@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-08-26 11:33:28",
-  "total_facts": 163,
+  "timestamp": "2025-08-26 13:04:14",
+  "total_facts": 178,
   "charts": {
     "4": [
       {
@@ -185,75 +185,7 @@
         }
       }
     ],
-    "2": [
-      {
-        "type": "change",
-        "subtype": "decrease",
-        "importance": 0.9,
-        "description": "In the Line of wait time over admission_date, the largest single decrease of 2.1 (6%) occurs between 2023-08 and 2023-09.",
-        "data_points": {
-          "from": "2023-08",
-          "to": "2023-09",
-          "change": -2.1240558341893774
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "maximum",
-        "importance": 0.7,
-        "description": "In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36.7.",
-        "data_points": {
-          "x": "2024-02",
-          "y": 36.67053364269142
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "minimum",
-        "importance": 0.65,
-        "description": "In the Line of wait time over admission_date, the trough is at 2024-10 with value 34.1.",
-        "data_points": {
-          "x": "2024-10",
-          "y": 34.05095541401274
-        }
-      }
-    ],
-    "22": [
-      {
-        "type": "distribution",
-        "subtype": "average",
-        "importance": 0.7,
-        "description": "Across all 2 categories in the Bar of Patient Admission Flag, the average wait time is 35.3 with a standard deviation of 0.3 (1% coefficient of variation).",
-        "data_points": {
-          "average": 35.26012779339659,
-          "std_dev": 0.2922179928762141,
-          "cv": 0.8287491032035901
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "maximum",
-        "importance": 0.6,
-        "description": "In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.",
-        "data_points": {
-          "category": "Not Adimitted",
-          "value": 35.55234578627281,
-          "average": 35.26012779339659
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "minimum",
-        "importance": 0.55,
-        "description": "In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.",
-        "data_points": {
-          "category": "Adimitted",
-          "value": 34.96790980052038,
-          "average": 35.26012779339659
-        }
-      }
-    ],
-    "23": [
+    "15": [
       {
         "type": "distribution_evenness",
         "subtype": "very_uneven",
@@ -308,62 +240,7 @@
         }
       }
     ],
-    "24": [
-      {
-        "type": "distribution_skew",
-        "subtype": "positive_skew",
-        "importance": 0.75,
-        "description": "The wait time distribution is right-skewed, with a few Patient Genders having unusually high values.",
-        "data_points": {
-          "skewness": 0.65296298231078
-        }
-      },
-      {
-        "type": "distribution",
-        "subtype": "average",
-        "importance": 0.7,
-        "description": "Across all 3 categories in the Bar of Patient Gender, the average wait time is 35.9 with a standard deviation of 0.9 (3% coefficient of variation).",
-        "data_points": {
-          "average": 35.88984394454974,
-          "std_dev": 0.9106877049989258,
-          "cv": 2.537452395741675
-        }
-      },
-      {
-        "type": "distribution_evenness",
-        "subtype": "moderately_even",
-        "importance": 0.7,
-        "description": "The distribution is moderately even across Patient Genders, with some variation but no dominant categories.",
-        "data_points": {
-          "gini": 0.34609615791558734,
-          "cv": 0.02537452395741675,
-          "normalized_entropy": 0.9997085357368265
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "maximum",
-        "importance": 0.6,
-        "description": "In the Bar showing wait time by Patient Gender, NC has the highest value at 37.2, which is 4% above the average of 35.9.",
-        "data_points": {
-          "category": "NC",
-          "value": 37.166666666666664,
-          "average": 35.88984394454974
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "minimum",
-        "importance": 0.55,
-        "description": "In the Bar showing wait time by Patient Gender, Female has the lowest value at 35.1, which is 2% below the average of 35.9.",
-        "data_points": {
-          "category": "Female",
-          "value": 35.10541564519723,
-          "average": 35.88984394454974
-        }
-      }
-    ],
-    "25": [
+    "16": [
       {
         "type": "distribution_evenness",
         "subtype": "moderately_uneven",
@@ -418,7 +295,253 @@
         }
       }
     ],
-    "26": [
+    "2": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of wait time over admission_date, the largest single decrease of 2.1 (6%) occurs between 2023-08 and 2023-09.",
+        "data_points": {
+          "from": "2023-08",
+          "to": "2023-09",
+          "change": -2.1240558341893774
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36.7.",
+        "data_points": {
+          "x": "2024-02",
+          "y": 36.67053364269142
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of wait time over admission_date, the trough is at 2024-10 with value 34.1.",
+        "data_points": {
+          "x": "2024-10",
+          "y": 34.05095541401274
+        }
+      }
+    ],
+    "3": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of score over admission_date, the largest single decrease of 0.7 (13%) occurs between 2024-03 and 2024-04.",
+        "data_points": {
+          "from": "2024-03",
+          "to": "2024-04",
+          "change": -0.7007469654528471
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of score over admission_date, the score peak at 2024-03 with value 5.3.",
+        "data_points": {
+          "x": "2024-03",
+          "y": 5.3277310924369745
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of score over admission_date, the trough is at 2024-04 with value 4.6.",
+        "data_points": {
+          "x": "2024-04",
+          "y": 4.626984126984127
+        }
+      }
+    ],
+    "28": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Patient Admission Flag, the average wait time is 35.3 with a standard deviation of 0.3 (1% coefficient of variation).",
+        "data_points": {
+          "average": 35.26012779339659,
+          "std_dev": 0.2922179928762141,
+          "cv": 0.8287491032035901
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "value": 35.55234578627281,
+          "average": 35.26012779339659
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.",
+        "data_points": {
+          "category": "Adimitted",
+          "value": 34.96790980052038,
+          "average": 35.26012779339659
+        }
+      }
+    ],
+    "29": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Patient Admission Flag, the average score is 5.0 with a standard deviation of 0.1 (2% coefficient of variation).",
+        "data_points": {
+          "average": 4.993609744389776,
+          "std_dev": 0.08331333253330131,
+          "cv": 1.6683989498158567
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing score by Patient Admission Flag, Adimitted has the highest value at 5.1, which is 2% above the average of 5.0.",
+        "data_points": {
+          "category": "Adimitted",
+          "value": 5.076923076923077,
+          "average": 4.993609744389776
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing score by Patient Admission Flag, Not Adimitted has the lowest value at 4.9, which is 2% below the average of 5.0.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "value": 4.910296411856474,
+          "average": 4.993609744389776
+        }
+      }
+    ],
+    "30": [
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The wait time distribution is right-skewed, with a few Patient Genders having unusually high values.",
+        "data_points": {
+          "skewness": 0.65296298231078
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 3 categories in the Bar of Patient Gender, the average wait time is 35.9 with a standard deviation of 0.9 (3% coefficient of variation).",
+        "data_points": {
+          "average": 35.88984394454974,
+          "std_dev": 0.9106877049989258,
+          "cv": 2.537452395741675
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across Patient Genders, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.34609615791558734,
+          "cv": 0.02537452395741675,
+          "normalized_entropy": 0.9997085357368265
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Patient Gender, NC has the highest value at 37.2, which is 4% above the average of 35.9.",
+        "data_points": {
+          "category": "NC",
+          "value": 37.166666666666664,
+          "average": 35.88984394454974
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Patient Gender, Female has the lowest value at 35.1, which is 2% below the average of 35.9.",
+        "data_points": {
+          "category": "Female",
+          "value": 35.10541564519723,
+          "average": 35.88984394454974
+        }
+      }
+    ],
+    "31": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Patient Genders, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.4259884882824747,
+          "cv": 0.19252045603173037,
+          "normalized_entropy": 0.9821880907299069
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The score distribution is left-skewed, with a few Patient Genders having unusually low values.",
+        "data_points": {
+          "skewness": -0.7026392552325206
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 3 categories in the Bar of Patient Gender, the average score is 4.4 with a standard deviation of 0.8 (19% coefficient of variation).",
+        "data_points": {
+          "average": 4.396049614104059,
+          "std_dev": 0.8463294764454258,
+          "cv": 19.252045603173038
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing score by Patient Gender, Male has the highest value at 5.0, which is 14% above the average of 4.4.",
+        "data_points": {
+          "category": "Male",
+          "value": 5.032924961715161,
+          "average": 4.396049614104059
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing score by Patient Gender, NC has the lowest value at 3.2, which is 27% below the average of 4.4.",
+        "data_points": {
+          "category": "NC",
+          "value": 3.2,
+          "average": 4.396049614104059
+        }
+      }
+    ],
+    "32": [
       {
         "type": "distribution_evenness",
         "subtype": "very_even",
@@ -473,42 +596,62 @@
         }
       }
     ],
-    "27": [
+    "33": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Patient Race.",
+        "data_points": {
+          "gini": 0.15865935659785202,
+          "cv": 0.028933033742693917,
+          "normalized_entropy": 0.9997862070565522
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The score distribution is right-skewed, with a few Patient Races having unusually high values.",
+        "data_points": {
+          "skewness": 0.6682406895741678
+        }
+      },
       {
         "type": "distribution",
         "subtype": "average",
         "importance": 0.7,
-        "description": "Across all 2 categories in the Bar of Wait Time, the average wait time is 32.9 with a standard deviation of 12.8 (39% coefficient of variation).",
+        "description": "Across all 7 categories in the Bar of Patient Race, the average score is 5.0 with a standard deviation of 0.1 (3% coefficient of variation).",
         "data_points": {
-          "average": 32.87851835179949,
-          "std_dev": 12.77449061106863,
-          "cv": 38.853607922296966
+          "average": 5.038715406449099,
+          "std_dev": 0.14578532287462348,
+          "cv": 2.893303374269392
         }
       },
       {
         "type": "extreme",
         "subtype": "maximum",
         "importance": 0.6,
-        "description": "In the Bar showing wait time by Wait Time, over 30 min has the highest value at 45.7, which is 39% above the average of 32.9.",
+        "description": "In the Bar showing score by Patient Race, Pacific Islander has the highest value at 5.3, which is 6% above the average of 5.0.",
         "data_points": {
-          "category": "over 30 min",
-          "value": 45.65300896286812,
-          "average": 32.87851835179949
+          "category": "Pacific Islander",
+          "value": 5.326530612244898,
+          "average": 5.038715406449099
         }
       },
       {
         "type": "extreme",
         "subtype": "minimum",
         "importance": 0.55,
-        "description": "In the Bar showing wait time by Wait Time, within 30 min has the lowest value at 20.1, which is 39% below the average of 32.9.",
+        "description": "In the Bar showing score by Patient Race, Two or More Races has the lowest value at 4.8, which is 4% below the average of 5.0.",
         "data_points": {
-          "category": "within 30 min",
-          "value": 20.10402774073086,
-          "average": 32.87851835179949
+          "category": "Two or More Races",
+          "value": 4.834134615384615,
+          "average": 5.038715406449099
         }
       }
     ],
-    "28": [
+    "34": [
       {
         "type": "distribution_evenness",
         "subtype": "very_even",
@@ -560,6 +703,61 @@
           "category": "Renal",
           "value": 34.69767441860465,
           "average": 35.592530653556885
+        }
+      }
+    ],
+    "35": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Department Referral.",
+        "data_points": {
+          "gini": 0.18043834125101677,
+          "cv": 0.06946611478809717,
+          "normalized_entropy": 0.9987736786001826
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The score distribution is right-skewed, with a few Department Referrals having unusually high values.",
+        "data_points": {
+          "skewness": 0.5712993612218087
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Department Referral, the average score is 5.1 with a standard deviation of 0.4 (7% coefficient of variation).",
+        "data_points": {
+          "average": 5.099082905931381,
+          "std_dev": 0.3542134784574534,
+          "cv": 6.946611478809716
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing score by Department Referral, Gastroenterology has the highest value at 5.8, which is 14% above the average of 5.1.",
+        "data_points": {
+          "category": "Gastroenterology",
+          "value": 5.796296296296297,
+          "average": 5.099082905931381
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing score by Department Referral, Renal has the lowest value at 4.6, which is 10% below the average of 5.1.",
+        "data_points": {
+          "category": "Renal",
+          "value": 4.565217391304348,
+          "average": 5.099082905931381
         }
       }
     ],
@@ -677,7 +875,7 @@
         }
       }
     ],
-    "670": [
+    "669": [
       {
         "type": "category_value_consistency",
         "subtype": "chart_level",
@@ -708,7 +906,7 @@
         }
       }
     ],
-    "671": [
+    "670": [
       {
         "type": "category_value_consistency",
         "subtype": "chart_level",
@@ -739,12 +937,12 @@
         }
       }
     ],
-    "672": [
+    "671": [
       {
         "type": "chart_dominance",
         "subtype": "series_majority",
         "importance": 0.95,
-        "description": "In the Bar comparing patients across admission_day, Not Adimitted leads in 5 out of 7 categories (71%), except Friday (led by Adimitted) and Tuesday (led by Adimitted).",
+        "description": "In the Bar comparing patients across admission_day, Not Adimitted leads in 5 out of 7 categories (71%), except Tuesday (led by Adimitted) and Friday (led by Adimitted).",
         "data_points": {
           "dominant_series": "Not Adimitted",
           "won_categories": [
@@ -755,8 +953,8 @@
             "Wednesday"
           ],
           "exceptions": {
-            "Friday": "Adimitted",
-            "Tuesday": "Adimitted"
+            "Tuesday": "Adimitted",
+            "Friday": "Adimitted"
           }
         }
       },
@@ -841,7 +1039,7 @@
         "type": "chart_dominance",
         "subtype": "series_majority",
         "importance": 0.95,
-        "description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Pacific Islander (led by Female) and Native American/Alaska Native (led by Female).",
+        "description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Native American/Alaska Native (led by Female) and Pacific Islander (led by Female).",
         "data_points": {
           "dominant_series": "Male",
           "won_categories": [
@@ -852,8 +1050,8 @@
             "White"
           ],
           "exceptions": {
-            "Pacific Islander": "Female",
-            "Native American/Alaska Native": "Female"
+            "Native American/Alaska Native": "Female",
+            "Pacific Islander": "Female"
           }
         }
       },
@@ -999,7 +1197,7 @@
         }
       }
     ],
-    "1297": [
+    "1296": [
       {
         "type": "distribution_evenness",
         "subtype": "moderately_uneven",
@@ -1054,12 +1252,12 @@
         }
       }
     ],
-    "1298": [
+    "1297": [
       {
         "type": "chart_dominance",
         "subtype": "series_majority",
         "importance": 0.95,
-        "description": "In the Bar comparing patients across Patient Gender, Male leads in 6 out of 8 categories (75%), except 40-49 (led by Female) and 0-9 (led by Female).",
+        "description": "In the Bar comparing patients across Patient Gender, Male leads in 6 out of 8 categories (75%), except 0-9 (led by Female) and 40-49 (led by Female).",
         "data_points": {
           "dominant_series": "Male",
           "won_categories": [
@@ -1071,8 +1269,8 @@
             "70-79"
           ],
           "exceptions": {
-            "40-49": "Female",
-            "0-9": "Female"
+            "0-9": "Female",
+            "40-49": "Female"
           }
         }
       },
@@ -1160,7 +1358,7 @@
         }
       }
     ],
-    "1299": [
+    "1298": [
       {
         "type": "relationship_consistency",
         "subtype": "mostly_stable",
@@ -1275,7 +1473,7 @@
         }
       }
     ],
-    "1300": [
+    "1299": [
       {
         "type": "chart_dominance",
         "subtype": "series_majority",
@@ -1392,39 +1590,6 @@
           "start_var": 6.25,
           "end_var": 132.25,
           "trend": 11.046052631578947
-        }
-      }
-    ],
-    "3": [
-      {
-        "type": "change",
-        "subtype": "decrease",
-        "importance": 0.9,
-        "description": "In the Line of score over admission_date, the largest single decrease of 0.7 (13%) occurs between 2024-03 and 2024-04.",
-        "data_points": {
-          "from": "2024-03",
-          "to": "2024-04",
-          "change": -0.7007469654528471
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "maximum",
-        "importance": 0.7,
-        "description": "In the Line of score over admission_date, the score peak at 2024-03 with value 5.3.",
-        "data_points": {
-          "x": "2024-03",
-          "y": 5.3277310924369745
-        }
-      },
-      {
-        "type": "extreme",
-        "subtype": "minimum",
-        "importance": 0.65,
-        "description": "In the Line of score over admission_date, the trough is at 2024-04 with value 4.6.",
-        "data_points": {
-          "x": "2024-04",
-          "y": 4.626984126984127
         }
       }
     ]

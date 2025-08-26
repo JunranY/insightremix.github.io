@@ -1,52 +1,58 @@
 {
   "metadata": {
     "description": "Goal insights with supporting facts for interactive interface",
-    "timestamp": "2025-08-26 11:33:28",
-    "total_goals": 3,
-    "total_insights": 6
+    "timestamp": "2025-08-26 13:04:14",
+    "total_goals": 4,
+    "total_insights": 7
   },
   "goals": {
-    "3": {
-      "goal_id": 3,
-      "insight_count": 3,
+    "1": {
+      "goal_id": 1,
+      "insight_count": 1,
       "insights": [
         {
-          "insight_id": "3_insight_0",
-          "title": "Inverse Performance Pattern: Adimitted",
-          "narrative": "Adimitted shows an inverse relationship between patients and wait time: high in patients but low in wait time, indicating these measures capture different aspects of performance.",
-          "pattern_type": "measure_contradiction",
-          "confidence": 0.69,
+          "insight_id": "1_insight_0",
+          "title": "Exceptional High Values: General Practice",
+          "narrative": "General Practice demonstrates exceptionally high patients values in Department Referral, Department Referral, representing a significant positive outlier that stands apart from typical patterns.",
+          "pattern_type": "outlier",
+          "confidence": 0.7749999999999999,
           "supporting_entities": [
-            "Adimitted"
+            "General Practice"
           ],
           "chart_ids": [],
           "supporting_facts": [
             {
-              "description": "In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.",
-              "chart_id": 4,
+              "description": "In the Bar showing patients across all categories in Department Referral, General Practice stands out with a value of 1840.0, which is 2.2 standard deviations above the mean of 545.1.",
+              "chart_id": 6,
+              "fact_type": "outlier",
+              "subtype": "high",
+              "importance": 0.95,
+              "entities": [
+                "General Practice"
+              ]
+            },
+            {
+              "description": "In the Bar showing patients by Department Referral, General Practice has the highest value at 1840.0, which is 238% above the average of 545.1.",
+              "chart_id": 6,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
               "entities": [
-                "Adimitted"
-              ]
-            },
-            {
-              "description": "In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.",
-              "chart_id": 22,
-              "fact_type": "extreme",
-              "subtype": "minimum",
-              "importance": 0.55,
-              "entities": [
-                "Adimitted"
+                "General Practice"
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    "4": {
+      "goal_id": 4,
+      "insight_count": 3,
+      "insights": [
         {
-          "insight_id": "3_insight_1",
+          "insight_id": "4_insight_0",
           "title": "Inverse Performance Pattern: Not Adimitted",
-          "narrative": "Not Adimitted shows an inverse relationship between patients and wait time: low in patients but high in wait time, indicating these measures capture different aspects of performance.",
+          "narrative": "Not Adimitted shows an inverse relationship between wait time and score: high in wait time but low in score, indicating these measures capture different aspects of performance.",
           "pattern_type": "measure_contradiction",
           "confidence": 0.69,
           "supporting_entities": [
@@ -55,21 +61,21 @@
           "chart_ids": [],
           "supporting_facts": [
             {
-              "description": "In the Bar showing patients by Patient Admission Flag, Not Adimitted has the lowest value at 4604.0, which is 0% below the average of 4608.0.",
-              "chart_id": 4,
+              "description": "In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.",
+              "chart_id": 28,
               "fact_type": "extreme",
-              "subtype": "minimum",
-              "importance": 0.55,
+              "subtype": "maximum",
+              "importance": 0.6,
               "entities": [
                 "Not Adimitted"
               ]
             },
             {
-              "description": "In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.",
-              "chart_id": 22,
+              "description": "In the Bar showing score by Patient Admission Flag, Not Adimitted has the lowest value at 4.9, which is 2% below the average of 5.0.",
+              "chart_id": 29,
               "fact_type": "extreme",
-              "subtype": "maximum",
-              "importance": 0.6,
+              "subtype": "minimum",
+              "importance": 0.55,
               "entities": [
                 "Not Adimitted"
               ]
@@ -77,37 +83,68 @@
           ]
         },
         {
-          "insight_id": "3_insight_2",
-          "title": "Consistent Performance: over 30 min",
-          "narrative": "over 30 min demonstrates consistent high performance across both patients and wait time, showing reliable excellence across both measures simultaneously.",
-          "pattern_type": "measure_consistency",
-          "confidence": 0.6,
+          "insight_id": "4_insight_1",
+          "title": "Inverse Performance Pattern: Adimitted",
+          "narrative": "Adimitted shows an inverse relationship between wait time and score: low in wait time but high in score, indicating these measures capture different aspects of performance.",
+          "pattern_type": "measure_contradiction",
+          "confidence": 0.69,
           "supporting_entities": [
-            "over 30 min"
+            "Adimitted"
           ],
           "chart_ids": [],
           "supporting_facts": [
             {
-              "description": "In the Bar showing patients by Wait Time, over 30 min has the highest value at 5467.0, which is 19% above the average of 4608.0.",
-              "chart_id": 5,
+              "description": "In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.",
+              "chart_id": 28,
               "fact_type": "extreme",
-              "subtype": "maximum",
-              "importance": 0.6,
+              "subtype": "minimum",
+              "importance": 0.55,
               "entities": [
-                "over 30 min"
+                "Adimitted"
               ]
             },
             {
-              "description": "In the Bar showing wait time by Wait Time, over 30 min has the highest value at 45.7, which is 39% above the average of 32.9.",
-              "chart_id": 27,
+              "description": "In the Bar showing score by Patient Admission Flag, Adimitted has the highest value at 5.1, which is 2% above the average of 5.0.",
+              "chart_id": 29,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
               "entities": [
-                "over 30 min"
+                "Adimitted"
               ]
             }
           ]
+        },
+        {
+          "insight_id": "4_insight_2",
+          "title": "Relationship between wait time and score",
+          "narrative": "wait time and score show no linear correlation (r=-0.02).",
+          "pattern_type": "measure_correlation",
+          "confidence": 0.02118296963857252,
+          "supporting_entities": [
+            "431-96-7393",
+            "2023-12-21 16:50:00",
+            "Casini",
+            "2024-07-30 02:48:00",
+            "2024-08-17 12:21:00",
+            "268-03-2892",
+            "2023-11-18 20:42:00",
+            "2023-07-14 12:45:00",
+            "2024-07-30 15:43:00",
+            "133-40-1294",
+            "2023-05-25 19:16:00",
+            "Daughtery",
+            "Loughran",
+            "840-81-0704",
+            "Alkin",
+            "581-50-9829",
+            "797-45-6464",
+            "2023-04-25 11:21:00",
+            "Arter",
+            "2023-04-29 11:55:00"
+          ],
+          "chart_ids": [],
+          "supporting_facts": []
         }
       ]
     },
@@ -148,7 +185,7 @@
             },
             {
               "description": "In the Bar showing 08-12 by admission_time, Adimitted has the lowest value at 762.0, which is 0% below the average of 763.0.",
-              "chart_id": 670,
+              "chart_id": 669,
               "fact_type": "extreme",
               "subtype": "minimum",
               "importance": 0.55,
@@ -158,7 +195,7 @@
             },
             {
               "description": "In the Bar showing Wednesday by Patient Admission Flag, Adimitted has the lowest value at 629.0, which is 0% below the average of 630.0.",
-              "chart_id": 671,
+              "chart_id": 670,
               "fact_type": "extreme",
               "subtype": "minimum",
               "importance": 0.55,
@@ -168,7 +205,7 @@
             },
             {
               "description": "Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the Adimitted category, which is 4% below the overall average.",
-              "chart_id": 671,
+              "chart_id": 670,
               "fact_type": "cross_series_extreme",
               "subtype": "global_minimum",
               "importance": 0.75,
@@ -237,7 +274,7 @@
             },
             {
               "description": "In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.",
-              "chart_id": 1297,
+              "chart_id": 1296,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
@@ -247,7 +284,7 @@
             },
             {
               "description": "In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
@@ -257,7 +294,7 @@
             },
             {
               "description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "cross_series_extreme",
               "subtype": "global_maximum",
               "importance": 0.8,
@@ -267,7 +304,7 @@
             },
             {
               "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 66.0 units for the absolute range, which is 1.8x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "variation",
               "subtype": "absolute range (range)",
               "importance": 0.7535714285714286,
@@ -277,7 +314,7 @@
             },
             {
               "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 17.44, which is 1.5x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "variation",
               "subtype": "standard deviation (std_dev)",
               "importance": 0.709221683054337,
@@ -298,8 +335,8 @@
           ],
           "chart_ids": [
             8,
-            1297,
-            1299
+            1296,
+            1298
           ],
           "supporting_facts": [
             {
@@ -324,7 +361,7 @@
             },
             {
               "description": "In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.",
-              "chart_id": 1297,
+              "chart_id": 1296,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
@@ -334,7 +371,7 @@
             },
             {
               "description": "In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "extreme",
               "subtype": "maximum",
               "importance": 0.6,
@@ -344,7 +381,7 @@
             },
             {
               "description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.",
-              "chart_id": 1299,
+              "chart_id": 1298,
               "fact_type": "cross_series_extreme",
               "subtype": "global_maximum",
               "importance": 0.8,
