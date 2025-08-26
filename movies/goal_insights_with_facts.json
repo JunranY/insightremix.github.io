@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "description": "Goal insights with supporting facts for interactive interface",
+    "timestamp": "2025-08-26 11:32:57",
+    "total_goals": 2,
+    "total_insights": 2
+  },
+  "goals": {
+    "1": {
+      "goal_id": 1,
+      "insight_count": 1,
+      "insights": [
+        {
+          "insight_id": "1_insight_0",
+          "title": "Exceptional High Values: SAMUEL L. JACKSON",
+          "narrative": "SAMUEL L. JACKSON demonstrates exceptionally high Movies Counts values in Person, Person, representing a significant positive outlier that stands apart from typical patterns.",
+          "pattern_type": "outlier",
+          "confidence": 0.7749999999999999,
+          "supporting_entities": [
+            "SAMUEL L. JACKSON"
+          ],
+          "chart_ids": [],
+          "supporting_facts": [
+            {
+              "description": "In the Bar showing Movie Counts across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+              "chart_id": 5,
+              "fact_type": "outlier",
+              "subtype": "high",
+              "importance": 0.95,
+              "entities": [
+                "SAMUEL L. JACKSON"
+              ]
+            },
+            {
+              "description": "In the Bar showing Movie Counts by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2.",
+              "chart_id": 5,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "SAMUEL L. JACKSON"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "goal_id": 3,
+      "insight_count": 1,
+      "insights": [
+        {
+          "insight_id": "3_insight_0",
+          "title": "Relationship between Average Votes and Average Rating",
+          "narrative": "Average Votes and Average Rating show a moderate positive correlation (r=0.50), indicating they tend to move together. This suggests complementary dynamics between these measures.",
+          "pattern_type": "measure_correlation",
+          "confidence": 0.5047134203296068,
+          "supporting_entities": [
+            "Albert Donoghue",
+            "nm1405310",
+            "Manuel",
+            "ROSS NOBLE",
+            "nm3479690",
+            "Rose Hearn",
+            "Him,Senator Denton",
+            "Principal Purdy",
+            "SCOTT SIMPSON",
+            "Nikolai Wolf",
+            "nm0517064",
+            "Jonathan Barnavelt",
+            "Kristen",
+            "nm1235447",
+            "nm0079694",
+            "nm0730406",
+            "TORAN CAUDELL",
+            "Comedy,Drama,Romance,Sci-Fi",
+            "BLACKKKLANSMAN",
+            "Hustle Guy"
+          ],
+          "chart_ids": [],
+          "supporting_facts": []
+        }
+      ]
+    }
+  }
+}

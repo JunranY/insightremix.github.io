@@ -1,0 +1,229 @@
+{
+  "title": "Enhanced Dashboard Analysis",
+  "description": "Enhanced insights with universal pattern detection",
+  "timestamp": "2025-08-20 12:00:00",
+  "approach": "pattern",
+  "entity_insights": [
+    {
+      "title": "2024-03: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average. Additionally, across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "2024-03",
+        "273",
+        "M"
+      ],
+      "importance": 0.95
+    },
+    {
+      "title": "M: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average. Additionally, across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "2024-03",
+        "273",
+        "M"
+      ],
+      "importance": 0.95
+    },
+    {
+      "title": "60-69: Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78.0 for 60-69 in the 2024-08 category, which is 29% above the overall average. Additionally, across all series in the Bar comparing patients by Patient Age, the highest value overall is 78.0 for 60-69 in the 2024-08 category, which is 29% above the overall average.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "78",
+        "60-69",
+        "2024-08"
+      ],
+      "importance": 0.95
+    }
+  ],
+  "cross_entity_insights": [
+    {
+      "title": "Relationship between Asian and 70-79",
+      "narrative": "In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40.0, which is 2.2 standard deviations below the mean of 60.7. Additionally, in the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024.0, which is 2.5 standard deviations below the mean of 1152.0.",
+      "charts": [
+        99,
+        8
+      ],
+      "entities": [
+        "2023-07",
+        "40",
+        "40-49",
+        "1024"
+      ],
+      "importance": 0.95
+    },
+    {
+      "title": "Relationship between 70-79 and 00-04",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average. Additionally, across all series in the Bar comparing patients by admission_time, the highest value overall is 795.0 for 04-08 in the False category, which is 4% above the overall average.",
+      "charts": [
+        100,
+        332
+      ],
+      "entities": [
+        "04-08",
+        "08-12",
+        "2024-01",
+        "112",
+        "795"
+      ],
+      "importance": 0.95
+    }
+  ],
+  "goals": [
+    {
+      "id": 4,
+      "type": "compare_measures",
+      "name": "comp_measure_Patient Waittime_Patient Satisfaction Score",
+      "views": [
+        2,
+        3,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Relationship between wait time and score",
+          "narrative": "wait time and score show a strong negative correlation (r=-0.99), indicating they tend to move in opposite directions. This suggests compensatory dynamics between these measures.",
+          "charts": [],
+          "entities": [
+            "NC",
+            "F",
+            "M"
+          ],
+          "importance": 0.5914741275154849,
+          "pattern_type": "correlation",
+          "pattern_confidence": 0.5914741275154849,
+          "supporting_entities": [
+            "F",
+            "M",
+            "NC"
+          ],
+          "source": "pattern"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "compare_dimension",
+      "name": "comp_dim_admission_date_COUNT",
+      "views": [
+        0,
+        1,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Exceptional Performer: 2023-09",
+          "narrative": "2023-09 demonstrates exceptional behavior in Patient Race, Patient Race, standing out significantly from other admission_date in terms of patients performance.",
+          "charts": [],
+          "entities": [
+            "2023-09"
+          ],
+          "importance": 0.95,
+          "pattern_type": "outlier",
+          "pattern_confidence": 0.95,
+          "supporting_entities": [
+            "2023-09"
+          ],
+          "source": "pattern"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": "compare_two_dimensions",
+      "name": "comp_dims_Patient Admission Flag_admission_day_COUNT_admission_time",
+      "views": [
+        4,
+        9,
+        6,
+        332,
+        333
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Compare Two Dimensions: Relationship between 70-79 and 00-04",
+          "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average.",
+          "charts": [
+            100
+          ],
+          "entities": [
+            "08-12",
+            "2024-01",
+            "112"
+          ],
+          "importance": 0.95,
+          "source": "traditional"
+        },
+        {
+          "title": "Compare Two Dimensions: Relationship between 87 and 138",
+          "narrative": "For the True category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 794.0 among all 6 series.",
+          "charts": [
+            332
+          ],
+          "entities": [
+            "794",
+            "20-00",
+            "True",
+            true
+          ],
+          "importance": 0.8,
+          "source": "traditional"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": "compare_two_dimensions",
+      "name": "comp_dims_Patient Race_Patient Age_COUNT_Patient Gender",
+      "views": [
+        7,
+        8,
+        528,
+        529,
+        530
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Compare Two Dimensions: Relationship between Asian and 70-79",
+          "narrative": "In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40.0, which is 2.2 standard deviations below the mean of 60.7.",
+          "charts": [
+            99
+          ],
+          "entities": [
+            "2023-07",
+            "40"
+          ],
+          "importance": 0.95,
+          "source": "traditional"
+        }
+      ]
+    }
+  ]
+}

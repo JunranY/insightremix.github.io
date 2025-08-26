@@ -1,0 +1,93 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Enhanced Dashboard Analysis</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                .goal-section { margin-bottom: 30px; border: 1px solid #ddd; padding: 20px; border-radius: 5px; }
+                .insight-item { margin-bottom: 15px; padding: 15px; background: #f9f9f9; border-radius: 3px; }
+                .pattern-insight { border-left: 4px solid #4682b4; }
+                .traditional-insight { border-left: 4px solid #d2691e; }
+                .confidence-score { font-weight: bold; color: #666; font-size: 0.9em; }
+                .pattern-type { font-style: italic; color: #4682b4; font-size: 0.9em; }
+                .chart-gallery { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+                .chart-item { border: 1px solid #eee; padding: 5px; }
+                h1 { color: #333; }
+                h2 { color: #4682b4; }
+                h3 { color: #666; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Enhanced Dashboard Analysis</h1>
+                <p>Enhanced insights with universal pattern detection</p>
+                <p><strong>Approach:</strong> Pattern</p>
+                <p><strong>Generated:</strong> 2025-08-20 12:00:00</p>
+        
+                <div class="goal-section">
+                    <h2>comp_measure_Patient Waittime_Patient Satisfaction Score (Compare Measures)</h2>
+                    <p><strong>Views:</strong> 2, 3, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45</p>
+                    <p><strong>Approach:</strong> Pattern</p>
+            
+                        <div class="insight-item pattern-insight">
+                            <h3>Relationship between wait time and score</h3>
+                            <p>wait time and score show a strong negative correlation (r=-0.99), indicating they tend to move in opposite directions. This suggests compensatory dynamics between these measures.</p>
+                            <div class="confidence-score">
+                                Confidence: 0.59
+                            </div>
+                    
+                            <div class="pattern-type">Pattern: correlation</div>
+                        </div></div>
+                <div class="goal-section">
+                    <h2>comp_dim_admission_date_COUNT (Compare Dimension)</h2>
+                    <p><strong>Views:</strong> 0, 1, 97, 98, 99, 100, 101</p>
+                    <p><strong>Approach:</strong> Pattern</p>
+            
+                        <div class="insight-item pattern-insight">
+                            <h3>Exceptional Performer: 2023-09</h3>
+                            <p>2023-09 demonstrates exceptional behavior in Patient Race, Patient Race, standing out significantly from other admission_date in terms of patients performance.</p>
+                            <div class="confidence-score">
+                                Confidence: 0.95
+                            </div>
+                    
+                            <div class="pattern-type">Pattern: outlier</div>
+                        </div></div>
+                <div class="goal-section">
+                    <h2>comp_dims_Patient Admission Flag_admission_day_COUNT_admission_time (Compare Two Dimensions)</h2>
+                    <p><strong>Views:</strong> 4, 9, 6, 332, 333</p>
+                    <p><strong>Approach:</strong> Pattern</p>
+            
+                        <div class="insight-item traditional-insight">
+                            <h3>Compare Two Dimensions: Relationship between 70-79 and 00-04</h3>
+                            <p>Across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average.</p>
+                            <div class="confidence-score">
+                                Importance: 0.95
+                            </div>
+                    <div class="chart-gallery"></div></div>
+                        <div class="insight-item traditional-insight">
+                            <h3>Compare Two Dimensions: Relationship between 87 and 138</h3>
+                            <p>For the True category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 794.0 among all 6 series.</p>
+                            <div class="confidence-score">
+                                Importance: 0.80
+                            </div>
+                    <div class="chart-gallery"></div></div></div>
+                <div class="goal-section">
+                    <h2>comp_dims_Patient Race_Patient Age_COUNT_Patient Gender (Compare Two Dimensions)</h2>
+                    <p><strong>Views:</strong> 7, 8, 528, 529, 530</p>
+                    <p><strong>Approach:</strong> Pattern</p>
+            
+                        <div class="insight-item traditional-insight">
+                            <h3>Compare Two Dimensions: Relationship between Asian and 70-79</h3>
+                            <p>In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40.0, which is 2.2 standard deviations below the mean of 60.7.</p>
+                            <div class="confidence-score">
+                                Importance: 0.95
+                            </div>
+                    <div class="chart-gallery"></div></div></div>
+            </div>
+        </body>
+        </html>
+        

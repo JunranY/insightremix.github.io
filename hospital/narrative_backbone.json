@@ -1,0 +1,4349 @@
+{
+  "title": "Dashboard Insight Narrative",
+  "description": "Automatically generated insights from dashboard analysis",
+  "timestamp": "2025-08-20 08:29:03",
+  "entity_insights": [
+    {
+      "title": "patient age:70-79: In the Bar showing score across all categories in Patient Age, 70-79 stands out with a value of 4",
+      "narrative": "In the Bar showing score across all categories in Patient Age, 70-79 stands out with a value of 4.6, which is 2.2 standard deviations below the mean of 5.0. Additionally, in the Bar showing score by Patient Age, 70-79 has the lowest value at 4.6, which is 8% below the average of 5.0.",
+      "charts": [
+        41
+      ],
+      "entities": [
+        "70-79"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "score",
+        "dimension_name": "Patient Age",
+        "category": "70-79",
+        "value": 4.58204334365325,
+        "avg_value": 4.993706908371246,
+        "z_score": 2.2323132021602348,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        41
+      ]
+    },
+    {
+      "title": "score:4.58204334365325: In the Bar showing score across all categories in Patient Age, 70-79 stands out with a value of 4",
+      "narrative": "In the Bar showing score across all categories in Patient Age, 70-79 stands out with a value of 4.6, which is 2.2 standard deviations below the mean of 5.0. Additionally, in the Bar showing score by Patient Age, 70-79 has the lowest value at 4.6, which is 8% below the average of 5.0.",
+      "charts": [
+        41
+      ],
+      "entities": [
+        "70-79"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "score",
+        "dimension_name": "Patient Age",
+        "category": "70-79",
+        "value": 4.58204334365325,
+        "avg_value": 4.993706908371246,
+        "z_score": 2.2323132021602348,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        41
+      ]
+    },
+    {
+      "title": "patient gender:2024-03: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average. Furthermore, for the 2024-03 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 273.0 among all 3 series. In addition, in the Bar showing M by Patient Gender, 2024-03 has the highest value at 273.0, which is 10% above the average of 247.6.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "M",
+        "2024-03"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-03",
+        "series_name": "M",
+        "value": 273,
+        "overall_avg": 161.68421052631578,
+        "percentage_above_avg": 68.84765625000001
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "series_patient gender:m: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average. Furthermore, across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for M in the 20-29 category, which is 63% above the overall average. In addition, in the Bar comparing patients across Patient Gender, M dominates in 15 out of 19 categories, leading by an average margin of 19.1 (12%).",
+      "charts": [
+        97,
+        529
+      ],
+      "entities": [
+        "20-29",
+        "M",
+        "2024-03"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "series_dominance",
+        "series_dominance",
+        "consistent_performance"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-03",
+        "series_name": "M",
+        "value": 273,
+        "overall_avg": 161.68421052631578,
+        "percentage_above_avg": 68.84765625000001
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:273: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 273.0 for M in the 2024-03 category, which is 69% above the overall average. Additionally, for the 2024-03 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 273.0 among all 3 series.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "M",
+        "2024-03"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-03",
+        "series_name": "M",
+        "value": 273,
+        "overall_avg": 161.68421052631578,
+        "percentage_above_avg": 68.84765625000001
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patient race:2023-06: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148.0 for White in the 2023-06 category, which is 114% above the overall average. Furthermore, for the 2023-06 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 148.0 among all 7 series. In addition, in the Bar showing White by Patient Race, 2023-06 has the highest value at 148.0, which is 9% above the average of 135.3.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "White",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-06",
+        "series_name": "White",
+        "value": 148,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 113.58506944444446
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patient race:2023-09: In the Bar showing White across all categories in Patient Race, 2023-09 stands out with a value of 112",
+      "narrative": "In the Bar showing White across all categories in Patient Race, 2023-09 stands out with a value of 112.0, which is 2.4 standard deviations below the mean of 135.3. Furthermore, for the 2023-09 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 112.0 among all 7 series. In addition, in the Bar showing White by Patient Race, 2023-09 has the lowest value at 112.0, which is 17% below the average of 135.3.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2023-09",
+        "White"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "White",
+        "dimension_name": "Patient Race",
+        "category": "2023-09",
+        "value": 112,
+        "avg_value": 135.31578947368422,
+        "z_score": 2.407466481842095,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "white:112: In the Bar showing White across all categories in Patient Race, 2023-09 stands out with a value of 112",
+      "narrative": "In the Bar showing White across all categories in Patient Race, 2023-09 stands out with a value of 112.0, which is 2.4 standard deviations below the mean of 135.3. Additionally, in the Bar showing White by Patient Race, 2023-09 has the lowest value at 112.0, which is 17% below the average of 135.3.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2023-09"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "White",
+        "dimension_name": "Patient Race",
+        "category": "2023-09",
+        "value": 112,
+        "avg_value": 135.31578947368422,
+        "z_score": 2.407466481842095,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "series_patient race:white: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148.0 for White in the 2023-06 category, which is 114% above the overall average. Furthermore, in the Bar comparing patients across Patient Race, White dominates in 19 out of 19 categories, leading by an average margin of 32.5 (47%). In addition, in the Bar comparing patients across Patient Race, White consistently performs above average in 19 out of 19 categories, demonstrating reliable high performance.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2023-04",
+        "White",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-06",
+        "series_name": "White",
+        "value": 148,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 113.58506944444446
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:148: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148.0 for White in the 2023-06 category, which is 114% above the overall average. Additionally, for the 2023-06 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 148.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "White",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-06",
+        "series_name": "White",
+        "value": 148,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 113.58506944444446
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:112: Across all series in the Bar comparing patients by admission_time, the highest value overall is 112",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average. Furthermore, for the 2023-09 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 112.0 among all 7 series.",
+      "charts": [
+        100,
+        98
+      ],
+      "entities": [
+        "2024-01",
+        "2023-09",
+        "White",
+        "08-12"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2024-01",
+        "series_name": "08-12",
+        "value": 112,
+        "overall_avg": 80.84210526315789,
+        "percentage_above_avg": 38.54166666666667
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patient age:2024-08: Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78.0 for 60-69 in the 2024-08 category, which is 29% above the overall average. Furthermore, for the 2024-08 category in the Bar comparing patients across different Patient Age, 60-69 leads with the highest value at 78.0 among all 8 series. In addition, in the Bar showing 60-69 by Patient Age, 2024-08 has the highest value at 78.0, which is 28% above the average of 60.7.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2024-08",
+        "60-69"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-08",
+        "series_name": "60-69",
+        "value": 78,
+        "overall_avg": 60.63157894736842,
+        "percentage_above_avg": 28.645833333333343
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patient age:2023-07: In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40",
+      "narrative": "In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40.0, which is 2.2 standard deviations below the mean of 60.7. Furthermore, for the 2023-07 category in the Bar comparing patients across different Patient Age, 20-29 leads with the highest value at 71.0 among all 8 series. In addition, in the Bar showing 60-69 by Patient Age, 2023-07 has the lowest value at 40.0, which is 34% below the average of 60.7.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "20-29",
+        "2023-07"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "60-69",
+        "dimension_name": "Patient Age",
+        "category": "2023-07",
+        "value": 40,
+        "avg_value": 60.73684210526316,
+        "z_score": 2.2187414160225996,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "60-69:40: In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40",
+      "narrative": "In the Bar showing 60-69 across all categories in Patient Age, 2023-07 stands out with a value of 40.0, which is 2.2 standard deviations below the mean of 60.7. Additionally, in the Bar showing 60-69 by Patient Age, 2023-07 has the lowest value at 40.0, which is 34% below the average of 60.7.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-07"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "60-69",
+        "dimension_name": "Patient Age",
+        "category": "2023-07",
+        "value": 40,
+        "avg_value": 60.73684210526316,
+        "z_score": 2.2187414160225996,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_patient age:60-69: Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78.0 for 60-69 in the 2024-08 category, which is 29% above the overall average. Furthermore, for the 2024-03 category in the Bar comparing patients across different Patient Age, 60-69 leads with the highest value at 74.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2024-08",
+        "2024-03",
+        "60-69"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-08",
+        "series_name": "60-69",
+        "value": 78,
+        "overall_avg": 60.63157894736842,
+        "percentage_above_avg": 28.645833333333343
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:78: Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the highest value overall is 78.0 for 60-69 in the 2024-08 category, which is 29% above the overall average. Furthermore, for the 2024-08 category in the Bar comparing patients across different Patient Age, 60-69 leads with the highest value at 78.0 among all 8 series.",
+      "charts": [
+        99,
+        101
+      ],
+      "entities": [
+        "2023-10",
+        "Wednesday",
+        "2024-08",
+        "60-69"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-08",
+        "series_name": "60-69",
+        "value": 78,
+        "overall_avg": 60.63157894736842,
+        "percentage_above_avg": 28.645833333333343
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "admission_time:2024-01: In the Bar showing 08-12 across all categories in admission_time, 2024-01 stands out with a value of 112",
+      "narrative": "In the Bar showing 08-12 across all categories in admission_time, 2024-01 stands out with a value of 112.0, which is 2.9 standard deviations above the mean of 80.3. Furthermore, across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average. In addition, in the Bar comparing patients by admission_time, the 2024-01 category shows the largest spread between series with a range of 38.0 from 04-08 (74.0) to 08-12 (112.0).",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "2024-01",
+        "08-12"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "08-12",
+        "dimension_name": "admission_time",
+        "category": "2024-01",
+        "value": 112,
+        "avg_value": 80.3157894736842,
+        "z_score": 2.902494354209713,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "08-12:112: In the Bar showing 08-12 across all categories in admission_time, 2024-01 stands out with a value of 112",
+      "narrative": "In the Bar showing 08-12 across all categories in admission_time, 2024-01 stands out with a value of 112.0, which is 2.9 standard deviations above the mean of 80.3. Additionally, in the Bar showing 08-12 by admission_time, 2024-01 has the highest value at 112.0, which is 39% above the average of 80.3.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "2024-01"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "08-12",
+        "dimension_name": "admission_time",
+        "category": "2024-01",
+        "value": 112,
+        "avg_value": 80.3157894736842,
+        "z_score": 2.902494354209713,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_time:04-08: Across all series in the Bar comparing patients by admission_time, the highest value overall is 795",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 795.0 for 04-08 in the False category, which is 4% above the overall average. Furthermore, in the Bar comparing patients across admission_time, 04-08 consistently performs above average in 2 out of 2 categories, demonstrating reliable high performance. In addition, in the Bar comparing patients across admission_time, 04-08 has the highest average value at 82.5, consistently outperforming other series (overall average: 80.8).",
+      "charts": [
+        332,
+        100
+      ],
+      "entities": [
+        "04-08",
+        "2023-05"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": false,
+        "series_name": "04-08",
+        "value": 795,
+        "overall_avg": 768.0,
+        "percentage_above_avg": 3.515625
+      },
+      "view_attribution": [
+        332
+      ]
+    },
+    {
+      "title": "series_admission_time:08-12: Across all series in the Bar comparing patients by admission_time, the highest value overall is 112",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 112.0 for 08-12 in the 2024-01 category, which is 39% above the overall average. Furthermore, in the Bar comparing patients across admission_time, 08-12 consistently performs below average in 2 out of 2 categories, showing consistently low performance. In addition, for the 2023-10 category in the Bar comparing patients across different admission_time, 08-12 leads with the highest value at 92.0 among all 6 series.",
+      "charts": [
+        100,
+        332
+      ],
+      "entities": [
+        "2023-10",
+        "2024-01",
+        "2024-03",
+        "08-12"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2024-01",
+        "series_name": "08-12",
+        "value": 112,
+        "overall_avg": 80.84210526315789,
+        "percentage_above_avg": 38.54166666666667
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "admission_day:2024-05: In the Bar showing Wednesday across all categories in admission_day, 2024-05 stands out with a value of 89",
+      "narrative": "In the Bar showing Wednesday across all categories in admission_day, 2024-05 stands out with a value of 89.0, which is 2.0 standard deviations above the mean of 66.3. Furthermore, for the 2024-05 category in the Bar comparing patients across different admission_day, Friday leads with the highest value at 96.0 among all 7 series. In addition, in the Bar showing Wednesday by admission_day, 2024-05 has the highest value at 89.0, which is 34% above the average of 66.3.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Friday",
+        "2024-05"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "Wednesday",
+        "dimension_name": "admission_day",
+        "category": "2024-05",
+        "value": 89,
+        "avg_value": 66.3157894736842,
+        "z_score": 2.0466343115102323,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "wednesday:89: In the Bar showing Wednesday across all categories in admission_day, 2024-05 stands out with a value of 89",
+      "narrative": "In the Bar showing Wednesday across all categories in admission_day, 2024-05 stands out with a value of 89.0, which is 2.0 standard deviations above the mean of 66.3. Additionally, in the Bar showing Wednesday by admission_day, 2024-05 has the highest value at 89.0, which is 34% above the average of 66.3.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2024-05"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "Wednesday",
+        "dimension_name": "admission_day",
+        "category": "2024-05",
+        "value": 89,
+        "avg_value": 66.3157894736842,
+        "z_score": 2.0466343115102323,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "admission_day:2023-06: Across all series in the Bar comparing patients by admission_day, the highest value overall is 102",
+      "narrative": "Across all series in the Bar comparing patients by admission_day, the highest value overall is 102.0 for Thursday in the 2023-06 category, which is 47% above the overall average. Additionally, for the 2023-06 category in the Bar comparing patients across different admission_day, Thursday leads with the highest value at 102.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Thursday",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-06",
+        "series_name": "Thursday",
+        "value": 102,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 47.20052083333334
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_day:thursday: Across all series in the Bar comparing patients by admission_day, the highest value overall is 102",
+      "narrative": "Across all series in the Bar comparing patients by admission_day, the highest value overall is 102.0 for Thursday in the 2023-06 category, which is 47% above the overall average. Furthermore, for the 2023-06 category in the Bar comparing patients across different admission_day, Thursday leads with the highest value at 102.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2023-06",
+        "2024-02",
+        "Thursday",
+        "2023-11"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-06",
+        "series_name": "Thursday",
+        "value": 102,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 47.20052083333334
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "patients:102: Across all series in the Bar comparing patients by admission_day, the highest value overall is 102",
+      "narrative": "Across all series in the Bar comparing patients by admission_day, the highest value overall is 102.0 for Thursday in the 2023-06 category, which is 47% above the overall average. Additionally, for the 2023-06 category in the Bar comparing patients across different admission_day, Thursday leads with the highest value at 102.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Thursday",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-06",
+        "series_name": "Thursday",
+        "value": 102,
+        "overall_avg": 69.29323308270676,
+        "percentage_above_avg": 47.20052083333334
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "admission_time:00-04: Across all series in the Bar comparing patients by admission_time, the highest value overall is 246",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average. Furthermore, in the Bar comparing patients by admission_time, the 00-04 category shows the largest spread between series with a range of 40.0 from Wednesday (206.0) to Saturday (246.0). In addition, in the Bar comparing patients by admission_time, the 00-04 category shows the greatest variation across all 7 series with a spread of 40.0 between the highest and lowest values.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        "Saturday",
+        "00-04"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "00-04",
+        "series_name": "Saturday",
+        "value": 246,
+        "overall_avg": 219.42857142857142,
+        "percentage_above_avg": 12.109375000000005
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_admission_time:saturday: Across all series in the Bar comparing patients by admission_time, the highest value overall is 246",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average. Furthermore, in the Bar comparing patients across admission_time, Saturday has the highest average value at 229.5, consistently outperforming other series (overall average: 219.4). In addition, for the 00-04 category in the Bar comparing patients across different admission_time, Saturday leads with the highest value at 246.0 among all 7 series.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        "Saturday",
+        "20-00",
+        "08-12",
+        "00-04"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_avg",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "00-04",
+        "series_name": "Saturday",
+        "value": 246,
+        "overall_avg": 219.42857142857142,
+        "percentage_above_avg": 12.109375000000005
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "patients:246: Across all series in the Bar comparing patients by admission_time, the highest value overall is 246",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average. Additionally, for the 00-04 category in the Bar comparing patients across different admission_time, Saturday leads with the highest value at 246.0 among all 7 series.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        "Saturday",
+        "00-04"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "00-04",
+        "series_name": "Saturday",
+        "value": 246,
+        "overall_avg": 219.42857142857142,
+        "percentage_above_avg": 12.109375000000005
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "patients:795: Across all series in the Bar comparing patients by admission_time, the highest value overall is 795",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 795.0 for 04-08 in the False category, which is 4% above the overall average. Additionally, for the False category in the Bar comparing patients across different admission_time, 04-08 leads with the highest value at 795.0 among all 6 series.",
+      "charts": [
+        332
+      ],
+      "entities": [
+        "04-08"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": false,
+        "series_name": "04-08",
+        "value": 795,
+        "overall_avg": 768.0,
+        "percentage_above_avg": 3.515625
+      },
+      "view_attribution": [
+        332
+      ]
+    },
+    {
+      "title": "series_patient admission flag:saturday: Across all series in the Bar comparing patients by Patient Admission Flag, the highest value overall is 691",
+      "narrative": "Across all series in the Bar comparing patients by Patient Admission Flag, the highest value overall is 691.0 for Saturday in the False category, which is 5% above the overall average. Furthermore, in the Bar comparing patients across Patient Admission Flag, Saturday dominates in 2 out of 2 categories, leading by an average margin of 11.0 (2%). In addition, in the Bar comparing patients across Patient Admission Flag, Saturday consistently performs above average in 2 out of 2 categories, demonstrating reliable high performance.",
+      "charts": [
+        333
+      ],
+      "entities": [
+        "Saturday"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Admission Flag",
+        "category": false,
+        "series_name": "Saturday",
+        "value": 691,
+        "overall_avg": 658.2857142857143,
+        "percentage_above_avg": 4.969618055555547
+      },
+      "view_attribution": [
+        333
+      ]
+    },
+    {
+      "title": "patients:691: Across all series in the Bar comparing patients by Patient Admission Flag, the highest value overall is 691",
+      "narrative": "Across all series in the Bar comparing patients by Patient Admission Flag, the highest value overall is 691.0 for Saturday in the False category, which is 5% above the overall average. Additionally, for the False category in the Bar comparing patients across different Patient Admission Flag, Saturday leads with the highest value at 691.0 among all 7 series.",
+      "charts": [
+        333
+      ],
+      "entities": [
+        "Saturday"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Admission Flag",
+        "category": false,
+        "series_name": "Saturday",
+        "value": 691,
+        "overall_avg": 658.2857142857143,
+        "percentage_above_avg": 4.969618055555547
+      },
+      "view_attribution": [
+        333
+      ]
+    },
+    {
+      "title": "patient race:white: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for M in the White category, which is 195% above the overall average. Furthermore, across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average. In addition, in the Bar comparing patients by Patient Race, the White category shows the largest spread between series with a range of 1291.0 from NC (5.0) to M (1296.0).",
+      "charts": [
+        7,
+        530
+      ],
+      "entities": [
+        "20-29",
+        "White",
+        "M"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "category_spread",
+        "category_spread",
+        "variation"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "White",
+        "series_name": "M",
+        "value": 1296,
+        "overall_avg": 438.85714285714283,
+        "percentage_above_avg": 195.3125
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "series_patient race:m: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for M in the White category, which is 195% above the overall average. Furthermore, in the Bar comparing patients across Patient Race, M dominates in 5 out of 7 categories, leading by an average margin of 45.6 (10%). In addition, in the Bar comparing patients across Patient Race, M consistently performs above average in 7 out of 7 categories, demonstrating reliable high performance.",
+      "charts": [
+        7
+      ],
+      "entities": [
+        "White",
+        "M",
+        "African American"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "White",
+        "series_name": "M",
+        "value": 1296,
+        "overall_avg": 438.85714285714283,
+        "percentage_above_avg": 195.3125
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patients:1296: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for M in the White category, which is 195% above the overall average. Additionally, for the White category in the Bar comparing patients across different Patient Race, M leads with the highest value at 1296.0 among all 3 series.",
+      "charts": [
+        7
+      ],
+      "entities": [
+        "White",
+        "M"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "White",
+        "series_name": "M",
+        "value": 1296,
+        "overall_avg": 438.85714285714283,
+        "percentage_above_avg": 195.3125
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patient age:40-49: In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024",
+      "narrative": "In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024.0, which is 2.5 standard deviations below the mean of 1152.0. Additionally, in the Bar showing patients by Patient Age, 40-49 has the lowest value at 1024.0, which is 11% below the average of 1152.0.",
+      "charts": [
+        8
+      ],
+      "entities": [
+        "40-49"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "40-49",
+        "value": 1024,
+        "avg_value": 1152.0,
+        "z_score": 2.464730824015787,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "patients:1024: In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024",
+      "narrative": "In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024.0, which is 2.5 standard deviations below the mean of 1152.0. Additionally, in the Bar showing patients by Patient Age, 40-49 has the lowest value at 1024.0, which is 11% below the average of 1152.0.",
+      "charts": [
+        8
+      ],
+      "entities": [
+        "40-49"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "40-49",
+        "value": 1024,
+        "avg_value": 1152.0,
+        "z_score": 2.464730824015787,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "patient gender:20-29: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for M in the 20-29 category, which is 63% above the overall average. Furthermore, in the Bar comparing patients by Patient Gender, the 20-29 category shows the largest spread between series with a range of 624.0 from NC (1.0) to M (625.0). In addition, in the Bar comparing patients by Patient Gender, the 20-29 category shows the greatest variation between M, F and NC with a spread of 624.0 between the highest and lowest values.",
+      "charts": [
+        529
+      ],
+      "entities": [
+        "20-29",
+        "M"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "20-29",
+        "series_name": "M",
+        "value": 625,
+        "overall_avg": 384.0,
+        "percentage_above_avg": 62.760416666666664
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "patient gender:40-49: In the Bar showing M across all categories in Patient Gender, 40-49 stands out with a value of 499",
+      "narrative": "In the Bar showing M across all categories in Patient Gender, 40-49 stands out with a value of 499.0, which is 2.3 standard deviations below the mean of 588.1. Furthermore, for the 40-49 category in the Bar comparing patients across different Patient Gender, F leads with the highest value at 521.0 among all 3 series. In addition, in the Bar showing M by Patient Gender, 40-49 has the lowest value at 499.0, which is 15% below the average of 588.1.",
+      "charts": [
+        529
+      ],
+      "entities": [
+        "F",
+        "40-49"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "M",
+        "dimension_name": "Patient Gender",
+        "category": "40-49",
+        "value": 499,
+        "avg_value": 588.125,
+        "z_score": 2.3360230344479067,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "m:499: In the Bar showing M across all categories in Patient Gender, 40-49 stands out with a value of 499",
+      "narrative": "In the Bar showing M across all categories in Patient Gender, 40-49 stands out with a value of 499.0, which is 2.3 standard deviations below the mean of 588.1. Additionally, in the Bar showing M by Patient Gender, 40-49 has the lowest value at 499.0, which is 15% below the average of 588.1.",
+      "charts": [
+        529
+      ],
+      "entities": [
+        "40-49"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "M",
+        "dimension_name": "Patient Gender",
+        "category": "40-49",
+        "value": 499,
+        "avg_value": 588.125,
+        "z_score": 2.3360230344479067,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "patients:625: Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for M in the 20-29 category, which is 63% above the overall average. Additionally, for the 20-29 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 625.0 among all 3 series.",
+      "charts": [
+        529
+      ],
+      "entities": [
+        "20-29",
+        "M"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "20-29",
+        "series_name": "M",
+        "value": 625,
+        "overall_avg": 384.0,
+        "percentage_above_avg": 62.760416666666664
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "series_patient race:20-29: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average. Furthermore, in the Bar comparing patients across Patient Race, 20-29 consistently performs above average in 5 out of 7 categories, demonstrating reliable high performance. In addition, in the Bar comparing patients across Patient Race, 20-29 has the highest average value at 172.4, consistently outperforming other series (overall average: 164.6).",
+      "charts": [
+        530
+      ],
+      "entities": [
+        "Pacific Islander",
+        "Asian",
+        "20-29",
+        "White"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "White",
+        "series_name": "20-29",
+        "value": 348,
+        "overall_avg": 164.57142857142858,
+        "percentage_above_avg": 111.45833333333333
+      },
+      "view_attribution": [
+        530
+      ]
+    },
+    {
+      "title": "patients:348: Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average. Additionally, for the White category in the Bar comparing patients across different Patient Race, 20-29 leads with the highest value at 348.0 among all 8 series.",
+      "charts": [
+        530
+      ],
+      "entities": [
+        "20-29",
+        "White"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "White",
+        "series_name": "20-29",
+        "value": 348,
+        "overall_avg": 164.57142857142858,
+        "percentage_above_avg": 111.45833333333333
+      },
+      "view_attribution": [
+        530
+      ]
+    },
+    {
+      "title": "patient waittime:30: In the Bar showing patients across all categories in Patient Waittime, 30 stands out with a value of 217",
+      "narrative": "In the Bar showing patients across all categories in Patient Waittime, 30 stands out with a value of 217.0, which is 2.4 standard deviations above the mean of 180.7. Additionally, in the Bar showing patients by Patient Waittime, 30 has the highest value at 217.0, which is 20% above the average of 180.7.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        30
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Waittime",
+        "category": 30,
+        "value": 217,
+        "avg_value": 180.7058823529412,
+        "z_score": 2.4085519650180283,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "patients:217: In the Bar showing patients across all categories in Patient Waittime, 30 stands out with a value of 217",
+      "narrative": "In the Bar showing patients across all categories in Patient Waittime, 30 stands out with a value of 217.0, which is 2.4 standard deviations above the mean of 180.7. Additionally, in the Bar showing patients by Patient Waittime, 30 has the highest value at 217.0, which is 20% above the average of 180.7.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        30
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Waittime",
+        "category": 30,
+        "value": 217,
+        "avg_value": 180.7058823529412,
+        "z_score": 2.4085519650180283,
+        "deviation_type": "above"
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "patient waittime:46: In the Bar showing patients across all categories in Patient Waittime, 46 stands out with a value of 135",
+      "narrative": "In the Bar showing patients across all categories in Patient Waittime, 46 stands out with a value of 135.0, which is 3.0 standard deviations below the mean of 180.7. Additionally, in the Bar showing patients by Patient Waittime, 46 has the lowest value at 135.0, which is 25% below the average of 180.7.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        46
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Waittime",
+        "category": 46,
+        "value": 135,
+        "avg_value": 180.7058823529412,
+        "z_score": 3.0331359429805653,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "patients:135: In the Bar showing patients across all categories in Patient Waittime, 46 stands out with a value of 135",
+      "narrative": "In the Bar showing patients across all categories in Patient Waittime, 46 stands out with a value of 135.0, which is 3.0 standard deviations below the mean of 180.7. Additionally, in the Bar showing patients by Patient Waittime, 46 has the lowest value at 135.0, which is 25% below the average of 180.7.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        46
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "outlier",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Waittime",
+        "category": 46,
+        "value": 135,
+        "avg_value": 180.7058823529412,
+        "z_score": 3.0331359429805653,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "patient admission flag:true: Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629",
+      "narrative": "Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the True category, which is 4% below the overall average. Furthermore, for the True category in the Bar comparing patients across different Patient Admission Flag, Saturday leads with the highest value at 686.0 among all 7 series. In addition, in the Bar showing score by Patient Admission Flag, True has the highest value at 5.1, which is 2% above the average of 5.0.",
+      "charts": [
+        333,
+        35,
+        4,
+        34
+      ],
+      "entities": [
+        true,
+        "Saturday",
+        "Wednesday"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme",
+        "extreme",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Admission Flag",
+        "category": true,
+        "series_name": "Wednesday",
+        "value": 629,
+        "overall_avg": 658.2857142857143,
+        "percentage_below_avg": 4.448784722222229
+      },
+      "view_attribution": [
+        333
+      ]
+    },
+    {
+      "title": "patient race:native american/alaska native: Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average. Furthermore, across all series in the Bar comparing patients by Patient Race, the lowest value overall is 50.0 for 70-79 in the Native American/Alaska Native category, which is 70% below the overall average. In addition, for the Native American/Alaska Native category in the Bar comparing patients across different Patient Race, F leads with the highest value at 252.0 among all 3 series.",
+      "charts": [
+        7,
+        530,
+        38
+      ],
+      "entities": [
+        "NC",
+        "70-79",
+        "Native American/Alaska Native",
+        "F",
+        "30-39"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "comparison",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Native American/Alaska Native",
+        "series_name": "NC",
+        "value": 0,
+        "overall_avg": 438.85714285714283,
+        "percentage_below_avg": 100.0
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "admission_time:16-20: Across all series in the Bar comparing patients by admission_time, the lowest value overall is 196",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the lowest value overall is 196.0 for Wednesday in the 16-20 category, which is 11% below the overall average. Furthermore, for the 16-20 category in the Bar comparing patients across different admission_time, Monday leads with the highest value at 227.0 among all 7 series. In addition, in the Bar showing wait time by admission_time, 16-20 has the lowest value at 34.6, which is 2% below the average of 35.3.",
+      "charts": [
+        6,
+        42
+      ],
+      "entities": [
+        "16-20",
+        "Wednesday",
+        "Monday"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "16-20",
+        "series_name": "Wednesday",
+        "value": 196,
+        "overall_avg": 219.42857142857142,
+        "percentage_below_avg": 10.677083333333329
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "patient gender:2024-01: In the Bar comparing patients by Patient Gender, the 2024-01 category shows the largest spread between series with a range of 272",
+      "narrative": "In the Bar comparing patients by Patient Gender, the 2024-01 category shows the largest spread between series with a range of 272.0 from NC (0.0) to M (272.0). Furthermore, in the Bar comparing patients by Patient Gender, the 2024-01 category shows the greatest variation between M, F and NC with a spread of 272.0 between the highest and lowest values. In addition, for the 2024-01 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 272.0 among all 3 series.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "2024-01",
+        "M"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-01",
+        "spread": 272,
+        "max_series": "M",
+        "max_value": 272,
+        "min_series": "NC",
+        "min_value": 0
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patient gender:2024-10: Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0.0 for NC in the 2024-10 category, which is 100% below the overall average. Additionally, for the 2024-10 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 244.0 among all 3 series.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "M",
+        "NC",
+        "2024-10"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-10",
+        "series_name": "NC",
+        "value": 0,
+        "overall_avg": 161.68421052631578,
+        "percentage_below_avg": 100.0
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "series_patient gender:nc: Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0.0 for NC in the 2024-10 category, which is 100% below the overall average. Furthermore, across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1.0 for NC in the 30-39 category, which is 100% below the overall average. In addition, in the Bar comparing patients across Patient Gender, NC consistently performs below average in 19 out of 19 categories, showing consistently low performance.",
+      "charts": [
+        97,
+        529
+      ],
+      "entities": [
+        "30-39",
+        "NC",
+        "2024-10"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "consistent_performance",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-10",
+        "series_name": "NC",
+        "value": 0,
+        "overall_avg": 161.68421052631578,
+        "percentage_below_avg": 100.0
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:0: Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 0.0 for NC in the 2024-10 category, which is 100% below the overall average. Additionally, across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average.",
+      "charts": [
+        97,
+        7
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "NC",
+        "2024-10"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-10",
+        "series_name": "NC",
+        "value": 0,
+        "overall_avg": 161.68421052631578,
+        "percentage_below_avg": 100.0
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patient race:2023-08: Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 20",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 20.0 for Native American/Alaska Native in the 2023-08 category, which is 71% below the overall average. Additionally, for the 2023-08 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 138.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "2023-08",
+        "White"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-08",
+        "series_name": "Native American/Alaska Native",
+        "value": 20,
+        "overall_avg": 69.29323308270676,
+        "percentage_below_avg": 71.13715277777779
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patient race:2024-04: In the Bar comparing patients by Patient Race, the 2024-04 category shows the largest spread between series with a range of 126",
+      "narrative": "In the Bar comparing patients by Patient Race, the 2024-04 category shows the largest spread between series with a range of 126.0 from Native American/Alaska Native (21.0) to White (147.0). Furthermore, in the Bar comparing patients by Patient Race, the 2024-04 category shows the greatest variation across all 7 series with a spread of 126.0 between the highest and lowest values. In addition, for the 2024-04 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 147.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2024-04",
+        "White"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2024-04",
+        "spread": 126,
+        "max_series": "White",
+        "max_value": 147,
+        "min_series": "Native American/Alaska Native",
+        "min_value": 21
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "series_patient race:native american/alaska native: Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 20",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 20.0 for Native American/Alaska Native in the 2023-08 category, which is 71% below the overall average. Furthermore, in the Bar comparing patients across Patient Race, Native American/Alaska Native consistently performs below average in 19 out of 19 categories, showing consistently low performance. In addition, in the Bar comparing patients across Patient Race, Native American/Alaska Native has the lowest average value at 26.2, consistently underperforming other series (overall average: 69.3).",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "2023-08"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-08",
+        "series_name": "Native American/Alaska Native",
+        "value": 20,
+        "overall_avg": 69.29323308270676,
+        "percentage_below_avg": 71.13715277777779
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patient age:2023-04: Across all series in the Bar comparing patients by Patient Age, the lowest value overall is 36",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the lowest value overall is 36.0 for 40-49 in the 2023-04 category, which is 41% below the overall average. Furthermore, in the Bar comparing patients by Patient Age, the 2023-04 category shows the largest spread between series with a range of 34.0 from 40-49 (36.0) to 0-9 (70.0). In addition, in the Bar comparing patients by Patient Age, the 2023-04 category shows the greatest variation across all 8 series with a spread of 34.0 between the highest and lowest values.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "0-9",
+        "2023-04",
+        "40-49"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-04",
+        "series_name": "40-49",
+        "value": 36,
+        "overall_avg": 60.63157894736842,
+        "percentage_below_avg": 40.62499999999999
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_patient age:40-49: Across all series in the Bar comparing patients by Patient Age, the lowest value overall is 36",
+      "narrative": "Across all series in the Bar comparing patients by Patient Age, the lowest value overall is 36.0 for 40-49 in the 2023-04 category, which is 41% below the overall average. Furthermore, in the Bar comparing patients across Patient Age, 40-49 consistently performs below average in 17 out of 19 categories, showing consistently low performance. In addition, in the Bar comparing patients across Patient Age, 40-49 has the lowest average value at 53.9, consistently underperforming other series (overall average: 60.6).",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-04",
+        "40-49"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-04",
+        "series_name": "40-49",
+        "value": 36,
+        "overall_avg": 60.63157894736842,
+        "percentage_below_avg": 40.62499999999999
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "admission_time:2023-06: Across all series in the Bar comparing patients by admission_time, the lowest value overall is 58",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the lowest value overall is 58.0 for 16-20 in the 2023-06 category, which is 28% below the overall average. Additionally, for the 2023-06 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 93.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "16-20",
+        "2023-06",
+        "00-04"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-06",
+        "series_name": "16-20",
+        "value": 58,
+        "overall_avg": 80.84210526315789,
+        "percentage_below_avg": 28.255208333333332
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_time:16-20: Across all series in the Bar comparing patients by admission_time, the lowest value overall is 58",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the lowest value overall is 58.0 for 16-20 in the 2023-06 category, which is 28% below the overall average. Furthermore, across all series in the Bar comparing patients by admission_time, the lowest value overall is 744.0 for 16-20 in the False category, which is 3% below the overall average. In addition, in the Bar comparing patients across admission_time, 16-20 consistently performs below average in 2 out of 2 categories, showing consistently low performance.",
+      "charts": [
+        100,
+        332
+      ],
+      "entities": [
+        "16-20",
+        "2024-06",
+        "2023-06"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "consistent_performance",
+        "comparison",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-06",
+        "series_name": "16-20",
+        "value": 58,
+        "overall_avg": 80.84210526315789,
+        "percentage_below_avg": 28.255208333333332
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "admission_day:2023-12: Across all series in the Bar comparing patients by admission_day, the lowest value overall is 47",
+      "narrative": "Across all series in the Bar comparing patients by admission_day, the lowest value overall is 47.0 for Wednesday in the 2023-12 category, which is 32% below the overall average. Furthermore, in the Bar comparing patients by admission_day, the 2023-12 category shows the largest spread between series with a range of 51.0 from Wednesday (47.0) to Friday (98.0). In addition, in the Bar comparing patients by admission_day, the 2023-12 category shows the greatest variation across all 7 series with a spread of 51.0 between the highest and lowest values.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Wednesday",
+        "Friday",
+        "2023-12"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-12",
+        "series_name": "Wednesday",
+        "value": 47,
+        "overall_avg": 69.29323308270676,
+        "percentage_below_avg": 32.17230902777777
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_day:wednesday: Across all series in the Bar comparing patients by admission_day, the lowest value overall is 47",
+      "narrative": "Across all series in the Bar comparing patients by admission_day, the lowest value overall is 47.0 for Wednesday in the 2023-12 category, which is 32% below the overall average. Furthermore, for the 2023-10 category in the Bar comparing patients across different admission_day, Wednesday leads with the highest value at 78.0 among all 7 series. In addition, in the Bar comparing patients across admission_day, Wednesday has the lowest average value at 66.3, consistently underperforming other series (overall average: 69.3).",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Wednesday",
+        "2023-12",
+        "2023-10"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-12",
+        "series_name": "Wednesday",
+        "value": 47,
+        "overall_avg": 69.29323308270676,
+        "percentage_below_avg": 32.17230902777777
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_time:wednesday: Across all series in the Bar comparing patients by admission_time, the lowest value overall is 196",
+      "narrative": "Across all series in the Bar comparing patients by admission_time, the lowest value overall is 196.0 for Wednesday in the 16-20 category, which is 11% below the overall average. Furthermore, in the Bar comparing patients across admission_time, Wednesday consistently performs below average in 5 out of 6 categories, showing consistently low performance. In addition, for the 12-16 category in the Bar comparing patients across different admission_time, Wednesday leads with the highest value at 234.0 among all 7 series.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        "16-20",
+        "Wednesday",
+        "12-16"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "comparison",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "16-20",
+        "series_name": "Wednesday",
+        "value": 196,
+        "overall_avg": 219.42857142857142,
+        "percentage_below_avg": 10.677083333333329
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_patient admission flag:wednesday: Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629",
+      "narrative": "Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the True category, which is 4% below the overall average. Furthermore, in the Bar comparing patients across Patient Admission Flag, Wednesday consistently performs below average in 2 out of 2 categories, showing consistently low performance. In addition, in the Bar comparing patients across Patient Admission Flag, Wednesday has the lowest average value at 630.0, consistently underperforming other series (overall average: 658.3).",
+      "charts": [
+        333
+      ],
+      "entities": [
+        true,
+        "Wednesday"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Admission Flag",
+        "category": true,
+        "series_name": "Wednesday",
+        "value": 629,
+        "overall_avg": 658.2857142857143,
+        "percentage_below_avg": 4.448784722222229
+      },
+      "view_attribution": [
+        333
+      ]
+    },
+    {
+      "title": "series_patient race:nc: Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average. Furthermore, in the Bar comparing patients across Patient Race, NC consistently performs below average in 7 out of 7 categories, showing consistently low performance. In addition, in the Bar comparing patients across Patient Race, NC has the lowest average value at 3.4, consistently underperforming other series (overall average: 438.9).",
+      "charts": [
+        7
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "NC"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Native American/Alaska Native",
+        "series_name": "NC",
+        "value": 0,
+        "overall_avg": 438.85714285714283,
+        "percentage_below_avg": 100.0
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patient gender:30-39: Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1.0 for NC in the 30-39 category, which is 100% below the overall average. Additionally, for the 30-39 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 624.0 among all 3 series.",
+      "charts": [
+        529
+      ],
+      "entities": [
+        "M",
+        "30-39",
+        "NC"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "30-39",
+        "series_name": "NC",
+        "value": 1,
+        "overall_avg": 384.0,
+        "percentage_below_avg": 99.73958333333334
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "series_patient race:70-79: Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 50",
+      "narrative": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 50.0 for 70-79 in the Native American/Alaska Native category, which is 70% below the overall average. Furthermore, in the Bar comparing patients across Patient Race, 70-79 consistently performs below average in 5 out of 7 categories, showing consistently low performance. In addition, for the Two or More Races category in the Bar comparing patients across different Patient Race, 70-79 leads with the highest value at 228.0 among all 8 series.",
+      "charts": [
+        530
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "Two or More Races",
+        "70-79"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Native American/Alaska Native",
+        "series_name": "70-79",
+        "value": 50,
+        "overall_avg": 164.57142857142858,
+        "percentage_below_avg": 69.61805555555556
+      },
+      "view_attribution": [
+        530
+      ]
+    },
+    {
+      "title": "series_patient gender:f: In the Bar comparing patients across Patient Gender, F consistently performs above average in 19 out of 19 categories, demonstrating reliable high performance",
+      "narrative": "In the Bar comparing patients across Patient Gender, F consistently performs above average in 19 out of 19 categories, demonstrating reliable high performance. Furthermore, in the Bar comparing patients across Patient Gender, F consistently performs above average in 8 out of 8 categories, demonstrating reliable high performance. In addition, for the 2023-05 category in the Bar comparing patients across different Patient Gender, F leads with the highest value at 261.0 among all 3 series.",
+      "charts": [
+        97,
+        529
+      ],
+      "entities": [
+        "2023-10",
+        "2024-04",
+        "F",
+        "2023-05"
+      ],
+      "importance": 0.88,
+      "fact_types": [
+        "consistent_performance",
+        "consistent_performance",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "series_name": "F",
+        "above_avg_count": 19,
+        "total_categories": 19
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "series_patient race:f: In the Bar comparing patients across Patient Race, F consistently performs above average in 7 out of 7 categories, demonstrating reliable high performance",
+      "narrative": "In the Bar comparing patients across Patient Race, F consistently performs above average in 7 out of 7 categories, demonstrating reliable high performance. Furthermore, for the Native American/Alaska Native category in the Bar comparing patients across different Patient Race, F leads with the highest value at 252.0 among all 3 series.",
+      "charts": [
+        7
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "F",
+        "Pacific Islander"
+      ],
+      "importance": 0.88,
+      "fact_types": [
+        "consistent_performance",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "series_name": "F",
+        "above_avg_count": 7,
+        "total_categories": 7
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "series_patient race:30-39: In the Bar comparing patients across Patient Race, 30-39 consistently performs above average in 5 out of 7 categories, demonstrating reliable high performance",
+      "narrative": "In the Bar comparing patients across Patient Race, 30-39 consistently performs above average in 5 out of 7 categories, demonstrating reliable high performance. Furthermore, for the African American category in the Bar comparing patients across different Patient Race, 30-39 leads with the highest value at 267.0 among all 8 series.",
+      "charts": [
+        530
+      ],
+      "entities": [
+        "Native American/Alaska Native",
+        "30-39",
+        "African American"
+      ],
+      "importance": 0.88,
+      "fact_types": [
+        "consistent_performance",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "series_name": "30-39",
+        "above_avg_count": 5,
+        "total_categories": 7
+      },
+      "view_attribution": [
+        530
+      ]
+    },
+    {
+      "title": "series_patient age:20-29: In the Bar comparing patients across Patient Age, 20-29 has the highest average value at 63",
+      "narrative": "In the Bar comparing patients across Patient Age, 20-29 has the highest average value at 63.5, consistently outperforming other series (overall average: 60.6). Furthermore, for the 2023-06 category in the Bar comparing patients across different Patient Age, 20-29 leads with the highest value at 75.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-07",
+        "2024-04",
+        "20-29",
+        "2024-05",
+        "2023-06"
+      ],
+      "importance": 0.85,
+      "fact_types": [
+        "cross_series_avg",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "series_name": "20-29",
+        "avg_value": 63.526315789473685,
+        "overall_avg": 60.63157894736842
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_admission_day:saturday: In the Bar comparing patients across admission_day, Saturday has the highest average value at 72",
+      "narrative": "In the Bar comparing patients across admission_day, Saturday has the highest average value at 72.5, consistently outperforming other series (overall average: 69.3). Furthermore, for the 2023-04 category in the Bar comparing patients across different admission_day, Saturday leads with the highest value at 85.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2023-08",
+        "Saturday",
+        "2023-04",
+        "2024-06",
+        "2024-08"
+      ],
+      "importance": 0.85,
+      "fact_types": [
+        "cross_series_avg",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "series_name": "Saturday",
+        "avg_value": 72.47368421052632,
+        "overall_avg": 69.29323308270676
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_patient race:40-49: In the Bar comparing patients across Patient Race, 40-49 consistently performs below average in 6 out of 7 categories, showing consistently low performance",
+      "narrative": "In the Bar comparing patients across Patient Race, 40-49 consistently performs below average in 6 out of 7 categories, showing consistently low performance. Additionally, in the Bar comparing patients across Patient Race, 40-49 has the lowest average value at 146.3, consistently underperforming other series (overall average: 164.6).",
+      "charts": [
+        530
+      ],
+      "entities": [
+        "40-49"
+      ],
+      "importance": 0.85,
+      "fact_types": [
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "series_name": "40-49",
+        "below_avg_count": 6,
+        "total_categories": 7
+      },
+      "view_attribution": [
+        530
+      ]
+    },
+    {
+      "title": "patient race:pacific islander: For the Pacific Islander category in the Bar comparing patients across different Patient Race, F leads with the highest value at 276",
+      "narrative": "For the Pacific Islander category in the Bar comparing patients across different Patient Race, F leads with the highest value at 276.0 among all 3 series. Furthermore, for the Pacific Islander category in the Bar comparing patients across different Patient Race, 20-29 leads with the highest value at 76.0 among all 8 series. In addition, in the Bar showing score by Patient Race, Pacific Islander has the highest value at 5.3, which is 6% above the average of 5.0.",
+      "charts": [
+        7,
+        530,
+        39,
+        38
+      ],
+      "entities": [
+        "F",
+        "20-29",
+        "Pacific Islander"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "extreme",
+        "extreme",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Pacific Islander",
+        "series_name": "F",
+        "value": 276,
+        "series_count": 3
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patient race:two or more races: For the Two or More Races category in the Bar comparing patients across different Patient Race, M leads with the highest value at 788",
+      "narrative": "For the Two or More Races category in the Bar comparing patients across different Patient Race, M leads with the highest value at 788.0 among all 3 series. Furthermore, for the Two or More Races category in the Bar comparing patients across different Patient Race, 70-79 leads with the highest value at 228.0 among all 8 series. In addition, in the Bar showing score by Patient Race, Two or More Races has the lowest value at 4.8, which is 4% below the average of 5.0.",
+      "charts": [
+        7,
+        530,
+        39
+      ],
+      "entities": [
+        "Two or More Races",
+        "M",
+        "70-79"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Two or More Races",
+        "series_name": "M",
+        "value": 788,
+        "series_count": 3
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "admission_time:08-12: For the 08-12 category in the Bar comparing patients across different admission_time, Saturday leads with the highest value at 233",
+      "narrative": "For the 08-12 category in the Bar comparing patients across different admission_time, Saturday leads with the highest value at 233.0 among all 7 series. Furthermore, in the Bar showing wait time by admission_time, 08-12 has the highest value at 36.0, which is 2% above the average of 35.3.",
+      "charts": [
+        6,
+        42,
+        43
+      ],
+      "entities": [
+        "Saturday",
+        "08-12"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "08-12",
+        "series_name": "Saturday",
+        "value": 233,
+        "series_count": 7
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "admission_time:04-08: For the 04-08 category in the Bar comparing patients across different admission_time, Tuesday leads with the highest value at 245",
+      "narrative": "For the 04-08 category in the Bar comparing patients across different admission_time, Tuesday leads with the highest value at 245.0 among all 7 series. Additionally, in the Bar showing score by admission_time, 04-08 has the lowest value at 4.8, which is 3% below the average of 5.0.",
+      "charts": [
+        6,
+        43
+      ],
+      "entities": [
+        "Tuesday",
+        "04-08"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "04-08",
+        "series_name": "Tuesday",
+        "value": 245,
+        "series_count": 7
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "patient gender:2023-05: For the 2023-05 category in the Bar comparing patients across different Patient Gender, F leads with the highest value at 261",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different Patient Gender, F leads with the highest value at 261.0 among all 3 series. Additionally, in the Bar showing M by Patient Gender, 2023-05 has the lowest value at 218.0, which is 12% below the average of 247.6.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "F",
+        "2023-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2023-05",
+        "series_name": "F",
+        "value": 261,
+        "series_count": 3
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:243: For the 2023-04 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 243",
+      "narrative": "For the 2023-04 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 243.0 among all 3 series. Additionally, for the 2024-06 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 243.0 among all 3 series.",
+      "charts": [
+        97
+      ],
+      "entities": [
+        "2024-06",
+        "2023-04",
+        "M"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2023-04",
+        "series_name": "M",
+        "value": 243,
+        "series_count": 3
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:237: For the 2023-11 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 237",
+      "narrative": "For the 2023-11 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 237.0 among all 3 series. Furthermore, for the 2024-09 category in the Bar comparing patients across different Patient Gender, F leads with the highest value at 237.0 among all 3 series.",
+      "charts": [
+        97,
+        6
+      ],
+      "entities": [
+        "Saturday",
+        "F",
+        "20-00",
+        "M",
+        "2023-11",
+        "2024-09"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2023-11",
+        "series_name": "M",
+        "value": 237,
+        "series_count": 3
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:234: For the 2024-02 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 234",
+      "narrative": "For the 2024-02 category in the Bar comparing patients across different Patient Gender, M leads with the highest value at 234.0 among all 3 series. Additionally, for the 12-16 category in the Bar comparing patients across different admission_time, Wednesday leads with the highest value at 234.0 among all 7 series.",
+      "charts": [
+        97,
+        6
+      ],
+      "entities": [
+        "2024-02",
+        "12-16",
+        "Wednesday",
+        "M"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "2024-02",
+        "series_name": "M",
+        "value": 234,
+        "series_count": 3
+      },
+      "view_attribution": [
+        97
+      ]
+    },
+    {
+      "title": "patients:140: For the 2023-05 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 140",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 140.0 among all 7 series. Additionally, for the 2024-10 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 140.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "White",
+        "2023-05",
+        "2024-10"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-05",
+        "series_name": "White",
+        "value": 140,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:138: For the 2023-08 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 138",
+      "narrative": "For the 2023-08 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 138.0 among all 7 series. Furthermore, for the 2024-05 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 138.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2023-08",
+        "2024-08",
+        "White",
+        "2024-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-08",
+        "series_name": "White",
+        "value": 138,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:128: For the 2023-10 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 128",
+      "narrative": "For the 2023-10 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 128.0 among all 7 series. Additionally, for the 2023-11 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 128.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "White",
+        "2023-10",
+        "2023-11"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-10",
+        "series_name": "White",
+        "value": 128,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:146: For the 2023-12 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 146",
+      "narrative": "For the 2023-12 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 146.0 among all 7 series. Additionally, for the 2024-07 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 146.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "White",
+        "2023-12",
+        "2024-07"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2023-12",
+        "series_name": "White",
+        "value": 146,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:124: For the 2024-02 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 124",
+      "narrative": "For the 2024-02 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 124.0 among all 7 series. Additionally, for the 2024-03 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 124.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2024-02",
+        "White",
+        "2024-03"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2024-02",
+        "series_name": "White",
+        "value": 124,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "patients:126: For the 2024-06 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 126",
+      "narrative": "For the 2024-06 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 126.0 among all 7 series. Additionally, for the 2024-09 category in the Bar comparing patients across different Patient Race, White leads with the highest value at 126.0 among all 7 series.",
+      "charts": [
+        98
+      ],
+      "entities": [
+        "2024-06",
+        "White",
+        "2024-09"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "2024-06",
+        "series_name": "White",
+        "value": 126,
+        "series_count": 7
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "series_patient age:0-9: For the 2023-04 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 70",
+      "narrative": "For the 2023-04 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 70.0 among all 8 series. Furthermore, for the 2024-01 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 76.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "0-9",
+        "2023-04",
+        "2024-10",
+        "2024-01"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-04",
+        "series_name": "0-9",
+        "value": 70,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:70: For the 2023-04 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 70",
+      "narrative": "For the 2023-04 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 70.0 among all 8 series. Additionally, for the 2023-10 category in the Bar comparing patients across different Patient Age, 70-79 leads with the highest value at 70.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "0-9",
+        "2023-04",
+        "2023-10",
+        "70-79"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-04",
+        "series_name": "0-9",
+        "value": 70,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_patient age:30-39: For the 2023-05 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 73",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 73.0 among all 8 series. Furthermore, for the 2023-12 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 72.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-12",
+        "2024-02",
+        "30-39",
+        "2023-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-05",
+        "series_name": "30-39",
+        "value": 73,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:73: For the 2023-05 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 73",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 73.0 among all 8 series. Furthermore, for the 2023-08 category in the Bar comparing patients across different Patient Age, 10-19 leads with the highest value at 73.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-08",
+        "2024-07",
+        "10-19",
+        "30-39",
+        "2023-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-05",
+        "series_name": "30-39",
+        "value": 73,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_patient age:10-19: For the 2023-08 category in the Bar comparing patients across different Patient Age, 10-19 leads with the highest value at 73",
+      "narrative": "For the 2023-08 category in the Bar comparing patients across different Patient Age, 10-19 leads with the highest value at 73.0 among all 8 series. Furthermore, for the 2023-11 category in the Bar comparing patients across different Patient Age, 10-19 leads with the highest value at 65.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2023-08",
+        "2024-07",
+        "10-19",
+        "2023-11"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-08",
+        "series_name": "10-19",
+        "value": 73,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "series_patient age:70-79: For the 2023-10 category in the Bar comparing patients across different Patient Age, 70-79 leads with the highest value at 70",
+      "narrative": "For the 2023-10 category in the Bar comparing patients across different Patient Age, 70-79 leads with the highest value at 70.0 among all 8 series. Additionally, for the 2024-06 category in the Bar comparing patients across different Patient Age, 70-79 leads with the highest value at 72.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2024-06",
+        "2023-10",
+        "70-79"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-10",
+        "series_name": "70-79",
+        "value": 70,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:72: For the 2023-12 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 72",
+      "narrative": "For the 2023-12 category in the Bar comparing patients across different Patient Age, 30-39 leads with the highest value at 72.0 among all 8 series. Additionally, for the 2024-06 category in the Bar comparing patients across different Patient Age, 70-79 leads with the highest value at 72.0 among all 8 series.",
+      "charts": [
+        99
+      ],
+      "entities": [
+        "2024-06",
+        "30-39",
+        "2023-12",
+        "70-79"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2023-12",
+        "series_name": "30-39",
+        "value": 72,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:76: For the 2024-01 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 76",
+      "narrative": "For the 2024-01 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 76.0 among all 8 series. Additionally, for the Pacific Islander category in the Bar comparing patients across different Patient Race, 20-29 leads with the highest value at 76.0 among all 8 series.",
+      "charts": [
+        99,
+        530
+      ],
+      "entities": [
+        "0-9",
+        "2024-01",
+        "20-29",
+        "Pacific Islander"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-01",
+        "series_name": "0-9",
+        "value": 76,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:74: For the 2024-03 category in the Bar comparing patients across different Patient Age, 60-69 leads with the highest value at 74",
+      "narrative": "For the 2024-03 category in the Bar comparing patients across different Patient Age, 60-69 leads with the highest value at 74.0 among all 8 series. Furthermore, for the 2024-05 category in the Bar comparing patients across different Patient Age, 20-29 leads with the highest value at 74.0 among all 8 series.",
+      "charts": [
+        99,
+        530
+      ],
+      "entities": [
+        "2024-03",
+        "Native American/Alaska Native",
+        "20-29",
+        "30-39",
+        "2024-05",
+        "60-69"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-03",
+        "series_name": "60-69",
+        "value": 74,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "patients:77: For the 2024-10 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 77",
+      "narrative": "For the 2024-10 category in the Bar comparing patients across different Patient Age, 0-9 leads with the highest value at 77.0 among all 8 series. Furthermore, for the 2023-08 category in the Bar comparing patients across different admission_day, Saturday leads with the highest value at 77.0 among all 7 series.",
+      "charts": [
+        99,
+        101
+      ],
+      "entities": [
+        "0-9",
+        "2023-08",
+        "Saturday",
+        "2024-10",
+        "2024-02",
+        "Thursday"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "2024-10",
+        "series_name": "0-9",
+        "value": 77,
+        "series_count": 8
+      },
+      "view_attribution": [
+        99
+      ]
+    },
+    {
+      "title": "admission_time:2023-12: For the 2023-12 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 94",
+      "narrative": "For the 2023-12 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 94.0 among all 6 series. Additionally, in the Bar showing 08-12 by admission_time, 2023-12 has the lowest value at 66.0, which is 18% below the average of 80.3.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "20-00",
+        "2023-12"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-12",
+        "series_name": "20-00",
+        "value": 94,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_time:20-00: For the 2023-04 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 87",
+      "narrative": "For the 2023-04 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 87.0 among all 6 series. Furthermore, for the 2023-08 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 91.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "2023-08",
+        "2023-04",
+        "2023-12",
+        "2024-04",
+        "20-00",
+        "2024-02"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-04",
+        "series_name": "20-00",
+        "value": 87,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:87: For the 2023-04 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 87",
+      "narrative": "For the 2023-04 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 87.0 among all 6 series. Furthermore, for the 2024-09 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 87.0 among all 6 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "2024-06",
+        "2023-04",
+        "Saturday",
+        "20-00",
+        "2024-09"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-04",
+        "series_name": "20-00",
+        "value": 87,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:97: For the 2023-05 category in the Bar comparing patients across different admission_time, 04-08 leads with the highest value at 97",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different admission_time, 04-08 leads with the highest value at 97.0 among all 6 series. Additionally, for the 2024-03 category in the Bar comparing patients across different admission_time, 08-12 leads with the highest value at 97.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "08-12",
+        "04-08",
+        "2024-03",
+        "2023-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-05",
+        "series_name": "04-08",
+        "value": 97,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_time:00-04: For the 2023-06 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 93",
+      "narrative": "For the 2023-06 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 93.0 among all 6 series. Additionally, for the 2023-07 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 95.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "2023-07",
+        "2023-06",
+        "00-04"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-06",
+        "series_name": "00-04",
+        "value": 93,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:93: For the 2023-06 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 93",
+      "narrative": "For the 2023-06 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 93.0 among all 6 series. Furthermore, for the 2023-09 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 93.0 among all 6 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "12-16",
+        "2023-09",
+        "Friday",
+        "2023-06",
+        "00-04"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-06",
+        "series_name": "00-04",
+        "value": 93,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:95: For the 2023-07 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 95",
+      "narrative": "For the 2023-07 category in the Bar comparing patients across different admission_time, 00-04 leads with the highest value at 95.0 among all 6 series. Additionally, for the 2024-01 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 95.0 among all 7 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "2024-01",
+        "Monday",
+        "2023-07",
+        "00-04"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-07",
+        "series_name": "00-04",
+        "value": 95,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:91: For the 2023-08 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 91",
+      "narrative": "For the 2023-08 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 91.0 among all 6 series. Additionally, for the 2024-04 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 91.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "2024-04",
+        "20-00",
+        "2023-08"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-08",
+        "series_name": "20-00",
+        "value": 91,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_time:12-16: For the 2023-09 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 93",
+      "narrative": "For the 2023-09 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 93.0 among all 6 series. Furthermore, for the 2023-11 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 89.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "12-16",
+        "2024-07",
+        "2023-09",
+        "2023-11"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-09",
+        "series_name": "12-16",
+        "value": 93,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:92: For the 2023-10 category in the Bar comparing patients across different admission_time, 08-12 leads with the highest value at 92",
+      "narrative": "For the 2023-10 category in the Bar comparing patients across different admission_time, 08-12 leads with the highest value at 92.0 among all 6 series. Additionally, for the 2024-06 category in the Bar comparing patients across different admission_time, 16-20 leads with the highest value at 92.0 among all 6 series.",
+      "charts": [
+        100
+      ],
+      "entities": [
+        "16-20",
+        "2024-06",
+        "2023-10",
+        "08-12"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-10",
+        "series_name": "08-12",
+        "value": 92,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:94: For the 2023-12 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 94",
+      "narrative": "For the 2023-12 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 94.0 among all 6 series. Furthermore, for the 2023-05 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 94.0 among all 7 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "Tuesday",
+        "2023-12",
+        "20-00",
+        "2024-03",
+        "2023-05",
+        "Sunday"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2023-12",
+        "series_name": "20-00",
+        "value": 94,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:84: For the 2024-02 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 84",
+      "narrative": "For the 2024-02 category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 84.0 among all 6 series. Additionally, for the 2024-09 category in the Bar comparing patients across different admission_day, Sunday leads with the highest value at 84.0 among all 7 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "2024-02",
+        "20-00",
+        "2024-09",
+        "Sunday"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2024-02",
+        "series_name": "20-00",
+        "value": 84,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "patients:98: For the 2024-07 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 98",
+      "narrative": "For the 2024-07 category in the Bar comparing patients across different admission_time, 12-16 leads with the highest value at 98.0 among all 6 series. Additionally, for the 2023-12 category in the Bar comparing patients across different admission_day, Friday leads with the highest value at 98.0 among all 7 series.",
+      "charts": [
+        100,
+        101
+      ],
+      "entities": [
+        "Friday",
+        "12-16",
+        "2023-12",
+        "2024-07"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "2024-07",
+        "series_name": "12-16",
+        "value": 98,
+        "series_count": 6
+      },
+      "view_attribution": [
+        100
+      ]
+    },
+    {
+      "title": "series_admission_day:tuesday: For the 2023-05 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 94",
+      "narrative": "For the 2023-05 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 94.0 among all 7 series. Furthermore, for the 2024-04 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 82.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "Tuesday",
+        "2024-07",
+        "2024-10",
+        "2024-04",
+        "2023-05"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-05",
+        "series_name": "Tuesday",
+        "value": 94,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_day:monday: For the 2023-07 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 82",
+      "narrative": "For the 2023-07 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 82.0 among all 7 series. Additionally, for the 2024-01 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 95.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2024-01",
+        "Monday",
+        "2023-07"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-07",
+        "series_name": "Monday",
+        "value": 82,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "patients:82: For the 2023-07 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 82",
+      "narrative": "For the 2023-07 category in the Bar comparing patients across different admission_day, Monday leads with the highest value at 82.0 among all 7 series. Additionally, for the 2024-04 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 82.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2024-04",
+        "Tuesday",
+        "Monday",
+        "2023-07"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-07",
+        "series_name": "Monday",
+        "value": 82,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_day:friday: For the 2023-09 category in the Bar comparing patients across different admission_day, Friday leads with the highest value at 93",
+      "narrative": "For the 2023-09 category in the Bar comparing patients across different admission_day, Friday leads with the highest value at 93.0 among all 7 series. Furthermore, for the 2023-12 category in the Bar comparing patients across different admission_day, Friday leads with the highest value at 98.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2024-05",
+        "2023-12",
+        "2023-09",
+        "Friday"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2023-09",
+        "series_name": "Friday",
+        "value": 93,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "series_admission_day:sunday: For the 2024-03 category in the Bar comparing patients across different admission_day, Sunday leads with the highest value at 94",
+      "narrative": "For the 2024-03 category in the Bar comparing patients across different admission_day, Sunday leads with the highest value at 94.0 among all 7 series. Additionally, for the 2024-09 category in the Bar comparing patients across different admission_day, Sunday leads with the highest value at 84.0 among all 7 series.",
+      "charts": [
+        101
+      ],
+      "entities": [
+        "2024-03",
+        "2024-09",
+        "Sunday"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2024-03",
+        "series_name": "Sunday",
+        "value": 94,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    },
+    {
+      "title": "admission_time:12-16: For the 12-16 category in the Bar comparing patients across different admission_time, Wednesday leads with the highest value at 234",
+      "narrative": "For the 12-16 category in the Bar comparing patients across different admission_time, Wednesday leads with the highest value at 234.0 among all 7 series. Additionally, in the Bar showing Wednesday by admission_time, 12-16 has the highest value at 234.0, which is 11% above the average of 210.0.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        "Wednesday",
+        "12-16"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": "12-16",
+        "series_name": "Wednesday",
+        "value": 234,
+        "series_count": 7
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "admission_time:true: For the True category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 794",
+      "narrative": "For the True category in the Bar comparing patients across different admission_time, 20-00 leads with the highest value at 794.0 among all 6 series. Additionally, in the Bar showing 08-12 by admission_time, True has the lowest value at 762.0, which is 0% below the average of 763.0.",
+      "charts": [
+        332
+      ],
+      "entities": [
+        true,
+        "20-00"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_time",
+        "category": true,
+        "series_name": "20-00",
+        "value": 794,
+        "series_count": 6
+      },
+      "view_attribution": [
+        332
+      ]
+    },
+    {
+      "title": "patient race:african american: For the African American category in the Bar comparing patients across different Patient Race, M leads with the highest value at 1028",
+      "narrative": "For the African American category in the Bar comparing patients across different Patient Race, M leads with the highest value at 1028.0 among all 3 series. Additionally, for the African American category in the Bar comparing patients across different Patient Race, 30-39 leads with the highest value at 267.0 among all 8 series.",
+      "charts": [
+        7,
+        530
+      ],
+      "entities": [
+        "30-39",
+        "M",
+        "African American"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "African American",
+        "series_name": "M",
+        "value": 1028,
+        "series_count": 3
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patient race:asian: For the Asian category in the Bar comparing patients across different Patient Race, M leads with the highest value at 544",
+      "narrative": "For the Asian category in the Bar comparing patients across different Patient Race, M leads with the highest value at 544.0 among all 3 series. Additionally, for the Asian category in the Bar comparing patients across different Patient Race, 20-29 leads with the highest value at 161.0 among all 8 series.",
+      "charts": [
+        7,
+        530
+      ],
+      "entities": [
+        "Asian",
+        "20-29",
+        "M"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Asian",
+        "series_name": "M",
+        "value": 544,
+        "series_count": 3
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "patient race:declined to identify: For the Declined to Identify category in the Bar comparing patients across different Patient Race, M leads with the highest value at 531",
+      "narrative": "For the Declined to Identify category in the Bar comparing patients across different Patient Race, M leads with the highest value at 531.0 among all 3 series. Additionally, for the Declined to Identify category in the Bar comparing patients across different Patient Race, 0-9 leads with the highest value at 139.0 among all 8 series.",
+      "charts": [
+        7,
+        530
+      ],
+      "entities": [
+        "0-9",
+        "Declined to Identify",
+        "M"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "category": "Declined to Identify",
+        "series_name": "M",
+        "value": 531,
+        "series_count": 3
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "admission_date:2024-02: In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36",
+      "narrative": "In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36.7. However, in the Line of False over admission_date, the trough is at 2024-02 with value 207.0.",
+      "charts": [
+        2,
+        1
+      ],
+      "entities": [
+        "2024-02"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "wait time",
+        "time_dimension": "admission_date",
+        "time_point": "2024-02",
+        "value": 36.67053364269142
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "admission:254: At 2023-06 in the Line tracking admission over admission_date, False leads all other series with the highest value at 254",
+      "narrative": "At 2023-06 in the Line tracking admission over admission_date, False leads all other series with the highest value at 254.0. Additionally, at 2023-10 in the Line tracking admission over admission_date, False leads all other series with the highest value at 254.0.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "2023-10",
+        "2023-06"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "admission",
+        "time_dimension": "admission_date",
+        "time_point": "2023-06",
+        "series_name": false,
+        "value": 254
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "series_admission_date:true: At 2023-07 in the Line tracking admission over admission_date, True leads all other series with the highest value at 236",
+      "narrative": "At 2023-07 in the Line tracking admission over admission_date, True leads all other series with the highest value at 236.0. Furthermore, at 2023-09 in the Line tracking admission over admission_date, True leads all other series with the highest value at 249.0.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        true,
+        "2023-12",
+        "2023-07",
+        "2024-01",
+        "2023-09",
+        "2024-02"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "admission",
+        "time_dimension": "admission_date",
+        "time_point": "2023-07",
+        "series_name": true,
+        "value": 236
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "admission:236: At 2023-07 in the Line tracking admission over admission_date, True leads all other series with the highest value at 236",
+      "narrative": "At 2023-07 in the Line tracking admission over admission_date, True leads all other series with the highest value at 236.0. Additionally, at 2024-09 in the Line tracking admission over admission_date, True leads all other series with the highest value at 236.0.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        true,
+        "2023-07",
+        "2024-09"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "admission",
+        "time_dimension": "admission_date",
+        "time_point": "2023-07",
+        "series_name": true,
+        "value": 236
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "admission:250: At 2023-12 in the Line tracking admission over admission_date, True leads all other series with the highest value at 250",
+      "narrative": "At 2023-12 in the Line tracking admission over admission_date, True leads all other series with the highest value at 250.0. Additionally, at 2024-06 in the Line tracking admission over admission_date, False leads all other series with the highest value at 250.0.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        true,
+        "2024-06",
+        "2023-12"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "admission",
+        "time_dimension": "admission_date",
+        "time_point": "2023-12",
+        "series_name": true,
+        "value": 250
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "admission:266: At 2024-05 in the Line tracking admission over admission_date, True leads all other series with the highest value at 266",
+      "narrative": "At 2024-05 in the Line tracking admission over admission_date, True leads all other series with the highest value at 266.0. Additionally, at 2024-07 in the Line tracking admission over admission_date, True leads all other series with the highest value at 266.0.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        true,
+        "2024-07",
+        "2024-05"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "admission",
+        "time_dimension": "admission_date",
+        "time_point": "2024-05",
+        "series_name": true,
+        "value": 266
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "patient gender:nc: In the Bar showing wait time by Patient Gender, NC has the highest value at 37",
+      "narrative": "In the Bar showing wait time by Patient Gender, NC has the highest value at 37.2, which is 4% above the average of 35.9. However, in the Bar showing score by Patient Gender, NC has the lowest value at 3.2, which is 27% below the average of 4.4.",
+      "charts": [
+        36,
+        37
+      ],
+      "entities": [
+        "NC"
+      ],
+      "importance": 0.6,
+      "fact_types": [
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "wait time",
+        "dimension_name": "Patient Gender",
+        "category": "NC",
+        "value": 37.166666666666664,
+        "avg_value": 35.88984394454974,
+        "percentage_above_avg": 3.5576156978827567
+      },
+      "view_attribution": [
+        36
+      ]
+    },
+    {
+      "title": "admission_day:saturday: In the Bar showing score by admission_day, Saturday has the highest value at 5",
+      "narrative": "In the Bar showing score by admission_day, Saturday has the highest value at 5.1, which is 3% above the average of 5.0. Additionally, in the Bar showing patients by admission_day, Saturday has the highest value at 1377.0, which is 5% above the average of 1316.6.",
+      "charts": [
+        45,
+        9
+      ],
+      "entities": [
+        "Saturday"
+      ],
+      "importance": 0.6,
+      "fact_types": [
+        "extreme",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "score",
+        "dimension_name": "admission_day",
+        "category": "Saturday",
+        "value": 5.117486338797814,
+        "avg_value": 4.992320058161332,
+        "percentage_above_avg": 2.5071766068335934
+      },
+      "view_attribution": [
+        45
+      ]
+    }
+  ],
+  "cross_entity_insights": [
+    {
+      "title": "Relationship between True and Two or More Races",
+      "narrative": "In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024.0, which is 2.5 standard deviations below the mean of 1152.0. Furthermore, in the Bar showing White across all categories in Patient Race, 2023-09 stands out with a value of 112.0, which is 2.4 standard deviations below the mean of 135.3. However, in the Bar showing 08-12 across all categories in admission_time, 2024-01 stands out with a value of 112.0, which is 2.9 standard deviations above the mean of 80.3.",
+      "charts": [
+        8,
+        98,
+        5,
+        41,
+        529,
+        100
+      ],
+      "entities": [
+        "40-49",
+        "70-79",
+        "2024-01",
+        "2023-09",
+        46
+      ],
+      "importance": 0.95,
+      "relationship_types": [
+        "contrasting",
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Age",
+        "category": "40-49",
+        "value": 1024,
+        "avg_value": 1152.0,
+        "z_score": 2.464730824015787,
+        "deviation_type": "below"
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "Relationship between True and 04-08",
+      "narrative": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for M in the 20-29 category, which is 63% above the overall average. Furthermore, across all series in the Bar comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average.",
+      "charts": [
+        529,
+        6,
+        101,
+        530,
+        100,
+        7
+      ],
+      "entities": [
+        "20-29",
+        "White",
+        "Thursday",
+        "08-12",
+        "00-04",
+        "Saturday",
+        "2024-01",
+        "M",
+        "2023-06"
+      ],
+      "importance": 0.95,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Gender",
+        "category": "20-29",
+        "series_name": "M",
+        "value": 625,
+        "overall_avg": 384.0,
+        "percentage_above_avg": 62.760416666666664
+      },
+      "view_attribution": [
+        529
+      ]
+    },
+    {
+      "title": "Relationship between Two or More Races and 04-08",
+      "narrative": "In the Bar comparing patients across Patient Race, White consistently performs above average in 19 out of 19 categories, demonstrating reliable high performance. Furthermore, in the Bar comparing patients across admission_time, 04-08 consistently performs above average in 2 out of 2 categories, demonstrating reliable high performance.",
+      "charts": [
+        98,
+        332,
+        7,
+        529,
+        333
+      ],
+      "entities": [
+        "Saturday",
+        "04-08",
+        "F",
+        "White",
+        "M"
+      ],
+      "importance": 0.88,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "Patient Race",
+        "series_name": "White",
+        "above_avg_count": 19,
+        "total_categories": 19
+      },
+      "view_attribution": [
+        98
+      ]
+    },
+    {
+      "title": "Relationship between True and Two or More Races",
+      "narrative": "For the 2024-07 category in the Bar comparing patients across different admission_day, Tuesday leads with the highest value at 88.0 among all 7 series. Furthermore, for the Declined to Identify category in the Bar comparing patients across different Patient Race, 0-9 leads with the highest value at 139.0 among all 8 series.",
+      "charts": [
+        101,
+        530,
+        100,
+        99
+      ],
+      "entities": [
+        "0-9",
+        "Tuesday",
+        "70-79",
+        "2024-10",
+        "20-00",
+        "20-29",
+        "2023-08",
+        "2024-07",
+        "2023-10",
+        "2024-04",
+        "Declined to Identify"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "patients",
+        "dimension_name": "admission_day",
+        "category": "2024-07",
+        "series_name": "Tuesday",
+        "value": 88,
+        "series_count": 7
+      },
+      "view_attribution": [
+        101
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": 4,
+      "type": "compare_measures",
+      "name": "comp_measure_Patient Waittime_Patient Satisfaction Score",
+      "views": [
+        2,
+        3,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "insights": [
+        {
+          "title": "Key Differences between wait time and score",
+          "narrative": "In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36.7. However, in the Bar showing score across all categories in Patient Age, 70-79 stands out with a value of 4.6, which is 2.2 standard deviations below the mean of 5.0.",
+          "charts": [
+            2,
+            41
+          ],
+          "entities": [
+            "2024-02",
+            "70-79"
+          ],
+          "importance": 0.76,
+          "aggregation_level": 4,
+          "primary_fact_type": "extreme",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "wait time",
+            "time_dimension": "admission_date",
+            "time_point": "2024-02",
+            "value": 36.67053364269142
+          },
+          "contextual_entities": {
+            "x": [
+              "admission_date:2024-02"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 0,
+            "contrasting_count": 2,
+            "total_charts": 2,
+            "entity_count": 2,
+            "has_template_variables": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "compare_dimension",
+      "name": "comp_dim_admission_date_COUNT",
+      "views": [
+        0,
+        1,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "insights": [
+        {
+          "title": "Comparison across admission_date Categories",
+          "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 148.0 for White in the 2023-06 category, which is 114% above the overall average. Furthermore, across all series in the Bar comparing patients by Patient Race, the highest value overall is 148.0 for White in the 2023-06 category, which is 114% above the overall average.",
+          "charts": [
+            98,
+            101
+          ],
+          "entities": [
+            "Wednesday",
+            "White",
+            "2023-06",
+            "2023-12"
+          ],
+          "importance": 0.95,
+          "aggregation_level": 4,
+          "primary_fact_type": "cross_series_extreme",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "patients",
+            "dimension_name": "Patient Race",
+            "category": "2023-06",
+            "series_name": "White",
+            "value": 148,
+            "overall_avg": 69.29323308270676,
+            "percentage_above_avg": 113.58506944444446
+          },
+          "contextual_entities": {
+            "category": [
+              "Patient Race:2023-06"
+            ],
+            "series": [
+              "series_Patient Race:White"
+            ],
+            "measure": [
+              "patients:148"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 2,
+            "contrasting_count": 0,
+            "total_charts": 2,
+            "entity_count": 4,
+            "has_template_variables": true
+          }
+        },
+        {
+          "title": "Variation across admission_date Categories",
+          "narrative": "In the Bar comparing patients by Patient Gender, the 2024-01 category shows the largest spread between series with a range of 272.0 from NC (0.0) to M (272.0). Furthermore, in the Bar comparing patients by Patient Gender, the 2024-01 category shows the greatest variation between M, F and NC with a spread of 272.0 between the highest and lowest values. In addition, in the Bar comparing patients by Patient Race, the 2024-04 category shows the largest spread between series with a range of 126.0 from Native American/Alaska Native (21.0) to White (147.0).",
+          "charts": [
+            97,
+            98,
+            99,
+            100,
+            101
+          ],
+          "entities": [
+            "2023-04",
+            "2023-12",
+            "2024-04",
+            "2024-01"
+          ],
+          "importance": 0.9,
+          "aggregation_level": 4,
+          "primary_fact_type": "category_spread",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "patients",
+            "dimension_name": "Patient Gender",
+            "category": "2024-01",
+            "spread": 272,
+            "max_series": "M",
+            "max_value": 272,
+            "min_series": "NC",
+            "min_value": 0
+          },
+          "contextual_entities": {
+            "category": [
+              "Patient Gender:2024-01"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 9,
+            "contrasting_count": 0,
+            "total_charts": 5,
+            "entity_count": 4,
+            "has_template_variables": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": "compare_two_dimensions",
+      "name": "comp_dims_Patient Admission Flag_admission_day_COUNT_admission_time",
+      "views": [
+        4,
+        9,
+        6,
+        332,
+        333
+      ],
+      "insights": [
+        {
+          "title": "Interaction between Patient Admission Flag and admission_day",
+          "narrative": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average. Furthermore, across all series in the Bar comparing patients by admission_time, the highest value overall is 795.0 for 04-08 in the False category, which is 4% above the overall average. In addition, in the Bar comparing patients by admission_time, the 00-04 category shows the largest spread between series with a range of 40.0 from Wednesday (206.0) to Saturday (246.0).",
+          "charts": [
+            6,
+            332,
+            333
+          ],
+          "entities": [
+            "Wednesday",
+            true,
+            "Saturday",
+            "04-08",
+            "16-20",
+            "00-04"
+          ],
+          "importance": 0.95,
+          "aggregation_level": 4,
+          "primary_fact_type": "cross_series_extreme",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "patients",
+            "dimension_name": "admission_time",
+            "category": "00-04",
+            "series_name": "Saturday",
+            "value": 246,
+            "overall_avg": 219.42857142857142,
+            "percentage_above_avg": 12.109375000000005
+          },
+          "contextual_entities": {
+            "category": [
+              "admission_time:00-04"
+            ],
+            "series": [
+              "series_admission_time:Saturday"
+            ],
+            "measure": [
+              "patients:246"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 11,
+            "contrasting_count": 0,
+            "total_charts": 3,
+            "entity_count": 6,
+            "has_template_variables": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": "compare_two_dimensions",
+      "name": "comp_dims_Patient Race_Patient Age_COUNT_Patient Gender",
+      "views": [
+        7,
+        8,
+        528,
+        529,
+        530
+      ],
+      "insights": [
+        {
+          "title": "Interaction between Patient Race and Patient Age",
+          "narrative": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for M in the White category, which is 195% above the overall average. Furthermore, across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for M in the 20-29 category, which is 63% above the overall average. In addition, in the Bar comparing patients by Patient Race, the White category shows the largest spread between series with a range of 1291.0 from NC (5.0) to M (1296.0).",
+          "charts": [
+            7,
+            529,
+            530
+          ],
+          "entities": [
+            "NC",
+            "70-79",
+            "Native American/Alaska Native",
+            "20-29",
+            "30-39",
+            "White",
+            "M"
+          ],
+          "importance": 0.95,
+          "aggregation_level": 4,
+          "primary_fact_type": "cross_series_extreme",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "patients",
+            "dimension_name": "Patient Race",
+            "category": "White",
+            "series_name": "M",
+            "value": 1296,
+            "overall_avg": 438.85714285714283,
+            "percentage_above_avg": 195.3125
+          },
+          "contextual_entities": {
+            "category": [
+              "Patient Race:White"
+            ],
+            "series": [
+              "series_Patient Race:M"
+            ],
+            "measure": [
+              "patients:1296"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 11,
+            "contrasting_count": 0,
+            "total_charts": 3,
+            "entity_count": 7,
+            "has_template_variables": true
+          }
+        }
+      ]
+    }
+  ]
+}

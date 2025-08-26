@@ -1,0 +1,869 @@
+{
+  "title": "Dashboard Analysis",
+  "description": "Enhanced insights with universal pattern detection and interactive interface",
+  "timestamp": "2025-08-26 11:32:57",
+  "approach": "pattern",
+  "goals": [
+    {
+      "id": 1,
+      "type": "summarize_measure",
+      "name": "Summary the measure Movies Counts",
+      "views": [
+        5,
+        0,
+        1
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Exceptional High Values: SAMUEL L. JACKSON",
+          "narrative": "SAMUEL L. JACKSON demonstrates exceptionally high Movies Counts values in Person, Person, representing a significant positive outlier that stands apart from typical patterns.",
+          "charts": [],
+          "entities": [
+            "SAMUEL L. JACKSON"
+          ],
+          "importance": 0.7749999999999999,
+          "contributing_charts": [
+            5
+          ],
+          "pattern_type": "outlier",
+          "pattern_confidence": 0.7749999999999999,
+          "supporting_entities": [
+            "SAMUEL L. JACKSON"
+          ],
+          "source": "pattern",
+          "supporting_facts": [
+            {
+              "description": "In the Bar showing Movie Counts across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+              "chart_id": 5,
+              "fact_type": "outlier",
+              "subtype": "high",
+              "importance": 0.95,
+              "entities": [
+                "SAMUEL L. JACKSON"
+              ]
+            },
+            {
+              "description": "In the Bar showing Movie Counts by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2.",
+              "chart_id": 5,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "SAMUEL L. JACKSON"
+              ]
+            }
+          ]
+        }
+      ],
+      "chart_insights": {
+        "5": [
+          {
+            "description": "In the Bar showing Movie Counts across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "SAMUEL L. JACKSON",
+              "value": 64,
+              "z_score": 2.4207023183111476
+            },
+            "entities": [
+              "SAMUEL L. JACKSON",
+              "64",
+              "SAMUEL L. JACKSON"
+            ]
+          },
+          {
+            "description": "In the Bar showing Movie Counts across all categories in Person, J.K. SIMMONS stands out with a value of 63.0, which is 2.2 standard deviations above the mean of 51.2.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "J.K. SIMMONS",
+              "value": 63,
+              "z_score": 2.231584949693089
+            },
+            "entities": [
+              "J.K. SIMMONS",
+              "63",
+              "J.K. SIMMONS"
+            ]
+          },
+          {
+            "description": "The Bar shows a consistent decreasing pattern in Movie Counts across all 20 categories in Person, indicating a negative relationship between category order and values.",
+            "fact_type": "pattern",
+            "subtype": "decreasing",
+            "importance": 0.85,
+            "data_points": {
+              "pattern": "decreasing"
+            },
+            "entities": []
+          },
+          {
+            "description": "The distribution is very even across categories, with nearly equal values for each Person.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_even",
+            "importance": 0.75,
+            "data_points": {
+              "gini": 0.10224609375000004,
+              "cv": 0.10327581301876786,
+              "normalized_entropy": 0.9982924534743731
+            },
+            "entities": []
+          },
+          {
+            "description": "The Movie Counts distribution is right-skewed, with a few Persons having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 1.3569374113977244
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 20 categories in the Bar of Person, the average Movie Counts is 51.2 with a standard deviation of 5.3 (10% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 51.2,
+              "std_dev": 5.287721626560915,
+              "cv": 10.327581301876785
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Movie Counts by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": "SAMUEL L. JACKSON",
+              "value": 64,
+              "average": 51.2
+            },
+            "entities": [
+              "SAMUEL L. JACKSON",
+              "64",
+              "SAMUEL L. JACKSON"
+            ]
+          },
+          {
+            "description": "In the Bar showing Movie Counts by Person, MICHAEL PE\ufffdA has the lowest value at 46.0, which is 10% below the average of 51.2.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": "MICHAEL PE\ufffdA",
+              "value": 46,
+              "average": 51.2
+            },
+            "entities": [
+              "MICHAEL PE\ufffdA",
+              "46",
+              "MICHAEL PE\ufffdA"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "description": "The distribution is highly uneven across Ratings, with a few categories dominating the total.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_uneven",
+            "importance": 0.85,
+            "data_points": {
+              "gini": 0.6972048048385799,
+              "cv": 1.261191131880191,
+              "normalized_entropy": 0.7374820262851839
+            },
+            "entities": []
+          },
+          {
+            "description": "Just 31% of Ratings (6.7, 6.2, 5.8, and 3 others) account for 80% of the total Movie Counts.",
+            "fact_type": "distribution_concentration",
+            "subtype": "pareto",
+            "importance": 0.8,
+            "data_points": {
+              "concentration_percentage": 31,
+              "categories": [
+                6.7,
+                6.2,
+                5.8,
+                7.1,
+                5.3,
+                4.9
+              ]
+            },
+            "entities": []
+          },
+          {
+            "description": "The Movie Counts distribution is right-skewed, with a few Ratings having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 1.036746071696766
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 19 categories in the Bar of Rating, the average Movie Counts is 5714.0 with a standard deviation of 7206.4 (126% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 5714.0,
+              "std_dev": 7206.446127563411,
+              "cv": 126.1191131880191
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Movie Counts by Rating, 6.7 has the highest value at 19959.0, which is 249% above the average of 5714.0.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": 6.7,
+              "value": 19959,
+              "average": 5714.0
+            },
+            "entities": [
+              "6.7",
+              "19959",
+              "6.7"
+            ]
+          },
+          {
+            "description": "In the Bar showing Movie Counts by Rating, 0.9 has the lowest value at 41.0, which is 99% below the average of 5714.0.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": 0.9,
+              "value": 41,
+              "average": 5714.0
+            },
+            "entities": [
+              "0.9",
+              "41",
+              "0.9"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "description": "In the Line of Movie Counts over Year, the largest single decrease of 1430.0 (27%) occurs between 2019 and 2020.",
+            "fact_type": "change",
+            "subtype": "decrease",
+            "importance": 0.9,
+            "data_points": {
+              "from": 2019,
+              "to": 2020,
+              "change": -1430
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Line of Movie Counts over Year, the Movie Counts peak at 2014 with value 5936.0.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.7,
+            "data_points": {
+              "x": 2014,
+              "y": 5936
+            },
+            "entities": [
+              "2014",
+              "2014"
+            ]
+          },
+          {
+            "description": "In the Line of Movie Counts over Year, the trough is at 2000 with value 3252.0.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.65,
+            "data_points": {
+              "x": 2000,
+              "y": 3252
+            },
+            "entities": [
+              "2000",
+              "2000"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": "compare_measures",
+      "name": "Undestanding the relationship between Number Of Votes and Rating",
+      "views": [
+        6,
+        4,
+        3,
+        2,
+        10,
+        11
+      ],
+      "approach": "pattern",
+      "insights": [
+        {
+          "title": "Relationship between Average Votes and Average Rating",
+          "narrative": "Average Votes and Average Rating show a moderate positive correlation (r=0.50), indicating they tend to move together. This suggests complementary dynamics between these measures.",
+          "charts": [],
+          "entities": [
+            "Albert Donoghue",
+            "nm1405310",
+            "Manuel",
+            "ROSS NOBLE",
+            "nm3479690",
+            "Rose Hearn",
+            "Him,Senator Denton",
+            "Principal Purdy",
+            "SCOTT SIMPSON",
+            "Nikolai Wolf",
+            "nm0517064",
+            "Jonathan Barnavelt",
+            "Kristen",
+            "nm1235447",
+            "nm0079694",
+            "nm0730406",
+            "TORAN CAUDELL",
+            "Comedy,Drama,Romance,Sci-Fi",
+            "BLACKKKLANSMAN",
+            "Hustle Guy"
+          ],
+          "importance": 0.5047134203296068,
+          "contributing_charts": [
+            2,
+            3,
+            4,
+            6,
+            10,
+            11
+          ],
+          "pattern_type": "measure_correlation",
+          "pattern_confidence": 0.5047134203296068,
+          "supporting_entities": [
+            "Albert Donoghue",
+            "nm1405310",
+            "Manuel",
+            "ROSS NOBLE",
+            "nm3479690",
+            "Rose Hearn",
+            "Him,Senator Denton",
+            "Principal Purdy",
+            "SCOTT SIMPSON",
+            "Nikolai Wolf",
+            "nm0517064",
+            "Jonathan Barnavelt",
+            "Kristen",
+            "nm1235447",
+            "nm0079694",
+            "nm0730406",
+            "TORAN CAUDELL",
+            "Comedy,Drama,Romance,Sci-Fi",
+            "BLACKKKLANSMAN",
+            "Hustle Guy"
+          ],
+          "source": "pattern",
+          "supporting_facts": []
+        }
+      ],
+      "chart_insights": {
+        "6": [
+          {
+            "description": "In the Bar showing Average Votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "RON DEAN",
+              "value": 2771597.0,
+              "z_score": 2.8194637987090805
+            },
+            "entities": [
+              "RON DEAN",
+              "2771597.0",
+              "RON DEAN"
+            ]
+          },
+          {
+            "description": "The Bar shows a consistent decreasing pattern in Average Votes across all 20 categories in Person, indicating a negative relationship between category order and values.",
+            "fact_type": "pattern",
+            "subtype": "decreasing",
+            "importance": 0.85,
+            "data_points": {
+              "pattern": "decreasing"
+            },
+            "entities": []
+          },
+          {
+            "description": "The distribution is very even across categories, with nearly equal values for each Person.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_even",
+            "importance": 0.75,
+            "data_points": {
+              "gini": 0.10633327896794997,
+              "cv": 0.12693521182169223,
+              "normalized_entropy": 0.9974693359337872
+            },
+            "entities": []
+          },
+          {
+            "description": "The Average Votes distribution is right-skewed, with a few Persons having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 1.624483089825406
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 20 categories in the Bar of Person, the average Average Votes is 2041106.8 with a standard deviation of 259088.3 (13% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 2041106.8366666667,
+              "std_dev": 259088.32866298745,
+              "cv": 12.69352118216922
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Average Votes by Person, RON DEAN has the highest value at 2771597.0, which is 36% above the average of 2041106.8.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": "RON DEAN",
+              "value": 2771597.0,
+              "average": 2041106.8366666667
+            },
+            "entities": [
+              "RON DEAN",
+              "2771597.0",
+              "RON DEAN"
+            ]
+          },
+          {
+            "description": "In the Bar showing Average Votes by Person, MIRANDA NOLAN has the lowest value at 1771212.0, which is 13% below the average of 2041106.8.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": "MIRANDA NOLAN",
+              "value": 1771212.0,
+              "average": 2041106.8366666667
+            },
+            "entities": [
+              "MIRANDA NOLAN",
+              "1771212.0",
+              "MIRANDA NOLAN"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "description": "The Bar shows a consistent decreasing pattern in Average Rating across all 20 categories in Person, indicating a negative relationship between category order and values.",
+            "fact_type": "pattern",
+            "subtype": "decreasing",
+            "importance": 0.85,
+            "data_points": {
+              "pattern": "decreasing"
+            },
+            "entities": []
+          },
+          {
+            "description": "The distribution is very even across categories, with nearly equal values for each Person.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_even",
+            "importance": 0.75,
+            "data_points": {
+              "gini": 0.06321414691022176,
+              "cv": 0.0264197192372442,
+              "normalized_entropy": 0.9998841005192111
+            },
+            "entities": []
+          },
+          {
+            "description": "The Average Rating distribution is right-skewed, with a few Persons having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 0.6038467685782493
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 20 categories in the Bar of Person, the average Average Rating is 8.6 with a standard deviation of 0.2 (3% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 8.576666666666668,
+              "std_dev": 0.22659312532476453,
+              "cv": 2.641971923724421
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Average Rating by Person, JASON FITCH has the highest value at 8.9, which is 4% above the average of 8.6.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": "JASON FITCH",
+              "value": 8.9,
+              "average": 8.576666666666668
+            },
+            "entities": [
+              "JASON FITCH",
+              "8.9",
+              "JASON FITCH"
+            ]
+          },
+          {
+            "description": "In the Bar showing Average Rating by Person, SAM COMERY has the lowest value at 8.4, which is 2% below the average of 8.6.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": "SAM COMERY",
+              "value": 8.4,
+              "average": 8.576666666666668
+            },
+            "entities": [
+              "SAM COMERY",
+              "8.4",
+              "SAM COMERY"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "description": "In the Bar showing Average Votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "THE DARK KNIGHT",
+              "value": 2771597.0,
+              "z_score": 2.891261411131984
+            },
+            "entities": [
+              "THE DARK KNIGHT",
+              "2771597.0",
+              "THE DARK KNIGHT"
+            ]
+          },
+          {
+            "description": "In the Bar showing Average Votes across all categories in TITLE, INCEPTION stands out with a value of 2460667.0, which is 2.1 standard deviations above the mean of 1658210.3.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "INCEPTION",
+              "value": 2460667.0,
+              "z_score": 2.0838331289697596
+            },
+            "entities": [
+              "INCEPTION",
+              "2460667.0",
+              "INCEPTION"
+            ]
+          },
+          {
+            "description": "The Bar shows a consistent decreasing pattern in Average Votes across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+            "fact_type": "pattern",
+            "subtype": "decreasing",
+            "importance": 0.85,
+            "data_points": {
+              "pattern": "decreasing"
+            },
+            "entities": []
+          },
+          {
+            "description": "The distribution is very even across categories, with nearly equal values for each TITLE.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_even",
+            "importance": 0.75,
+            "data_points": {
+              "gini": 0.16813026369453854,
+              "cv": 0.2322303949836772,
+              "normalized_entropy": 0.9917626549720461
+            },
+            "entities": []
+          },
+          {
+            "description": "The Average Votes distribution is right-skewed, with a few TITLEs having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 1.5040219039942295
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 20 categories in the Bar of TITLE, the average Average Votes is 1658210.3 with a standard deviation of 385086.8 (23% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 1658210.3,
+              "std_dev": 385086.8329350018,
+              "cv": 23.22303949836772
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Average Votes by TITLE, THE DARK KNIGHT has the highest value at 2771597.0, which is 67% above the average of 1658210.3.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": "THE DARK KNIGHT",
+              "value": 2771597.0,
+              "average": 1658210.3
+            },
+            "entities": [
+              "THE DARK KNIGHT",
+              "2771597.0",
+              "THE DARK KNIGHT"
+            ]
+          },
+          {
+            "description": "In the Bar showing Average Votes by TITLE, GUARDIANS OF THE GALAXY has the lowest value at 1240886.0, which is 25% below the average of 1658210.3.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": "GUARDIANS OF THE GALAXY",
+              "value": 1240886.0,
+              "average": 1658210.3
+            },
+            "entities": [
+              "GUARDIANS OF THE GALAXY",
+              "1240886.0",
+              "GUARDIANS OF THE GALAXY"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "description": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+              "value": 8.9,
+              "z_score": 2.18518518518519
+            },
+            "entities": [
+              "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+              "8.9",
+              "THE LORD OF THE RINGS: THE RETURN OF THE KING"
+            ]
+          },
+          {
+            "description": "In the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+            "fact_type": "outlier",
+            "subtype": "high",
+            "importance": 0.95,
+            "data_points": {
+              "category": "THE DARK KNIGHT",
+              "value": 8.9,
+              "z_score": 2.18518518518519
+            },
+            "entities": [
+              "THE DARK KNIGHT",
+              "8.9",
+              "THE DARK KNIGHT"
+            ]
+          },
+          {
+            "description": "The Bar shows a consistent decreasing pattern in Rating across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+            "fact_type": "pattern",
+            "subtype": "decreasing",
+            "importance": 0.85,
+            "data_points": {
+              "pattern": "decreasing"
+            },
+            "entities": []
+          },
+          {
+            "description": "The distribution is very even across categories, with nearly equal values for each TITLE.",
+            "fact_type": "distribution_evenness",
+            "subtype": "very_even",
+            "importance": 0.75,
+            "data_points": {
+              "gini": 0.0663658243080626,
+              "cv": 0.03249097472924188,
+              "normalized_entropy": 0.9998247372645258
+            },
+            "entities": []
+          },
+          {
+            "description": "The Rating distribution is right-skewed, with a few TITLEs having unusually high values.",
+            "fact_type": "distribution_skew",
+            "subtype": "positive_skew",
+            "importance": 0.75,
+            "data_points": {
+              "skewness": 0.5340649291266342
+            },
+            "entities": []
+          },
+          {
+            "description": "Across all 20 categories in the Bar of TITLE, the average Rating is 8.3 with a standard deviation of 0.3 (3% coefficient of variation).",
+            "fact_type": "distribution",
+            "subtype": "average",
+            "importance": 0.7,
+            "data_points": {
+              "average": 8.309999999999999,
+              "std_dev": 0.27000000000000013,
+              "cv": 3.2490974729241895
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Bar showing Rating by TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING has the highest value at 8.9, which is 7% above the average of 8.3.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.6,
+            "data_points": {
+              "category": "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+              "value": 8.9,
+              "average": 8.309999999999999
+            },
+            "entities": [
+              "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+              "8.9",
+              "THE LORD OF THE RINGS: THE RETURN OF THE KING"
+            ]
+          },
+          {
+            "description": "In the Bar showing Rating by TITLE, MAD MAX: FURY ROAD has the lowest value at 8.0, which is 4% below the average of 8.3.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.55,
+            "data_points": {
+              "category": "MAD MAX: FURY ROAD",
+              "value": 8.0,
+              "average": 8.309999999999999
+            },
+            "entities": [
+              "MAD MAX: FURY ROAD",
+              "8.0",
+              "MAD MAX: FURY ROAD"
+            ]
+          }
+        ],
+        "10": [
+          {
+            "description": "In the Line of Average Votes over Year, the largest single decrease of 70011.4 (55%) occurs between 2019 and 2020.",
+            "fact_type": "change",
+            "subtype": "decrease",
+            "importance": 0.9,
+            "data_points": {
+              "from": 2019,
+              "to": 2020,
+              "change": -70011.4246319533
+            },
+            "entities": []
+          },
+          {
+            "description": "The Line tracking Average Votes over Year shows a weak downward trend with a correlation coefficient of R\u00b2 = 0.37.",
+            "fact_type": "trend",
+            "subtype": "downward",
+            "importance": 0.8743359944403013,
+            "data_points": {
+              "slope": -2658.8479264624184,
+              "r_squared": 0.3716799722015065,
+              "direction": "downward"
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Line of Average Votes over Year, the Average Votes peak at 2013 with value 178273.3.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.7,
+            "data_points": {
+              "x": 2013,
+              "y": 178273.34026499817
+            },
+            "entities": [
+              "2013",
+              "2013"
+            ]
+          },
+          {
+            "description": "In the Line of Average Votes over Year, the trough is at 2020 with value 57345.6.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.65,
+            "data_points": {
+              "x": 2020,
+              "y": 57345.604741046125
+            },
+            "entities": [
+              "2020",
+              "2020"
+            ]
+          }
+        ],
+        "11": [
+          {
+            "description": "In the Line of Average Rating over Year, the largest single decrease of 0.3 (5%) occurs between 2019 and 2020.",
+            "fact_type": "change",
+            "subtype": "decrease",
+            "importance": 0.9,
+            "data_points": {
+              "from": 2019,
+              "to": 2020,
+              "change": -0.3092422221608775
+            },
+            "entities": []
+          },
+          {
+            "description": "In the Line of Average Rating over Year, the Average Rating peak at 2019 with value 6.2.",
+            "fact_type": "extreme",
+            "subtype": "maximum",
+            "importance": 0.7,
+            "data_points": {
+              "x": 2019,
+              "y": 6.234776878177368
+            },
+            "entities": [
+              "2019",
+              "2019"
+            ]
+          },
+          {
+            "description": "In the Line of Average Rating over Year, the trough is at 2020 with value 5.9.",
+            "fact_type": "extreme",
+            "subtype": "minimum",
+            "importance": 0.65,
+            "data_points": {
+              "x": 2020,
+              "y": 5.925534656016491
+            },
+            "entities": [
+              "2020",
+              "2020"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

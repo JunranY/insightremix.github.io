@@ -1,0 +1,1432 @@
+{
+  "timestamp": "2025-08-26 11:33:28",
+  "total_facts": 163,
+  "charts": {
+    "4": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Patient Admission Flag, the average patients is 4608.0 with a standard deviation of 4.0 (0% coefficient of variation).",
+        "data_points": {
+          "average": 4608.0,
+          "std_dev": 4.0,
+          "cv": 0.08680555555555555
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.",
+        "data_points": {
+          "category": "Adimitted",
+          "value": 4612,
+          "average": 4608.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Patient Admission Flag, Not Adimitted has the lowest value at 4604.0, which is 0% below the average of 4608.0.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "value": 4604,
+          "average": 4608.0
+        }
+      }
+    ],
+    "5": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Wait Time, the average patients is 4608.0 with a standard deviation of 859.0 (19% coefficient of variation).",
+        "data_points": {
+          "average": 4608.0,
+          "std_dev": 859.0,
+          "cv": 18.641493055555554
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Wait Time, over 30 min has the highest value at 5467.0, which is 19% above the average of 4608.0.",
+        "data_points": {
+          "category": "over 30 min",
+          "value": 5467,
+          "average": 4608.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Wait Time, within 30 min has the lowest value at 3749.0, which is 19% below the average of 4608.0.",
+        "data_points": {
+          "category": "within 30 min",
+          "value": 3749,
+          "average": 4608.0
+        }
+      }
+    ],
+    "6": [
+      {
+        "type": "outlier",
+        "subtype": "high",
+        "importance": 0.95,
+        "description": "In the Bar showing patients across all categories in Department Referral, General Practice stands out with a value of 1840.0, which is 2.2 standard deviations above the mean of 545.1.",
+        "data_points": {
+          "category": "General Practice",
+          "value": 1840,
+          "z_score": 2.1626618784404825
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_uneven",
+        "importance": 0.85,
+        "description": "The distribution is highly uneven across Department Referrals, with a few categories dominating the total.",
+        "data_points": {
+          "gini": 0.6653938304881701,
+          "cv": 1.098304861331427,
+          "normalized_entropy": 0.744753025637411
+        }
+      },
+      {
+        "type": "distribution_concentration",
+        "subtype": "pareto",
+        "importance": 0.8,
+        "description": "Just 42% of Department Referrals (General Practice, Orthopedics, Physiotherapy) account for 80% of the total patients.",
+        "data_points": {
+          "concentration_percentage": 42,
+          "categories": [
+            "General Practice",
+            "Orthopedics",
+            "Physiotherapy"
+          ]
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is right-skewed, with a few Department Referrals having unusually high values.",
+        "data_points": {
+          "skewness": 1.348728273809604
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Department Referral, the average patients is 545.1 with a standard deviation of 598.7 (110% coefficient of variation).",
+        "data_points": {
+          "average": 545.1428571428571,
+          "std_dev": 598.7330501201036,
+          "cv": 109.8304861331427
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Department Referral, General Practice has the highest value at 1840.0, which is 238% above the average of 545.1.",
+        "data_points": {
+          "category": "General Practice",
+          "value": 1840,
+          "average": 545.1428571428571
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Department Referral, Renal has the lowest value at 86.0, which is 84% below the average of 545.1.",
+        "data_points": {
+          "category": "Renal",
+          "value": 86,
+          "average": 545.1428571428571
+        }
+      }
+    ],
+    "0": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of patients over admission_date, the largest single decrease of 82.0 (16%) occurs between 2024-01 and 2024-02.",
+        "data_points": {
+          "from": "2024-01",
+          "to": "2024-02",
+          "change": -82
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of patients over admission_date, the patients peak at 2024-08 with value 530.0.",
+        "data_points": {
+          "x": "2024-08",
+          "y": 530
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of patients over admission_date, the trough is at 2024-02 with value 431.0.",
+        "data_points": {
+          "x": "2024-02",
+          "y": 431
+        }
+      }
+    ],
+    "2": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of wait time over admission_date, the largest single decrease of 2.1 (6%) occurs between 2023-08 and 2023-09.",
+        "data_points": {
+          "from": "2023-08",
+          "to": "2023-09",
+          "change": -2.1240558341893774
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of wait time over admission_date, the wait time peak at 2024-02 with value 36.7.",
+        "data_points": {
+          "x": "2024-02",
+          "y": 36.67053364269142
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of wait time over admission_date, the trough is at 2024-10 with value 34.1.",
+        "data_points": {
+          "x": "2024-10",
+          "y": 34.05095541401274
+        }
+      }
+    ],
+    "22": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Patient Admission Flag, the average wait time is 35.3 with a standard deviation of 0.3 (1% coefficient of variation).",
+        "data_points": {
+          "average": 35.26012779339659,
+          "std_dev": 0.2922179928762141,
+          "cv": 0.8287491032035901
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "value": 35.55234578627281,
+          "average": 35.26012779339659
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.",
+        "data_points": {
+          "category": "Adimitted",
+          "value": 34.96790980052038,
+          "average": 35.26012779339659
+        }
+      }
+    ],
+    "23": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_uneven",
+        "importance": 0.85,
+        "description": "The distribution is highly uneven across Patient Genders, with a few categories dominating the total.",
+        "data_points": {
+          "gini": 0.671947337962963,
+          "cv": 0.7021804053226667,
+          "normalized_entropy": 0.6455041784720458
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is left-skewed, with a few Patient Genders having unusually low values.",
+        "data_points": {
+          "skewness": -0.701694116111687
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 3 categories in the Bar of Patient Gender, the average patients is 3072.0 with a standard deviation of 2157.1 (70% coefficient of variation).",
+        "data_points": {
+          "average": 3072.0,
+          "std_dev": 2157.098205151232,
+          "cv": 70.21804053226667
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Patient Gender, Male has the highest value at 4705.0, which is 53% above the average of 3072.0.",
+        "data_points": {
+          "category": "Male",
+          "value": 4705,
+          "average": 3072.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Patient Gender, NC has the lowest value at 24.0, which is 99% below the average of 3072.0.",
+        "data_points": {
+          "category": "NC",
+          "value": 24,
+          "average": 3072.0
+        }
+      }
+    ],
+    "24": [
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The wait time distribution is right-skewed, with a few Patient Genders having unusually high values.",
+        "data_points": {
+          "skewness": 0.65296298231078
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 3 categories in the Bar of Patient Gender, the average wait time is 35.9 with a standard deviation of 0.9 (3% coefficient of variation).",
+        "data_points": {
+          "average": 35.88984394454974,
+          "std_dev": 0.9106877049989258,
+          "cv": 2.537452395741675
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across Patient Genders, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.34609615791558734,
+          "cv": 0.02537452395741675,
+          "normalized_entropy": 0.9997085357368265
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Patient Gender, NC has the highest value at 37.2, which is 4% above the average of 35.9.",
+        "data_points": {
+          "category": "NC",
+          "value": 37.166666666666664,
+          "average": 35.88984394454974
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Patient Gender, Female has the lowest value at 35.1, which is 2% below the average of 35.9.",
+        "data_points": {
+          "category": "Female",
+          "value": 35.10541564519723,
+          "average": 35.88984394454974
+        }
+      }
+    ],
+    "25": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.43892609126984117,
+          "cv": 0.5325416039531977,
+          "normalized_entropy": 0.9273858314784206
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Patient Race, the average patients is 1316.6 with a standard deviation of 701.1 (53% coefficient of variation).",
+        "data_points": {
+          "average": 1316.5714285714287,
+          "std_dev": 701.1290602903815,
+          "cv": 53.25416039531977
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The patients distribution is approximately symmetric across Patient Races.",
+        "data_points": {
+          "skewness": 0.49823944876591975
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.",
+        "data_points": {
+          "category": "White",
+          "value": 2571,
+          "average": 1316.5714285714287
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Patient Race, Native American/Alaska Native has the lowest value at 498.0, which is 62% below the average of 1316.6.",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "value": 498,
+          "average": 1316.5714285714287
+        }
+      }
+    ],
+    "26": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Patient Race.",
+        "data_points": {
+          "gini": 0.14831910763522527,
+          "cv": 0.00966040977250847,
+          "normalized_entropy": 0.9999759996199583
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Patient Race, the average wait time is 35.2 with a standard deviation of 0.3 (1% coefficient of variation).",
+        "data_points": {
+          "average": 35.23232501433318,
+          "std_dev": 0.3403586968766589,
+          "cv": 0.966040977250847
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The wait time distribution is approximately symmetric across Patient Races.",
+        "data_points": {
+          "skewness": -0.2619622346144284
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Patient Race, Native American/Alaska Native has the highest value at 35.7, which is 1% above the average of 35.2.",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "value": 35.69277108433735,
+          "average": 35.23232501433318
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Patient Race, Pacific Islander has the lowest value at 34.6, which is 2% below the average of 35.2.",
+        "data_points": {
+          "category": "Pacific Islander",
+          "value": 34.64845173041894,
+          "average": 35.23232501433318
+        }
+      }
+    ],
+    "27": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Wait Time, the average wait time is 32.9 with a standard deviation of 12.8 (39% coefficient of variation).",
+        "data_points": {
+          "average": 32.87851835179949,
+          "std_dev": 12.77449061106863,
+          "cv": 38.853607922296966
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Wait Time, over 30 min has the highest value at 45.7, which is 39% above the average of 32.9.",
+        "data_points": {
+          "category": "over 30 min",
+          "value": 45.65300896286812,
+          "average": 32.87851835179949
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Wait Time, within 30 min has the lowest value at 20.1, which is 39% below the average of 32.9.",
+        "data_points": {
+          "category": "within 30 min",
+          "value": 20.10402774073086,
+          "average": 32.87851835179949
+        }
+      }
+    ],
+    "28": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Department Referral.",
+        "data_points": {
+          "gini": 0.1548641152450726,
+          "cv": 0.021659136198150675,
+          "normalized_entropy": 0.9998798351747727
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Department Referral, the average wait time is 35.6 with a standard deviation of 0.8 (2% coefficient of variation).",
+        "data_points": {
+          "average": 35.592530653556885,
+          "std_dev": 0.7709034690622415,
+          "cv": 2.1659136198150675
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The wait time distribution is approximately symmetric across Department Referrals.",
+        "data_points": {
+          "skewness": 0.4480805514753235
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing wait time by Department Referral, Neurology has the highest value at 36.8, which is 3% above the average of 35.6.",
+        "data_points": {
+          "category": "Neurology",
+          "value": 36.803108808290155,
+          "average": 35.592530653556885
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing wait time by Department Referral, Renal has the lowest value at 34.7, which is 3% below the average of 35.6.",
+        "data_points": {
+          "category": "Renal",
+          "value": 34.69767441860465,
+          "average": 35.592530653556885
+        }
+      }
+    ],
+    "10": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each admission_day.",
+        "data_points": {
+          "gini": 0.1556609623015872,
+          "cv": 0.024487495658737143,
+          "normalized_entropy": 0.9998460978515546
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of admission_day, the average patients is 1316.6 with a standard deviation of 32.2 (2% coefficient of variation).",
+        "data_points": {
+          "average": 1316.5714285714287,
+          "std_dev": 32.23953714156022,
+          "cv": 2.4487495658737144
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The patients distribution is approximately symmetric across admission_days.",
+        "data_points": {
+          "skewness": 0.17666712445997557
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by admission_day, Saturday has the highest value at 1377.0, which is 5% above the average of 1316.6.",
+        "data_points": {
+          "category": "Saturday",
+          "value": 1377,
+          "average": 1316.5714285714287
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by admission_day, Wednesday has the lowest value at 1260.0, which is 4% below the average of 1316.6.",
+        "data_points": {
+          "category": "Wednesday",
+          "value": 1260,
+          "average": 1316.5714285714287
+        }
+      }
+    ],
+    "7": [
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.95,
+        "description": "In the Density comparing patients across admission_time, the relationship landscape shows exceptional predictability with 22 highly stable series relationships. The most predictable pair, Monday and Friday, demonstrates 96% consistency maintaining a 1.00 ratio across all categories, with an overall relationship consistency of 92% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 22,
+          "avg_consistency": 91.79954564664219,
+          "most_stable_pair": [
+            "Monday",
+            "Friday"
+          ],
+          "relationship_hubs": [
+            "Sunday",
+            "Monday",
+            "Wednesday",
+            "Saturday",
+            "Thursday",
+            "Friday",
+            "Tuesday"
+          ]
+        }
+      },
+      {
+        "type": "consistent_performance",
+        "subtype": "below_average",
+        "importance": 0.85,
+        "description": "In the Density comparing patients across admission_time, Wednesday consistently performs below average in 5 out of 6 categories, showing consistently low performance.",
+        "data_points": {
+          "series": "Wednesday",
+          "below_avg_count": 5,
+          "total_categories": 6
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Density comparing patients by admission_time, the highest value overall is 246.0 for Saturday in the 00-04 category, which is 12% above the overall average.",
+        "data_points": {
+          "category": "00-04",
+          "series": "Saturday",
+          "value": 246
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Density comparing patients by admission_time, the lowest value overall is 196.0 for Wednesday in the 16-20 category, which is 11% below the overall average.",
+        "data_points": {
+          "category": "16-20",
+          "series": "Wednesday",
+          "value": 196
+        }
+      }
+    ],
+    "670": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 04-08 consistently perform above average while 08-12, 16-20 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by admission_time, the highest value overall is 795.0 for 04-08 in the Not Adimitted category, which is 4% above the overall average.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "series": "04-08",
+          "value": 795
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by admission_time, the lowest value overall is 744.0 for 16-20 in the Not Adimitted category, which is 3% below the overall average.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "series": "16-20",
+          "value": 744
+        }
+      }
+    ],
+    "671": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Saturday consistently perform above average while Wednesday consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by Patient Admission Flag, the highest value overall is 691.0 for Saturday in the Not Adimitted category, which is 5% above the overall average.",
+        "data_points": {
+          "category": "Not Adimitted",
+          "series": "Saturday",
+          "value": 691
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the Adimitted category, which is 4% below the overall average.",
+        "data_points": {
+          "category": "Adimitted",
+          "series": "Wednesday",
+          "value": 629
+        }
+      }
+    ],
+    "672": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across admission_day, Not Adimitted leads in 5 out of 7 categories (71%), except Friday (led by Adimitted) and Tuesday (led by Adimitted).",
+        "data_points": {
+          "dominant_series": "Not Adimitted",
+          "won_categories": [
+            "Monday",
+            "Saturday",
+            "Sunday",
+            "Thursday",
+            "Wednesday"
+          ],
+          "exceptions": {
+            "Friday": "Adimitted",
+            "Tuesday": "Adimitted"
+          }
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across admission_day, the Tuesday category shows the most pronounced disparities between series with a range of 39.0 units for the absolute range, which is 3.1x higher than the average disparity in other categories. The gap ranges from Not Adimitted (633.0) to Adimitted (672.0).",
+        "data_points": {
+          "category": "Tuesday",
+          "disparity_measure": "range",
+          "disparity_value": 39,
+          "max_series": "Adimitted",
+          "min_series": "Not Adimitted"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across admission_day, the Tuesday category shows the most pronounced disparities between series with a standard deviation of 19.50, which is 3.1x higher than the average disparity in other categories. The gap ranges from Not Adimitted (633.0) to Adimitted (672.0).",
+        "data_points": {
+          "category": "Tuesday",
+          "disparity_measure": "std_dev",
+          "disparity_value": 19.5,
+          "max_series": "Adimitted",
+          "min_series": "Not Adimitted"
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Not Adimitted consistently perform above average while Adimitted consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by admission_day, the highest value overall is 691.0 for Not Adimitted in the Saturday category, which is 5% above the overall average.",
+        "data_points": {
+          "category": "Saturday",
+          "series": "Not Adimitted",
+          "value": 691
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by admission_day, the lowest value overall is 629.0 for Adimitted in the Wednesday category, which is 4% below the overall average.",
+        "data_points": {
+          "category": "Wednesday",
+          "series": "Adimitted",
+          "value": 629
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each admission_day.",
+        "data_points": {
+          "gini": 0.16128832071490617,
+          "cv": 0.0329188899949315,
+          "normalized_entropy": 0.9997221777174485
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The patients distribution is approximately symmetric across admission_days.",
+        "data_points": {
+          "skewness": 0.23050697185170949
+        }
+      }
+    ],
+    "8": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Pacific Islander (led by Female) and Native American/Alaska Native (led by Female).",
+        "data_points": {
+          "dominant_series": "Male",
+          "won_categories": [
+            "African American",
+            "Asian",
+            "Declined to Identify",
+            "Two or More Races",
+            "White"
+          ],
+          "exceptions": {
+            "Pacific Islander": "Female",
+            "Native American/Alaska Native": "Female"
+          }
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.8646797444319231,
+        "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 602.55, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).",
+        "data_points": {
+          "category": "White",
+          "disparity_measure": "std_dev",
+          "disparity_value": 602.5484766113567,
+          "max_series": "Male",
+          "min_series": "NC"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.8556470588235294,
+        "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 1291.0 units for the absolute range, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).",
+        "data_points": {
+          "category": "White",
+          "disparity_measure": "range",
+          "disparity_value": 1291,
+          "max_series": "Male",
+          "min_series": "NC"
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.",
+        "data_points": {
+          "category": "White",
+          "series": "Male",
+          "value": 1296
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average.",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "series": "NC",
+          "value": 0
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.44156672233186567,
+          "cv": 0.5356325581171167,
+          "normalized_entropy": 0.9257870123266538
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The patients distribution is approximately symmetric across Patient Races.",
+        "data_points": {
+          "skewness": 0.4379341702568829
+        }
+      }
+    ],
+    "9": [
+      {
+        "type": "outlier",
+        "subtype": "low",
+        "importance": 0.95,
+        "description": "In the Bar showing patients across all categories in Patient Age, 40-49 stands out with a value of 1024.0, which is 2.5 standard deviations below the mean of 1152.0.",
+        "data_points": {
+          "category": "40-49",
+          "value": 1024,
+          "z_score": 2.464730824015787
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Patient Age.",
+        "data_points": {
+          "gini": 0.14610460069444442,
+          "cv": 0.045080424210412445,
+          "normalized_entropy": 0.9994983271817279
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is left-skewed, with a few Patient Ages having unusually low values.",
+        "data_points": {
+          "skewness": -1.657399323724586
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 8 categories in the Bar of Patient Age, the average patients is 1152.0 with a standard deviation of 51.9 (5% coefficient of variation).",
+        "data_points": {
+          "average": 1152.0,
+          "std_dev": 51.93264869039514,
+          "cv": 4.508042421041244
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Patient Age, 20-29 has the highest value at 1207.0, which is 5% above the average of 1152.0.",
+        "data_points": {
+          "category": "20-29",
+          "value": 1207,
+          "average": 1152.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Patient Age, 40-49 has the lowest value at 1024.0, which is 11% below the average of 1152.0.",
+        "data_points": {
+          "category": "40-49",
+          "value": 1024,
+          "average": 1152.0
+        }
+      }
+    ],
+    "1297": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.43892609126984117,
+          "cv": 0.5325416039531977,
+          "normalized_entropy": 0.9273858314784206
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of Patient Race, the average patients is 1316.6 with a standard deviation of 701.1 (53% coefficient of variation).",
+        "data_points": {
+          "average": 1316.5714285714287,
+          "std_dev": 701.1290602903815,
+          "cv": 53.25416039531977
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The patients distribution is approximately symmetric across Patient Races.",
+        "data_points": {
+          "skewness": 0.49823944876591975
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.",
+        "data_points": {
+          "category": "White",
+          "value": 2571,
+          "average": 1316.5714285714287
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing patients by Patient Race, Native American/Alaska Native has the lowest value at 498.0, which is 62% below the average of 1316.6.",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "value": 498,
+          "average": 1316.5714285714287
+        }
+      }
+    ],
+    "1298": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Gender, Male leads in 6 out of 8 categories (75%), except 40-49 (led by Female) and 0-9 (led by Female).",
+        "data_points": {
+          "dominant_series": "Male",
+          "won_categories": [
+            "10-19",
+            "20-29",
+            "30-39",
+            "50-59",
+            "60-69",
+            "70-79"
+          ],
+          "exceptions": {
+            "40-49": "Female",
+            "0-9": "Female"
+          }
+        }
+      },
+      {
+        "type": "category_clustering",
+        "subtype": "similar_behavior",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Gender, 20-29 and 30-39 exhibit very similar patterns across all series (similarity score: 1.00), suggesting these 2 categories behave as a cohesive group and may share common underlying characteristics.",
+        "data_points": {
+          "categories": [
+            "20-29",
+            "30-39"
+          ],
+          "similarity": 0.9999999999999998,
+          "cluster_size": 2
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.8528733850295501,
+        "description": "In the Bar comparing patients across Patient Gender, the relationship landscape shows exceptional predictability with 3 highly stable series relationships. The most predictable pair, Female and NC, demonstrates 96% consistency maintaining a consistent gap of 557.9 units across all categories, with an overall relationship consistency of 95% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 3,
+          "avg_consistency": 94.57467700591002,
+          "most_stable_pair": [
+            "Female",
+            "NC"
+          ],
+          "relationship_hubs": [
+            "Male",
+            "NC",
+            "Female"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for Male in the 20-29 category, which is 63% above the overall average.",
+        "data_points": {
+          "category": "20-29",
+          "series": "Male",
+          "value": 625
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1.0 for NC in the 30-39 category, which is 100% below the overall average.",
+        "data_points": {
+          "category": "30-39",
+          "series": "NC",
+          "value": 1
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Patient Gender.",
+        "data_points": {
+          "gini": 0.15786397449521783,
+          "cv": 0.06487132690332195,
+          "normalized_entropy": 0.9989557393891698
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is left-skewed, with a few Patient Genders having unusually low values.",
+        "data_points": {
+          "skewness": -1.3396082930674105
+        }
+      }
+    ],
+    "1299": [
+      {
+        "type": "relationship_consistency",
+        "subtype": "mostly_stable",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Race, the relationship landscape demonstrates strong overall stability with 14 very stable relationships and 13 moderately stable relationships. The most reliable relationship between 50-59 and 10-19 shows 97% consistency, contributing to an overall relationship consistency of 90% across all series pairs, indicating predominantly stable interaction patterns.",
+        "data_points": {
+          "pattern_type": "mostly_stable",
+          "total_relationships": 27,
+          "avg_consistency": 89.7049155981502,
+          "most_stable_pair": [
+            "50-59",
+            "10-19"
+          ],
+          "relationship_hubs": [
+            "60-69",
+            "0-9",
+            "50-59",
+            "20-29",
+            "40-49",
+            "10-19",
+            "30-39",
+            "70-79"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 20-29, 10-19, 30-39 consistently perform above average while 40-49, 70-79 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.",
+        "data_points": {
+          "category": "White",
+          "series": "20-29",
+          "value": 348
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.7535714285714286,
+        "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 66.0 units for the absolute range, which is 1.8x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).",
+        "data_points": {
+          "category": "White",
+          "disparity_measure": "range",
+          "disparity_value": 66,
+          "max_series": "20-29",
+          "min_series": "40-49"
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 50.0 for 70-79 in the Native American/Alaska Native category, which is 70% below the overall average.",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "series": "70-79",
+          "value": 50
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.4416934884872493,
+          "cv": 0.538827594476358,
+          "normalized_entropy": 0.9257350121125602
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is right-skewed, with a few Patient Races having unusually high values.",
+        "data_points": {
+          "skewness": 0.5317543936740914
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "relative variation (cv)",
+        "importance": 0.712046033157167,
+        "description": "In the Bar comparing patients across Patient Race, the Native American/Alaska Native category shows the most pronounced disparities between series with a 12% coefficient of relative variation, which is 1.6x higher than the average disparity in other categories. The gap ranges from 70-79 (50.0) to 30-39 (74.0).",
+        "data_points": {
+          "category": "Native American/Alaska Native",
+          "disparity_measure": "cv",
+          "disparity_value": 0.12014678957149873,
+          "max_series": "30-39",
+          "min_series": "70-79"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.709221683054337,
+        "description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 17.44, which is 1.5x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).",
+        "data_points": {
+          "category": "White",
+          "disparity_measure": "std_dev",
+          "disparity_value": 17.435147690799756,
+          "max_series": "20-29",
+          "min_series": "40-49"
+        }
+      }
+    ],
+    "1300": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Age, White leads in 8 out of 8 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "White",
+          "won_categories": [
+            "0-9",
+            "10-19",
+            "20-29",
+            "30-39",
+            "40-49",
+            "50-59",
+            "60-69",
+            "70-79"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "mostly_stable",
+        "importance": 0.95,
+        "description": "In the Bar comparing patients across Patient Age, the relationship landscape demonstrates strong overall stability with 14 very stable relationships and 18 moderately stable relationships. The most reliable relationship between White and Asian shows 95% consistency, contributing to an overall relationship consistency of 88% across all series pairs, indicating predominantly stable interaction patterns.",
+        "data_points": {
+          "pattern_type": "mostly_stable",
+          "total_relationships": 35,
+          "avg_consistency": 88.02168427069599,
+          "most_stable_pair": [
+            "White",
+            "Asian"
+          ],
+          "relationship_hubs": [
+            "White",
+            "Native American/Alaska Native",
+            "African American",
+            "Asian",
+            "Two or More Races",
+            "Pacific Islander",
+            "Declined to Identify"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, White, African American, Two or More Races consistently perform above average while Native American/Alaska Native, Asian, Pacific Islander, Declined to Identify consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing patients by Patient Age, the highest value overall is 348.0 for White in the 20-29 category, which is 111% above the overall average.",
+        "data_points": {
+          "category": "20-29",
+          "series": "White",
+          "value": 348
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing patients by Patient Age, the lowest value overall is 50.0 for Native American/Alaska Native in the 70-79 category, which is 70% below the overall average.",
+        "data_points": {
+          "category": "70-79",
+          "series": "Native American/Alaska Native",
+          "value": 50
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each Patient Age.",
+        "data_points": {
+          "gini": 0.15227537922987167,
+          "cv": 0.05425172365865346,
+          "normalized_entropy": 0.9992783710800964
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The patients distribution is left-skewed, with a few Patient Ages having unusually low values.",
+        "data_points": {
+          "skewness": -0.9750750930827087
+        }
+      }
+    ],
+    "1": [
+      {
+        "type": "temporal_leadership",
+        "subtype": "stability_pattern",
+        "importance": 0.85,
+        "description": "In the Line tracking admission over admission_date, Not Adimitted maintains leadership in 53% of time periods (10 out of 19), with Adimitted challenging during 2023-07, 2023-09, and 7 other periods.",
+        "data_points": {
+          "dominant_series": "Not Adimitted",
+          "leadership_percentage": 52.63157894736842,
+          "challenger": "Adimitted",
+          "total_periods": 19
+        }
+      },
+      {
+        "type": "series_divergence",
+        "subtype": "variance_trend",
+        "importance": 0.85,
+        "description": "In the Line of admission over admission_date, the series values are diverging and spreading apart, with the variability between series increasing by 2016% from 2023-04 to 2024-10.",
+        "data_points": {
+          "start_var": 6.25,
+          "end_var": 132.25,
+          "trend": 11.046052631578947
+        }
+      }
+    ],
+    "3": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of score over admission_date, the largest single decrease of 0.7 (13%) occurs between 2024-03 and 2024-04.",
+        "data_points": {
+          "from": "2024-03",
+          "to": "2024-04",
+          "change": -0.7007469654528471
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of score over admission_date, the score peak at 2024-03 with value 5.3.",
+        "data_points": {
+          "x": "2024-03",
+          "y": 5.3277310924369745
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of score over admission_date, the trough is at 2024-04 with value 4.6.",
+        "data_points": {
+          "x": "2024-04",
+          "y": 4.626984126984127
+        }
+      }
+    ]
+  }
+}

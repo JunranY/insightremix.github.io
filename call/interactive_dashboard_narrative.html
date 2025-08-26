@@ -1,0 +1,3061 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard Analysis</title>
+            <style>
+                
+        /* Enhanced Interactive Dashboard Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .main-header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .approach-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .pattern-approach {
+            background-color: rgba(70, 130, 180, 0.8);
+        }
+        
+        .traditional-approach {
+            background-color: rgba(210, 105, 30, 0.8);
+        }
+        
+        .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Main Layout */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .goal-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .goal-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 1.5rem 2rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .goal-title {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .goal-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .goal-type, .goal-views, .approach-indicator {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .goal-type {
+            background-color: #e6fffa;
+            color: #234e52;
+        }
+        
+        .goal-views {
+            background-color: #fef7e0;
+            color: #744210;
+        }
+        
+        .approach-indicator {
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+        
+        /* Side Panel Layout */
+        .goal-content {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            min-height: 600px;
+        }
+        
+        .charts-panel {
+            padding: 2rem;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            max-height: 800px;
+        }
+        
+        .insights-panel {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: 800px;
+            background-color: #fafbfc;
+        }
+        
+        .charts-panel h3, .insights-panel h3 {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .chart-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .chart-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .chart-item.highlighted {
+            border: 3px solid #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .chart-item.dimmed {
+            opacity: 0.5;
+        }
+        
+        .new-view {
+            border: 2px solid #48bb78;
+        }
+        
+        .new-view-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #48bb78;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        .svg-container, .chart-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+        }
+        
+        .responsive-svg, .responsive-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .chart-placeholder {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7fafc;
+            color: #a0aec0;
+        }
+        
+        .placeholder-content {
+            text-align: center;
+        }
+        
+        .placeholder-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chart-caption {
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .chart-id {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .zoom-hint {
+            font-size: 0.7rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        /* Chart Zoom Overlay */
+        .chart-zoom-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+        
+        .chart-zoom-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .zoom-overlay-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .zoom-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+            z-index: 1001;
+        }
+        
+        .zoom-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .zoom-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+        
+        .close-overlay {
+            background: rgba(255, 0, 0, 0.8) !important;
+            color: white;
+        }
+        
+        .zoom-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 10px 30px 10px;
+        }
+        
+        .zoom-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+            transform-origin: center center;
+        }
+        
+        .zoom-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .zoom-chart-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .zoom-chart-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .chart-details-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .chart-details-header h5 {
+            margin: 0;
+            color: #2d3748;
+        }
+        
+        .chart-insight-count {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Insights Styles */
+        .goal-insights {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .insight-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .insight-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .insight-pattern {
+            border-left: 4px solid #667eea;
+        }
+        
+        .insight-traditional {
+            border-left: 4px solid #d69e2e;
+        }
+        
+        .insight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .insight-title {
+            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .insight-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: flex-end;
+        }
+        
+        .confidence-score {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pattern-type {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .source-indicator {
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+        
+        .insight-narrative {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .contributing-evidence {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            max-height: 0;
+        }
+        
+        .contributing-evidence.expanded {
+            max-height: 200px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .contributing-evidence h5 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .evidence-list {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+        
+        .entities-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .entity-tag {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #81e6d9;
+        }
+        
+        /* Chart Details Section */
+        .chart-details-section {
+            background: white;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .chart-details-section.hidden {
+            display: none;
+        }
+        
+        .chart-details-section h4 {
+            background: #667eea;
+            color: white;
+            padding: 1rem 1.5rem;
+            margin: 0;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .chart-details-content {
+            padding: 1.5rem;
+        }
+        
+        .chart-fact-item {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .fact-type-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        
+        .fact-extreme { border-left-color: #f56565; }
+        .fact-trend { border-left-color: #4299e1; }
+        .fact-outlier { border-left-color: #ed8936; }
+        .fact-comparison { border-left-color: #48bb78; }
+        .fact-distribution { border-left-color: #9f7aea; }
+        
+        .close-details-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 1.5rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .close-details-btn:hover {
+            background: #5a67d8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .goal-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .charts-panel {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                max-height: 400px;
+            }
+            
+            .insights-panel {
+                max-height: 600px;
+            }
+            
+            .charts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 1rem;
+            }
+            
+            .goal-header {
+                padding: 1rem;
+            }
+            
+            .charts-panel, .insights-panel {
+                padding: 1rem;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .insight-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .insight-meta {
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+            
+            .main-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        
+        
+        /* Enhanced Supporting Facts Styles */
+        .expand-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.8rem;
+            color: #718096;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .insight-item:hover .expand-indicator {
+            color: #4a5568;
+        }
+        
+        .expand-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.7rem;
+        }
+        
+        .insight-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        .insight-item.expanded .expand-text {
+            opacity: 0.7;
+        }
+        
+        .supporting-facts-section {
+            margin-top: 1rem;
+            padding: 0;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            max-height: 0;
+            position: relative;
+        }
+        
+        .supporting-facts-section.expanded {
+            max-height: 600px;
+            border-left-color: #48bb78;
+            padding: 1rem;
+            overflow: visible; /* Allow content to be scrollable */
+        }
+        
+        .supporting-facts-title {
+            color: #2d3748;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            position: sticky;
+            top: 0;
+            background: #f8fafc;
+            z-index: 2;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .scroll-hint {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: normal;
+            animation: bounce-hint 2s infinite;
+        }
+        
+        @keyframes bounce-hint {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-3px); }
+            60% { transform: translateY(-2px); }
+        }
+        
+        .evidence-icon {
+            font-size: 1.2rem;
+        }
+        
+        .supporting-facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-height: 450px; /* Allow scrolling within the facts list */
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 8px; /* Space for scrollbar */
+            margin-right: -8px; /* Compensate for padding */
+        }
+        
+        /* Custom scrollbar styling for better UX */
+        .supporting-facts-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0;
+        }
+        
+        /* Firefox scrollbar */
+        .supporting-facts-list {
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e0 #f1f5f9;
+        }
+        
+        .chart-facts-group {
+            background: white;
+            border-radius: 6px;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-facts-group:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .chart-facts-header {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .chart-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .facts-count {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: normal;
+        }
+        
+        .facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .supporting-fact-item {
+            padding: 0.75rem;
+            background: #fafbfc;
+            border-radius: 4px;
+            border-left: 3px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .supporting-fact-item:hover {
+            background: #f1f5f9;
+            border-left-color: #667eea;
+            transform: translateX(2px);
+        }
+        
+        .supporting-fact-item.highlighted {
+            background: #e6fffa;
+            border-left-color: #38b2ac;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(56, 178, 172, 0.2);
+        }
+        
+        .fact-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .fact-type-badge {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .fact-extreme { 
+            background: #fed7d7; 
+            color: #c53030; 
+        }
+        
+        .fact-trend { 
+            background: #bee3f8; 
+            color: #2b6cb0; 
+        }
+        
+        .fact-outlier { 
+            background: #fbd38d; 
+            color: #c05621; 
+        }
+        
+        .fact-comparison { 
+            background: #c6f6d5; 
+            color: #2f855a; 
+        }
+        
+        .fact-distribution { 
+            background: #e9d8fd; 
+            color: #6b46c1; 
+        }
+        
+        .fact-subtype {
+            font-size: 0.8rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .fact-description {
+            flex: 1;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+        
+        .fact-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+        
+        .fact-importance {
+            background: #f0fff4;
+            color: #22543d;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+        }
+        
+        .fact-entities {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+        }
+        
+        /* Enhanced Chart Highlighting for Facts */
+        .chart-item.fact-highlighted {
+            border: 3px solid #38b2ac;
+            box-shadow: 0 8px 30px rgba(56, 178, 172, 0.4);
+            transform: translateY(-4px) scale(1.02);
+            z-index: 10;
+            position: relative;
+        }
+        
+        .chart-item.fact-highlighted::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(45deg, #38b2ac, #4fd1c7);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 0.5; 
+                transform: scale(1.02); 
+            }
+        }
+        
+        /* Responsive adjustments for supporting facts */
+        @media (max-width: 768px) {
+            .supporting-facts-section {
+                padding: 0.75rem;
+            }
+            
+            .chart-facts-group {
+                padding: 0.75rem;
+            }
+            
+            .supporting-fact-item {
+                padding: 0.5rem;
+            }
+            
+            .fact-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+            
+            .fact-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Animation classes */
+        .slide-down {
+            animation: slideDown 0.3s ease;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from { 
+                max-height: 0; 
+                opacity: 0; 
+            }
+            to { 
+                max-height: 800px; 
+                opacity: 1; 
+            }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                max-height: 800px; 
+                opacity: 1; 
+            }
+            to { 
+                max-height: 0; 
+                opacity: 0; 
+            }
+        }
+        
+            </style>
+        </head>
+        <body>
+            <header class="main-header">
+                <div class="header-content">
+                    <h1>Dashboard Analysis</h1>
+                    <p>Enhanced insights with universal pattern detection and interactive interface</p>
+                    <div class="header-meta">
+                        <span class="approach-badge pattern-approach">
+                            Pattern Approach
+                        </span>
+                        <span class="timestamp">Generated: 2025-08-26 11:40:03</span>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="dashboard-container">
+        
+        <section class="goal-section" id="goal-1" data-goal-id="1">
+            <div class="goal-header">
+                <h2 class="goal-title">Summary the measure calls</h2>
+                <div class="goal-meta">
+                    <span class="goal-type">Summarize Measure</span>
+                    <span class="goal-views">Views: 1, 3, 0, 4, 2, 5</span>
+                    <span class="approach-indicator">Pattern</span>
+                </div>
+            </div>
+            
+            <div class="goal-content">
+                <!-- Charts Panel (Left) -->
+                <div class="charts-panel">
+                    <h3>Goal Charts</h3>
+                    <div class="charts-grid">
+        
+        <div class="chart-item" 
+             data-chart-id="1" 
+             data-chart-insights='[{"description": "In the Donut of sentiment, Negative, Neutral, Very Negative, and Positive collectively account for 90.4% of total calls, while the remaining 1 categories account for only 9.6%, demonstrating a concentration pattern.", "fact_type": "concentration", "subtype": "pareto_principle", "importance": 0.85, "data_points": {"categories": ["Negative", "Neutral", "Very Negative", "Positive"], "percentage": 90.37947783849422}, "entities": []}, {"description": "In the Donut showing the distribution of calls by sentiment, Negative accounts for the largest share at 33.6% (11063.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "largest", "importance": 0.7, "data_points": {"category": "Negative", "percentage": 33.585306618093504, "value": 11063}, "entities": ["Negative", "11063", "Negative"]}, {"description": "In the Donut showing the distribution of calls by sentiment, Very Positive represents the smallest share at only 9.6% (3169.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "smallest", "importance": 0.65, "data_points": {"category": "Very Positive", "percentage": 9.620522161505768, "value": 3169}, "entities": ["Very Positive", "3169", "Very Positive"]}]'
+             onclick="showChartDetails(1, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_1.svg" alt="Chart 1" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 1</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="3" 
+             data-chart-insights='[{"description": "In the Donut of channel, Call-Center, Chatbot, and Email collectively account for 80.0% of total calls, while the remaining 1 categories account for only 20.0%, demonstrating a concentration pattern.", "fact_type": "concentration", "subtype": "pareto_principle", "importance": 0.85, "data_points": {"categories": ["Call-Center", "Chatbot", "Email"], "percentage": 80.03642987249545}, "entities": []}, {"description": "In the Donut showing the distribution of calls by channel, Call-Center accounts for the largest share at 32.3% (10638.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "largest", "importance": 0.7, "data_points": {"category": "Call-Center", "percentage": 32.295081967213115, "value": 10638}, "entities": ["Call-Center", "10638", "Call-Center"]}, {"description": "In the Donut showing the distribution of calls by channel, Web represents the smallest share at only 20.0% (6576.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "smallest", "importance": 0.65, "data_points": {"category": "Web", "percentage": 19.963570127504553, "value": 6576}, "entities": ["Web", "6576", "Web"]}]'
+             onclick="showChartDetails(3, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_3.svg" alt="Chart 3" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 3</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="0" 
+             data-chart-insights='[{"description": "In the Donut showing calls by reason, Billing Question dominates with 71.2% of the total, representing a clear majority over all other categories.", "fact_type": "dominance", "subtype": "majority", "importance": 0.95, "data_points": {"category": "Billing Question", "percentage": 71.22343655130541, "value": 23461}, "entities": ["Billing Question", "23461", "Billing Question"]}, {"description": "In the Donut of reason, Billing Question and Payments collectively account for 85.6% of total calls, while the remaining 1 categories account for only 14.4%, demonstrating a concentration pattern.", "fact_type": "concentration", "subtype": "pareto_principle", "importance": 0.85, "data_points": {"categories": ["Billing Question", "Payments"], "percentage": 85.64055859137827}, "entities": []}, {"description": "In the Donut showing the distribution of calls by reason, Billing Question accounts for the largest share at 71.2% (23461.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "largest", "importance": 0.7, "data_points": {"category": "Billing Question", "percentage": 71.22343655130541, "value": 23461}, "entities": ["Billing Question", "23461", "Billing Question"]}, {"description": "In the Donut showing the distribution of calls by reason, Service Outage represents the smallest share at only 14.4% (4730.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "smallest", "importance": 0.65, "data_points": {"category": "Service Outage", "percentage": 14.359441408621738, "value": 4730}, "entities": ["Service Outage", "4730", "Service Outage"]}]'
+             onclick="showChartDetails(0, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_0.svg" alt="Chart 0" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 0</span>
+                
+                <span class="insights-count">4 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="4" 
+             data-chart-insights='[{"description": "In the Line of calls over timestamp, the largest single decrease of 107.0 (9%) occurs between 10/06/2020 and 10/07/2020.", "fact_type": "change", "subtype": "decrease", "importance": 0.9, "data_points": {"from": "10/06/2020", "to": "10/07/2020", "change": -107}, "entities": []}, {"description": "In the Line of calls over timestamp, the calls peak at 10/21/2020 with value 1170.0.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.7, "data_points": {"x": "10/21/2020", "y": 1170}, "entities": ["10/21/2020", "10/21/2020"]}, {"description": "In the Line of calls over timestamp, the trough is at 10/07/2020 with value 1045.0.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.65, "data_points": {"x": "10/07/2020", "y": 1045}, "entities": ["10/07/2020", "10/07/2020"]}]'
+             onclick="showChartDetails(4, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_4.svg" alt="Chart 4" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 4</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="2" 
+             data-chart-insights='[{"description": "In the Donut of call_center, Los Angeles/CA, Baltimore/MD, and Chicago/IL collectively account for 91.6% of total calls, while the remaining 1 categories account for only 8.4%, demonstrating a concentration pattern.", "fact_type": "concentration", "subtype": "pareto_principle", "importance": 0.85, "data_points": {"categories": ["Los Angeles/CA", "Baltimore/MD", "Chicago/IL"], "percentage": 91.57255616272009}, "entities": []}, {"description": "In the Donut showing the distribution of calls by call_center, Los Angeles/CA accounts for the largest share at 41.7% (13734.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "largest", "importance": 0.7, "data_points": {"category": "Los Angeles/CA", "percentage": 41.69398907103825, "value": 13734}, "entities": ["Los Angeles/CA", "13734", "Los Angeles/CA"]}, {"description": "In the Donut showing the distribution of calls by call_center, Denver/CO represents the smallest share at only 8.4% (2776.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "smallest", "importance": 0.65, "data_points": {"category": "Denver/CO", "percentage": 8.427443837279904, "value": 2776}, "entities": ["Denver/CO", "2776", "Denver/CO"]}]'
+             onclick="showChartDetails(2, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_2.svg" alt="Chart 2" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 2</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="5" 
+             data-chart-insights='[{"description": "The distribution is very even across categories, with nearly equal values for each day.", "fact_type": "distribution_evenness", "subtype": "very_even", "importance": 0.75, "data_points": {"gini": 0.19631364385462746, "cv": 0.11073936405091711, "normalized_entropy": 0.9969457527879306}, "entities": []}, {"description": "The calls distribution is right-skewed, with a few days having unusually high values.", "fact_type": "distribution_skew", "subtype": "positive_skew", "importance": 0.75, "data_points": {"skewness": 0.9289227877428853}, "entities": []}, {"description": "Across all 7 categories in the Bar of day, the average calls is 4705.7 with a standard deviation of 521.1 (11% coefficient of variation).", "fact_type": "distribution", "subtype": "average", "importance": 0.7, "data_points": {"average": 4705.714285714285, "std_dev": 521.1078074053156, "cv": 11.073936405091711}, "entities": []}, {"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "data_points": {"category": "Friday", "value": 5570, "average": 4705.714285714285}, "entities": ["Friday", "5570", "Friday"]}, {"description": "In the Bar showing calls by day, Sunday has the lowest value at 4296.0, which is 9% below the average of 4705.7.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "data_points": {"category": "Sunday", "value": 4296, "average": 4705.714285714285}, "entities": ["Sunday", "4296", "Sunday"]}]'
+             onclick="showChartDetails(5, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_5.svg" alt="Chart 5" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 5</span>
+                
+                <span class="insights-count">5 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+                    </div>
+                </div>
+                
+                <!-- Insights Panel (Right) -->
+                <div class="insights-panel">
+                    <h3>Goal Insights</h3>
+                    <div class="goal-insights">
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="0"
+            data-contributing-charts='[5]'
+            data-entities='["Friday", "Friday"]'
+            data-pattern-type="outlier"
+            data-supporting-facts='[{"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}]'
+            onmouseover="highlightContributingCharts(this, '1')"
+            onmouseout="clearHighlights('1')"
+            onclick="toggleSupportingFacts(this, '1', 0)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Exceptional High Values: Friday</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 0.60
+                    </span>
+                    <span class="pattern-type">outlier</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Friday demonstrates exceptionally high calls values in day, day, representing a significant positive outlier that stands apart from typical patterns.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-1-0">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (2 facts)
+                    
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-1-0">
+        
+                    <div class="chart-facts-group" data-chart-id="5">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 5</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-5-0"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '5')"
+                                onmouseout="clearFactHighlight('1', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-5-1"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '5')"
+                                onmouseout="clearFactHighlight('1', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Friday</span>
+            </div>
+        </div>
+        
+                    </div>
+                    
+                    <!-- Chart Details Section (Hidden by default) -->
+                    <div class="chart-details-section hidden" id="chart-details-1">
+                        <h4>Chart Details</h4>
+                        <div class="chart-details-content">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                        <button class="close-details-btn" onclick="closeChartDetails('1')">
+                            ✕ Close Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="goal-section" id="goal-11" data-goal-id="11">
+            <div class="goal-header">
+                <h2 class="goal-title">Compare the categories of sentiment and channel for duration</h2>
+                <div class="goal-meta">
+                    <span class="goal-type">Compare Two Dimensions</span>
+                    <span class="goal-views">Views: 10, 9, 6, 69, 70, 71</span>
+                    <span class="approach-indicator">Pattern</span>
+                </div>
+            </div>
+            
+            <div class="goal-content">
+                <!-- Charts Panel (Left) -->
+                <div class="charts-panel">
+                    <h3>Goal Charts</h3>
+                    <div class="charts-grid">
+        
+        <div class="chart-item" 
+             data-chart-id="10" 
+             data-chart-insights='[{"description": "The duration distribution is right-skewed, with a few sentiments having unusually high values.", "fact_type": "distribution_skew", "subtype": "positive_skew", "importance": 0.75, "data_points": {"skewness": 0.928252986425188}, "entities": []}, {"description": "Across all 5 categories in the Bar of sentiment, the average duration is 25.0 with a standard deviation of 0.2 (1% coefficient of variation).", "fact_type": "distribution", "subtype": "average", "importance": 0.7, "data_points": {"average": 24.95314053825699, "std_dev": 0.1673799252401465, "cv": 0.6707769909103322}, "entities": []}, {"description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.20344740947830997, "cv": 0.006707769909103322, "normalized_entropy": 0.9999860505073128}, "entities": []}, {"description": "In the Bar showing duration by sentiment, Negative has the highest value at 25.3, which is 1% above the average of 25.0.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "data_points": {"category": "Negative", "value": 25.261773479164784, "average": 24.95314053825699}, "entities": ["Negative", "25.261773479164784", "Negative"]}, {"description": "In the Bar showing duration by sentiment, Very Positive has the lowest value at 24.8, which is 1% below the average of 25.0.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "data_points": {"category": "Very Positive", "value": 24.763016724518774, "average": 24.95314053825699}, "entities": ["Very Positive", "24.763016724518774", "Very Positive"]}]'
+             onclick="showChartDetails(10, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_10.svg" alt="Chart 10" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 10</span>
+                
+                <span class="insights-count">5 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="9" 
+             data-chart-insights='[{"description": "In the Bar comparing duration across sentiment, the relationship landscape shows exceptional predictability with 3 highly stable series relationships. The most predictable pair, Service Outage and Payments, demonstrates 99% consistency maintaining a 1.00 ratio across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.8728651796737643, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 3, "avg_consistency": 98.57303593475285, "most_stable_pair": ["Service Outage", "Payments"], "relationship_hubs": ["Billing Question", "Service Outage", "Payments"]}, "entities": []}, {"description": "In the Bar comparing duration across sentiment, the Very Negative category shows the most pronounced disparities between series with a range of 0.8 units for the absolute range, which is 2.1x higher than the average disparity in other categories. The gap ranges from Billing Question (24.7) to Service Outage (25.6).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.8214544345218824, "data_points": {"category": "Very Negative", "disparity_measure": "range", "disparity_value": 0.8163960501584988, "max_series": "Service Outage", "min_series": "Billing Question"}, "entities": ["Very Negative", "Very Negative"]}, {"description": "In the Bar comparing duration across sentiment, the Very Negative category shows the most pronounced disparities between series with a standard deviation of 0.34, which is 2.1x higher than the average disparity in other categories. The gap ranges from Billing Question (24.7) to Service Outage (25.6).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.8114508951677012, "data_points": {"category": "Very Negative", "disparity_measure": "std_dev", "disparity_value": 0.33806981631975463, "max_series": "Service Outage", "min_series": "Billing Question"}, "entities": ["Very Negative", "Very Negative"]}, {"description": "Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.7 for Payments in the Negative category, which is 3% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Negative", "series": "Payments", "value": 25.711236660389204}, "entities": ["Negative", "Payments", "25.711236660389204", "Negative", "Payments"]}, {"description": "Across all series in the Bar comparing duration by sentiment, the lowest value overall is 24.5 for Payments in the Very Positive category, which is 2% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Very Positive", "series": "Payments", "value": 24.473347547974413}, "entities": ["Very Positive", "Payments", "24.473347547974413", "Very Positive", "Payments"]}, {"description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.20307420729741443, "cv": 0.005567724813870362, "normalized_entropy": 0.9999903754808482}, "entities": []}, {"description": "The duration distribution is approximately symmetric across sentiments.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.3423863890026494}, "entities": []}]'
+             onclick="showChartDetails(9, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_9.svg" alt="Chart 9" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 9</span>
+                
+                <span class="insights-count">7 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="6" 
+             data-chart-insights='[{"description": "The duration distribution is left-skewed, with a few channels having unusually low values.", "fact_type": "distribution_skew", "subtype": "negative_skew", "importance": 0.75, "data_points": {"skewness": -0.5576202223809364}, "entities": []}, {"description": "Across all 4 categories in the Bar of channel, the average duration is 25.0 with a standard deviation of 0.1 (0% coefficient of variation).", "fact_type": "distribution", "subtype": "average", "importance": 0.7, "data_points": {"average": 25.02154732555006, "std_dev": 0.06595964717706895, "cv": 0.2636113838959755}, "entities": []}, {"description": "The distribution is moderately even across channels, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.2514188883267172, "cv": 0.002636113838959755, "normalized_entropy": 0.9999974924094406}, "entities": []}, {"description": "In the Bar showing duration by channel, Email has the highest value at 25.1, which is 0% above the average of 25.0.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "data_points": {"category": "Email", "value": 25.09879518072289, "average": 25.02154732555006}, "entities": ["Email", "25.09879518072289", "Email"]}, {"description": "In the Bar showing duration by channel, Chatbot has the lowest value at 24.9, which is 0% below the average of 25.0.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "data_points": {"category": "Chatbot", "value": 24.917756782945737, "average": 25.02154732555006}, "entities": ["Chatbot", "24.917756782945737", "Chatbot"]}]'
+             onclick="showChartDetails(6, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_6.svg" alt="Chart 6" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 6</span>
+                
+                <span class="insights-count">5 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="69" 
+             data-chart-insights='[{"description": "In the Bar comparing duration across reason, the relationship landscape shows exceptional predictability with 2 highly stable series relationships. The most predictable pair, Service Outage and Payments, demonstrates 99% consistency maintaining a consistent gap of 25.1 units across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.8665103369321075, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 2, "avg_consistency": 99.3020673864215, "most_stable_pair": ["Service Outage", "Payments"], "relationship_hubs": ["Service Outage"]}, "entities": []}, {"description": "In the Bar, Billing Question, Service Outage consistently perform above average while Payments consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing duration by reason, the highest value overall is 25.3 for Service Outage in the Email category, which is 52% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Email", "series": "Service Outage", "value": 25.34480560866794}, "entities": ["Email", "Service Outage", "25.34480560866794", "Email", "Service Outage"]}, {"description": "Across all series in the Bar comparing duration by reason, the lowest value overall is 0.0 for Payments in the Web category, which is 100% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Web", "series": "Payments", "value": 0.0}, "entities": ["Web", "Payments", "0.0", "Web", "Payments"]}, {"description": "The distribution is moderately even across reasons, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.2512957742373888, "cv": 0.0024633173726374526, "normalized_entropy": 0.9999978113099924}, "entities": []}, {"description": "The duration distribution is approximately symmetric across reasons.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": -0.0798696127003756}, "entities": []}]'
+             onclick="showChartDetails(69, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_69.svg" alt="Chart 69" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 69</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">6 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="70" 
+             data-chart-insights='[{"description": "In the Bar comparing duration across sentiment, the Very Positive category shows the most pronounced disparities between series with a range of 1.1 units for the absolute range, which is 3.2x higher than the average disparity in other categories. The gap ranges from Call-Center (24.3) to Web (25.4).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.95, "data_points": {"category": "Very Positive", "disparity_measure": "range", "disparity_value": 1.0839886003999304, "max_series": "Web", "min_series": "Call-Center"}, "entities": ["Very Positive", "Very Positive"]}, {"description": "In the Bar comparing duration across sentiment, the Very Positive category shows the most pronounced disparities between series with a standard deviation of 0.40, which is 3.0x higher than the average disparity in other categories. The gap ranges from Call-Center (24.3) to Web (25.4).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.95, "data_points": {"category": "Very Positive", "disparity_measure": "std_dev", "disparity_value": 0.3963766365180361, "max_series": "Web", "min_series": "Call-Center"}, "entities": ["Very Positive", "Very Positive"]}, {"description": "In the Bar comparing duration across sentiment, the relationship landscape shows exceptional predictability with 6 highly stable series relationships. The most predictable pair, Chatbot and Email, demonstrates 99% consistency maintaining a 0.99 ratio across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.9040800795550302, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 6, "avg_consistency": 98.81601591100603, "most_stable_pair": ["Chatbot", "Email"], "relationship_hubs": ["Call-Center", "Chatbot", "Email", "Web"]}, "entities": []}, {"description": "In the Bar, Email, Web consistently perform above average while Chatbot consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.4 for Web in the Very Positive category, which is 2% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Very Positive", "series": "Web", "value": 25.40531561461794}, "entities": ["Very Positive", "Web", "25.40531561461794", "Very Positive", "Web"]}, {"description": "Across all series in the Bar comparing duration by sentiment, the lowest value overall is 24.3 for Call-Center in the Very Positive category, which is 3% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Very Positive", "series": "Call-Center", "value": 24.32132701421801}, "entities": ["Very Positive", "Call-Center", "24.32132701421801", "Very Positive", "Call-Center"]}, {"description": "The duration distribution is left-skewed, with a few sentiments having unusually low values.", "fact_type": "distribution_skew", "subtype": "negative_skew", "importance": 0.75, "data_points": {"skewness": -0.5854394262272868}, "entities": []}, {"description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.20728682802338372, "cv": 0.013651913576320765, "normalized_entropy": 0.9999419407005403}, "entities": []}]'
+             onclick="showChartDetails(70, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_70.svg" alt="Chart 70" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 70</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">8 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="71" 
+             data-chart-insights='[{"description": "In the Bar comparing duration across channel, Negative leads in 3 out of 4 categories (75%), except Web, which is led by Very Positive.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Negative", "won_categories": ["Call-Center", "Chatbot", "Email"], "exceptions": {"Web": "Very Positive"}}, "entities": []}, {"description": "In the Bar comparing duration across channel, the relationship landscape shows exceptional predictability with 11 highly stable series relationships. The most predictable pair, Neutral and Positive, demonstrates 100% consistency maintaining a 1.00 ratio across all categories, with an overall relationship consistency of 98% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.949424254225967, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 11, "avg_consistency": 97.8848508451934, "most_stable_pair": ["Neutral", "Positive"], "relationship_hubs": ["Neutral", "Very Negative", "Very Positive", "Negative", "Positive"]}, "entities": []}, {"description": "In the Bar, Negative, Very Negative consistently perform above average while Neutral, Very Positive, Positive consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing duration by channel, the highest value overall is 25.4 for Very Positive in the Web category, which is 2% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Web", "series": "Very Positive", "value": 25.40531561461794}, "entities": ["Web", "Very Positive", "25.40531561461794", "Web", "Very Positive"]}, {"description": "In the Bar comparing duration across channel, the Call-Center category shows the most pronounced disparities between series with a range of 1.0 units for the absolute range, which is 1.9x higher than the average disparity in other categories. The gap ranges from Very Positive (24.3) to Negative (25.4).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.785073717786481, "data_points": {"category": "Call-Center", "disparity_measure": "range", "disparity_value": 1.0422584199556582, "max_series": "Negative", "min_series": "Very Positive"}, "entities": ["Call-Center", "Call-Center"]}, {"description": "Across all series in the Bar comparing duration by channel, the lowest value overall is 24.3 for Very Positive in the Call-Center category, which is 3% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Call-Center", "series": "Very Positive", "value": 24.32132701421801}, "entities": ["Call-Center", "Very Positive", "24.32132701421801", "Call-Center", "Very Positive"]}, {"description": "The duration distribution is left-skewed, with a few channels having unusually low values.", "fact_type": "distribution_skew", "subtype": "negative_skew", "importance": 0.75, "data_points": {"skewness": -0.8357249263307618}, "entities": []}, {"description": "In the Bar comparing duration across channel, the Call-Center category shows the most pronounced disparities between series with a standard deviation of 0.34, which is 1.7x higher than the average disparity in other categories. The gap ranges from Very Positive (24.3) to Negative (25.4).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.7466959495928165, "data_points": {"category": "Call-Center", "disparity_measure": "std_dev", "disparity_value": 0.34013502597060413, "max_series": "Negative", "min_series": "Very Positive"}, "entities": ["Call-Center", "Call-Center"]}, {"description": "The distribution is moderately even across channels, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.2527333443289599, "cv": 0.0052721636034451114, "normalized_entropy": 0.9999899599937843}, "entities": []}]'
+             onclick="showChartDetails(71, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_71.svg" alt="Chart 71" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 71</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">9 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+                    </div>
+                </div>
+                
+                <!-- Insights Panel (Right) -->
+                <div class="insights-panel">
+                    <h3>Goal Insights</h3>
+                    <div class="goal-insights">
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="0"
+            data-contributing-charts='[9, 10]'
+            data-entities='["Negative", "Negative"]'
+            data-pattern-type="outlier"
+            data-supporting-facts='[{"description": "In the Bar showing duration by sentiment, Negative has the highest value at 25.3, which is 1% above the average of 25.0.", "chart_id": 10, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Negative"]}, {"description": "In the Bar showing Billing Question by sentiment, Negative has the highest value at 25.1, which is 1% above the average of 24.9.", "chart_id": 9, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Negative"]}, {"description": "Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.7 for Payments in the Negative category, which is 3% above the overall average.", "chart_id": 9, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Negative"]}, {"description": "In the Bar showing Call-Center by sentiment, Negative has the highest value at 25.4, which is 2% above the average of 24.9.", "chart_id": 70, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Negative"]}]'
+            onmouseover="highlightContributingCharts(this, '11')"
+            onmouseout="clearHighlights('11')"
+            onclick="toggleSupportingFacts(this, '11', 0)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Exceptional Dimensional Behavior: Negative</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 1.00
+                    </span>
+                    <span class="pattern-type">outlier</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Negative demonstrates exceptional behavior in the dimensional interaction between sentiment and channel, standing out from typical interaction patterns.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-11-0">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (4 facts)
+                    
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-11-0">
+        
+                    <div class="chart-facts-group" data-chart-id="10">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 10</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-0-10-0"
+                                data-chart-id="10"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '11', '10')"
+                                onmouseout="clearFactHighlight('11', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing duration by sentiment, Negative has the highest value at 25.3, which is 1% above the average of 25.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Negative</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="9">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 9</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-0-9-0"
+                                data-chart-id="9"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '11', '9')"
+                                onmouseout="clearFactHighlight('11', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing Billing Question by sentiment, Negative has the highest value at 25.1, which is 1% above the average of 24.9.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Negative</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-0-9-1"
+                                data-chart-id="9"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '11', '9')"
+                                onmouseout="clearFactHighlight('11', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.7 for Payments in the Negative category, which is 3% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Negative</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="70">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 70</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-0-70-0"
+                                data-chart-id="70"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '11', '70')"
+                                onmouseout="clearFactHighlight('11', '70')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing Call-Center by sentiment, Negative has the highest value at 25.4, which is 2% above the average of 24.9.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Negative</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Negative</span>
+            </div>
+        </div>
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="1"
+            data-contributing-charts='[69, 70, 71]'
+            data-entities='["Web", "Web"]'
+            data-pattern-type="contradiction"
+            data-supporting-facts='[{"description": "In the Bar showing Billing Question by reason, Web has the highest value at 25.0, which is 0% above the average of 25.0.", "chart_id": 69, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Web"]}, {"description": "Across all series in the Bar comparing duration by reason, the lowest value overall is 0.0 for Payments in the Web category, which is 100% below the overall average.", "chart_id": 69, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Web"]}, {"description": "Across all series in the Bar comparing duration by channel, the highest value overall is 25.4 for Very Positive in the Web category, which is 2% above the overall average.", "chart_id": 71, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Web"]}]'
+            onmouseover="highlightContributingCharts(this, '11')"
+            onmouseout="clearHighlights('11')"
+            onclick="toggleSupportingFacts(this, '11', 1)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Context-Dependent Dimensional Performance: Web</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 0.68
+                    </span>
+                    <span class="pattern-type">contradiction</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Web shows varying duration performance depending on the combination of sentiment and channel: excelling in channel but underperforming in reason, indicating strong interaction effects.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-11-1">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (3 facts)
+                    
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-11-1">
+        
+                    <div class="chart-facts-group" data-chart-id="69">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 69</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-1-69-0"
+                                data-chart-id="69"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '11', '69')"
+                                onmouseout="clearFactHighlight('11', '69')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing Billing Question by reason, Web has the highest value at 25.0, which is 0% above the average of 25.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Web</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-1-69-1"
+                                data-chart-id="69"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '11', '69')"
+                                onmouseout="clearFactHighlight('11', '69')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing duration by reason, the lowest value overall is 0.0 for Payments in the Web category, which is 100% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Web</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="71">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 71</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="11-1-71-0"
+                                data-chart-id="71"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '11', '71')"
+                                onmouseout="clearFactHighlight('11', '71')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing duration by channel, the highest value overall is 25.4 for Very Positive in the Web category, which is 2% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Web</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Web</span>
+            </div>
+        </div>
+        
+                    </div>
+                    
+                    <!-- Chart Details Section (Hidden by default) -->
+                    <div class="chart-details-section hidden" id="chart-details-11">
+                        <h4>Chart Details</h4>
+                        <div class="chart-details-content">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                        <button class="close-details-btn" onclick="closeChartDetails('11')">
+                            ✕ Close Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="goal-section" id="goal-38" data-goal-id="38">
+            <div class="goal-header">
+                <h2 class="goal-title">Compare the categories of sentiment and day for calls</h2>
+                <div class="goal-meta">
+                    <span class="goal-type">Compare Two Dimensions</span>
+                    <span class="goal-views">Views: 1, 7, 5, 173, 174, 175</span>
+                    <span class="approach-indicator">Pattern</span>
+                </div>
+            </div>
+            
+            <div class="goal-content">
+                <!-- Charts Panel (Left) -->
+                <div class="charts-panel">
+                    <h3>Goal Charts</h3>
+                    <div class="charts-grid">
+        
+        <div class="chart-item" 
+             data-chart-id="1" 
+             data-chart-insights='[{"description": "In the Donut of sentiment, Negative, Neutral, Very Negative, and Positive collectively account for 90.4% of total calls, while the remaining 1 categories account for only 9.6%, demonstrating a concentration pattern.", "fact_type": "concentration", "subtype": "pareto_principle", "importance": 0.85, "data_points": {"categories": ["Negative", "Neutral", "Very Negative", "Positive"], "percentage": 90.37947783849422}, "entities": []}, {"description": "In the Donut showing the distribution of calls by sentiment, Negative accounts for the largest share at 33.6% (11063.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "largest", "importance": 0.7, "data_points": {"category": "Negative", "percentage": 33.585306618093504, "value": 11063}, "entities": ["Negative", "11063", "Negative"]}, {"description": "In the Donut showing the distribution of calls by sentiment, Very Positive represents the smallest share at only 9.6% (3169.0 out of 32940.0 total).", "fact_type": "proportion", "subtype": "smallest", "importance": 0.65, "data_points": {"category": "Very Positive", "percentage": 9.620522161505768, "value": 3169}, "entities": ["Very Positive", "3169", "Very Positive"]}]'
+             onclick="showChartDetails(1, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_1.svg" alt="Chart 1" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 1</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="7" 
+             data-chart-insights='[{"description": "In the Line tracking calls over timestamp, Negative maintains leadership in 100% of time periods (30 out of 30).", "fact_type": "temporal_leadership", "subtype": "stability_pattern", "importance": 0.85, "data_points": {"dominant_series": "Negative", "leadership_percentage": 100.0, "challenger": null, "total_periods": 30}, "entities": []}, {"description": "In the Line of calls over timestamp, the series values are diverging and spreading apart, with the variability between series increasing by 1% from 10/01/2020 to 10/30/2020.", "fact_type": "series_divergence", "subtype": "variance_trend", "importance": 0.85, "data_points": {"start_var": 9749.36, "end_var": 9812.8, "trend": 0.6419399332588184}, "entities": []}]'
+             onclick="showChartDetails(7, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_7.svg" alt="Chart 7" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 7</span>
+                
+                <span class="insights-count">2 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="5" 
+             data-chart-insights='[{"description": "The distribution is very even across categories, with nearly equal values for each day.", "fact_type": "distribution_evenness", "subtype": "very_even", "importance": 0.75, "data_points": {"gini": 0.19631364385462746, "cv": 0.11073936405091711, "normalized_entropy": 0.9969457527879306}, "entities": []}, {"description": "The calls distribution is right-skewed, with a few days having unusually high values.", "fact_type": "distribution_skew", "subtype": "positive_skew", "importance": 0.75, "data_points": {"skewness": 0.9289227877428853}, "entities": []}, {"description": "Across all 7 categories in the Bar of day, the average calls is 4705.7 with a standard deviation of 521.1 (11% coefficient of variation).", "fact_type": "distribution", "subtype": "average", "importance": 0.7, "data_points": {"average": 4705.714285714285, "std_dev": 521.1078074053156, "cv": 11.073936405091711}, "entities": []}, {"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "data_points": {"category": "Friday", "value": 5570, "average": 4705.714285714285}, "entities": ["Friday", "5570", "Friday"]}, {"description": "In the Bar showing calls by day, Sunday has the lowest value at 4296.0, which is 9% below the average of 4705.7.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "data_points": {"category": "Sunday", "value": 4296, "average": 4705.714285714285}, "entities": ["Sunday", "4296", "Sunday"]}]'
+             onclick="showChartDetails(5, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_5.svg" alt="Chart 5" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 5</span>
+                
+                <span class="insights-count">5 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="173" 
+             data-chart-insights='[{"description": "In the Line of calls over timestamp, there are divergent trends: 10/28/2020, 10/21/2020, 10/07/2020 and 10/14/2020 show upward movement while 10/16/2020, 10/09/2020, 10/02/2020, 10/30/2020 and 10/23/2020 show downward movement.", "fact_type": "divergent_trends", "subtype": "opposite_directions", "importance": 1.0, "data_points": {"upward": ["10/28/2020", "10/21/2020", "10/07/2020", "10/14/2020"], "downward": ["10/16/2020", "10/09/2020", "10/02/2020", "10/30/2020", "10/23/2020"]}, "entities": []}, {"description": "In the Line of calls over timestamp, 10/21/2020 exhibits the strongest upward trend among all series with a correlation coefficient of R\u00b2 = 0.38.", "fact_type": "trend_comparison", "subtype": "strongest_upward", "importance": 0.9, "data_points": {"series": "10/21/2020", "slope": 125.35714285714285, "r_squared": 0.3750000000000001}, "entities": ["10/21/2020", "10/21/2020"]}, {"description": "In the Line of calls over timestamp, 10/16/2020 exhibits the strongest downward trend among all series with a correlation coefficient of R\u00b2 = 0.38.", "fact_type": "trend_comparison", "subtype": "strongest_downward", "importance": 0.9, "data_points": {"series": "10/16/2020", "slope": -121.28571428571425, "r_squared": 0.375}, "entities": ["10/16/2020", "10/16/2020"]}, {"description": "In the Line of calls over timestamp, all series values are converging toward similar levels, with the variability between series decreasing by 17% from Friday to Wednesday.", "fact_type": "series_convergence", "subtype": "variance_trend", "importance": 0.85, "data_points": {"start_var": 172405.55555555556, "end_var": 143265.80999999997, "trend": -1808.742698412697}, "entities": []}, {"description": "At Friday in the Line tracking calls over timestamp, 10/16/2020 leads all other series with the highest value at 1132.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Friday", "series": "10/16/2020", "value": 1132}, "entities": ["10/16/2020", "Friday", "1132", "10/16/2020", "Friday"]}, {"description": "At Monday in the Line tracking calls over timestamp, 10/19/2020 leads all other series with the highest value at 1102.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Monday", "series": "10/19/2020", "value": 1102}, "entities": ["10/19/2020", "Monday", "1102", "10/19/2020", "Monday"]}, {"description": "At Saturday in the Line tracking calls over timestamp, 10/17/2020 leads all other series with the highest value at 1123.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Saturday", "series": "10/17/2020", "value": 1123}, "entities": ["10/17/2020", "Saturday", "1123", "10/17/2020", "Saturday"]}, {"description": "At Sunday in the Line tracking calls over timestamp, 10/18/2020 leads all other series with the highest value at 1097.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Sunday", "series": "10/18/2020", "value": 1097}, "entities": ["10/18/2020", "Sunday", "1097", "10/18/2020", "Sunday"]}, {"description": "At Thursday in the Line tracking calls over timestamp, 10/22/2020 leads all other series with the highest value at 1167.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Thursday", "series": "10/22/2020", "value": 1167}, "entities": ["10/22/2020", "Thursday", "1167", "10/22/2020", "Thursday"]}, {"description": "At Tuesday in the Line tracking calls over timestamp, 10/06/2020 leads all other series with the highest value at 1152.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Tuesday", "series": "10/06/2020", "value": 1152}, "entities": ["10/06/2020", "Tuesday", "1152", "10/06/2020", "Tuesday"]}, {"description": "At Wednesday in the Line tracking calls over timestamp, 10/21/2020 leads all other series with the highest value at 1170.0.", "fact_type": "comparison", "subtype": "temporal_leader", "importance": 0.7, "data_points": {"time": "Wednesday", "series": "10/21/2020", "value": 1170}, "entities": ["10/21/2020", "Wednesday", "1170", "10/21/2020", "Wednesday"]}]'
+             onclick="showChartDetails(173, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_173.svg" alt="Chart 173" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 173</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">11 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="174" 
+             data-chart-insights='[{"description": "In the Bar comparing calls across sentiment, Friday leads in 3 out of 5 categories (60%), except Very Positive (led by Thursday) and Very Negative (led by Thursday).", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Friday", "won_categories": ["Negative", "Neutral", "Positive"], "exceptions": {"Very Positive": "Thursday", "Very Negative": "Thursday"}}, "entities": []}, {"description": "In the Bar comparing calls across sentiment, the relationship landscape shows exceptional predictability with 23 highly stable series relationships. The most predictable pair, Thursday and Monday, demonstrates 98% consistency maintaining a 1.27 ratio across all categories, with an overall relationship consistency of 94% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.95, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 23, "avg_consistency": 93.97456285854666, "most_stable_pair": ["Thursday", "Monday"], "relationship_hubs": ["Sunday", "Tuesday", "Saturday", "Thursday", "Monday", "Wednesday", "Friday"]}, "entities": []}, {"description": "In the Bar, Thursday, Friday consistently perform above average while Monday, Sunday, Saturday, Wednesday, Tuesday consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing calls by sentiment, the highest value overall is 1869.0 for Friday in the Negative category, which is 99% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Negative", "series": "Friday", "value": 1869}, "entities": ["Negative", "Friday", "1869", "Negative", "Friday"]}, {"description": "In the Bar comparing calls across sentiment, the Negative category shows the most pronounced disparities between series with a standard deviation of 172.70, which is 1.9x higher than the average disparity in other categories. The gap ranges from Sunday (1430.0) to Friday (1869.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.7813024660295032, "data_points": {"category": "Negative", "disparity_measure": "std_dev", "disparity_value": 172.69531976688816, "max_series": "Friday", "min_series": "Sunday"}, "entities": ["Negative", "Negative"]}, {"description": "Across all series in the Bar comparing calls by sentiment, the lowest value overall is 406.0 for Sunday in the Very Positive category, which is 57% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Very Positive", "series": "Sunday", "value": 406}, "entities": ["Very Positive", "Sunday", "406", "Very Positive", "Sunday"]}, {"description": "The distribution is moderately uneven across sentiments, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.44462689290275503, "cv": 0.4387224992696141, "normalized_entropy": 0.9399191816054235}, "entities": []}, {"description": "In the Bar comparing calls across sentiment, the Negative category shows the most pronounced disparities between series with a range of 439.0 units for the absolute range, which is 1.7x higher than the average disparity in other categories. The gap ranges from Sunday (1430.0) to Friday (1869.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.7491053677932406, "data_points": {"category": "Negative", "disparity_measure": "range", "disparity_value": 439, "max_series": "Friday", "min_series": "Sunday"}, "entities": ["Negative", "Negative"]}, {"description": "The calls distribution is approximately symmetric across sentiments.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.30677219208170836}, "entities": []}]'
+             onclick="showChartDetails(174, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_174.svg" alt="Chart 174" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 174</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">9 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="175" 
+             data-chart-insights='[{"description": "In the Bar comparing calls across day, Negative leads in 7 out of 7 categories (100%), showing complete dominance across all categories.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Negative", "won_categories": ["Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday"], "exceptions": {}}, "entities": []}, {"description": "In the Bar comparing calls across day, the relationship landscape demonstrates strong overall stability with 10 very stable relationships and 8 moderately stable relationships. The most reliable relationship between Negative and Very Negative shows 98% consistency, contributing to an overall relationship consistency of 90% across all series pairs, indicating predominantly stable interaction patterns.", "fact_type": "relationship_consistency", "subtype": "mostly_stable", "importance": 0.95, "data_points": {"pattern_type": "mostly_stable", "total_relationships": 20, "avg_consistency": 90.15190647520086, "most_stable_pair": ["Negative", "Very Negative"], "relationship_hubs": ["Neutral", "Very Positive", "Negative", "Very Negative", "Positive"]}, "entities": []}, {"description": "In the Bar, Neutral, Negative consistently perform above average while Very Positive, Very Negative, Positive consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Friday", "series": "Negative", "value": 1869}, "entities": ["Friday", "Negative", "1869", "Friday", "Negative"]}, {"description": "Across all series in the Bar comparing calls by day, the lowest value overall is 406.0 for Very Positive in the Sunday category, which is 57% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Sunday", "series": "Very Positive", "value": 406}, "entities": ["Sunday", "Very Positive", "406", "Sunday", "Very Positive"]}, {"description": "The calls distribution is right-skewed, with a few days having unusually high values.", "fact_type": "distribution_skew", "subtype": "positive_skew", "importance": 0.75, "data_points": {"skewness": 0.9992558488441613}, "entities": []}, {"description": "The distribution is moderately even across days, with some variation but no dominant categories.", "fact_type": "distribution_evenness", "subtype": "moderately_even", "importance": 0.7, "data_points": {"gini": 0.20542445902281403, "cv": 0.12294612886882549, "normalized_entropy": 0.9962543283061012}, "entities": []}]'
+             onclick="showChartDetails(175, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_175.svg" alt="Chart 175" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 175</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">7 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+                    </div>
+                </div>
+                
+                <!-- Insights Panel (Right) -->
+                <div class="insights-panel">
+                    <h3>Goal Insights</h3>
+                    <div class="goal-insights">
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="0"
+            data-contributing-charts='[175, 5, 174, 173]'
+            data-entities='["Friday", "Friday"]'
+            data-pattern-type="outlier"
+            data-supporting-facts='[{"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "In the Line of 10/29/2020 over timestamp, the trough is at Friday with value 0.0.", "chart_id": 173, "fact_type": "extreme", "subtype": "minimum", "importance": 0.65, "entities": ["Friday"]}, {"description": "In the Bar showing Neutral by day, Friday has the highest value at 1548.0, which is 24% above the average of 1250.6.", "chart_id": 175, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.", "chart_id": 175, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Friday"]}]'
+            onmouseover="highlightContributingCharts(this, '38')"
+            onmouseout="clearHighlights('38')"
+            onclick="toggleSupportingFacts(this, '38', 0)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Exceptional Dimensional Behavior: Friday</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 1.00
+                    </span>
+                    <span class="pattern-type">outlier</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Friday demonstrates exceptional behavior in the dimensional interaction between sentiment and day, standing out from typical interaction patterns.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-38-0">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (5 facts)
+                    
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-38-0">
+        
+                    <div class="chart-facts-group" data-chart-id="5">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 5</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-0-5-0"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '5')"
+                                onmouseout="clearFactHighlight('38', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-0-5-1"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '5')"
+                                onmouseout="clearFactHighlight('38', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="173">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 173</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-0-173-0"
+                                data-chart-id="173"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '173')"
+                                onmouseout="clearFactHighlight('38', '173')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Line of 10/29/2020 over timestamp, the trough is at Friday with value 0.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.65</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="175">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 175</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-0-175-0"
+                                data-chart-id="175"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '175')"
+                                onmouseout="clearFactHighlight('38', '175')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing Neutral by day, Friday has the highest value at 1548.0, which is 24% above the average of 1250.6.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-0-175-1"
+                                data-chart-id="175"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '38', '175')"
+                                onmouseout="clearFactHighlight('38', '175')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Friday</span>
+            </div>
+        </div>
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="1"
+            data-contributing-charts='[175, 5, 174, 173]'
+            data-entities='["Friday", "Friday"]'
+            data-pattern-type="contradiction"
+            data-supporting-facts='[{"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.", "chart_id": 5, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "In the Bar showing Neutral by day, Friday has the highest value at 1548.0, which is 24% above the average of 1250.6.", "chart_id": 175, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Friday"]}, {"description": "Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.", "chart_id": 175, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Friday"]}, {"description": "In the Line of 10/29/2020 over timestamp, the trough is at Friday with value 0.0.", "chart_id": 173, "fact_type": "extreme", "subtype": "minimum", "importance": 0.65, "entities": ["Friday"]}]'
+            onmouseover="highlightContributingCharts(this, '38')"
+            onmouseout="clearHighlights('38')"
+            onclick="toggleSupportingFacts(this, '38', 1)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Context-Dependent Dimensional Performance: Friday</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 0.82
+                    </span>
+                    <span class="pattern-type">contradiction</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Friday shows varying calls performance depending on the combination of sentiment and day: excelling in day but underperforming in timestamp, indicating strong interaction effects.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-38-1">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (5 facts)
+                    
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-38-1">
+        
+                    <div class="chart-facts-group" data-chart-id="5">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 5</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-1-5-0"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '5')"
+                                onmouseout="clearFactHighlight('38', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-1-5-1"
+                                data-chart-id="5"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '5')"
+                                onmouseout="clearFactHighlight('38', '5')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="175">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 175</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-1-175-0"
+                                data-chart-id="175"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '175')"
+                                onmouseout="clearFactHighlight('38', '175')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing Neutral by day, Friday has the highest value at 1548.0, which is 24% above the average of 1250.6.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-1-175-1"
+                                data-chart-id="175"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '38', '175')"
+                                onmouseout="clearFactHighlight('38', '175')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="173">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 173</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="38-1-173-0"
+                                data-chart-id="173"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '38', '173')"
+                                onmouseout="clearFactHighlight('38', '173')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Line of 10/29/2020 over timestamp, the trough is at Friday with value 0.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.65</span>
+                                    <span class="fact-entities">Entities: Friday</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Friday</span>
+            </div>
+        </div>
+        
+                    </div>
+                    
+                    <!-- Chart Details Section (Hidden by default) -->
+                    <div class="chart-details-section hidden" id="chart-details-38">
+                        <h4>Chart Details</h4>
+                        <div class="chart-details-content">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                        <button class="close-details-btn" onclick="closeChartDetails('38')">
+                            ✕ Close Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            </main>
+            
+            <script>
+                
+        // Interactive Dashboard Functionality
+        
+        // Global state
+        let currentOpenChart = null;
+        let highlightedCharts = [];
+        
+        // Main Functions
+        function highlightContributingCharts(insightElement, goalId) {
+            const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
+            const goalSection = document.getElementById('goal-' + goalId);
+            
+            if (!goalSection) return;
+            
+            // Clear previous highlights
+            clearHighlights(goalId);
+            
+            // Highlight contributing charts
+            contributingCharts.forEach(chartId => {
+                const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+                if (chartElement) {
+                    chartElement.classList.add('highlighted');
+                    highlightedCharts.push(chartElement);
+                }
+            });
+            
+            // Dim non-contributing charts
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const chartId = parseInt(chart.dataset.chartId);
+                if (!contributingCharts.includes(chartId)) {
+                    chart.classList.add('dimmed');
+                }
+            });
+            
+            // Expand contributing evidence
+            const evidencePanel = insightElement.querySelector('.contributing-evidence');
+            if (evidencePanel) {
+                evidencePanel.classList.remove('hidden');
+                evidencePanel.classList.add('expanded');
+                
+                // Update evidence content with specific chart information
+                const evidenceList = evidencePanel.querySelector('.evidence-list');
+                if (evidenceList && contributingCharts.length > 0) {
+                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
+                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
+                }
+            }
+        }
+        
+        function clearHighlights(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove all highlight classes
+            highlightedCharts.forEach(chart => {
+                chart.classList.remove('highlighted', 'dimmed');
+            });
+            highlightedCharts = [];
+            
+            // Clear all chart highlights and dims
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('highlighted', 'dimmed');
+            });
+            
+            // Collapse all contributing evidence panels
+            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
+            evidencePanels.forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('expanded');
+            });
+        }
+        
+        function showChartDetails(chartId, chartElement, event) {
+            // Check if this is a double-click for zoom overlay
+            if (event && event.detail === 2) {
+                showChartZoomOverlay(chartId, chartElement);
+                return;
+            }
+            
+            const goalSection = chartElement.closest('.goal-section');
+            const goalId = goalSection.dataset.goalId;
+            const detailsSection = goalSection.querySelector('.chart-details-section');
+            const detailsContent = detailsSection.querySelector('.chart-details-content');
+            
+            if (!detailsSection || !detailsContent) return;
+            
+            // Get chart insights from data attribute
+            const chartInsights = JSON.parse(chartElement.dataset.chartInsights || '[]');
+            
+            // Close previous chart if open
+            if (currentOpenChart && currentOpenChart !== chartId) {
+                closeChartDetails(goalId);
+            }
+            
+            // Toggle if clicking the same chart
+            if (currentOpenChart === chartId) {
+                closeChartDetails(goalId);
+                return;
+            }
+            
+            // Update details content
+            let detailsHTML = `
+                <div class="chart-details-header">
+                    <h5>Chart ${chartId} - Detailed Insights</h5>
+                    <p class="chart-insight-count">${chartInsights.length} fact${chartInsights.length !== 1 ? 's' : ''} extracted</p>
+                </div>
+            `;
+            
+            if (chartInsights.length > 0) {
+                chartInsights.forEach((insight, index) => {
+                    const factTypeClass = `fact-${insight.fact_type}`;
+                    detailsHTML += `
+                        <div class="chart-fact-item ${factTypeClass}">
+                            <div class="fact-header">
+                                <span class="fact-type-badge">${insight.fact_type}</span>
+                                ${insight.subtype ? `<span class="fact-subtype">${insight.subtype}</span>` : ''}
+                                <span class="fact-importance">Importance: ${insight.importance.toFixed(2)}</span>
+                            </div>
+                            <div class="fact-description">${insight.description}</div>
+                            ${insight.entities && insight.entities.length > 0 ? 
+                                `<div class="fact-entities">
+                                    <strong>Entities:</strong> ${insight.entities.join(', ')}
+                                </div>` : ''
+                            }
+                        </div>
+                    `;
+                });
+            } else {
+                detailsHTML += `
+                    <div class="chart-fact-item">
+                        <div class="fact-description">No detailed insights available for this chart.</div>
+                    </div>
+                `;
+            }
+            
+            detailsContent.innerHTML = detailsHTML;
+            
+            // Show details section with animation
+            detailsSection.classList.remove('hidden');
+            detailsSection.classList.add('fade-in');
+            
+            // Update current open chart
+            currentOpenChart = chartId;
+            
+            // Scroll details into view
+            setTimeout(() => {
+                detailsSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            }, 100);
+        }
+        
+        function showChartZoomOverlay(chartId, chartElement) {
+            const goalSection = chartElement.closest('.goal-section');
+            const chartsPanel = goalSection.querySelector('.charts-panel');
+            
+            // Get the chart image source
+            const chartImg = chartElement.querySelector('img');
+            if (!chartImg) return;
+            
+            const chartSrc = chartImg.src;
+            
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'chart-zoom-overlay';
+            overlay.innerHTML = `
+                <div class="zoom-overlay-content">
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" id="zoom-in">➕</button>
+                        <button class="zoom-btn" id="zoom-out">➖</button>
+                        <button class="zoom-btn" id="zoom-reset">⚡</button>
+                        <button class="zoom-btn close-overlay">✕</button>
+                    </div>
+                    <div class="zoom-container">
+                        <img src="${chartSrc}" alt="Chart ${chartId}" class="zoom-image" id="zoom-image">
+                    </div>
+                    <div class="zoom-info">
+                        <span>Chart ${chartId} - Double-click to zoom, drag to pan</span>
+                    </div>
+                </div>
+            `;
+            
+            // Add overlay to charts panel
+            chartsPanel.appendChild(overlay);
+            
+            // Initialize zoom functionality
+            initializeZoomControls(overlay);
+            
+            // Show overlay with animation
+            setTimeout(() => {
+                overlay.classList.add('visible');
+            }, 10);
+        }
+        
+        function initializeZoomControls(overlay) {
+            const zoomImage = overlay.querySelector('#zoom-image');
+            const zoomContainer = overlay.querySelector('.zoom-container');
+            const zoomInBtn = overlay.querySelector('#zoom-in');
+            const zoomOutBtn = overlay.querySelector('#zoom-out');
+            const zoomResetBtn = overlay.querySelector('#zoom-reset');
+            const closeBtn = overlay.querySelector('.close-overlay');
+            
+            let scale = 1;
+            let isDragging = false;
+            let dragStart = { x: 0, y: 0 };
+            let translation = { x: 0, y: 0 };
+            
+            // Zoom controls
+            zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.3, 5);
+                updateTransform();
+            });
+            
+            zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.3, 0.5);
+                updateTransform();
+            });
+            
+            zoomResetBtn.addEventListener('click', () => {
+                scale = 1;
+                translation = { x: 0, y: 0 };
+                updateTransform();
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                closeZoomOverlay(overlay);
+            });
+            
+            // Double-click zoom
+            zoomImage.addEventListener('dblclick', (e) => {
+                e.preventDefault();
+                const rect = zoomContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                if (scale === 1) {
+                    scale = 2;
+                    translation.x = (centerX - x) * scale;
+                    translation.y = (centerY - y) * scale;
+                } else {
+                    scale = 1;
+                    translation = { x: 0, y: 0 };
+                }
+                updateTransform();
+            });
+            
+            // Mouse wheel zoom
+            zoomContainer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = zoomContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const zoom = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * zoom, 0.5), 5);
+                
+                if (newScale !== scale) {
+                    const factor = newScale / scale;
+                    translation.x = x - (x - translation.x) * factor;
+                    translation.y = y - (y - translation.y) * factor;
+                    scale = newScale;
+                    updateTransform();
+                }
+            });
+            
+            // Drag to pan
+            zoomImage.addEventListener('mousedown', (e) => {
+                if (scale > 1) {
+                    isDragging = true;
+                    dragStart.x = e.clientX - translation.x;
+                    dragStart.y = e.clientY - translation.y;
+                    zoomImage.style.cursor = 'grabbing';
+                    e.preventDefault();
+                }
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    translation.x = e.clientX - dragStart.x;
+                    translation.y = e.clientY - dragStart.y;
+                    updateTransform();
+                }
+            });
+            
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    zoomImage.style.cursor = scale > 1 ? 'grab' : 'default';
+                }
+            });
+            
+            // Touch support for mobile
+            let touchStart = null;
+            let initialDistance = 0;
+            let initialScale = 1;
+            
+            zoomContainer.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    touchStart = {
+                        x: e.touches[0].clientX - translation.x,
+                        y: e.touches[0].clientY - translation.y
+                    };
+                } else if (e.touches.length === 2) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    initialDistance = Math.sqrt(dx * dx + dy * dy);
+                    initialScale = scale;
+                }
+                e.preventDefault();
+            });
+            
+            zoomContainer.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && touchStart) {
+                    translation.x = e.touches[0].clientX - touchStart.x;
+                    translation.y = e.touches[0].clientY - touchStart.y;
+                    updateTransform();
+                } else if (e.touches.length === 2) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const newScale = Math.min(Math.max((distance / initialDistance) * initialScale, 0.5), 5);
+                    scale = newScale;
+                    updateTransform();
+                }
+                e.preventDefault();
+            });
+            
+            zoomContainer.addEventListener('touchend', () => {
+                touchStart = null;
+            });
+            
+            function updateTransform() {
+                zoomImage.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
+                zoomImage.style.cursor = scale > 1 ? 'grab' : 'default';
+            }
+            
+            // Keyboard shortcuts
+            overlay.addEventListener('keydown', (e) => {
+                switch(e.key) {
+                    case 'Escape':
+                        closeZoomOverlay(overlay);
+                        break;
+                    case '+':
+                    case '=':
+                        zoomInBtn.click();
+                        break;
+                    case '-':
+                        zoomOutBtn.click();
+                        break;
+                    case '0':
+                        zoomResetBtn.click();
+                        break;
+                }
+            });
+            
+            // Focus overlay for keyboard events
+            overlay.setAttribute('tabindex', '0');
+            overlay.focus();
+        }
+        
+        function closeZoomOverlay(overlay) {
+            overlay.classList.remove('visible');
+            setTimeout(() => {
+                if (overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 300);
+        }
+        
+        function closeChartDetails(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            const detailsSection = goalSection.querySelector('.chart-details-section');
+            
+            if (detailsSection) {
+                detailsSection.classList.add('hidden');
+                detailsSection.classList.remove('fade-in');
+            }
+            
+            currentOpenChart = null;
+        }
+        
+        // Chart hover effects for bidirectional interaction
+        function setupChartHoverEffects() {
+            document.querySelectorAll('.chart-item').forEach(chartElement => {
+                chartElement.addEventListener('mouseenter', function() {
+                    const chartId = parseInt(this.dataset.chartId);
+                    const goalSection = this.closest('.goal-section');
+                    const goalId = goalSection.dataset.goalId;
+                    
+                    // Find insights that reference this chart
+                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                    relatedInsights.forEach(insight => {
+                        const contributingCharts = JSON.parse(insight.dataset.contributingCharts || '[]');
+                        if (contributingCharts.includes(chartId)) {
+                            insight.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                            insight.style.transform = 'translateX(5px)';
+                        }
+                    });
+                });
+                
+                chartElement.addEventListener('mouseleave', function() {
+                    const goalSection = this.closest('.goal-section');
+                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                    relatedInsights.forEach(insight => {
+                        insight.style.backgroundColor = '';
+                        insight.style.transform = '';
+                    });
+                });
+            });
+        }
+        
+        // Smooth scrolling for goal navigation
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#goal-"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Enhanced keyboard navigation
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && currentOpenChart) {
+                    const openDetails = document.querySelector('.chart-details-section:not(.hidden)');
+                    if (openDetails) {
+                        const goalSection = openDetails.closest('.goal-section');
+                        const goalId = goalSection.dataset.goalId;
+                        closeChartDetails(goalId);
+                    }
+                }
+            });
+        }
+        
+        // Touch device support
+        function setupTouchSupport() {
+            // Convert hover interactions to touch on mobile devices
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.insight-item').forEach(insight => {
+                    insight.addEventListener('touchstart', function() {
+                        const goalSection = this.closest('.goal-section');
+                        const goalId = goalSection.dataset.goalId;
+                        highlightContributingCharts(this, goalId);
+                        
+                        // Auto-clear after 3 seconds on touch devices
+                        setTimeout(() => {
+                            clearHighlights(goalId);
+                        }, 3000);
+                    });
+                });
+            }
+        }
+        
+        // Initialize all interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            setupChartHoverEffects();
+            setupSmoothScrolling();
+            setupKeyboardNavigation();
+            setupTouchSupport();
+            
+            console.log('Interactive dashboard initialized');
+        });
+        
+        // Utility functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Performance optimization for hover effects
+        const debouncedHighlight = debounce(highlightContributingCharts, 100);
+        const debouncedClear = debounce(clearHighlights, 100);
+        
+        
+        // Enhanced Supporting Facts Functionality
+        
+        // Global state for supporting facts
+        let openSupportingFacts = new Set();
+        let factHighlightedCharts = new Map(); // chartId -> highlightType
+        
+        function toggleSupportingFacts(insightElement, goalId, insightIndex) {
+            const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+            const expandIcon = insightElement.querySelector('.expand-icon');
+            const expandText = insightElement.querySelector('.expand-text');
+            
+            if (!factsSection) return;
+            
+            const isCurrentlyOpen = openSupportingFacts.has(`${goalId}-${insightIndex}`);
+            
+            if (isCurrentlyOpen) {
+                // Close supporting facts
+                factsSection.classList.remove('expanded');
+                insightElement.classList.remove('expanded');
+                openSupportingFacts.delete(`${goalId}-${insightIndex}`);
+                expandText.textContent = 'Click to see evidence';
+                
+                // Animate close
+                factsSection.style.maxHeight = '0';
+                factsSection.style.padding = '0';
+                
+                setTimeout(() => {
+                    factsSection.classList.add('hidden');
+                }, 300);
+            } else {
+                // Open supporting facts
+                factsSection.classList.remove('hidden');
+                
+                // Force a reflow to ensure the element is visible before animating
+                factsSection.offsetHeight;
+                
+                // Set initial styles for animation
+                factsSection.style.maxHeight = '600px';
+                factsSection.style.padding = '1rem';
+                
+                // Add expanded class after a brief delay
+                setTimeout(() => {
+                    factsSection.classList.add('expanded');
+                    
+                    // Setup scroll indicator behavior
+                    setupScrollIndicator(goalId, insightIndex);
+                }, 10);
+                
+                insightElement.classList.add('expanded');
+                openSupportingFacts.add(`${goalId}-${insightIndex}`);
+                expandText.textContent = 'Click to hide evidence';
+            }
+            
+            // Scroll into view if opening
+            if (!isCurrentlyOpen) {
+                setTimeout(() => {
+                    factsSection.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 200);
+            }
+        }
+        
+        function setupScrollIndicator(goalId, insightIndex) {
+            const factsList = document.getElementById(`facts-list-${goalId}-${insightIndex}`);
+            const scrollHint = factsList.parentElement.querySelector('.scroll-hint');
+            
+            if (!factsList || !scrollHint) return;
+            
+            function updateScrollHint() {
+                const isScrollable = factsList.scrollHeight > factsList.clientHeight;
+                const isAtBottom = factsList.scrollTop + factsList.clientHeight >= factsList.scrollHeight - 5;
+                
+                if (isScrollable && !isAtBottom) {
+                    scrollHint.style.display = 'inline';
+                } else {
+                    scrollHint.style.display = 'none';
+                }
+            }
+            
+            // Initial check
+            setTimeout(updateScrollHint, 100);
+            
+            // Listen for scroll events
+            factsList.addEventListener('scroll', updateScrollHint);
+            
+            // Listen for resize events (in case content changes)
+            window.addEventListener('resize', updateScrollHint);
+        }
+        
+        function highlightFactChart(factElement, goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Find the chart element
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (!chartElement) return;
+            
+            // Add enhanced highlighting for fact interaction
+            chartElement.classList.add('fact-highlighted');
+            factHighlightedCharts.set(chartId, 'fact');
+            
+            // Also highlight the fact item itself
+            factElement.classList.add('highlighted');
+            
+            // Dim other charts slightly
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const currentChartId = chart.dataset.chartId;
+                if (currentChartId !== chartId) {
+                    chart.classList.add('dimmed');
+                }
+            });
+        }
+        
+        function clearFactHighlight(goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove enhanced highlighting
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (chartElement) {
+                chartElement.classList.remove('fact-highlighted');
+            }
+            
+            // Remove fact highlighting
+            const factElements = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
+            factElements.forEach(fact => fact.classList.remove('highlighted'));
+            
+            // Remove dimming from all charts
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('dimmed');
+            });
+            
+            // Clear from tracking
+            factHighlightedCharts.delete(chartId);
+        }
+        
+        function clearAllFactHighlights(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove all fact highlights
+            const factHighlightedElements = goalSection.querySelectorAll('.fact-highlighted');
+            factHighlightedElements.forEach(element => {
+                element.classList.remove('fact-highlighted');
+            });
+            
+            // Remove all fact item highlights
+            const factItems = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
+            factItems.forEach(fact => fact.classList.remove('highlighted'));
+            
+            // Remove dimming
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('dimmed');
+            });
+            
+            // Clear tracking
+            factHighlightedCharts.clear();
+        }
+        
+        // Enhanced version of existing highlightContributingCharts function
+        function highlightContributingCharts(insightElement, goalId) {
+            const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
+            const goalSection = document.getElementById('goal-' + goalId);
+            
+            if (!goalSection) return;
+            
+            // Clear previous highlights (but preserve fact highlights)
+            clearHighlights(goalId, true); // true = preserve fact highlights
+            
+            // Highlight contributing charts
+            contributingCharts.forEach(chartId => {
+                const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+                if (chartElement) {
+                    // Don't override fact highlighting
+                    if (!chartElement.classList.contains('fact-highlighted')) {
+                        chartElement.classList.add('highlighted');
+                        highlightedCharts.push(chartElement);
+                    }
+                }
+            });
+            
+            // Dim non-contributing charts (unless they're fact-highlighted)
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const chartId = parseInt(chart.dataset.chartId);
+                if (!contributingCharts.includes(chartId) && !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.add('dimmed');
+                }
+            });
+            
+            // Expand contributing evidence
+            const evidencePanel = insightElement.querySelector('.contributing-evidence');
+            if (evidencePanel) {
+                evidencePanel.classList.remove('hidden');
+                evidencePanel.classList.add('expanded');
+                
+                // Update evidence content with specific chart information
+                const evidenceList = evidencePanel.querySelector('.evidence-list');
+                if (evidenceList && contributingCharts.length > 0) {
+                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
+                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
+                }
+            }
+        }
+        
+        // Enhanced version of clearHighlights to preserve fact highlights
+        function clearHighlights(goalId, preserveFactHighlights = false) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove highlight classes (but preserve fact highlights if requested)
+            highlightedCharts.forEach(chart => {
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
+            });
+            highlightedCharts = [];
+            
+            // Clear all chart highlights and dims (except fact highlights)
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
+            });
+            
+            // Collapse all contributing evidence panels
+            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
+            evidencePanels.forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('expanded');
+            });
+        }
+        
+        // Enhanced chart hover effects to work with supporting facts
+        function setupEnhancedChartHoverEffects() {
+            document.querySelectorAll('.chart-item').forEach(chartElement => {
+                chartElement.addEventListener('mouseenter', function() {
+                    const chartId = parseInt(this.dataset.chartId);
+                    const goalSection = this.closest('.goal-section');
+                    const goalId = goalSection.dataset.goalId;
+                    
+                    // Only proceed if not already fact-highlighted
+                    if (!this.classList.contains('fact-highlighted')) {
+                        // Find insights that reference this chart
+                        const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                        relatedInsights.forEach(insight => {
+                            const contributingCharts = JSON.parse(insight.dataset.contributingCharts || '[]');
+                            if (contributingCharts.includes(chartId)) {
+                                insight.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                                insight.style.transform = 'translateX(5px)';
+                            }
+                        });
+                        
+                        // Also check for facts that reference this chart
+                        const factItems = goalSection.querySelectorAll(`[data-chart-id="${chartId}"] .supporting-fact-item`);
+                        factItems.forEach(fact => {
+                            fact.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                            fact.style.transform = 'translateX(2px)';
+                        });
+                    }
+                });
+                
+                chartElement.addEventListener('mouseleave', function() {
+                    const goalSection = this.closest('.goal-section');
+                    
+                    // Only clear if not fact-highlighted
+                    if (!this.classList.contains('fact-highlighted')) {
+                        const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                        relatedInsights.forEach(insight => {
+                            insight.style.backgroundColor = '';
+                            insight.style.transform = '';
+                        });
+                        
+                        const factItems = goalSection.querySelectorAll('.supporting-fact-item');
+                        factItems.forEach(fact => {
+                            fact.style.backgroundColor = '';
+                            fact.style.transform = '';
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Close all supporting facts when clicking outside
+        function setupSupportingFactsClickOutside() {
+            document.addEventListener('click', function(event) {
+                // Check if click is outside any insight item
+                const insightItem = event.target.closest('.insight-item');
+                if (!insightItem) {
+                    // Close all open supporting facts
+                    openSupportingFacts.forEach(factId => {
+                        const [goalId, insightIndex] = factId.split('-');
+                        const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+                        const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+                        
+                        if (factsSection && insightElement) {
+                            factsSection.classList.remove('expanded');
+                            factsSection.classList.add('slide-up');
+                            insightElement.classList.remove('expanded');
+                            
+                            const expandText = insightElement.querySelector('.expand-text');
+                            if (expandText) {
+                                expandText.textContent = 'Click to see evidence';
+                            }
+                            
+                            setTimeout(() => {
+                                factsSection.classList.add('hidden');
+                                factsSection.classList.remove('slide-up');
+                            }, 300);
+                        }
+                    });
+                    
+                    openSupportingFacts.clear();
+                    
+                    // Clear all fact highlights
+                    document.querySelectorAll('.goal-section').forEach(goalSection => {
+                        const goalId = goalSection.dataset.goalId;
+                        clearAllFactHighlights(goalId);
+                    });
+                }
+            });
+        }
+        
+        // Keyboard shortcuts for supporting facts
+        function setupSupportingFactsKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    // Close all supporting facts
+                    openSupportingFacts.forEach(factId => {
+                        const [goalId, insightIndex] = factId.split('-');
+                        const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+                        const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+                        
+                        if (factsSection && insightElement) {
+                            factsSection.classList.remove('expanded');
+                            insightElement.classList.remove('expanded');
+                            factsSection.classList.add('hidden');
+                            
+                            const expandText = insightElement.querySelector('.expand-text');
+                            if (expandText) {
+                                expandText.textContent = 'Click to see evidence';
+                            }
+                        }
+                    });
+                    
+                    openSupportingFacts.clear();
+                    
+                    // Clear all highlights
+                    document.querySelectorAll('.goal-section').forEach(goalSection => {
+                        const goalId = goalSection.dataset.goalId;
+                        clearAllFactHighlights(goalId);
+                        clearHighlights(goalId);
+                    });
+                }
+            });
+        }
+        
+        // Enhanced initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            setupChartHoverEffects();
+            setupEnhancedChartHoverEffects();
+            setupSmoothScrolling();
+            setupKeyboardNavigation();
+            setupSupportingFactsKeyboard();
+            setupSupportingFactsClickOutside();
+            setupTouchSupport();
+            
+            console.log('Enhanced interactive dashboard with supporting facts initialized');
+            
+            // Log supporting facts statistics
+            const allSupportingFacts = document.querySelectorAll('.supporting-fact-item');
+            const chartGroups = document.querySelectorAll('.chart-facts-group');
+            console.log(`Found ${allSupportingFacts.length} supporting facts across ${chartGroups.length} chart groups`);
+        });
+        
+        // Utility function to get supporting facts for debugging
+        function getInsightSupportingFacts(goalId, insightIndex) {
+            const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+            if (insightElement) {
+                const supportingFacts = JSON.parse(insightElement.dataset.supportingFacts || '[]');
+                console.log(`Insight ${insightIndex} in goal ${goalId}:`, supportingFacts);
+                return supportingFacts;
+            }
+            return [];
+        }
+        
+        // Utility function to highlight specific fact by ID (for debugging)
+        function debugHighlightFact(goalId, insightIndex, chartId, factIndex) {
+            const factId = `${goalId}-${insightIndex}-${chartId}-${factIndex}`;
+            const factElement = document.querySelector(`[data-fact-id="${factId}"]`);
+            if (factElement) {
+                highlightFactChart(factElement, goalId, chartId);
+            }
+        }
+        
+            </script>
+        </body>
+        </html>
+        

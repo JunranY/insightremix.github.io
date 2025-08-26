@@ -1,0 +1,3079 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard Analysis</title>
+            <style>
+                
+        /* Enhanced Interactive Dashboard Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .main-header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .approach-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .pattern-approach {
+            background-color: rgba(70, 130, 180, 0.8);
+        }
+        
+        .traditional-approach {
+            background-color: rgba(210, 105, 30, 0.8);
+        }
+        
+        .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Main Layout */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .goal-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .goal-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 1.5rem 2rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .goal-title {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .goal-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .goal-type, .goal-views, .approach-indicator {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .goal-type {
+            background-color: #e6fffa;
+            color: #234e52;
+        }
+        
+        .goal-views {
+            background-color: #fef7e0;
+            color: #744210;
+        }
+        
+        .approach-indicator {
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+        
+        /* Side Panel Layout */
+        .goal-content {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            min-height: 600px;
+        }
+        
+        .charts-panel {
+            padding: 2rem;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            max-height: 800px;
+        }
+        
+        .insights-panel {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: 800px;
+            background-color: #fafbfc;
+        }
+        
+        .charts-panel h3, .insights-panel h3 {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .chart-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .chart-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .chart-item.highlighted {
+            border: 3px solid #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .chart-item.dimmed {
+            opacity: 0.5;
+        }
+        
+        .new-view {
+            border: 2px solid #48bb78;
+        }
+        
+        .new-view-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #48bb78;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        .svg-container, .chart-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+        }
+        
+        .responsive-svg, .responsive-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .chart-placeholder {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7fafc;
+            color: #a0aec0;
+        }
+        
+        .placeholder-content {
+            text-align: center;
+        }
+        
+        .placeholder-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chart-caption {
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .chart-id {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .zoom-hint {
+            font-size: 0.7rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        /* Chart Zoom Overlay */
+        .chart-zoom-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+        
+        .chart-zoom-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .zoom-overlay-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .zoom-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+            z-index: 1001;
+        }
+        
+        .zoom-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .zoom-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+        
+        .close-overlay {
+            background: rgba(255, 0, 0, 0.8) !important;
+            color: white;
+        }
+        
+        .zoom-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 10px 30px 10px;
+        }
+        
+        .zoom-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+            transform-origin: center center;
+        }
+        
+        .zoom-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .zoom-chart-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .zoom-chart-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .chart-details-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .chart-details-header h5 {
+            margin: 0;
+            color: #2d3748;
+        }
+        
+        .chart-insight-count {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Insights Styles */
+        .goal-insights {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .insight-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .insight-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .insight-pattern {
+            border-left: 4px solid #667eea;
+        }
+        
+        .insight-traditional {
+            border-left: 4px solid #d69e2e;
+        }
+        
+        .insight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .insight-title {
+            color: #2d3748;
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .insight-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: flex-end;
+        }
+        
+        .confidence-score {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pattern-type {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .source-indicator {
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+        
+        .insight-narrative {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .contributing-evidence {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            max-height: 0;
+        }
+        
+        .contributing-evidence.expanded {
+            max-height: 200px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .contributing-evidence h5 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .evidence-list {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+        
+        .entities-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .entity-tag {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #81e6d9;
+        }
+        
+        /* Chart Details Section */
+        .chart-details-section {
+            background: white;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .chart-details-section.hidden {
+            display: none;
+        }
+        
+        .chart-details-section h4 {
+            background: #667eea;
+            color: white;
+            padding: 1rem 1.5rem;
+            margin: 0;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .chart-details-content {
+            padding: 1.5rem;
+        }
+        
+        .chart-fact-item {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .fact-type-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        
+        .fact-extreme { border-left-color: #f56565; }
+        .fact-trend { border-left-color: #4299e1; }
+        .fact-outlier { border-left-color: #ed8936; }
+        .fact-comparison { border-left-color: #48bb78; }
+        .fact-distribution { border-left-color: #9f7aea; }
+        
+        .close-details-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 1.5rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .close-details-btn:hover {
+            background: #5a67d8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .goal-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .charts-panel {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                max-height: 400px;
+            }
+            
+            .insights-panel {
+                max-height: 600px;
+            }
+            
+            .charts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 1rem;
+            }
+            
+            .goal-header {
+                padding: 1rem;
+            }
+            
+            .charts-panel, .insights-panel {
+                padding: 1rem;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .insight-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .insight-meta {
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+            
+            .main-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        
+        
+        /* Enhanced Supporting Facts Styles */
+        .expand-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.8rem;
+            color: #718096;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .insight-item:hover .expand-indicator {
+            color: #4a5568;
+        }
+        
+        .expand-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.7rem;
+        }
+        
+        .insight-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        .insight-item.expanded .expand-text {
+            opacity: 0.7;
+        }
+        
+        .supporting-facts-section {
+            margin-top: 1rem;
+            padding: 0;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            max-height: 0;
+            position: relative;
+        }
+        
+        .supporting-facts-section.expanded {
+            max-height: 600px;
+            border-left-color: #48bb78;
+            padding: 1rem;
+            overflow: visible; /* Allow content to be scrollable */
+        }
+        
+        .supporting-facts-title {
+            color: #2d3748;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            position: sticky;
+            top: 0;
+            background: #f8fafc;
+            z-index: 2;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .scroll-hint {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: normal;
+            animation: bounce-hint 2s infinite;
+        }
+        
+        @keyframes bounce-hint {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-3px); }
+            60% { transform: translateY(-2px); }
+        }
+        
+        .evidence-icon {
+            font-size: 1.2rem;
+        }
+        
+        .supporting-facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-height: 450px; /* Allow scrolling within the facts list */
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 8px; /* Space for scrollbar */
+            margin-right: -8px; /* Compensate for padding */
+        }
+        
+        /* Custom scrollbar styling for better UX */
+        .supporting-facts-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .supporting-facts-list::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0;
+        }
+        
+        /* Firefox scrollbar */
+        .supporting-facts-list {
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e0 #f1f5f9;
+        }
+        
+        .chart-facts-group {
+            background: white;
+            border-radius: 6px;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-facts-group:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .chart-facts-header {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .chart-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .facts-count {
+            font-size: 0.8rem;
+            color: #718096;
+            font-weight: normal;
+        }
+        
+        .facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .supporting-fact-item {
+            padding: 0.75rem;
+            background: #fafbfc;
+            border-radius: 4px;
+            border-left: 3px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .supporting-fact-item:hover {
+            background: #f1f5f9;
+            border-left-color: #667eea;
+            transform: translateX(2px);
+        }
+        
+        .supporting-fact-item.highlighted {
+            background: #e6fffa;
+            border-left-color: #38b2ac;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(56, 178, 172, 0.2);
+        }
+        
+        .fact-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .fact-type-badge {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .fact-extreme { 
+            background: #fed7d7; 
+            color: #c53030; 
+        }
+        
+        .fact-trend { 
+            background: #bee3f8; 
+            color: #2b6cb0; 
+        }
+        
+        .fact-outlier { 
+            background: #fbd38d; 
+            color: #c05621; 
+        }
+        
+        .fact-comparison { 
+            background: #c6f6d5; 
+            color: #2f855a; 
+        }
+        
+        .fact-distribution { 
+            background: #e9d8fd; 
+            color: #6b46c1; 
+        }
+        
+        .fact-subtype {
+            font-size: 0.8rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .fact-description {
+            flex: 1;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+        
+        .fact-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+        
+        .fact-importance {
+            background: #f0fff4;
+            color: #22543d;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+        }
+        
+        .fact-entities {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+        }
+        
+        /* Enhanced Chart Highlighting for Facts */
+        .chart-item.fact-highlighted {
+            border: 3px solid #38b2ac;
+            box-shadow: 0 8px 30px rgba(56, 178, 172, 0.4);
+            transform: translateY(-4px) scale(1.02);
+            z-index: 10;
+            position: relative;
+        }
+        
+        .chart-item.fact-highlighted::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(45deg, #38b2ac, #4fd1c7);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 0.5; 
+                transform: scale(1.02); 
+            }
+        }
+        
+        /* Responsive adjustments for supporting facts */
+        @media (max-width: 768px) {
+            .supporting-facts-section {
+                padding: 0.75rem;
+            }
+            
+            .chart-facts-group {
+                padding: 0.75rem;
+            }
+            
+            .supporting-fact-item {
+                padding: 0.5rem;
+            }
+            
+            .fact-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+            
+            .fact-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Animation classes */
+        .slide-down {
+            animation: slideDown 0.3s ease;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from { 
+                max-height: 0; 
+                opacity: 0; 
+            }
+            to { 
+                max-height: 800px; 
+                opacity: 1; 
+            }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                max-height: 800px; 
+                opacity: 1; 
+            }
+            to { 
+                max-height: 0; 
+                opacity: 0; 
+            }
+        }
+        
+            </style>
+        </head>
+        <body>
+            <header class="main-header">
+                <div class="header-content">
+                    <h1>Dashboard Analysis</h1>
+                    <p>Enhanced insights with universal pattern detection and interactive interface</p>
+                    <div class="header-meta">
+                        <span class="approach-badge pattern-approach">
+                            Pattern Approach
+                        </span>
+                        <span class="timestamp">Generated: 2025-08-26 11:54:03</span>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="dashboard-container">
+        
+        <section class="goal-section" id="goal-1" data-goal-id="1">
+            <div class="goal-header">
+                <h2 class="goal-title">Compare the categories of Attrition/Retention for headcount</h2>
+                <div class="goal-meta">
+                    <span class="goal-type">Compare Dimension</span>
+                    <span class="goal-views">Views: 0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 34</span>
+                    <span class="approach-indicator">Pattern</span>
+                </div>
+            </div>
+            
+            <div class="goal-content">
+                <!-- Charts Panel (Left) -->
+                <div class="charts-panel">
+                    <h3>Goal Charts</h3>
+                    <div class="charts-grid">
+        
+        <div class="chart-item" 
+             data-chart-id="0" 
+             data-chart-insights='[{"description": "In the Bar comparing headcount across Department, Retention leads in 3 out of 3 categories (100%), showing complete dominance across all categories.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Retention", "won_categories": ["HR", "R & D", "Sales"], "exceptions": {}}, "entities": []}, {"description": "In the Bar comparing headcount across Department, the R & D category shows the most pronounced disparities between series with a range of 695.0 units for the absolute range, which is 4.6x higher than the average disparity in other categories. The gap ranges from Attrition (133.0) to Retention (828.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.95, "data_points": {"category": "R & D", "disparity_measure": "range", "disparity_value": 695, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["R & D", "R & D"]}, {"description": "In the Bar comparing headcount across Department, the R & D category shows the most pronounced disparities between series with a standard deviation of 347.50, which is 4.6x higher than the average disparity in other categories. The gap ranges from Attrition (133.0) to Retention (828.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.95, "data_points": {"category": "R & D", "disparity_measure": "std_dev", "disparity_value": 347.5, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["R & D", "R & D"]}, {"description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "The distribution is highly uneven across Departments, with a few categories dominating the total.", "fact_type": "distribution_evenness", "subtype": "very_uneven", "importance": 0.85, "data_points": {"gini": 0.6736990154711673, "cv": 0.6360260912088374, "normalized_entropy": 0.7669452600094419}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Department, the highest value overall is 828.0 for Retention in the R & D category, which is 238% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "R & D", "series": "Retention", "value": 828}, "entities": ["R & D", "Retention", "828", "R & D", "Retention"]}, {"description": "Across all series in the Bar comparing headcount by Department, the lowest value overall is 12.0 for Attrition in the HR category, which is 95% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "HR", "series": "Attrition", "value": 12}, "entities": ["HR", "Attrition", "12", "HR", "Attrition"]}, {"description": "The headcount distribution is approximately symmetric across Departments.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": -0.37077107465567977}, "entities": []}]'
+             onclick="showChartDetails(0, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_0.svg" alt="Chart 0" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 0</span>
+                
+                <span class="insights-count">8 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="1" 
+             data-chart-insights='[{"description": "In the Bar comparing headcount across Job Role, Retention leads in 9 out of 9 categories (100%), showing complete dominance across all categories.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Retention", "won_categories": ["Healthcare Representative", "Human Resources", "Laboratory Technician", "Manager", "Manufacturing Director", "Research Director", "Research Scientist", "Sales Executive", "Sales Representative"], "exceptions": {}}, "entities": []}, {"description": "In the Bar comparing headcount across Job Role, Human Resources and Sales Representative exhibit very similar patterns across all series (similarity score: 1.00), suggesting these 2 categories behave as a cohesive group and may share common underlying characteristics.", "fact_type": "category_clustering", "subtype": "similar_behavior", "importance": 0.95, "data_points": {"categories": ["Human Resources", "Sales Representative"], "similarity": 0.9999999999999999, "cluster_size": 2}, "entities": []}, {"description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "In the Bar comparing headcount across Job Role, the Sales Executive category shows the most pronounced disparities between series with a range of 212.0 units for the absolute range, which is 2.2x higher than the average disparity in other categories. The gap ranges from Attrition (57.0) to Retention (269.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.8326530612244898, "data_points": {"category": "Sales Executive", "disparity_measure": "range", "disparity_value": 212, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["Sales Executive", "Sales Executive"]}, {"description": "In the Bar comparing headcount across Job Role, the Sales Executive category shows the most pronounced disparities between series with a standard deviation of 106.00, which is 2.2x higher than the average disparity in other categories. The gap ranges from Attrition (57.0) to Retention (269.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.8326530612244898, "data_points": {"category": "Sales Executive", "disparity_measure": "std_dev", "disparity_value": 106.0, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["Sales Executive", "Sales Executive"]}, {"description": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Sales Executive", "series": "Retention", "value": 269}, "entities": ["Sales Executive", "Retention", "269", "Sales Executive", "Retention"]}, {"description": "Just 44% of Job Roles (Laboratory Technician, Sales Executive, Research Scientist, and 1 others) account for 80% of the total headcount.", "fact_type": "distribution_concentration", "subtype": "pareto", "importance": 0.8, "data_points": {"concentration_percentage": 44, "categories": ["Laboratory Technician", "Sales Executive", "Research Scientist", "Sales Representative"]}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Research Director", "series": "Attrition", "value": 2}, "entities": ["Research Director", "Attrition", "2", "Research Director", "Attrition"]}, {"description": "The distribution is moderately uneven across Job Roles, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.5752461322081575, "cv": 0.8495170499018997, "normalized_entropy": 0.8280470760673178}, "entities": []}, {"description": "The headcount distribution is approximately symmetric across Job Roles.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.4635762223903273}, "entities": []}]'
+             onclick="showChartDetails(1, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_1.svg" alt="Chart 1" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 1</span>
+                
+                <span class="insights-count">10 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="3" 
+             data-chart-insights='[{"description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Gender, the highest value overall is 732.0 for Retention in the Male category, which is 99% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Male", "series": "Retention", "value": 732}, "entities": ["Male", "Retention", "732", "Male", "Retention"]}, {"description": "Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87.0 for Attrition in the Female category, which is 76% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Female", "series": "Attrition", "value": 87}, "entities": ["Female", "Attrition", "87", "Female", "Attrition"]}]'
+             onclick="showChartDetails(3, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_3.svg" alt="Chart 3" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 3</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="2" 
+             data-chart-insights='[{"description": "In the Line tracking headcount over Attrition Date, Attrition maintains leadership in 100% of time periods (116 out of 116).", "fact_type": "temporal_leadership", "subtype": "stability_pattern", "importance": 0.85, "data_points": {"dominant_series": "Attrition", "leadership_percentage": 100.0, "challenger": null, "total_periods": 116}, "entities": []}]'
+             onclick="showChartDetails(2, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_2.svg" alt="Chart 2" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 2</span>
+                
+                <span class="insights-count">1 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="4" 
+             data-chart-insights='[{"description": "In the Bar comparing headcount across Age group, Retention leads in 5 out of 5 categories (100%), showing complete dominance across all categories.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Retention", "won_categories": ["25-34", "35-44", "45-55", "< 25", "> 55"], "exceptions": {}}, "entities": []}, {"description": "In the Bar comparing headcount across Age group, the 35-44 category shows the most pronounced disparities between series with a range of 403.0 units for the absolute range, which is 2.7x higher than the average disparity in other categories. The gap ranges from Attrition (51.0) to Retention (454.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.9436762225969645, "data_points": {"category": "35-44", "disparity_measure": "range", "disparity_value": 403, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["35-44", "35-44"]}, {"description": "In the Bar comparing headcount across Age group, the 35-44 category shows the most pronounced disparities between series with a standard deviation of 201.50, which is 2.7x higher than the average disparity in other categories. The gap ranges from Attrition (51.0) to Retention (454.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.9436762225969645, "data_points": {"category": "35-44", "disparity_measure": "std_dev", "disparity_value": 201.5, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["35-44", "35-44"]}, {"description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Age group, the highest value overall is 454.0 for Retention in the 35-44 category, which is 209% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "35-44", "series": "Retention", "value": 454}, "entities": ["35-44", "Retention", "454", "35-44", "Retention"]}, {"description": "Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8.0 for Attrition in the > 55 category, which is 95% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "> 55", "series": "Attrition", "value": 8}, "entities": ["> 55", "Attrition", "8", "> 55", "Attrition"]}, {"description": "The distribution is moderately uneven across Age groups, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.5898734177215189, "cv": 0.7430953573924494, "normalized_entropy": 0.8357079134377844}, "entities": []}, {"description": "The headcount distribution is right-skewed, with a few Age groups having unusually high values.", "fact_type": "distribution_skew", "subtype": "positive_skew", "importance": 0.75, "data_points": {"skewness": 0.916904942292109}, "entities": []}]'
+             onclick="showChartDetails(4, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_4.svg" alt="Chart 4" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 4</span>
+                
+                <span class="insights-count">8 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="5" 
+             data-chart-insights='[{"description": "In the Bar comparing headcount across Education, Retention leads in 5 out of 5 categories (100%), showing complete dominance across all categories.", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Retention", "won_categories": ["Associates Degree", "Bachelor's Degree", "Doctoral Degree", "High School", "Master's Degree"], "exceptions": {}}, "entities": []}, {"description": "In the Bar comparing headcount across Education, the Bachelor's Degree category shows the most pronounced disparities between series with a range of 374.0 units for the absolute range, which is 2.4x higher than the average disparity in other categories. The gap ranges from Attrition (99.0) to Retention (473.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.8810289389067524, "data_points": {"category": "Bachelor's Degree", "disparity_measure": "range", "disparity_value": 374, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["Bachelor's Degree", "Bachelor's Degree"]}, {"description": "In the Bar comparing headcount across Education, the Bachelor's Degree category shows the most pronounced disparities between series with a standard deviation of 187.00, which is 2.4x higher than the average disparity in other categories. The gap ranges from Attrition (99.0) to Retention (473.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.8810289389067524, "data_points": {"category": "Bachelor's Degree", "disparity_measure": "std_dev", "disparity_value": 187.0, "max_series": "Retention", "min_series": "Attrition"}, "entities": ["Bachelor's Degree", "Bachelor's Degree"]}, {"description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Education, the highest value overall is 473.0 for Retention in the Bachelor's Degree category, which is 222% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Bachelor's Degree", "series": "Retention", "value": 473}, "entities": ["Bachelor's Degree", "Retention", "473", "Bachelor's Degree", "Retention"]}, {"description": "Across all series in the Bar comparing headcount by Education, the lowest value overall is 5.0 for Attrition in the Doctoral Degree category, which is 97% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Doctoral Degree", "series": "Attrition", "value": 5}, "entities": ["Doctoral Degree", "Attrition", "5", "Doctoral Degree", "Attrition"]}, {"description": "The distribution is moderately uneven across Educations, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.5628691983122363, "cv": 0.6572805040371861, "normalized_entropy": 0.8507374470198628}, "entities": []}, {"description": "The headcount distribution is approximately symmetric across Educations.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.3829570636477687}, "entities": []}]'
+             onclick="showChartDetails(5, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_5.svg" alt="Chart 5" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 5</span>
+                
+                <span class="insights-count">8 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="6" 
+             data-chart-insights='[{"description": "In the Bar, 3, 4 consistently perform above average while 2 consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Retention", "series": 3, "value": 391}, "entities": ["Retention", "3", "391", "Retention", "3"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Attrition", "series": 2, "value": 43}, "entities": ["Attrition", "2", "43", "Attrition", "2"]}]'
+             onclick="showChartDetails(6, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_6.svg" alt="Chart 6" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 6</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="7" 
+             data-chart-insights='[{"description": "In the Bar, 3 consistently perform above average while 4, 1 consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Retention", "series": 3, "value": 743}, "entities": ["Retention", "3", "743", "Retention", "3"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Attrition", "series": 4, "value": 13}, "entities": ["Attrition", "4", "13", "Attrition", "4"]}]'
+             onclick="showChartDetails(7, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_7.svg" alt="Chart 7" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 7</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="8" 
+             data-chart-insights='[{"description": "In the Bar, 3 consistently perform above average while 2 consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Retention", "series": 4, "value": 407}, "entities": ["Retention", "4", "407", "Retention", "4"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Attrition", "series": 2, "value": 46}, "entities": ["Attrition", "2", "46", "Attrition", "2"]}]'
+             onclick="showChartDetails(8, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_8.svg" alt="Chart 8" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 8</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="9" 
+             data-chart-insights='[{"description": "In the Bar, 4, 3 consistently perform above average while 1, 2 consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Retention", "series": 3, "value": 388}, "entities": ["Retention", "3", "388", "Retention", "3"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Attrition", "series": 2, "value": 45}, "entities": ["Attrition", "2", "45", "Attrition", "2"]}]'
+             onclick="showChartDetails(9, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_9.svg" alt="Chart 9" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 9</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item" 
+             data-chart-id="10" 
+             data-chart-insights='[{"description": "In the Bar, 3 consistently perform above average while 1, 2, 4 consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "Retention", "series": 3, "value": 766}, "entities": ["Retention", "3", "766", "Retention", "3"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Attrition", "series": 1, "value": 25}, "entities": ["Attrition", "1", "25", "Attrition", "1"]}]'
+             onclick="showChartDetails(10, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/e_10.svg" alt="Chart 10" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 10</span>
+                
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+        <div class="chart-item new-view" 
+             data-chart-id="34" 
+             data-chart-insights='[{"description": "Across all 2 categories in the Bar of Attrition/Retention, the average headcount is 735.0 with a standard deviation of 498.0 (68% coefficient of variation).", "fact_type": "distribution", "subtype": "average", "importance": 0.7, "data_points": {"average": 735.0, "std_dev": 498.0, "cv": 67.75510204081633}, "entities": []}, {"description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.", "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "data_points": {"category": "Retention", "value": 1233, "average": 735.0}, "entities": ["Retention", "1233", "Retention"]}, {"description": "In the Bar showing headcount by Attrition/Retention, Attrition has the lowest value at 237.0, which is 68% below the average of 735.0.", "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "data_points": {"category": "Attrition", "value": 237, "average": 735.0}, "entities": ["Attrition", "237", "Attrition"]}]'
+             onclick="showChartDetails(34, this, event)"
+             title="Click for details, double-click to zoom">
+        
+                    <div class="svg-container">
+                        <img src="chart/a_34.svg" alt="Chart 34" class="responsive-svg">
+                    </div>
+                    
+            <div class="chart-caption">
+                <span class="chart-id">Chart 34</span>
+                <span class="new-view-indicator">New View</span>
+                <span class="insights-count">3 insights</span>
+                <span class="zoom-hint">Double-click to zoom</span>
+            </div>
+        </div>
+        
+                    </div>
+                </div>
+                
+                <!-- Insights Panel (Right) -->
+                <div class="insights-panel">
+                    <h3>Goal Insights</h3>
+                    <div class="goal-insights">
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="0"
+            data-contributing-charts='[34, 6, 7, 8, 9, 10]'
+            data-entities='["Retention", "Retention"]'
+            data-pattern-type="consistency"
+            data-supporting-facts='[{"description": "In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.", "chart_id": 6, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.", "chart_id": 6, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.", "chart_id": 7, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.", "chart_id": 7, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.", "chart_id": 8, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.", "chart_id": 8, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.", "chart_id": 9, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.", "chart_id": 9, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.", "chart_id": 10, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.", "chart_id": 10, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.", "chart_id": 34, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}]'
+            onmouseover="highlightContributingCharts(this, '1')"
+            onmouseout="clearHighlights('1')"
+            onclick="toggleSupportingFacts(this, '1', 0)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Consistent High Performer: Retention</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 1.00
+                    </span>
+                    <span class="pattern-type">consistency</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Retention consistently shows strong headcount performance across multiple contexts including Attrition/Retention, demonstrating reliable excellence across 11 different dimensions.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-1-0">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (11 facts)
+                    <span class="scroll-hint">Scroll to see more ↓</span>
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-1-0">
+        
+                    <div class="chart-facts-group" data-chart-id="6">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 6</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-6-0"
+                                data-chart-id="6"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-6-1"
+                                data-chart-id="6"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="7">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 7</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-7-0"
+                                data-chart-id="7"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-7-1"
+                                data-chart-id="7"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="8">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 8</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-8-0"
+                                data-chart-id="8"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-8-1"
+                                data-chart-id="8"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="9">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 9</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-9-0"
+                                data-chart-id="9"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-9-1"
+                                data-chart-id="9"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="10">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 10</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-10-0"
+                                data-chart-id="10"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-10-1"
+                                data-chart-id="10"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="34">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 34</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-0-34-0"
+                                data-chart-id="34"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '34')"
+                                onmouseout="clearFactHighlight('1', '34')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Retention</span>
+            </div>
+        </div>
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="1"
+            data-contributing-charts='[34, 6, 7, 8, 9, 10]'
+            data-entities='["Attrition", "Attrition"]'
+            data-pattern-type="consistency"
+            data-supporting-facts='[{"description": "In the Bar showing 2 by Attrition/Retention, Attrition has the lowest value at 43.0, which is 70% below the average of 143.5.", "chart_id": 6, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average.", "chart_id": 6, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Attrition"]}, {"description": "In the Bar showing 3 by Attrition/Retention, Attrition has the lowest value at 125.0, which is 71% below the average of 434.0.", "chart_id": 7, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.", "chart_id": 7, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Attrition"]}, {"description": "In the Bar showing 4 by Attrition/Retention, Attrition has the lowest value at 52.0, which is 77% below the average of 229.5.", "chart_id": 8, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average.", "chart_id": 8, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Attrition"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 57.0, which is 59% below the average of 138.0.", "chart_id": 9, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average.", "chart_id": 9, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Attrition"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 25.0, which is 38% below the average of 40.0.", "chart_id": 10, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average.", "chart_id": 10, "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "entities": ["Attrition"]}, {"description": "In the Bar showing headcount by Attrition/Retention, Attrition has the lowest value at 237.0, which is 68% below the average of 735.0.", "chart_id": 34, "fact_type": "extreme", "subtype": "minimum", "importance": 0.55, "entities": ["Attrition"]}]'
+            onmouseover="highlightContributingCharts(this, '1')"
+            onmouseout="clearHighlights('1')"
+            onclick="toggleSupportingFacts(this, '1', 1)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Consistent Underperformer: Attrition</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 1.00
+                    </span>
+                    <span class="pattern-type">consistency</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Attrition consistently shows lower headcount performance across Attrition/Retention, indicating potential areas for improvement across 11 different dimensions.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-1-1">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (11 facts)
+                    <span class="scroll-hint">Scroll to see more ↓</span>
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-1-1">
+        
+                    <div class="chart-facts-group" data-chart-id="6">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 6</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-6-0"
+                                data-chart-id="6"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing 2 by Attrition/Retention, Attrition has the lowest value at 43.0, which is 70% below the average of 143.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-6-1"
+                                data-chart-id="6"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="7">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 7</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-7-0"
+                                data-chart-id="7"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing 3 by Attrition/Retention, Attrition has the lowest value at 125.0, which is 71% below the average of 434.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-7-1"
+                                data-chart-id="7"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="8">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 8</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-8-0"
+                                data-chart-id="8"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing 4 by Attrition/Retention, Attrition has the lowest value at 52.0, which is 77% below the average of 229.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-8-1"
+                                data-chart-id="8"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="9">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 9</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-9-0"
+                                data-chart-id="9"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 57.0, which is 59% below the average of 138.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-9-1"
+                                data-chart-id="9"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="10">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 10</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-10-0"
+                                data-chart-id="10"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 25.0, which is 38% below the average of 40.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-10-1"
+                                data-chart-id="10"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_minimum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.75</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="34">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 34</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-1-34-0"
+                                data-chart-id="34"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '34')"
+                                onmouseout="clearFactHighlight('1', '34')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(minimum)</span>
+                                    <span class="fact-description">In the Bar showing headcount by Attrition/Retention, Attrition has the lowest value at 237.0, which is 68% below the average of 735.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.55</span>
+                                    <span class="fact-entities">Entities: Attrition</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Attrition</span>
+            </div>
+        </div>
+        
+        <div class="insight-item insight-pattern" 
+            data-insight-id="2"
+            data-contributing-charts='[0, 1, 34, 3, 4, 5, 6, 7, 8, 9, 10]'
+            data-entities='["Retention", "Retention"]'
+            data-pattern-type="outlier"
+            data-supporting-facts='[{"description": "In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.", "chart_id": 6, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.", "chart_id": 6, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.", "chart_id": 7, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.", "chart_id": 7, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.", "chart_id": 8, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.", "chart_id": 8, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.", "chart_id": 9, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.", "chart_id": 9, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.", "chart_id": 10, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}, {"description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.", "chart_id": 10, "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "entities": ["Retention"]}, {"description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.", "chart_id": 34, "fact_type": "extreme", "subtype": "maximum", "importance": 0.6, "entities": ["Retention"]}]'
+            onmouseover="highlightContributingCharts(this, '1')"
+            onmouseout="clearHighlights('1')"
+            onclick="toggleSupportingFacts(this, '1', 2)">
+            
+            <div class="insight-header">
+                <h4 class="insight-title">Exceptional Performer: Retention</h4>
+                <div class="insight-meta">
+                    <span class="confidence-score">
+                        Confidence: 1.00
+                    </span>
+                    <span class="pattern-type">outlier</span>
+                    <span class="source-indicator">pattern</span>
+                    <span class="expand-indicator">
+                        <span class="expand-text">Click to see evidence</span>
+                        <span class="expand-icon">▼</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="insight-narrative">
+                Retention demonstrates exceptional behavior in Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, standing out significantly from other Attrition/Retention in terms of headcount performance.
+            </div>
+            
+            <!-- NEW: Supporting Facts Section -->
+            <div class="supporting-facts-section hidden" id="supporting-facts-1-2">
+                <h5 class="supporting-facts-title">
+                    <span class="evidence-icon">🔍</span>
+                    Supporting Evidence (11 facts)
+                    <span class="scroll-hint">Scroll to see more ↓</span>
+                </h5>
+                <div class="supporting-facts-list" id="facts-list-1-2">
+        
+                    <div class="chart-facts-group" data-chart-id="6">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 6</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-6-0"
+                                data-chart-id="6"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-6-1"
+                                data-chart-id="6"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '6')"
+                                onmouseout="clearFactHighlight('1', '6')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="7">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 7</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-7-0"
+                                data-chart-id="7"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-7-1"
+                                data-chart-id="7"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '7')"
+                                onmouseout="clearFactHighlight('1', '7')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="8">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 8</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-8-0"
+                                data-chart-id="8"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-8-1"
+                                data-chart-id="8"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '8')"
+                                onmouseout="clearFactHighlight('1', '8')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="9">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 9</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-9-0"
+                                data-chart-id="9"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-9-1"
+                                data-chart-id="9"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '9')"
+                                onmouseout="clearFactHighlight('1', '9')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="10">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 10</span>
+                            <span class="facts-count">(2 facts)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-10-0"
+                                data-chart-id="10"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-10-1"
+                                data-chart-id="10"
+                                data-fact-type="cross_series_extreme"
+                                onmouseover="highlightFactChart(this, '1', '10')"
+                                onmouseout="clearFactHighlight('1', '10')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
+                                    <span class="fact-subtype">(global_maximum)</span>
+                                    <span class="fact-description">Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.80</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                    <div class="chart-facts-group" data-chart-id="34">
+                        <h6 class="chart-facts-header">
+                            <span class="chart-indicator">📊 Chart 34</span>
+                            <span class="facts-count">(1 fact)</span>
+                        </h6>
+                        <div class="facts-list">
+            
+                            <div class="supporting-fact-item" 
+                                data-fact-id="1-2-34-0"
+                                data-chart-id="34"
+                                data-fact-type="extreme"
+                                onmouseover="highlightFactChart(this, '1', '34')"
+                                onmouseout="clearFactHighlight('1', '34')">
+                                <div class="fact-content">
+                                    <span class="fact-type-badge fact-extreme">extreme</span>
+                                    <span class="fact-subtype">(maximum)</span>
+                                    <span class="fact-description">In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.</span>
+                                </div>
+                                <div class="fact-meta">
+                                    <span class="fact-importance">Importance: 0.60</span>
+                                    <span class="fact-entities">Entities: Retention</span>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="entities-container">
+        <span class="entity-tag">Retention</span>
+            </div>
+        </div>
+        
+                    </div>
+                    
+                    <!-- Chart Details Section (Hidden by default) -->
+                    <div class="chart-details-section hidden" id="chart-details-1">
+                        <h4>Chart Details</h4>
+                        <div class="chart-details-content">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                        <button class="close-details-btn" onclick="closeChartDetails('1')">
+                            ✕ Close Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            </main>
+            
+            <script>
+                
+        // Interactive Dashboard Functionality
+        
+        // Global state
+        let currentOpenChart = null;
+        let highlightedCharts = [];
+        
+        // Main Functions
+        function highlightContributingCharts(insightElement, goalId) {
+            const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
+            const goalSection = document.getElementById('goal-' + goalId);
+            
+            if (!goalSection) return;
+            
+            // Clear previous highlights
+            clearHighlights(goalId);
+            
+            // Highlight contributing charts
+            contributingCharts.forEach(chartId => {
+                const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+                if (chartElement) {
+                    chartElement.classList.add('highlighted');
+                    highlightedCharts.push(chartElement);
+                }
+            });
+            
+            // Dim non-contributing charts
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const chartId = parseInt(chart.dataset.chartId);
+                if (!contributingCharts.includes(chartId)) {
+                    chart.classList.add('dimmed');
+                }
+            });
+            
+            // Expand contributing evidence
+            const evidencePanel = insightElement.querySelector('.contributing-evidence');
+            if (evidencePanel) {
+                evidencePanel.classList.remove('hidden');
+                evidencePanel.classList.add('expanded');
+                
+                // Update evidence content with specific chart information
+                const evidenceList = evidencePanel.querySelector('.evidence-list');
+                if (evidenceList && contributingCharts.length > 0) {
+                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
+                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
+                }
+            }
+        }
+        
+        function clearHighlights(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove all highlight classes
+            highlightedCharts.forEach(chart => {
+                chart.classList.remove('highlighted', 'dimmed');
+            });
+            highlightedCharts = [];
+            
+            // Clear all chart highlights and dims
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('highlighted', 'dimmed');
+            });
+            
+            // Collapse all contributing evidence panels
+            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
+            evidencePanels.forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('expanded');
+            });
+        }
+        
+        function showChartDetails(chartId, chartElement, event) {
+            // Check if this is a double-click for zoom overlay
+            if (event && event.detail === 2) {
+                showChartZoomOverlay(chartId, chartElement);
+                return;
+            }
+            
+            const goalSection = chartElement.closest('.goal-section');
+            const goalId = goalSection.dataset.goalId;
+            const detailsSection = goalSection.querySelector('.chart-details-section');
+            const detailsContent = detailsSection.querySelector('.chart-details-content');
+            
+            if (!detailsSection || !detailsContent) return;
+            
+            // Get chart insights from data attribute
+            const chartInsights = JSON.parse(chartElement.dataset.chartInsights || '[]');
+            
+            // Close previous chart if open
+            if (currentOpenChart && currentOpenChart !== chartId) {
+                closeChartDetails(goalId);
+            }
+            
+            // Toggle if clicking the same chart
+            if (currentOpenChart === chartId) {
+                closeChartDetails(goalId);
+                return;
+            }
+            
+            // Update details content
+            let detailsHTML = `
+                <div class="chart-details-header">
+                    <h5>Chart ${chartId} - Detailed Insights</h5>
+                    <p class="chart-insight-count">${chartInsights.length} fact${chartInsights.length !== 1 ? 's' : ''} extracted</p>
+                </div>
+            `;
+            
+            if (chartInsights.length > 0) {
+                chartInsights.forEach((insight, index) => {
+                    const factTypeClass = `fact-${insight.fact_type}`;
+                    detailsHTML += `
+                        <div class="chart-fact-item ${factTypeClass}">
+                            <div class="fact-header">
+                                <span class="fact-type-badge">${insight.fact_type}</span>
+                                ${insight.subtype ? `<span class="fact-subtype">${insight.subtype}</span>` : ''}
+                                <span class="fact-importance">Importance: ${insight.importance.toFixed(2)}</span>
+                            </div>
+                            <div class="fact-description">${insight.description}</div>
+                            ${insight.entities && insight.entities.length > 0 ? 
+                                `<div class="fact-entities">
+                                    <strong>Entities:</strong> ${insight.entities.join(', ')}
+                                </div>` : ''
+                            }
+                        </div>
+                    `;
+                });
+            } else {
+                detailsHTML += `
+                    <div class="chart-fact-item">
+                        <div class="fact-description">No detailed insights available for this chart.</div>
+                    </div>
+                `;
+            }
+            
+            detailsContent.innerHTML = detailsHTML;
+            
+            // Show details section with animation
+            detailsSection.classList.remove('hidden');
+            detailsSection.classList.add('fade-in');
+            
+            // Update current open chart
+            currentOpenChart = chartId;
+            
+            // Scroll details into view
+            setTimeout(() => {
+                detailsSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            }, 100);
+        }
+        
+        function showChartZoomOverlay(chartId, chartElement) {
+            const goalSection = chartElement.closest('.goal-section');
+            const chartsPanel = goalSection.querySelector('.charts-panel');
+            
+            // Get the chart image source
+            const chartImg = chartElement.querySelector('img');
+            if (!chartImg) return;
+            
+            const chartSrc = chartImg.src;
+            
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'chart-zoom-overlay';
+            overlay.innerHTML = `
+                <div class="zoom-overlay-content">
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" id="zoom-in">➕</button>
+                        <button class="zoom-btn" id="zoom-out">➖</button>
+                        <button class="zoom-btn" id="zoom-reset">⚡</button>
+                        <button class="zoom-btn close-overlay">✕</button>
+                    </div>
+                    <div class="zoom-container">
+                        <img src="${chartSrc}" alt="Chart ${chartId}" class="zoom-image" id="zoom-image">
+                    </div>
+                    <div class="zoom-info">
+                        <span>Chart ${chartId} - Double-click to zoom, drag to pan</span>
+                    </div>
+                </div>
+            `;
+            
+            // Add overlay to charts panel
+            chartsPanel.appendChild(overlay);
+            
+            // Initialize zoom functionality
+            initializeZoomControls(overlay);
+            
+            // Show overlay with animation
+            setTimeout(() => {
+                overlay.classList.add('visible');
+            }, 10);
+        }
+        
+        function initializeZoomControls(overlay) {
+            const zoomImage = overlay.querySelector('#zoom-image');
+            const zoomContainer = overlay.querySelector('.zoom-container');
+            const zoomInBtn = overlay.querySelector('#zoom-in');
+            const zoomOutBtn = overlay.querySelector('#zoom-out');
+            const zoomResetBtn = overlay.querySelector('#zoom-reset');
+            const closeBtn = overlay.querySelector('.close-overlay');
+            
+            let scale = 1;
+            let isDragging = false;
+            let dragStart = { x: 0, y: 0 };
+            let translation = { x: 0, y: 0 };
+            
+            // Zoom controls
+            zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.3, 5);
+                updateTransform();
+            });
+            
+            zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.3, 0.5);
+                updateTransform();
+            });
+            
+            zoomResetBtn.addEventListener('click', () => {
+                scale = 1;
+                translation = { x: 0, y: 0 };
+                updateTransform();
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                closeZoomOverlay(overlay);
+            });
+            
+            // Double-click zoom
+            zoomImage.addEventListener('dblclick', (e) => {
+                e.preventDefault();
+                const rect = zoomContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                if (scale === 1) {
+                    scale = 2;
+                    translation.x = (centerX - x) * scale;
+                    translation.y = (centerY - y) * scale;
+                } else {
+                    scale = 1;
+                    translation = { x: 0, y: 0 };
+                }
+                updateTransform();
+            });
+            
+            // Mouse wheel zoom
+            zoomContainer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = zoomContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const zoom = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * zoom, 0.5), 5);
+                
+                if (newScale !== scale) {
+                    const factor = newScale / scale;
+                    translation.x = x - (x - translation.x) * factor;
+                    translation.y = y - (y - translation.y) * factor;
+                    scale = newScale;
+                    updateTransform();
+                }
+            });
+            
+            // Drag to pan
+            zoomImage.addEventListener('mousedown', (e) => {
+                if (scale > 1) {
+                    isDragging = true;
+                    dragStart.x = e.clientX - translation.x;
+                    dragStart.y = e.clientY - translation.y;
+                    zoomImage.style.cursor = 'grabbing';
+                    e.preventDefault();
+                }
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    translation.x = e.clientX - dragStart.x;
+                    translation.y = e.clientY - dragStart.y;
+                    updateTransform();
+                }
+            });
+            
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    zoomImage.style.cursor = scale > 1 ? 'grab' : 'default';
+                }
+            });
+            
+            // Touch support for mobile
+            let touchStart = null;
+            let initialDistance = 0;
+            let initialScale = 1;
+            
+            zoomContainer.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    touchStart = {
+                        x: e.touches[0].clientX - translation.x,
+                        y: e.touches[0].clientY - translation.y
+                    };
+                } else if (e.touches.length === 2) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    initialDistance = Math.sqrt(dx * dx + dy * dy);
+                    initialScale = scale;
+                }
+                e.preventDefault();
+            });
+            
+            zoomContainer.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && touchStart) {
+                    translation.x = e.touches[0].clientX - touchStart.x;
+                    translation.y = e.touches[0].clientY - touchStart.y;
+                    updateTransform();
+                } else if (e.touches.length === 2) {
+                    const dx = e.touches[0].clientX - e.touches[1].clientX;
+                    const dy = e.touches[0].clientY - e.touches[1].clientY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const newScale = Math.min(Math.max((distance / initialDistance) * initialScale, 0.5), 5);
+                    scale = newScale;
+                    updateTransform();
+                }
+                e.preventDefault();
+            });
+            
+            zoomContainer.addEventListener('touchend', () => {
+                touchStart = null;
+            });
+            
+            function updateTransform() {
+                zoomImage.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
+                zoomImage.style.cursor = scale > 1 ? 'grab' : 'default';
+            }
+            
+            // Keyboard shortcuts
+            overlay.addEventListener('keydown', (e) => {
+                switch(e.key) {
+                    case 'Escape':
+                        closeZoomOverlay(overlay);
+                        break;
+                    case '+':
+                    case '=':
+                        zoomInBtn.click();
+                        break;
+                    case '-':
+                        zoomOutBtn.click();
+                        break;
+                    case '0':
+                        zoomResetBtn.click();
+                        break;
+                }
+            });
+            
+            // Focus overlay for keyboard events
+            overlay.setAttribute('tabindex', '0');
+            overlay.focus();
+        }
+        
+        function closeZoomOverlay(overlay) {
+            overlay.classList.remove('visible');
+            setTimeout(() => {
+                if (overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 300);
+        }
+        
+        function closeChartDetails(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            const detailsSection = goalSection.querySelector('.chart-details-section');
+            
+            if (detailsSection) {
+                detailsSection.classList.add('hidden');
+                detailsSection.classList.remove('fade-in');
+            }
+            
+            currentOpenChart = null;
+        }
+        
+        // Chart hover effects for bidirectional interaction
+        function setupChartHoverEffects() {
+            document.querySelectorAll('.chart-item').forEach(chartElement => {
+                chartElement.addEventListener('mouseenter', function() {
+                    const chartId = parseInt(this.dataset.chartId);
+                    const goalSection = this.closest('.goal-section');
+                    const goalId = goalSection.dataset.goalId;
+                    
+                    // Find insights that reference this chart
+                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                    relatedInsights.forEach(insight => {
+                        const contributingCharts = JSON.parse(insight.dataset.contributingCharts || '[]');
+                        if (contributingCharts.includes(chartId)) {
+                            insight.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                            insight.style.transform = 'translateX(5px)';
+                        }
+                    });
+                });
+                
+                chartElement.addEventListener('mouseleave', function() {
+                    const goalSection = this.closest('.goal-section');
+                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                    relatedInsights.forEach(insight => {
+                        insight.style.backgroundColor = '';
+                        insight.style.transform = '';
+                    });
+                });
+            });
+        }
+        
+        // Smooth scrolling for goal navigation
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#goal-"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Enhanced keyboard navigation
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && currentOpenChart) {
+                    const openDetails = document.querySelector('.chart-details-section:not(.hidden)');
+                    if (openDetails) {
+                        const goalSection = openDetails.closest('.goal-section');
+                        const goalId = goalSection.dataset.goalId;
+                        closeChartDetails(goalId);
+                    }
+                }
+            });
+        }
+        
+        // Touch device support
+        function setupTouchSupport() {
+            // Convert hover interactions to touch on mobile devices
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.insight-item').forEach(insight => {
+                    insight.addEventListener('touchstart', function() {
+                        const goalSection = this.closest('.goal-section');
+                        const goalId = goalSection.dataset.goalId;
+                        highlightContributingCharts(this, goalId);
+                        
+                        // Auto-clear after 3 seconds on touch devices
+                        setTimeout(() => {
+                            clearHighlights(goalId);
+                        }, 3000);
+                    });
+                });
+            }
+        }
+        
+        // Initialize all interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            setupChartHoverEffects();
+            setupSmoothScrolling();
+            setupKeyboardNavigation();
+            setupTouchSupport();
+            
+            console.log('Interactive dashboard initialized');
+        });
+        
+        // Utility functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Performance optimization for hover effects
+        const debouncedHighlight = debounce(highlightContributingCharts, 100);
+        const debouncedClear = debounce(clearHighlights, 100);
+        
+        
+        // Enhanced Supporting Facts Functionality
+        
+        // Global state for supporting facts
+        let openSupportingFacts = new Set();
+        let factHighlightedCharts = new Map(); // chartId -> highlightType
+        
+        function toggleSupportingFacts(insightElement, goalId, insightIndex) {
+            const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+            const expandIcon = insightElement.querySelector('.expand-icon');
+            const expandText = insightElement.querySelector('.expand-text');
+            
+            if (!factsSection) return;
+            
+            const isCurrentlyOpen = openSupportingFacts.has(`${goalId}-${insightIndex}`);
+            
+            if (isCurrentlyOpen) {
+                // Close supporting facts
+                factsSection.classList.remove('expanded');
+                insightElement.classList.remove('expanded');
+                openSupportingFacts.delete(`${goalId}-${insightIndex}`);
+                expandText.textContent = 'Click to see evidence';
+                
+                // Animate close
+                factsSection.style.maxHeight = '0';
+                factsSection.style.padding = '0';
+                
+                setTimeout(() => {
+                    factsSection.classList.add('hidden');
+                }, 300);
+            } else {
+                // Open supporting facts
+                factsSection.classList.remove('hidden');
+                
+                // Force a reflow to ensure the element is visible before animating
+                factsSection.offsetHeight;
+                
+                // Set initial styles for animation
+                factsSection.style.maxHeight = '600px';
+                factsSection.style.padding = '1rem';
+                
+                // Add expanded class after a brief delay
+                setTimeout(() => {
+                    factsSection.classList.add('expanded');
+                    
+                    // Setup scroll indicator behavior
+                    setupScrollIndicator(goalId, insightIndex);
+                }, 10);
+                
+                insightElement.classList.add('expanded');
+                openSupportingFacts.add(`${goalId}-${insightIndex}`);
+                expandText.textContent = 'Click to hide evidence';
+            }
+            
+            // Scroll into view if opening
+            if (!isCurrentlyOpen) {
+                setTimeout(() => {
+                    factsSection.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 200);
+            }
+        }
+        
+        function setupScrollIndicator(goalId, insightIndex) {
+            const factsList = document.getElementById(`facts-list-${goalId}-${insightIndex}`);
+            const scrollHint = factsList.parentElement.querySelector('.scroll-hint');
+            
+            if (!factsList || !scrollHint) return;
+            
+            function updateScrollHint() {
+                const isScrollable = factsList.scrollHeight > factsList.clientHeight;
+                const isAtBottom = factsList.scrollTop + factsList.clientHeight >= factsList.scrollHeight - 5;
+                
+                if (isScrollable && !isAtBottom) {
+                    scrollHint.style.display = 'inline';
+                } else {
+                    scrollHint.style.display = 'none';
+                }
+            }
+            
+            // Initial check
+            setTimeout(updateScrollHint, 100);
+            
+            // Listen for scroll events
+            factsList.addEventListener('scroll', updateScrollHint);
+            
+            // Listen for resize events (in case content changes)
+            window.addEventListener('resize', updateScrollHint);
+        }
+        
+        function highlightFactChart(factElement, goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Find the chart element
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (!chartElement) return;
+            
+            // Add enhanced highlighting for fact interaction
+            chartElement.classList.add('fact-highlighted');
+            factHighlightedCharts.set(chartId, 'fact');
+            
+            // Also highlight the fact item itself
+            factElement.classList.add('highlighted');
+            
+            // Dim other charts slightly
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const currentChartId = chart.dataset.chartId;
+                if (currentChartId !== chartId) {
+                    chart.classList.add('dimmed');
+                }
+            });
+        }
+        
+        function clearFactHighlight(goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove enhanced highlighting
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (chartElement) {
+                chartElement.classList.remove('fact-highlighted');
+            }
+            
+            // Remove fact highlighting
+            const factElements = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
+            factElements.forEach(fact => fact.classList.remove('highlighted'));
+            
+            // Remove dimming from all charts
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('dimmed');
+            });
+            
+            // Clear from tracking
+            factHighlightedCharts.delete(chartId);
+        }
+        
+        function clearAllFactHighlights(goalId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove all fact highlights
+            const factHighlightedElements = goalSection.querySelectorAll('.fact-highlighted');
+            factHighlightedElements.forEach(element => {
+                element.classList.remove('fact-highlighted');
+            });
+            
+            // Remove all fact item highlights
+            const factItems = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
+            factItems.forEach(fact => fact.classList.remove('highlighted'));
+            
+            // Remove dimming
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('dimmed');
+            });
+            
+            // Clear tracking
+            factHighlightedCharts.clear();
+        }
+        
+        // Enhanced version of existing highlightContributingCharts function
+        function highlightContributingCharts(insightElement, goalId) {
+            const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
+            const goalSection = document.getElementById('goal-' + goalId);
+            
+            if (!goalSection) return;
+            
+            // Clear previous highlights (but preserve fact highlights)
+            clearHighlights(goalId, true); // true = preserve fact highlights
+            
+            // Highlight contributing charts
+            contributingCharts.forEach(chartId => {
+                const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+                if (chartElement) {
+                    // Don't override fact highlighting
+                    if (!chartElement.classList.contains('fact-highlighted')) {
+                        chartElement.classList.add('highlighted');
+                        highlightedCharts.push(chartElement);
+                    }
+                }
+            });
+            
+            // Dim non-contributing charts (unless they're fact-highlighted)
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const chartId = parseInt(chart.dataset.chartId);
+                if (!contributingCharts.includes(chartId) && !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.add('dimmed');
+                }
+            });
+            
+            // Expand contributing evidence
+            const evidencePanel = insightElement.querySelector('.contributing-evidence');
+            if (evidencePanel) {
+                evidencePanel.classList.remove('hidden');
+                evidencePanel.classList.add('expanded');
+                
+                // Update evidence content with specific chart information
+                const evidenceList = evidencePanel.querySelector('.evidence-list');
+                if (evidenceList && contributingCharts.length > 0) {
+                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
+                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
+                }
+            }
+        }
+        
+        // Enhanced version of clearHighlights to preserve fact highlights
+        function clearHighlights(goalId, preserveFactHighlights = false) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove highlight classes (but preserve fact highlights if requested)
+            highlightedCharts.forEach(chart => {
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
+            });
+            highlightedCharts = [];
+            
+            // Clear all chart highlights and dims (except fact highlights)
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
+            });
+            
+            // Collapse all contributing evidence panels
+            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
+            evidencePanels.forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('expanded');
+            });
+        }
+        
+        // Enhanced chart hover effects to work with supporting facts
+        function setupEnhancedChartHoverEffects() {
+            document.querySelectorAll('.chart-item').forEach(chartElement => {
+                chartElement.addEventListener('mouseenter', function() {
+                    const chartId = parseInt(this.dataset.chartId);
+                    const goalSection = this.closest('.goal-section');
+                    const goalId = goalSection.dataset.goalId;
+                    
+                    // Only proceed if not already fact-highlighted
+                    if (!this.classList.contains('fact-highlighted')) {
+                        // Find insights that reference this chart
+                        const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                        relatedInsights.forEach(insight => {
+                            const contributingCharts = JSON.parse(insight.dataset.contributingCharts || '[]');
+                            if (contributingCharts.includes(chartId)) {
+                                insight.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                                insight.style.transform = 'translateX(5px)';
+                            }
+                        });
+                        
+                        // Also check for facts that reference this chart
+                        const factItems = goalSection.querySelectorAll(`[data-chart-id="${chartId}"] .supporting-fact-item`);
+                        factItems.forEach(fact => {
+                            fact.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                            fact.style.transform = 'translateX(2px)';
+                        });
+                    }
+                });
+                
+                chartElement.addEventListener('mouseleave', function() {
+                    const goalSection = this.closest('.goal-section');
+                    
+                    // Only clear if not fact-highlighted
+                    if (!this.classList.contains('fact-highlighted')) {
+                        const relatedInsights = goalSection.querySelectorAll('.insight-item');
+                        relatedInsights.forEach(insight => {
+                            insight.style.backgroundColor = '';
+                            insight.style.transform = '';
+                        });
+                        
+                        const factItems = goalSection.querySelectorAll('.supporting-fact-item');
+                        factItems.forEach(fact => {
+                            fact.style.backgroundColor = '';
+                            fact.style.transform = '';
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Close all supporting facts when clicking outside
+        function setupSupportingFactsClickOutside() {
+            document.addEventListener('click', function(event) {
+                // Check if click is outside any insight item
+                const insightItem = event.target.closest('.insight-item');
+                if (!insightItem) {
+                    // Close all open supporting facts
+                    openSupportingFacts.forEach(factId => {
+                        const [goalId, insightIndex] = factId.split('-');
+                        const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+                        const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+                        
+                        if (factsSection && insightElement) {
+                            factsSection.classList.remove('expanded');
+                            factsSection.classList.add('slide-up');
+                            insightElement.classList.remove('expanded');
+                            
+                            const expandText = insightElement.querySelector('.expand-text');
+                            if (expandText) {
+                                expandText.textContent = 'Click to see evidence';
+                            }
+                            
+                            setTimeout(() => {
+                                factsSection.classList.add('hidden');
+                                factsSection.classList.remove('slide-up');
+                            }, 300);
+                        }
+                    });
+                    
+                    openSupportingFacts.clear();
+                    
+                    // Clear all fact highlights
+                    document.querySelectorAll('.goal-section').forEach(goalSection => {
+                        const goalId = goalSection.dataset.goalId;
+                        clearAllFactHighlights(goalId);
+                    });
+                }
+            });
+        }
+        
+        // Keyboard shortcuts for supporting facts
+        function setupSupportingFactsKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    // Close all supporting facts
+                    openSupportingFacts.forEach(factId => {
+                        const [goalId, insightIndex] = factId.split('-');
+                        const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
+                        const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+                        
+                        if (factsSection && insightElement) {
+                            factsSection.classList.remove('expanded');
+                            insightElement.classList.remove('expanded');
+                            factsSection.classList.add('hidden');
+                            
+                            const expandText = insightElement.querySelector('.expand-text');
+                            if (expandText) {
+                                expandText.textContent = 'Click to see evidence';
+                            }
+                        }
+                    });
+                    
+                    openSupportingFacts.clear();
+                    
+                    // Clear all highlights
+                    document.querySelectorAll('.goal-section').forEach(goalSection => {
+                        const goalId = goalSection.dataset.goalId;
+                        clearAllFactHighlights(goalId);
+                        clearHighlights(goalId);
+                    });
+                }
+            });
+        }
+        
+        // Enhanced initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            setupChartHoverEffects();
+            setupEnhancedChartHoverEffects();
+            setupSmoothScrolling();
+            setupKeyboardNavigation();
+            setupSupportingFactsKeyboard();
+            setupSupportingFactsClickOutside();
+            setupTouchSupport();
+            
+            console.log('Enhanced interactive dashboard with supporting facts initialized');
+            
+            // Log supporting facts statistics
+            const allSupportingFacts = document.querySelectorAll('.supporting-fact-item');
+            const chartGroups = document.querySelectorAll('.chart-facts-group');
+            console.log(`Found ${allSupportingFacts.length} supporting facts across ${chartGroups.length} chart groups`);
+        });
+        
+        // Utility function to get supporting facts for debugging
+        function getInsightSupportingFacts(goalId, insightIndex) {
+            const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
+            if (insightElement) {
+                const supportingFacts = JSON.parse(insightElement.dataset.supportingFacts || '[]');
+                console.log(`Insight ${insightIndex} in goal ${goalId}:`, supportingFacts);
+                return supportingFacts;
+            }
+            return [];
+        }
+        
+        // Utility function to highlight specific fact by ID (for debugging)
+        function debugHighlightFact(goalId, insightIndex, chartId, factIndex) {
+            const factId = `${goalId}-${insightIndex}-${chartId}-${factIndex}`;
+            const factElement = document.querySelector(`[data-fact-id="${factId}"]`);
+            if (factElement) {
+                highlightFactChart(factElement, goalId, chartId);
+            }
+        }
+        
+            </script>
+        </body>
+        </html>
+        

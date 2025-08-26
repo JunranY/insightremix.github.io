@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "description": "Goal insights with supporting facts for interactive interface",
+    "timestamp": "2025-08-26 11:54:03",
+    "total_goals": 1,
+    "total_insights": 3
+  },
+  "goals": {
+    "1": {
+      "goal_id": 1,
+      "insight_count": 3,
+      "insights": [
+        {
+          "insight_id": "1_insight_0",
+          "title": "Consistent High Performer: Retention",
+          "narrative": "Retention consistently shows strong headcount performance across multiple contexts including Attrition/Retention, demonstrating reliable excellence across 11 different dimensions.",
+          "pattern_type": "consistency",
+          "confidence": 1.0,
+          "supporting_entities": [
+            "Retention"
+          ],
+          "chart_ids": [
+            34,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "supporting_facts": [
+            {
+              "description": "In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.",
+              "chart_id": 6,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.",
+              "chart_id": 6,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.",
+              "chart_id": 7,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.",
+              "chart_id": 7,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.",
+              "chart_id": 8,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.",
+              "chart_id": 8,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.",
+              "chart_id": 9,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.",
+              "chart_id": 9,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.",
+              "chart_id": 10,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.",
+              "chart_id": 10,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.",
+              "chart_id": 34,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            }
+          ]
+        },
+        {
+          "insight_id": "1_insight_1",
+          "title": "Consistent Underperformer: Attrition",
+          "narrative": "Attrition consistently shows lower headcount performance across Attrition/Retention, indicating potential areas for improvement across 11 different dimensions.",
+          "pattern_type": "consistency",
+          "confidence": 1.0,
+          "supporting_entities": [
+            "Attrition"
+          ],
+          "chart_ids": [
+            34,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "supporting_facts": [
+            {
+              "description": "In the Bar showing 2 by Attrition/Retention, Attrition has the lowest value at 43.0, which is 70% below the average of 143.5.",
+              "chart_id": 6,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average.",
+              "chart_id": 6,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_minimum",
+              "importance": 0.75,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "In the Bar showing 3 by Attrition/Retention, Attrition has the lowest value at 125.0, which is 71% below the average of 434.0.",
+              "chart_id": 7,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.",
+              "chart_id": 7,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_minimum",
+              "importance": 0.75,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "In the Bar showing 4 by Attrition/Retention, Attrition has the lowest value at 52.0, which is 77% below the average of 229.5.",
+              "chart_id": 8,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average.",
+              "chart_id": 8,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_minimum",
+              "importance": 0.75,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 57.0, which is 59% below the average of 138.0.",
+              "chart_id": 9,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average.",
+              "chart_id": 9,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_minimum",
+              "importance": 0.75,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Attrition has the lowest value at 25.0, which is 38% below the average of 40.0.",
+              "chart_id": 10,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average.",
+              "chart_id": 10,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_minimum",
+              "importance": 0.75,
+              "entities": [
+                "Attrition"
+              ]
+            },
+            {
+              "description": "In the Bar showing headcount by Attrition/Retention, Attrition has the lowest value at 237.0, which is 68% below the average of 735.0.",
+              "chart_id": 34,
+              "fact_type": "extreme",
+              "subtype": "minimum",
+              "importance": 0.55,
+              "entities": [
+                "Attrition"
+              ]
+            }
+          ]
+        },
+        {
+          "insight_id": "1_insight_2",
+          "title": "Exceptional Performer: Retention",
+          "narrative": "Retention demonstrates exceptional behavior in Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, standing out significantly from other Attrition/Retention in terms of headcount performance.",
+          "pattern_type": "outlier",
+          "confidence": 1.0,
+          "supporting_entities": [
+            "Retention"
+          ],
+          "chart_ids": [],
+          "supporting_facts": [
+            {
+              "description": "In the Bar showing 2 by Attrition/Retention, Retention has the highest value at 244.0, which is 70% above the average of 143.5.",
+              "chart_id": 6,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.",
+              "chart_id": 6,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 3 by Attrition/Retention, Retention has the highest value at 743.0, which is 71% above the average of 434.0.",
+              "chart_id": 7,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.",
+              "chart_id": 7,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 4 by Attrition/Retention, Retention has the highest value at 407.0, which is 77% above the average of 229.5.",
+              "chart_id": 8,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.",
+              "chart_id": 8,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 219.0, which is 59% above the average of 138.0.",
+              "chart_id": 9,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.",
+              "chart_id": 9,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing 1 by Attrition/Retention, Retention has the highest value at 55.0, which is 38% above the average of 40.0.",
+              "chart_id": 10,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.",
+              "chart_id": 10,
+              "fact_type": "cross_series_extreme",
+              "subtype": "global_maximum",
+              "importance": 0.8,
+              "entities": [
+                "Retention"
+              ]
+            },
+            {
+              "description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.",
+              "chart_id": 34,
+              "fact_type": "extreme",
+              "subtype": "maximum",
+              "importance": 0.6,
+              "entities": [
+                "Retention"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

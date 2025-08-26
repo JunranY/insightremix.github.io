@@ -1,0 +1,2431 @@
+{
+  "space": {
+    "0": {
+      "id": 0,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Department for headcount",
+      "existed": [
+        0
+      ],
+      "added": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ]
+    },
+    "1": {
+      "id": 1,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Attrition/Retention for headcount",
+      "existed": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "added": [
+        34
+      ]
+    },
+    "2": {
+      "id": 2,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Job Role for headcount",
+      "existed": [
+        1
+      ],
+      "added": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    "3": {
+      "id": 3,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Gender for headcount",
+      "existed": [
+        3
+      ],
+      "added": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    "4": {
+      "id": 4,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Attrition Date for headcount",
+      "existed": [
+        2
+      ],
+      "added": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ]
+    },
+    "5": {
+      "id": 5,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Age group for headcount",
+      "existed": [
+        4
+      ],
+      "added": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ]
+    },
+    "6": {
+      "id": 6,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Education for headcount",
+      "existed": [
+        5
+      ],
+      "added": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    "7": {
+      "id": 7,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Environment Satisfaction for headcount",
+      "existed": [
+        6
+      ],
+      "added": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    "8": {
+      "id": 8,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Job Involvement for headcount",
+      "existed": [
+        7
+      ],
+      "added": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    "9": {
+      "id": 9,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Job Satisfaction for headcount",
+      "existed": [
+        8
+      ],
+      "added": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ]
+    },
+    "10": {
+      "id": 10,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Relationship Satisfaction for headcount",
+      "existed": [
+        9
+      ],
+      "added": [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ]
+    },
+    "11": {
+      "id": 11,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Work Life Balance for headcount",
+      "existed": [
+        10
+      ],
+      "added": [
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    "12": {
+      "id": 12,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        1,
+        0,
+        0
+      ],
+      "added": [
+        145,
+        146,
+        147
+      ]
+    },
+    "13": {
+      "id": 13,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        3,
+        0,
+        0
+      ],
+      "added": [
+        148,
+        149,
+        150
+      ]
+    },
+    "14": {
+      "id": 14,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        2,
+        0,
+        0
+      ],
+      "added": [
+        151,
+        152,
+        153
+      ]
+    },
+    "15": {
+      "id": 15,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        4,
+        0,
+        0
+      ],
+      "added": [
+        154,
+        155,
+        156
+      ]
+    },
+    "16": {
+      "id": 16,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        5,
+        0,
+        0
+      ],
+      "added": [
+        157,
+        158,
+        159
+      ]
+    },
+    "17": {
+      "id": 17,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        6,
+        0,
+        0
+      ],
+      "added": [
+        160,
+        161,
+        162
+      ]
+    },
+    "18": {
+      "id": 18,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        7,
+        0,
+        0
+      ],
+      "added": [
+        163,
+        164,
+        165
+      ]
+    },
+    "19": {
+      "id": 19,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        8,
+        0,
+        0
+      ],
+      "added": [
+        166,
+        167,
+        168
+      ]
+    },
+    "20": {
+      "id": 20,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        9,
+        0,
+        0
+      ],
+      "added": [
+        169,
+        170,
+        171
+      ]
+    },
+    "21": {
+      "id": 21,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Attrition/Retention for headcount",
+      "existed": [
+        10,
+        0,
+        0
+      ],
+      "added": [
+        172,
+        173,
+        174
+      ]
+    },
+    "22": {
+      "id": 22,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Job Role for headcount",
+      "existed": [
+        0,
+        1
+      ],
+      "added": [
+        175,
+        176,
+        177,
+        178
+      ]
+    },
+    "23": {
+      "id": 23,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Gender for headcount",
+      "existed": [
+        0,
+        3
+      ],
+      "added": [
+        233,
+        234,
+        235,
+        236
+      ]
+    },
+    "24": {
+      "id": 24,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Age group for headcount",
+      "existed": [
+        0,
+        4
+      ],
+      "added": [
+        291,
+        292,
+        293,
+        294
+      ]
+    },
+    "25": {
+      "id": 25,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Education for headcount",
+      "existed": [
+        0,
+        5
+      ],
+      "added": [
+        349,
+        350,
+        351,
+        352
+      ]
+    },
+    "26": {
+      "id": 26,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Environment Satisfaction for headcount",
+      "existed": [
+        0,
+        6
+      ],
+      "added": [
+        407,
+        408,
+        409,
+        410
+      ]
+    },
+    "27": {
+      "id": 27,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Job Involvement for headcount",
+      "existed": [
+        0,
+        7
+      ],
+      "added": [
+        465,
+        466,
+        467,
+        468
+      ]
+    },
+    "28": {
+      "id": 28,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Job Satisfaction for headcount",
+      "existed": [
+        0,
+        8
+      ],
+      "added": [
+        523,
+        524,
+        525,
+        526
+      ]
+    },
+    "29": {
+      "id": 29,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Relationship Satisfaction for headcount",
+      "existed": [
+        0,
+        9
+      ],
+      "added": [
+        581,
+        582,
+        583,
+        584
+      ]
+    },
+    "30": {
+      "id": 30,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department and Work Life Balance for headcount",
+      "existed": [
+        0,
+        10
+      ],
+      "added": [
+        639,
+        640,
+        641,
+        642
+      ]
+    },
+    "31": {
+      "id": 31,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        0,
+        1,
+        1
+      ],
+      "added": [
+        697,
+        698,
+        699
+      ]
+    },
+    "32": {
+      "id": 32,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        3,
+        1,
+        1
+      ],
+      "added": [
+        700,
+        701,
+        702
+      ]
+    },
+    "33": {
+      "id": 33,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        2,
+        1,
+        1
+      ],
+      "added": [
+        703,
+        704,
+        705
+      ]
+    },
+    "34": {
+      "id": 34,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        4,
+        1,
+        1
+      ],
+      "added": [
+        706,
+        707,
+        708
+      ]
+    },
+    "35": {
+      "id": 35,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        5,
+        1,
+        1
+      ],
+      "added": [
+        709,
+        710,
+        711
+      ]
+    },
+    "36": {
+      "id": 36,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        6,
+        1,
+        1
+      ],
+      "added": [
+        712,
+        713,
+        714
+      ]
+    },
+    "37": {
+      "id": 37,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        7,
+        1,
+        1
+      ],
+      "added": [
+        715,
+        716,
+        717
+      ]
+    },
+    "38": {
+      "id": 38,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        8,
+        1,
+        1
+      ],
+      "added": [
+        718,
+        719,
+        720
+      ]
+    },
+    "39": {
+      "id": 39,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        9,
+        1,
+        1
+      ],
+      "added": [
+        721,
+        722,
+        723
+      ]
+    },
+    "40": {
+      "id": 40,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Role for headcount",
+      "existed": [
+        10,
+        1,
+        1
+      ],
+      "added": [
+        724,
+        725,
+        726
+      ]
+    },
+    "41": {
+      "id": 41,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        0,
+        3,
+        3
+      ],
+      "added": [
+        727,
+        728,
+        729
+      ]
+    },
+    "42": {
+      "id": 42,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        1,
+        3,
+        3
+      ],
+      "added": [
+        730,
+        731,
+        732
+      ]
+    },
+    "43": {
+      "id": 43,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        2,
+        3,
+        3
+      ],
+      "added": [
+        733,
+        734,
+        735
+      ]
+    },
+    "44": {
+      "id": 44,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        4,
+        3,
+        3
+      ],
+      "added": [
+        736,
+        737,
+        738
+      ]
+    },
+    "45": {
+      "id": 45,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        5,
+        3,
+        3
+      ],
+      "added": [
+        739,
+        740,
+        741
+      ]
+    },
+    "46": {
+      "id": 46,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        6,
+        3,
+        3
+      ],
+      "added": [
+        742,
+        743,
+        744
+      ]
+    },
+    "47": {
+      "id": 47,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        7,
+        3,
+        3
+      ],
+      "added": [
+        745,
+        746,
+        747
+      ]
+    },
+    "48": {
+      "id": 48,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        8,
+        3,
+        3
+      ],
+      "added": [
+        748,
+        749,
+        750
+      ]
+    },
+    "49": {
+      "id": 49,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        9,
+        3,
+        3
+      ],
+      "added": [
+        751,
+        752,
+        753
+      ]
+    },
+    "50": {
+      "id": 50,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Gender for headcount",
+      "existed": [
+        10,
+        3,
+        3
+      ],
+      "added": [
+        754,
+        755,
+        756
+      ]
+    },
+    "51": {
+      "id": 51,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        0,
+        4,
+        4
+      ],
+      "added": [
+        757,
+        758,
+        759
+      ]
+    },
+    "52": {
+      "id": 52,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        1,
+        4,
+        4
+      ],
+      "added": [
+        760,
+        761,
+        762
+      ]
+    },
+    "53": {
+      "id": 53,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        3,
+        4,
+        4
+      ],
+      "added": [
+        763,
+        764,
+        765
+      ]
+    },
+    "54": {
+      "id": 54,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        2,
+        4,
+        4
+      ],
+      "added": [
+        766,
+        767,
+        768
+      ]
+    },
+    "55": {
+      "id": 55,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        5,
+        4,
+        4
+      ],
+      "added": [
+        769,
+        770,
+        771
+      ]
+    },
+    "56": {
+      "id": 56,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        6,
+        4,
+        4
+      ],
+      "added": [
+        772,
+        773,
+        774
+      ]
+    },
+    "57": {
+      "id": 57,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        7,
+        4,
+        4
+      ],
+      "added": [
+        775,
+        776,
+        777
+      ]
+    },
+    "58": {
+      "id": 58,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        8,
+        4,
+        4
+      ],
+      "added": [
+        778,
+        779,
+        780
+      ]
+    },
+    "59": {
+      "id": 59,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        9,
+        4,
+        4
+      ],
+      "added": [
+        781,
+        782,
+        783
+      ]
+    },
+    "60": {
+      "id": 60,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Age group for headcount",
+      "existed": [
+        10,
+        4,
+        4
+      ],
+      "added": [
+        784,
+        785,
+        786
+      ]
+    },
+    "61": {
+      "id": 61,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        0,
+        5,
+        5
+      ],
+      "added": [
+        787,
+        788,
+        789
+      ]
+    },
+    "62": {
+      "id": 62,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        1,
+        5,
+        5
+      ],
+      "added": [
+        790,
+        791,
+        792
+      ]
+    },
+    "63": {
+      "id": 63,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        3,
+        5,
+        5
+      ],
+      "added": [
+        793,
+        794,
+        795
+      ]
+    },
+    "64": {
+      "id": 64,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        2,
+        5,
+        5
+      ],
+      "added": [
+        796,
+        797,
+        798
+      ]
+    },
+    "65": {
+      "id": 65,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        4,
+        5,
+        5
+      ],
+      "added": [
+        799,
+        800,
+        801
+      ]
+    },
+    "66": {
+      "id": 66,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        6,
+        5,
+        5
+      ],
+      "added": [
+        802,
+        803,
+        804
+      ]
+    },
+    "67": {
+      "id": 67,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        7,
+        5,
+        5
+      ],
+      "added": [
+        805,
+        806,
+        807
+      ]
+    },
+    "68": {
+      "id": 68,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        8,
+        5,
+        5
+      ],
+      "added": [
+        808,
+        809,
+        810
+      ]
+    },
+    "69": {
+      "id": 69,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        9,
+        5,
+        5
+      ],
+      "added": [
+        811,
+        812,
+        813
+      ]
+    },
+    "70": {
+      "id": 70,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Education for headcount",
+      "existed": [
+        10,
+        5,
+        5
+      ],
+      "added": [
+        814,
+        815,
+        816
+      ]
+    },
+    "71": {
+      "id": 71,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        0,
+        6,
+        6
+      ],
+      "added": [
+        817,
+        818,
+        819
+      ]
+    },
+    "72": {
+      "id": 72,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        1,
+        6,
+        6
+      ],
+      "added": [
+        820,
+        821,
+        822
+      ]
+    },
+    "73": {
+      "id": 73,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        3,
+        6,
+        6
+      ],
+      "added": [
+        823,
+        824,
+        825
+      ]
+    },
+    "74": {
+      "id": 74,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        2,
+        6,
+        6
+      ],
+      "added": [
+        826,
+        827,
+        828
+      ]
+    },
+    "75": {
+      "id": 75,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        4,
+        6,
+        6
+      ],
+      "added": [
+        829,
+        830,
+        831
+      ]
+    },
+    "76": {
+      "id": 76,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        5,
+        6,
+        6
+      ],
+      "added": [
+        832,
+        833,
+        834
+      ]
+    },
+    "77": {
+      "id": 77,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        7,
+        6,
+        6
+      ],
+      "added": [
+        835,
+        836,
+        837
+      ]
+    },
+    "78": {
+      "id": 78,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        8,
+        6,
+        6
+      ],
+      "added": [
+        838,
+        839,
+        840
+      ]
+    },
+    "79": {
+      "id": 79,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        9,
+        6,
+        6
+      ],
+      "added": [
+        841,
+        842,
+        843
+      ]
+    },
+    "80": {
+      "id": 80,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Environment Satisfaction for headcount",
+      "existed": [
+        10,
+        6,
+        6
+      ],
+      "added": [
+        844,
+        845,
+        846
+      ]
+    },
+    "81": {
+      "id": 81,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        0,
+        7,
+        7
+      ],
+      "added": [
+        847,
+        848,
+        849
+      ]
+    },
+    "82": {
+      "id": 82,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        1,
+        7,
+        7
+      ],
+      "added": [
+        850,
+        851,
+        852
+      ]
+    },
+    "83": {
+      "id": 83,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        3,
+        7,
+        7
+      ],
+      "added": [
+        853,
+        854,
+        855
+      ]
+    },
+    "84": {
+      "id": 84,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        2,
+        7,
+        7
+      ],
+      "added": [
+        856,
+        857,
+        858
+      ]
+    },
+    "85": {
+      "id": 85,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        4,
+        7,
+        7
+      ],
+      "added": [
+        859,
+        860,
+        861
+      ]
+    },
+    "86": {
+      "id": 86,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        5,
+        7,
+        7
+      ],
+      "added": [
+        862,
+        863,
+        864
+      ]
+    },
+    "87": {
+      "id": 87,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        6,
+        7,
+        7
+      ],
+      "added": [
+        865,
+        866,
+        867
+      ]
+    },
+    "88": {
+      "id": 88,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        8,
+        7,
+        7
+      ],
+      "added": [
+        868,
+        869,
+        870
+      ]
+    },
+    "89": {
+      "id": 89,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        9,
+        7,
+        7
+      ],
+      "added": [
+        871,
+        872,
+        873
+      ]
+    },
+    "90": {
+      "id": 90,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Involvement for headcount",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        874,
+        875,
+        876
+      ]
+    },
+    "91": {
+      "id": 91,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        0,
+        8,
+        8
+      ],
+      "added": [
+        877,
+        878,
+        879
+      ]
+    },
+    "92": {
+      "id": 92,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        1,
+        8,
+        8
+      ],
+      "added": [
+        880,
+        881,
+        882
+      ]
+    },
+    "93": {
+      "id": 93,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        3,
+        8,
+        8
+      ],
+      "added": [
+        883,
+        884,
+        885
+      ]
+    },
+    "94": {
+      "id": 94,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        2,
+        8,
+        8
+      ],
+      "added": [
+        886,
+        887,
+        888
+      ]
+    },
+    "95": {
+      "id": 95,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        4,
+        8,
+        8
+      ],
+      "added": [
+        889,
+        890,
+        891
+      ]
+    },
+    "96": {
+      "id": 96,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        5,
+        8,
+        8
+      ],
+      "added": [
+        892,
+        893,
+        894
+      ]
+    },
+    "97": {
+      "id": 97,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        6,
+        8,
+        8
+      ],
+      "added": [
+        895,
+        896,
+        897
+      ]
+    },
+    "98": {
+      "id": 98,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        7,
+        8,
+        8
+      ],
+      "added": [
+        898,
+        899,
+        900
+      ]
+    },
+    "99": {
+      "id": 99,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        9,
+        8,
+        8
+      ],
+      "added": [
+        901,
+        902,
+        903
+      ]
+    },
+    "100": {
+      "id": 100,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Job Satisfaction for headcount",
+      "existed": [
+        10,
+        8,
+        8
+      ],
+      "added": [
+        904,
+        905,
+        906
+      ]
+    },
+    "101": {
+      "id": 101,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        0,
+        9,
+        9
+      ],
+      "added": [
+        907,
+        908,
+        909
+      ]
+    },
+    "102": {
+      "id": 102,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        1,
+        9,
+        9
+      ],
+      "added": [
+        910,
+        911,
+        912
+      ]
+    },
+    "103": {
+      "id": 103,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        3,
+        9,
+        9
+      ],
+      "added": [
+        913,
+        914,
+        915
+      ]
+    },
+    "104": {
+      "id": 104,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        2,
+        9,
+        9
+      ],
+      "added": [
+        916,
+        917,
+        918
+      ]
+    },
+    "105": {
+      "id": 105,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        4,
+        9,
+        9
+      ],
+      "added": [
+        919,
+        920,
+        921
+      ]
+    },
+    "106": {
+      "id": 106,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        5,
+        9,
+        9
+      ],
+      "added": [
+        922,
+        923,
+        924
+      ]
+    },
+    "107": {
+      "id": 107,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        6,
+        9,
+        9
+      ],
+      "added": [
+        925,
+        926,
+        927
+      ]
+    },
+    "108": {
+      "id": 108,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        7,
+        9,
+        9
+      ],
+      "added": [
+        928,
+        929,
+        930
+      ]
+    },
+    "109": {
+      "id": 109,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        8,
+        9,
+        9
+      ],
+      "added": [
+        931,
+        932,
+        933
+      ]
+    },
+    "110": {
+      "id": 110,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Relationship Satisfaction for headcount",
+      "existed": [
+        10,
+        9,
+        9
+      ],
+      "added": [
+        934,
+        935,
+        936
+      ]
+    },
+    "111": {
+      "id": 111,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        0,
+        10,
+        10
+      ],
+      "added": [
+        937,
+        938,
+        939
+      ]
+    },
+    "112": {
+      "id": 112,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        1,
+        10,
+        10
+      ],
+      "added": [
+        940,
+        941,
+        942
+      ]
+    },
+    "113": {
+      "id": 113,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        3,
+        10,
+        10
+      ],
+      "added": [
+        943,
+        944,
+        945
+      ]
+    },
+    "114": {
+      "id": 114,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        2,
+        10,
+        10
+      ],
+      "added": [
+        946,
+        947,
+        948
+      ]
+    },
+    "115": {
+      "id": 115,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        4,
+        10,
+        10
+      ],
+      "added": [
+        949,
+        950,
+        951
+      ]
+    },
+    "116": {
+      "id": 116,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        5,
+        10,
+        10
+      ],
+      "added": [
+        952,
+        953,
+        954
+      ]
+    },
+    "117": {
+      "id": 117,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        6,
+        10,
+        10
+      ],
+      "added": [
+        955,
+        956,
+        957
+      ]
+    },
+    "118": {
+      "id": 118,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        7,
+        10,
+        10
+      ],
+      "added": [
+        958,
+        959,
+        960
+      ]
+    },
+    "119": {
+      "id": 119,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        8,
+        10,
+        10
+      ],
+      "added": [
+        961,
+        962,
+        963
+      ]
+    },
+    "120": {
+      "id": 120,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Attrition/Retention and Work Life Balance for headcount",
+      "existed": [
+        9,
+        10,
+        10
+      ],
+      "added": [
+        964,
+        965,
+        966
+      ]
+    },
+    "121": {
+      "id": 121,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Gender for headcount",
+      "existed": [
+        1,
+        3
+      ],
+      "added": [
+        973,
+        974,
+        975,
+        976
+      ]
+    },
+    "122": {
+      "id": 122,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Age group for headcount",
+      "existed": [
+        1,
+        4
+      ],
+      "added": [
+        1031,
+        1032,
+        1033,
+        1034
+      ]
+    },
+    "123": {
+      "id": 123,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Education for headcount",
+      "existed": [
+        1,
+        5
+      ],
+      "added": [
+        1089,
+        1090,
+        1091,
+        1092
+      ]
+    },
+    "124": {
+      "id": 124,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Environment Satisfaction for headcount",
+      "existed": [
+        1,
+        6
+      ],
+      "added": [
+        1147,
+        1148,
+        1149,
+        1150
+      ]
+    },
+    "125": {
+      "id": 125,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Job Involvement for headcount",
+      "existed": [
+        1,
+        7
+      ],
+      "added": [
+        1205,
+        1206,
+        1207,
+        1208
+      ]
+    },
+    "126": {
+      "id": 126,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Job Satisfaction for headcount",
+      "existed": [
+        1,
+        8
+      ],
+      "added": [
+        1263,
+        1264,
+        1265,
+        1266
+      ]
+    },
+    "127": {
+      "id": 127,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Relationship Satisfaction for headcount",
+      "existed": [
+        1,
+        9
+      ],
+      "added": [
+        1321,
+        1322,
+        1323,
+        1324
+      ]
+    },
+    "128": {
+      "id": 128,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Role and Work Life Balance for headcount",
+      "existed": [
+        1,
+        10
+      ],
+      "added": [
+        1379,
+        1380,
+        1381,
+        1382
+      ]
+    },
+    "129": {
+      "id": 129,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Age group for headcount",
+      "existed": [
+        3,
+        4
+      ],
+      "added": [
+        1437,
+        1438,
+        1439,
+        1440
+      ]
+    },
+    "130": {
+      "id": 130,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Education for headcount",
+      "existed": [
+        3,
+        5
+      ],
+      "added": [
+        1495,
+        1496,
+        1497,
+        1498
+      ]
+    },
+    "131": {
+      "id": 131,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Environment Satisfaction for headcount",
+      "existed": [
+        3,
+        6
+      ],
+      "added": [
+        1553,
+        1554,
+        1555,
+        1556
+      ]
+    },
+    "132": {
+      "id": 132,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Job Involvement for headcount",
+      "existed": [
+        3,
+        7
+      ],
+      "added": [
+        1611,
+        1612,
+        1613,
+        1614
+      ]
+    },
+    "133": {
+      "id": 133,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Job Satisfaction for headcount",
+      "existed": [
+        3,
+        8
+      ],
+      "added": [
+        1669,
+        1670,
+        1671,
+        1672
+      ]
+    },
+    "134": {
+      "id": 134,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Relationship Satisfaction for headcount",
+      "existed": [
+        3,
+        9
+      ],
+      "added": [
+        1727,
+        1728,
+        1729,
+        1730
+      ]
+    },
+    "135": {
+      "id": 135,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Gender and Work Life Balance for headcount",
+      "existed": [
+        3,
+        10
+      ],
+      "added": [
+        1785,
+        1786,
+        1787,
+        1788
+      ]
+    },
+    "136": {
+      "id": 136,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Education for headcount",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        1843,
+        1844,
+        1845,
+        1846
+      ]
+    },
+    "137": {
+      "id": 137,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Environment Satisfaction for headcount",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        1901,
+        1902,
+        1903,
+        1904
+      ]
+    },
+    "138": {
+      "id": 138,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Job Involvement for headcount",
+      "existed": [
+        4,
+        7
+      ],
+      "added": [
+        1959,
+        1960,
+        1961,
+        1962
+      ]
+    },
+    "139": {
+      "id": 139,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Job Satisfaction for headcount",
+      "existed": [
+        4,
+        8
+      ],
+      "added": [
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    "140": {
+      "id": 140,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Relationship Satisfaction for headcount",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        2075,
+        2076,
+        2077,
+        2078
+      ]
+    },
+    "141": {
+      "id": 141,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Age group and Work Life Balance for headcount",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        2133,
+        2134,
+        2135,
+        2136
+      ]
+    },
+    "142": {
+      "id": 142,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Education and Environment Satisfaction for headcount",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        2191,
+        2192,
+        2193,
+        2194
+      ]
+    },
+    "143": {
+      "id": 143,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Education and Job Involvement for headcount",
+      "existed": [
+        5,
+        7
+      ],
+      "added": [
+        2249,
+        2250,
+        2251,
+        2252
+      ]
+    },
+    "144": {
+      "id": 144,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Education and Job Satisfaction for headcount",
+      "existed": [
+        5,
+        8
+      ],
+      "added": [
+        2307,
+        2308,
+        2309,
+        2310
+      ]
+    },
+    "145": {
+      "id": 145,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Education and Relationship Satisfaction for headcount",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        2365,
+        2366,
+        2367,
+        2368
+      ]
+    },
+    "146": {
+      "id": 146,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Education and Work Life Balance for headcount",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        2423,
+        2424,
+        2425,
+        2426
+      ]
+    },
+    "147": {
+      "id": 147,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Environment Satisfaction and Job Involvement for headcount",
+      "existed": [
+        6,
+        7
+      ],
+      "added": [
+        2481,
+        2482,
+        2483,
+        2484
+      ]
+    },
+    "148": {
+      "id": 148,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Environment Satisfaction and Job Satisfaction for headcount",
+      "existed": [
+        6,
+        8
+      ],
+      "added": [
+        2539,
+        2540,
+        2541,
+        2542
+      ]
+    },
+    "149": {
+      "id": 149,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Environment Satisfaction and Relationship Satisfaction for headcount",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        2597,
+        2598,
+        2599,
+        2600
+      ]
+    },
+    "150": {
+      "id": 150,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Environment Satisfaction and Work Life Balance for headcount",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        2655,
+        2656,
+        2657,
+        2658
+      ]
+    },
+    "151": {
+      "id": 151,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Involvement and Job Satisfaction for headcount",
+      "existed": [
+        7,
+        8
+      ],
+      "added": [
+        2713,
+        2714,
+        2715,
+        2716
+      ]
+    },
+    "152": {
+      "id": 152,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Involvement and Relationship Satisfaction for headcount",
+      "existed": [
+        7,
+        9
+      ],
+      "added": [
+        2771,
+        2772,
+        2773,
+        2774
+      ]
+    },
+    "153": {
+      "id": 153,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Involvement and Work Life Balance for headcount",
+      "existed": [
+        7,
+        10
+      ],
+      "added": [
+        2829,
+        2830,
+        2831,
+        2832
+      ]
+    },
+    "154": {
+      "id": 154,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Satisfaction and Relationship Satisfaction for headcount",
+      "existed": [
+        8,
+        9
+      ],
+      "added": [
+        2887,
+        2888,
+        2889,
+        2890
+      ]
+    },
+    "155": {
+      "id": 155,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Job Satisfaction and Work Life Balance for headcount",
+      "existed": [
+        8,
+        10
+      ],
+      "added": [
+        2945,
+        2946,
+        2947,
+        2948
+      ]
+    },
+    "156": {
+      "id": 156,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Relationship Satisfaction and Work Life Balance for headcount",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        3003,
+        3004,
+        3005,
+        3006
+      ]
+    }
+  }
+}

@@ -1,0 +1,2397 @@
+{
+  "title": "Dashboard Insight Narrative",
+  "description": "Automatically generated insights from dashboard analysis",
+  "timestamp": "2025-08-20 08:03:28",
+  "entity_insights": [
+    {
+      "title": "series_job role:retention: Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average. Furthermore, in the Bar comparing headcount across Job Role, Retention dominates in 9 out of 9 categories, leading by an average margin of 110.7 (136%). In addition, in the Bar comparing headcount across Job Role, Retention consistently performs above average in 9 out of 9 categories, demonstrating reliable high performance.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Healthcare Representative",
+        "Sales Executive",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Sales Executive",
+        "series_name": "Retention",
+        "value": 269,
+        "overall_avg": 81.66666666666667,
+        "percentage_above_avg": 229.38775510204076
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "job role:sales executive: Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average. Furthermore, in the Bar comparing headcount by Job Role, the Sales Executive category shows the largest spread between series with a range of 212.0 from Attrition (57.0) to Retention (269.0). In addition, in the Bar comparing headcount by Job Role, the Sales Executive category shows the greatest variation between Attrition and Retention with a spread of 212.0 between the highest and lowest values.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Sales Executive",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Sales Executive",
+        "series_name": "Retention",
+        "value": 269,
+        "overall_avg": 81.66666666666667,
+        "percentage_above_avg": 229.38775510204076
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "headcount:269: Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average. Additionally, for the Sales Executive category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 269.0 among all 2 series.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Sales Executive",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Sales Executive",
+        "series_name": "Retention",
+        "value": 269,
+        "overall_avg": 81.66666666666667,
+        "percentage_above_avg": 229.38775510204076
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "gender:male: Across all series in the Bar comparing headcount by Gender, the highest value overall is 732",
+      "narrative": "Across all series in the Bar comparing headcount by Gender, the highest value overall is 732.0 for Retention in the Male category, which is 99% above the overall average. Furthermore, in the Bar comparing headcount by Gender, the Male category shows the largest spread between series with a range of 582.0 from Attrition (150.0) to Retention (732.0). In addition, in the Bar comparing headcount by Gender, the Male category shows the greatest variation between Attrition and Retention with a spread of 582.0 between the highest and lowest values.",
+      "charts": [
+        3
+      ],
+      "entities": [
+        "Retention",
+        "Male"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Male",
+        "series_name": "Retention",
+        "value": 732,
+        "overall_avg": 367.5,
+        "percentage_above_avg": 99.18367346938776
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "series_gender:retention: Across all series in the Bar comparing headcount by Gender, the highest value overall is 732",
+      "narrative": "Across all series in the Bar comparing headcount by Gender, the highest value overall is 732.0 for Retention in the Male category, which is 99% above the overall average. Furthermore, in the Bar comparing headcount across Gender, Retention dominates in 2 out of 2 categories, leading by an average margin of 498.0 (136%). In addition, in the Bar comparing headcount across Gender, Retention consistently performs above average in 2 out of 2 categories, demonstrating reliable high performance.",
+      "charts": [
+        3
+      ],
+      "entities": [
+        "Retention",
+        "Male",
+        "Female"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Male",
+        "series_name": "Retention",
+        "value": 732,
+        "overall_avg": 367.5,
+        "percentage_above_avg": 99.18367346938776
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "headcount:732: Across all series in the Bar comparing headcount by Gender, the highest value overall is 732",
+      "narrative": "Across all series in the Bar comparing headcount by Gender, the highest value overall is 732.0 for Retention in the Male category, which is 99% above the overall average. Additionally, for the Male category in the Bar comparing headcount across different Gender, Retention leads with the highest value at 732.0 among all 2 series.",
+      "charts": [
+        3
+      ],
+      "entities": [
+        "Retention",
+        "Male"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Male",
+        "series_name": "Retention",
+        "value": 732,
+        "overall_avg": 367.5,
+        "percentage_above_avg": 99.18367346938776
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "series_age group:retention: Across all series in the Bar comparing headcount by Age group, the highest value overall is 454",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the highest value overall is 454.0 for Retention in the 35-44 category, which is 209% above the overall average. Furthermore, in the Bar comparing headcount across Age group, Retention dominates in 5 out of 5 categories, leading by an average margin of 199.2 (136%). In addition, in the Bar comparing headcount across Age group, Retention consistently performs above average in 5 out of 5 categories, demonstrating reliable high performance.",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "25-34",
+        "35-44",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "35-44",
+        "series_name": "Retention",
+        "value": 454,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 208.84353741496597
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "age group:35-44: Across all series in the Bar comparing headcount by Age group, the highest value overall is 454",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the highest value overall is 454.0 for Retention in the 35-44 category, which is 209% above the overall average. Furthermore, in the Bar comparing headcount by Age group, the 35-44 category shows the largest spread between series with a range of 403.0 from Attrition (51.0) to Retention (454.0). In addition, in the Bar comparing headcount by Age group, the 35-44 category shows the greatest variation between Attrition and Retention with a spread of 403.0 between the highest and lowest values.",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "35-44",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "35-44",
+        "series_name": "Retention",
+        "value": 454,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 208.84353741496597
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "headcount:454: Across all series in the Bar comparing headcount by Age group, the highest value overall is 454",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the highest value overall is 454.0 for Retention in the 35-44 category, which is 209% above the overall average. Additionally, for the 35-44 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 454.0 among all 2 series.",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "35-44",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "35-44",
+        "series_name": "Retention",
+        "value": 454,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 208.84353741496597
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "education:bachelor's degree: Across all series in the Bar comparing headcount by Education, the highest value overall is 473",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the highest value overall is 473.0 for Retention in the Bachelor's Degree category, which is 222% above the overall average. Furthermore, in the Bar comparing headcount by Education, the Bachelor's Degree category shows the largest spread between series with a range of 374.0 from Attrition (99.0) to Retention (473.0). In addition, in the Bar comparing headcount by Education, the Bachelor's Degree category shows the greatest variation between Attrition and Retention with a spread of 374.0 between the highest and lowest values.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        "Bachelor's Degree",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "category_spread",
+        "variation",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Bachelor's Degree",
+        "series_name": "Retention",
+        "value": 473,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 221.76870748299316
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "series_education:retention: Across all series in the Bar comparing headcount by Education, the highest value overall is 473",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the highest value overall is 473.0 for Retention in the Bachelor's Degree category, which is 222% above the overall average. Furthermore, in the Bar comparing headcount across Education, Retention dominates in 5 out of 5 categories, leading by an average margin of 199.2 (136%). In addition, in the Bar comparing headcount across Education, Retention consistently performs above average in 5 out of 5 categories, demonstrating reliable high performance.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        "Bachelor's Degree",
+        "Retention",
+        "Associates Degree"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "series_dominance",
+        "consistent_performance",
+        "cross_series_avg",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Bachelor's Degree",
+        "series_name": "Retention",
+        "value": 473,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 221.76870748299316
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "headcount:473: Across all series in the Bar comparing headcount by Education, the highest value overall is 473",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the highest value overall is 473.0 for Retention in the Bachelor's Degree category, which is 222% above the overall average. Additionally, for the Bachelor's Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 473.0 among all 2 series.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        "Bachelor's Degree",
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Bachelor's Degree",
+        "series_name": "Retention",
+        "value": 473,
+        "overall_avg": 147.0,
+        "percentage_above_avg": 221.76870748299316
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "attrition/retention:retention: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.",
+      "charts": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "entities": [
+        3,
+        4,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 391,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 112.78911564625851
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_attrition/retention:3: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average. In addition, in the Bar comparing headcount across Attrition/Retention, 3 dominates in 2 out of 2 categories, leading by an average margin of 246.5 (134%).",
+      "charts": [
+        6,
+        7,
+        9,
+        10
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "series_dominance"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 391,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 112.78911564625851
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "headcount:391: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average. Additionally, for the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 391.0 among all 4 series.",
+      "charts": [
+        6
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 391,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 112.78911564625851
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_attrition/retention:4: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average. In addition, in the Bar comparing headcount across Attrition/Retention, 4 consistently performs above average in 2 out of 2 categories, demonstrating reliable high performance.",
+      "charts": [
+        8,
+        7,
+        6,
+        9
+      ],
+      "entities": [
+        "Attrition",
+        "Retention",
+        4
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "consistent_performance",
+        "consistent_performance",
+        "consistent_performance"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 4,
+        "value": 407,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 121.49659863945578
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "headcount:743: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average. Additionally, for the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 743.0 among all 4 series.",
+      "charts": [
+        7
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 743,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 304.3537414965986
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "headcount:407: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average. Additionally, for the Retention category in the Bar comparing headcount across different Attrition/Retention, 4 leads with the highest value at 407.0 among all 4 series.",
+      "charts": [
+        8
+      ],
+      "entities": [
+        "Retention",
+        4
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 4,
+        "value": 407,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 121.49659863945578
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "headcount:388: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average. Additionally, for the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 388.0 among all 4 series.",
+      "charts": [
+        9
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 388,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 111.15646258503402
+      },
+      "view_attribution": [
+        9
+      ]
+    },
+    {
+      "title": "headcount:766: Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average. Additionally, for the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 766.0 among all 4 series.",
+      "charts": [
+        10
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.95,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 766,
+        "overall_avg": 183.75,
+        "percentage_above_avg": 316.87074829931976
+      },
+      "view_attribution": [
+        10
+      ]
+    },
+    {
+      "title": "job role:research director: Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average. Furthermore, for the Research Director category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 78.0 among all 2 series. In addition, in the Bar showing Attrition by Job Role, Research Director has the lowest value at 2.0, which is 92% below the average of 26.3.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Attrition",
+        "Retention",
+        "Research Director"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Research Director",
+        "series_name": "Attrition",
+        "value": 2,
+        "overall_avg": 81.66666666666667,
+        "percentage_below_avg": 97.55102040816327
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "series_job role:attrition: Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average. Furthermore, in the Bar comparing headcount across Job Role, Attrition consistently performs below average in 9 out of 9 categories, showing consistently low performance. In addition, in the Bar comparing headcount across Job Role, Attrition has the lowest average value at 26.3, consistently underperforming other series (overall average: 81.7).",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Attrition",
+        "Research Director"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Research Director",
+        "series_name": "Attrition",
+        "value": 2,
+        "overall_avg": 81.66666666666667,
+        "percentage_below_avg": 97.55102040816327
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "headcount:2: Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average. Furthermore, at 1/12/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 2.0.",
+      "charts": [
+        1,
+        2
+      ],
+      "entities": [
+        "10/13/2021",
+        "Attrition",
+        "Research Director",
+        "1/12/2022",
+        "10/18/2021",
+        "10/17/2021"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Research Director",
+        "series_name": "Attrition",
+        "value": 2,
+        "overall_avg": 81.66666666666667,
+        "percentage_below_avg": 97.55102040816327
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "gender:female: Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87",
+      "narrative": "Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87.0 for Attrition in the Female category, which is 76% below the overall average. Furthermore, for the Female category in the Bar comparing headcount across different Gender, Retention leads with the highest value at 501.0 among all 2 series. In addition, in the Bar showing Attrition by Gender, Female has the lowest value at 87.0, which is 27% below the average of 118.5.",
+      "charts": [
+        3
+      ],
+      "entities": [
+        "Retention",
+        "Attrition",
+        "Female"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Female",
+        "series_name": "Attrition",
+        "value": 87,
+        "overall_avg": 367.5,
+        "percentage_below_avg": 76.32653061224491
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "series_gender:attrition: Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87",
+      "narrative": "Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87.0 for Attrition in the Female category, which is 76% below the overall average. Furthermore, in the Bar comparing headcount across Gender, Attrition consistently performs below average in 2 out of 2 categories, showing consistently low performance. In addition, in the Bar comparing headcount across Gender, Attrition has the lowest average value at 118.5, consistently underperforming other series (overall average: 367.5).",
+      "charts": [
+        3
+      ],
+      "entities": [
+        "Attrition",
+        "Female"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Female",
+        "series_name": "Attrition",
+        "value": 87,
+        "overall_avg": 367.5,
+        "percentage_below_avg": 76.32653061224491
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "headcount:5: Across all series in the Bar comparing headcount by Education, the lowest value overall is 5",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the lowest value overall is 5.0 for Attrition in the Doctoral Degree category, which is 97% below the overall average. Furthermore, at 2/11/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 5.0.",
+      "charts": [
+        5,
+        2
+      ],
+      "entities": [
+        "3/11/2022",
+        "Attrition",
+        "3/4/2022",
+        "Doctoral Degree",
+        "2/11/2022",
+        "4/13/2022"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Doctoral Degree",
+        "series_name": "Attrition",
+        "value": 5,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 96.5986394557823
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "headcount:8: Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8.0 for Attrition in the > 55 category, which is 95% below the overall average. Additionally, at 4/30/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 8.0.",
+      "charts": [
+        4,
+        2
+      ],
+      "entities": [
+        "Attrition",
+        "> 55",
+        "4/30/2022"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "> 55",
+        "series_name": "Attrition",
+        "value": 8,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 94.5578231292517
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "age group:> 55: Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8.0 for Attrition in the > 55 category, which is 95% below the overall average. Furthermore, for the > 55 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 39.0 among all 2 series. In addition, in the Bar showing Attrition by Age group, > 55 has the lowest value at 8.0, which is 83% below the average of 47.4.",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "Retention",
+        "Attrition",
+        "> 55"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "> 55",
+        "series_name": "Attrition",
+        "value": 8,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 94.5578231292517
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "series_age group:attrition: Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8",
+      "narrative": "Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8.0 for Attrition in the > 55 category, which is 95% below the overall average. Furthermore, in the Bar comparing headcount across Age group, Attrition consistently performs below average in 5 out of 5 categories, showing consistently low performance. In addition, in the Bar comparing headcount across Age group, Attrition has the lowest average value at 47.4, consistently underperforming other series (overall average: 147.0).",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "Attrition",
+        "> 55"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "> 55",
+        "series_name": "Attrition",
+        "value": 8,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 94.5578231292517
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "education:doctoral degree: Across all series in the Bar comparing headcount by Education, the lowest value overall is 5",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the lowest value overall is 5.0 for Attrition in the Doctoral Degree category, which is 97% below the overall average. Furthermore, for the Doctoral Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 43.0 among all 2 series. In addition, in the Bar showing Attrition by Education, Doctoral Degree has the lowest value at 5.0, which is 89% below the average of 47.4.",
+      "charts": [
+        5
+      ],
+      "entities": [
+        "Retention",
+        "Attrition",
+        "Doctoral Degree"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Doctoral Degree",
+        "series_name": "Attrition",
+        "value": 5,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 96.5986394557823
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "headcount:43: Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average. Additionally, for the Doctoral Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 43.0 among all 2 series.",
+      "charts": [
+        6,
+        5
+      ],
+      "entities": [
+        2,
+        "Retention",
+        "Attrition",
+        "Doctoral Degree"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 2,
+        "value": 43,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 76.59863945578232
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_education:attrition: Across all series in the Bar comparing headcount by Education, the lowest value overall is 5",
+      "narrative": "Across all series in the Bar comparing headcount by Education, the lowest value overall is 5.0 for Attrition in the Doctoral Degree category, which is 97% below the overall average. Furthermore, in the Bar comparing headcount across Education, Attrition consistently performs below average in 5 out of 5 categories, showing consistently low performance. In addition, in the Bar comparing headcount across Education, Attrition has the lowest average value at 47.4, consistently underperforming other series (overall average: 147.0).",
+      "charts": [
+        5
+      ],
+      "entities": [
+        "Attrition",
+        "Doctoral Degree"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "cross_series_avg"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Doctoral Degree",
+        "series_name": "Attrition",
+        "value": 5,
+        "overall_avg": 147.0,
+        "percentage_below_avg": 96.5986394557823
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "attrition/retention:attrition: Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.",
+      "charts": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "entities": [
+        1,
+        2,
+        "Attrition",
+        4
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 2,
+        "value": 43,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 76.59863945578232
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "series_attrition/retention:1: Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average. Furthermore, in the Bar comparing headcount across Attrition/Retention, 1 consistently performs below average in 2 out of 2 categories, showing consistently low performance. In addition, for the Attrition category in the Bar comparing headcount across different Attrition/Retention, 1 leads with the highest value at 72.0 among all 4 series.",
+      "charts": [
+        10,
+        7,
+        9,
+        6
+      ],
+      "entities": [
+        1,
+        "Attrition"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "consistent_performance",
+        "consistent_performance",
+        "consistent_performance",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 1,
+        "value": 25,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 86.39455782312925
+      },
+      "view_attribution": [
+        10
+      ]
+    },
+    {
+      "title": "series_attrition/retention:2: Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average. In addition, in the Bar comparing headcount across Attrition/Retention, 2 consistently performs below average in 2 out of 2 categories, showing consistently low performance.",
+      "charts": [
+        6,
+        8,
+        9
+      ],
+      "entities": [
+        2,
+        "Attrition"
+      ],
+      "importance": 0.9,
+      "fact_types": [
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "cross_series_extreme",
+        "consistent_performance",
+        "consistent_performance"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 2,
+        "value": 43,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 76.59863945578232
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "job role:laboratory technician: For the Laboratory Technician category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 197",
+      "narrative": "For the Laboratory Technician category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 197.0 among all 2 series. Additionally, in the Bar showing Attrition by Job Role, Laboratory Technician has the highest value at 62.0, which is 135% above the average of 26.3.",
+      "charts": [
+        1
+      ],
+      "entities": [
+        "Retention",
+        "Laboratory Technician"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Laboratory Technician",
+        "series_name": "Retention",
+        "value": 197,
+        "series_count": 2
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "age group:25-34: For the 25-34 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 442",
+      "narrative": "For the 25-34 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 442.0 among all 2 series. Additionally, in the Bar showing Attrition by Age group, 25-34 has the highest value at 112.0, which is 136% above the average of 47.4.",
+      "charts": [
+        4
+      ],
+      "entities": [
+        "25-34",
+        "Retention"
+      ],
+      "importance": 0.8,
+      "fact_types": [
+        "comparison",
+        "extreme"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "25-34",
+        "series_name": "Retention",
+        "value": 442,
+        "series_count": 2
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "series_attrition date:attrition: At 1/1/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1",
+      "narrative": "At 1/1/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0. Furthermore, at 1/12/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 2.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "Attrition",
+        "1/1/2022",
+        "1/16/2022",
+        "1/24/2022",
+        "1/12/2022",
+        "1/21/2022"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "1/1/2022",
+        "series_name": "Attrition",
+        "value": 1
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "headcount:1: At 1/1/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1",
+      "narrative": "At 1/1/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0. Furthermore, at 1/24/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "1/25/2022",
+        "Attrition",
+        "1/1/2022",
+        "1/24/2022",
+        "1/29/2022",
+        "1/5/2022"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "1/1/2022",
+        "series_name": "Attrition",
+        "value": 1
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "headcount:6: At 1/16/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 6",
+      "narrative": "At 1/16/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 6.0. Additionally, at 4/29/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 6.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "4/29/2022",
+        "Attrition",
+        "1/16/2022"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "1/16/2022",
+        "series_name": "Attrition",
+        "value": 6
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "headcount:3: At 1/21/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3",
+      "narrative": "At 1/21/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3.0. Furthermore, at 11/26/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "3/18/2022",
+        "Attrition",
+        "12/20/2021",
+        "3/22/2022",
+        "1/21/2022",
+        "11/26/2021"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "1/21/2022",
+        "series_name": "Attrition",
+        "value": 3
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "headcount:4: At 1/28/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 4",
+      "narrative": "At 1/28/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 4.0. Furthermore, at 1/3/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 4.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "1/3/2022",
+        "3/10/2022",
+        "4/26/2022",
+        "Attrition",
+        "1/28/2022",
+        "2/21/2022"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "1/28/2022",
+        "series_name": "Attrition",
+        "value": 4
+      },
+      "view_attribution": [
+        2
+      ]
+    },
+    {
+      "title": "headcount:7: At 4/17/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 7",
+      "narrative": "At 4/17/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 7.0. Additionally, at 4/4/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 7.0.",
+      "charts": [
+        2
+      ],
+      "entities": [
+        "4/4/2022",
+        "Attrition",
+        "4/17/2022"
+      ],
+      "importance": 0.7,
+      "fact_types": [
+        "comparison",
+        "comparison"
+      ],
+      "template_variables": {
+        "chart_type": "Line",
+        "metric_name": "headcount",
+        "time_dimension": "Attrition Date",
+        "time_point": "4/17/2022",
+        "series_name": "Attrition",
+        "value": 7
+      },
+      "view_attribution": [
+        2
+      ]
+    }
+  ],
+  "cross_entity_insights": [
+    {
+      "title": "Relationship between 1 and 2",
+      "narrative": "In the Bar comparing headcount across Gender, Retention dominates in 2 out of 2 categories, leading by an average margin of 498.0 (136%). Furthermore, in the Bar comparing headcount across Attrition/Retention, 3 dominates in 2 out of 2 categories, leading by an average margin of 13.5 (7%).",
+      "charts": [
+        3,
+        9,
+        10,
+        7,
+        5,
+        4
+      ],
+      "entities": [
+        3,
+        "Retention"
+      ],
+      "importance": 0.92,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "series_name": "Retention",
+        "dominating_count": 2,
+        "total_categories": 2,
+        "avg_margin": 498.0,
+        "margin_percentage": 135.51020408163265
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "Relationship between 1 and Attrition",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average. Furthermore, at 4/20/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        10,
+        2
+      ],
+      "entities": [
+        1,
+        "Attrition",
+        "4/11/2022",
+        "4/20/2022"
+      ],
+      "importance": 0.9,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 1,
+        "value": 25,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 86.39455782312925
+      },
+      "view_attribution": [
+        10
+      ]
+    },
+    {
+      "title": "Relationship between 10/13/2021 and 6/13/2021",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average. Furthermore, at 6/13/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        9,
+        2
+      ],
+      "entities": [
+        "10/13/2021",
+        "6/13/2021",
+        2,
+        "Attrition"
+      ],
+      "importance": 0.9,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 2,
+        "value": 45,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 75.51020408163265
+      },
+      "view_attribution": [
+        9
+      ]
+    },
+    {
+      "title": "Relationship between 9/3/2021 and Attrition",
+      "narrative": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average. Furthermore, at 9/3/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        1,
+        2
+      ],
+      "entities": [
+        "9/3/2021",
+        "Attrition",
+        "Research Director",
+        "10/25/2021"
+      ],
+      "importance": 0.9,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Research Director",
+        "series_name": "Attrition",
+        "value": 2,
+        "overall_avg": 81.66666666666667,
+        "percentage_below_avg": 97.55102040816327
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "Relationship between 4/26/2022 and Attrition",
+      "narrative": "In the Bar comparing headcount by Age group, the 35-44 category shows the largest spread between series with a range of 403.0 from Attrition (51.0) to Retention (454.0). Furthermore, in the Bar comparing headcount by Attrition/Retention, the Retention category shows the largest spread between series with a range of 169.0 from 1 (219.0) to 3 (388.0).",
+      "charts": [
+        4,
+        9,
+        5,
+        3,
+        6,
+        7
+      ],
+      "entities": [
+        "35-44",
+        "Bachelor's Degree",
+        "Retention",
+        "Male"
+      ],
+      "importance": 0.9,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "35-44",
+        "spread": 403,
+        "max_series": "Retention",
+        "max_value": 454,
+        "min_series": "Attrition",
+        "min_value": 51
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "Relationship between 11/9/2021 and 2",
+      "narrative": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average. Furthermore, at 11/9/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        8,
+        2
+      ],
+      "entities": [
+        "11/9/2021",
+        2,
+        "Attrition",
+        "1/7/2022"
+      ],
+      "importance": 0.9,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 2,
+        "value": 46,
+        "overall_avg": 183.75,
+        "percentage_below_avg": 74.96598639455783
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "Relationship between 2/12/2022 and Attrition",
+      "narrative": "For the Healthcare Representative category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 122.0 among all 2 series. Furthermore, for the Bachelor's Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 473.0 among all 2 series.",
+      "charts": [
+        1,
+        5,
+        2
+      ],
+      "entities": [
+        "2/12/2022",
+        "Attrition",
+        "11/28/2021",
+        "Retention",
+        "3/4/2022",
+        "Healthcare Representative",
+        "Bachelor's Degree",
+        "2/3/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Healthcare Representative",
+        "series_name": "Retention",
+        "value": 122,
+        "series_count": 2
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "Relationship between 4/18/2022 and Attrition",
+      "narrative": "For the Human Resources category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 40.0 among all 2 series. Furthermore, for the Associates Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 238.0 among all 2 series.",
+      "charts": [
+        1,
+        5,
+        2
+      ],
+      "entities": [
+        "4/18/2022",
+        "Attrition",
+        "Retention",
+        "3/14/2022",
+        "3/26/2022",
+        "Human Resources",
+        "10/18/2021",
+        "Associates Degree"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Human Resources",
+        "series_name": "Retention",
+        "value": 40,
+        "series_count": 2
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "Relationship between 45-55 and 5/27/2021",
+      "narrative": "For the 45-55 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 239.0 among all 2 series. Furthermore, for the Doctoral Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 43.0 among all 2 series.",
+      "charts": [
+        4,
+        5,
+        1,
+        2
+      ],
+      "entities": [
+        "45-55",
+        "Manufacturing Director",
+        "Attrition",
+        "Doctoral Degree",
+        "11/14/2021",
+        "12/17/2021",
+        "Retention",
+        "7/1/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "45-55",
+        "series_name": "Retention",
+        "value": 239,
+        "series_count": 2
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "Relationship between 1/3/2022 and 25-34",
+      "narrative": "For the Research Director category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 78.0 among all 2 series. Furthermore, for the 25-34 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 442.0 among all 2 series.",
+      "charts": [
+        1,
+        4,
+        2
+      ],
+      "entities": [
+        "25-34",
+        "1/3/2022",
+        "Research Director",
+        "Attrition",
+        "Retention",
+        "11/1/2021",
+        "2/22/2022",
+        "4/17/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Research Director",
+        "series_name": "Retention",
+        "value": 78,
+        "series_count": 2
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "Relationship between Attrition and 7/31/2021",
+      "narrative": "For the Male category in the Bar comparing headcount across different Gender, Retention leads with the highest value at 732.0 among all 2 series. Furthermore, at 7/31/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        3,
+        2
+      ],
+      "entities": [
+        "Attrition",
+        "7/31/2021",
+        "Retention",
+        "Male",
+        "2/20/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Male",
+        "series_name": "Retention",
+        "value": 732,
+        "series_count": 2
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "Relationship between 3 and Attrition",
+      "narrative": "For the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 743.0 among all 4 series. Furthermore, at 1/1/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        7,
+        2
+      ],
+      "entities": [
+        3,
+        "Attrition",
+        "1/1/2022",
+        "3/18/2022",
+        "Retention"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 743,
+        "series_count": 4
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "Relationship between 3 and Attrition",
+      "narrative": "For the Attrition category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 127.0 among all 4 series. Furthermore, at 3/31/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3.0.",
+      "charts": [
+        10,
+        2
+      ],
+      "entities": [
+        3,
+        "Attrition",
+        "1/12/2022",
+        "3/31/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 3,
+        "value": 127,
+        "series_count": 4
+      },
+      "view_attribution": [
+        10
+      ]
+    },
+    {
+      "title": "Relationship between Attrition and 12/30/2021",
+      "narrative": "For the Female category in the Bar comparing headcount across different Gender, Retention leads with the highest value at 501.0 among all 2 series. Furthermore, at 12/30/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        3,
+        2
+      ],
+      "entities": [
+        "12/30/2021",
+        "Attrition",
+        "1/16/2022",
+        "Retention",
+        "Female"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Gender",
+        "category": "Female",
+        "series_name": "Retention",
+        "value": 501,
+        "series_count": 2
+      },
+      "view_attribution": [
+        3
+      ]
+    },
+    {
+      "title": "Relationship between 3 and Attrition",
+      "narrative": "For the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 388.0 among all 4 series. Furthermore, at 4/27/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3.0.",
+      "charts": [
+        9,
+        2
+      ],
+      "entities": [
+        3,
+        "Attrition",
+        "4/27/2022",
+        "1/21/2022",
+        "Retention"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 388,
+        "series_count": 4
+      },
+      "view_attribution": [
+        9
+      ]
+    },
+    {
+      "title": "Relationship between 2/7/2022 and 3",
+      "narrative": "For the Attrition category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 73.0 among all 4 series. Furthermore, at 2/7/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 2.0.",
+      "charts": [
+        8,
+        2
+      ],
+      "entities": [
+        "2/7/2022",
+        3,
+        "Attrition",
+        "1/24/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 3,
+        "value": 73,
+        "series_count": 4
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "Relationship between 1/25/2022 and Attrition",
+      "narrative": "For the < 25 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 59.0 among all 2 series. Furthermore, for the Sales Representative category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 50.0 among all 2 series.",
+      "charts": [
+        4,
+        1,
+        2
+      ],
+      "entities": [
+        "1/25/2022",
+        "Attrition",
+        "2/17/2022",
+        "Retention",
+        "Sales Representative",
+        "8/26/2021",
+        "< 25",
+        "4/13/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "< 25",
+        "series_name": "Retention",
+        "value": 59,
+        "series_count": 2
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "Relationship between 3/21/2022 and Attrition",
+      "narrative": "For the > 55 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 39.0 among all 2 series. Furthermore, for the Sales Executive category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 269.0 among all 2 series.",
+      "charts": [
+        4,
+        1,
+        2
+      ],
+      "entities": [
+        "3/21/2022",
+        "Attrition",
+        "6/22/2021",
+        "Sales Executive",
+        "4/3/2022",
+        "Retention",
+        "> 55",
+        "6/17/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Age group",
+        "category": "> 55",
+        "series_name": "Retention",
+        "value": 39,
+        "series_count": 2
+      },
+      "view_attribution": [
+        4
+      ]
+    },
+    {
+      "title": "Relationship between 12/24/2021 and Attrition",
+      "narrative": "For the Laboratory Technician category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 197.0 among all 2 series. Furthermore, for the 35-44 category in the Bar comparing headcount across different Age group, Retention leads with the highest value at 454.0 among all 2 series.",
+      "charts": [
+        1,
+        4,
+        2
+      ],
+      "entities": [
+        "12/24/2021",
+        "Attrition",
+        "2/27/2022",
+        "Retention",
+        "35-44",
+        "Laboratory Technician",
+        "4/29/2022",
+        "10/4/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Job Role",
+        "category": "Laboratory Technician",
+        "series_name": "Retention",
+        "value": 197,
+        "series_count": 2
+      },
+      "view_attribution": [
+        1
+      ]
+    },
+    {
+      "title": "Relationship between Attrition and 6/5/2021",
+      "narrative": "For the High School category in the Bar comparing headcount across different Education, Retention leads with the highest value at 139.0 among all 2 series. Furthermore, for the Research Scientist category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 245.0 among all 2 series.",
+      "charts": [
+        5,
+        1,
+        2
+      ],
+      "entities": [
+        "Attrition",
+        "6/5/2021",
+        "High School",
+        "Retention",
+        "Research Scientist",
+        "2/4/2022",
+        "5/6/2022",
+        "7/5/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "High School",
+        "series_name": "Retention",
+        "value": 139,
+        "series_count": 2
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "Relationship between 12/4/2021 and Attrition",
+      "narrative": "For the Master's Degree category in the Bar comparing headcount across different Education, Retention leads with the highest value at 340.0 among all 2 series. Furthermore, for the Manager category in the Bar comparing headcount across different Job Role, Retention leads with the highest value at 97.0 among all 2 series.",
+      "charts": [
+        5,
+        1,
+        2
+      ],
+      "entities": [
+        "12/4/2021",
+        "Master's Degree",
+        "Attrition",
+        "Retention",
+        "5/3/2022",
+        "5/4/2022",
+        "3/12/2022",
+        "Manager"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Education",
+        "category": "Master's Degree",
+        "series_name": "Retention",
+        "value": 340,
+        "series_count": 2
+      },
+      "view_attribution": [
+        5
+      ]
+    },
+    {
+      "title": "Relationship between 1 and Attrition",
+      "narrative": "For the Attrition category in the Bar comparing headcount across different Attrition/Retention, 1 leads with the highest value at 72.0 among all 4 series. Furthermore, at 3/22/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 3.0.",
+      "charts": [
+        6,
+        2
+      ],
+      "entities": [
+        1,
+        "Attrition",
+        "8/16/2021",
+        "3/22/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 1,
+        "value": 72,
+        "series_count": 4
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "Relationship between 3 and Attrition",
+      "narrative": "For the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 391.0 among all 4 series. Furthermore, at 4/7/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        6,
+        2
+      ],
+      "entities": [
+        3,
+        "Attrition",
+        "Retention",
+        "4/7/2022",
+        "11/23/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 391,
+        "series_count": 4
+      },
+      "view_attribution": [
+        6
+      ]
+    },
+    {
+      "title": "Relationship between 4/16/2022 and 3",
+      "narrative": "For the Attrition category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 125.0 among all 4 series. Furthermore, at 4/16/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        7,
+        2
+      ],
+      "entities": [
+        "4/16/2022",
+        3,
+        "Attrition",
+        "7/18/2021"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 3,
+        "value": 125,
+        "series_count": 4
+      },
+      "view_attribution": [
+        7
+      ]
+    },
+    {
+      "title": "Relationship between 4/23/2022 and Attrition",
+      "narrative": "For the Retention category in the Bar comparing headcount across different Attrition/Retention, 4 leads with the highest value at 407.0 among all 4 series. Furthermore, at 2/21/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 4.0.",
+      "charts": [
+        8,
+        2
+      ],
+      "entities": [
+        "4/23/2022",
+        "Attrition",
+        4,
+        "2/21/2022",
+        "Retention"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 4,
+        "value": 407,
+        "series_count": 4
+      },
+      "view_attribution": [
+        8
+      ]
+    },
+    {
+      "title": "Relationship between 3/10/2022 and 3",
+      "narrative": "For the Attrition category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 71.0 among all 4 series. Furthermore, at 3/10/2022 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 4.0.",
+      "charts": [
+        9,
+        2
+      ],
+      "entities": [
+        "3/10/2022",
+        3,
+        "Attrition",
+        "2/25/2022"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Attrition",
+        "series_name": 3,
+        "value": 71,
+        "series_count": 4
+      },
+      "view_attribution": [
+        9
+      ]
+    },
+    {
+      "title": "Relationship between 11/10/2021 and 3",
+      "narrative": "For the Retention category in the Bar comparing headcount across different Attrition/Retention, 3 leads with the highest value at 766.0 among all 4 series. Furthermore, at 9/12/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0.",
+      "charts": [
+        10,
+        2
+      ],
+      "entities": [
+        "11/10/2021",
+        3,
+        "Attrition",
+        "9/12/2021",
+        "Retention"
+      ],
+      "importance": 0.8,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": "headcount",
+        "dimension_name": "Attrition/Retention",
+        "category": "Retention",
+        "series_name": 3,
+        "value": 766,
+        "series_count": 4
+      },
+      "view_attribution": [
+        10
+      ]
+    },
+    {
+      "title": "Relationship between Research Director and 9/2/2021",
+      "narrative": "Across all 2 categories in the Bar of Attrition/Retention, the average 4 is 229.5 with a standard deviation of 177.5 (77% coefficient of variation). Furthermore, at 11/2/2021 in the Line tracking headcount over Attrition Date, Attrition leads all other series with the highest value at 1.0. In addition, across all 2 categories in the Bar of Attrition/Retention, the average headcount is 735.0 with a standard deviation of 498.0 (68% coefficient of variation).",
+      "charts": [
+        8,
+        2,
+        34
+      ],
+      "entities": [
+        "Attrition",
+        "11/2/2021",
+        "12/10/2021",
+        "3/5/2022",
+        "12/8/2021"
+      ],
+      "importance": 0.7,
+      "relationship_types": [
+        "supporting"
+      ],
+      "template_variables": {
+        "chart_type": "Bar",
+        "metric_name": 4,
+        "dimension_name": "Attrition/Retention",
+        "avg_value": 229.5,
+        "std_dev": 177.5,
+        "cv": 77.34204793028321,
+        "category_count": 2
+      },
+      "view_attribution": [
+        8
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "type": "compare_dimension",
+      "name": "comp_dim_Attrition/Retention_COUNT",
+      "views": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        34
+      ],
+      "insights": [
+        {
+          "title": "Comparison across Attrition/Retention Categories",
+          "narrative": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average. Furthermore, across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.",
+          "charts": [
+            1,
+            8,
+            6
+          ],
+          "entities": [
+            3,
+            4,
+            "Sales Executive",
+            "Retention"
+          ],
+          "importance": 0.95,
+          "aggregation_level": 4,
+          "primary_fact_type": "cross_series_extreme",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "headcount",
+            "dimension_name": "Job Role",
+            "category": "Sales Executive",
+            "series_name": "Retention",
+            "value": 269,
+            "overall_avg": 81.66666666666667,
+            "percentage_above_avg": 229.38775510204076
+          },
+          "contextual_entities": {
+            "category": [
+              "Job Role:Sales Executive"
+            ],
+            "series": [
+              "series_Job Role:Retention"
+            ],
+            "measure": [
+              "headcount:269"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 2,
+            "contrasting_count": 0,
+            "total_charts": 3,
+            "entity_count": 4,
+            "has_template_variables": true
+          }
+        },
+        {
+          "title": "Variation across Attrition/Retention Categories",
+          "narrative": "In the Bar comparing headcount by Job Role, the Sales Executive category shows the largest spread between series with a range of 212.0 from Attrition (57.0) to Retention (269.0). Furthermore, in the Bar comparing headcount by Job Role, the Sales Executive category shows the greatest variation between Attrition and Retention with a spread of 212.0 between the highest and lowest values. In addition, in the Bar comparing headcount by Gender, the Male category shows the largest spread between series with a range of 582.0 from Attrition (150.0) to Retention (732.0).",
+          "charts": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "entities": [
+            "35-44",
+            "Sales Executive",
+            "Retention",
+            "Bachelor's Degree",
+            "Male"
+          ],
+          "importance": 0.9,
+          "aggregation_level": 4,
+          "primary_fact_type": "category_spread",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "headcount",
+            "dimension_name": "Job Role",
+            "category": "Sales Executive",
+            "spread": 212,
+            "max_series": "Retention",
+            "max_value": 269,
+            "min_series": "Attrition",
+            "min_value": 57
+          },
+          "contextual_entities": {
+            "category": [
+              "Job Role:Sales Executive"
+            ]
+          },
+          "relationship_summary": {
+            "supporting_count": 17,
+            "contrasting_count": 0,
+            "total_charts": 9,
+            "entity_count": 5,
+            "has_template_variables": true
+          }
+        }
+      ]
+    }
+  ]
+}

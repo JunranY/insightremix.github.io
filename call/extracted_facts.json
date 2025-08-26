@@ -1,0 +1,1164 @@
+{
+  "timestamp": "2025-08-26 11:40:03",
+  "total_facts": 139,
+  "charts": {
+    "1": [
+      {
+        "type": "concentration",
+        "subtype": "pareto_principle",
+        "importance": 0.85,
+        "description": "In the Donut of sentiment, Negative, Neutral, Very Negative, and Positive collectively account for 90.4% of total calls, while the remaining 1 categories account for only 9.6%, demonstrating a concentration pattern.",
+        "data_points": {
+          "categories": [
+            "Negative",
+            "Neutral",
+            "Very Negative",
+            "Positive"
+          ],
+          "percentage": 90.37947783849422
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "largest",
+        "importance": 0.7,
+        "description": "In the Donut showing the distribution of calls by sentiment, Negative accounts for the largest share at 33.6% (11063.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Negative",
+          "percentage": 33.585306618093504,
+          "value": 11063
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "smallest",
+        "importance": 0.65,
+        "description": "In the Donut showing the distribution of calls by sentiment, Very Positive represents the smallest share at only 9.6% (3169.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Very Positive",
+          "percentage": 9.620522161505768,
+          "value": 3169
+        }
+      }
+    ],
+    "3": [
+      {
+        "type": "concentration",
+        "subtype": "pareto_principle",
+        "importance": 0.85,
+        "description": "In the Donut of channel, Call-Center, Chatbot, and Email collectively account for 80.0% of total calls, while the remaining 1 categories account for only 20.0%, demonstrating a concentration pattern.",
+        "data_points": {
+          "categories": [
+            "Call-Center",
+            "Chatbot",
+            "Email"
+          ],
+          "percentage": 80.03642987249545
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "largest",
+        "importance": 0.7,
+        "description": "In the Donut showing the distribution of calls by channel, Call-Center accounts for the largest share at 32.3% (10638.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Call-Center",
+          "percentage": 32.295081967213115,
+          "value": 10638
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "smallest",
+        "importance": 0.65,
+        "description": "In the Donut showing the distribution of calls by channel, Web represents the smallest share at only 20.0% (6576.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Web",
+          "percentage": 19.963570127504553,
+          "value": 6576
+        }
+      }
+    ],
+    "0": [
+      {
+        "type": "dominance",
+        "subtype": "majority",
+        "importance": 0.95,
+        "description": "In the Donut showing calls by reason, Billing Question dominates with 71.2% of the total, representing a clear majority over all other categories.",
+        "data_points": {
+          "category": "Billing Question",
+          "percentage": 71.22343655130541,
+          "value": 23461
+        }
+      },
+      {
+        "type": "concentration",
+        "subtype": "pareto_principle",
+        "importance": 0.85,
+        "description": "In the Donut of reason, Billing Question and Payments collectively account for 85.6% of total calls, while the remaining 1 categories account for only 14.4%, demonstrating a concentration pattern.",
+        "data_points": {
+          "categories": [
+            "Billing Question",
+            "Payments"
+          ],
+          "percentage": 85.64055859137827
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "largest",
+        "importance": 0.7,
+        "description": "In the Donut showing the distribution of calls by reason, Billing Question accounts for the largest share at 71.2% (23461.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Billing Question",
+          "percentage": 71.22343655130541,
+          "value": 23461
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "smallest",
+        "importance": 0.65,
+        "description": "In the Donut showing the distribution of calls by reason, Service Outage represents the smallest share at only 14.4% (4730.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Service Outage",
+          "percentage": 14.359441408621738,
+          "value": 4730
+        }
+      }
+    ],
+    "4": [
+      {
+        "type": "change",
+        "subtype": "decrease",
+        "importance": 0.9,
+        "description": "In the Line of calls over timestamp, the largest single decrease of 107.0 (9%) occurs between 10/06/2020 and 10/07/2020.",
+        "data_points": {
+          "from": "10/06/2020",
+          "to": "10/07/2020",
+          "change": -107
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.7,
+        "description": "In the Line of calls over timestamp, the calls peak at 10/21/2020 with value 1170.0.",
+        "data_points": {
+          "x": "10/21/2020",
+          "y": 1170
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.65,
+        "description": "In the Line of calls over timestamp, the trough is at 10/07/2020 with value 1045.0.",
+        "data_points": {
+          "x": "10/07/2020",
+          "y": 1045
+        }
+      }
+    ],
+    "2": [
+      {
+        "type": "concentration",
+        "subtype": "pareto_principle",
+        "importance": 0.85,
+        "description": "In the Donut of call_center, Los Angeles/CA, Baltimore/MD, and Chicago/IL collectively account for 91.6% of total calls, while the remaining 1 categories account for only 8.4%, demonstrating a concentration pattern.",
+        "data_points": {
+          "categories": [
+            "Los Angeles/CA",
+            "Baltimore/MD",
+            "Chicago/IL"
+          ],
+          "percentage": 91.57255616272009
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "largest",
+        "importance": 0.7,
+        "description": "In the Donut showing the distribution of calls by call_center, Los Angeles/CA accounts for the largest share at 41.7% (13734.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Los Angeles/CA",
+          "percentage": 41.69398907103825,
+          "value": 13734
+        }
+      },
+      {
+        "type": "proportion",
+        "subtype": "smallest",
+        "importance": 0.65,
+        "description": "In the Donut showing the distribution of calls by call_center, Denver/CO represents the smallest share at only 8.4% (2776.0 out of 32940.0 total).",
+        "data_points": {
+          "category": "Denver/CO",
+          "percentage": 8.427443837279904,
+          "value": 2776
+        }
+      }
+    ],
+    "5": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_even",
+        "importance": 0.75,
+        "description": "The distribution is very even across categories, with nearly equal values for each day.",
+        "data_points": {
+          "gini": 0.19631364385462746,
+          "cv": 0.11073936405091711,
+          "normalized_entropy": 0.9969457527879306
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The calls distribution is right-skewed, with a few days having unusually high values.",
+        "data_points": {
+          "skewness": 0.9289227877428853
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 7 categories in the Bar of day, the average calls is 4705.7 with a standard deviation of 521.1 (11% coefficient of variation).",
+        "data_points": {
+          "average": 4705.714285714285,
+          "std_dev": 521.1078074053156,
+          "cv": 11.073936405091711
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing calls by day, Friday has the highest value at 5570.0, which is 18% above the average of 4705.7.",
+        "data_points": {
+          "category": "Friday",
+          "value": 5570,
+          "average": 4705.714285714285
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing calls by day, Sunday has the lowest value at 4296.0, which is 9% below the average of 4705.7.",
+        "data_points": {
+          "category": "Sunday",
+          "value": 4296,
+          "average": 4705.714285714285
+        }
+      }
+    ],
+    "10": [
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The duration distribution is right-skewed, with a few sentiments having unusually high values.",
+        "data_points": {
+          "skewness": 0.928252986425188
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 5 categories in the Bar of sentiment, the average duration is 25.0 with a standard deviation of 0.2 (1% coefficient of variation).",
+        "data_points": {
+          "average": 24.95314053825699,
+          "std_dev": 0.1673799252401465,
+          "cv": 0.6707769909103322
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.20344740947830997,
+          "cv": 0.006707769909103322,
+          "normalized_entropy": 0.9999860505073128
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing duration by sentiment, Negative has the highest value at 25.3, which is 1% above the average of 25.0.",
+        "data_points": {
+          "category": "Negative",
+          "value": 25.261773479164784,
+          "average": 24.95314053825699
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing duration by sentiment, Very Positive has the lowest value at 24.8, which is 1% below the average of 25.0.",
+        "data_points": {
+          "category": "Very Positive",
+          "value": 24.763016724518774,
+          "average": 24.95314053825699
+        }
+      }
+    ],
+    "9": [
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.8728651796737643,
+        "description": "In the Bar comparing duration across sentiment, the relationship landscape shows exceptional predictability with 3 highly stable series relationships. The most predictable pair, Service Outage and Payments, demonstrates 99% consistency maintaining a 1.00 ratio across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 3,
+          "avg_consistency": 98.57303593475285,
+          "most_stable_pair": [
+            "Service Outage",
+            "Payments"
+          ],
+          "relationship_hubs": [
+            "Billing Question",
+            "Service Outage",
+            "Payments"
+          ]
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.8214544345218824,
+        "description": "In the Bar comparing duration across sentiment, the Very Negative category shows the most pronounced disparities between series with a range of 0.8 units for the absolute range, which is 2.1x higher than the average disparity in other categories. The gap ranges from Billing Question (24.7) to Service Outage (25.6).",
+        "data_points": {
+          "category": "Very Negative",
+          "disparity_measure": "range",
+          "disparity_value": 0.8163960501584988,
+          "max_series": "Service Outage",
+          "min_series": "Billing Question"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.8114508951677012,
+        "description": "In the Bar comparing duration across sentiment, the Very Negative category shows the most pronounced disparities between series with a standard deviation of 0.34, which is 2.1x higher than the average disparity in other categories. The gap ranges from Billing Question (24.7) to Service Outage (25.6).",
+        "data_points": {
+          "category": "Very Negative",
+          "disparity_measure": "std_dev",
+          "disparity_value": 0.33806981631975463,
+          "max_series": "Service Outage",
+          "min_series": "Billing Question"
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.7 for Payments in the Negative category, which is 3% above the overall average.",
+        "data_points": {
+          "category": "Negative",
+          "series": "Payments",
+          "value": 25.711236660389204
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing duration by sentiment, the lowest value overall is 24.5 for Payments in the Very Positive category, which is 2% below the overall average.",
+        "data_points": {
+          "category": "Very Positive",
+          "series": "Payments",
+          "value": 24.473347547974413
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.20307420729741443,
+          "cv": 0.005567724813870362,
+          "normalized_entropy": 0.9999903754808482
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The duration distribution is approximately symmetric across sentiments.",
+        "data_points": {
+          "skewness": 0.3423863890026494
+        }
+      }
+    ],
+    "6": [
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The duration distribution is left-skewed, with a few channels having unusually low values.",
+        "data_points": {
+          "skewness": -0.5576202223809364
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 4 categories in the Bar of channel, the average duration is 25.0 with a standard deviation of 0.1 (0% coefficient of variation).",
+        "data_points": {
+          "average": 25.02154732555006,
+          "std_dev": 0.06595964717706895,
+          "cv": 0.2636113838959755
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across channels, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.2514188883267172,
+          "cv": 0.002636113838959755,
+          "normalized_entropy": 0.9999974924094406
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing duration by channel, Email has the highest value at 25.1, which is 0% above the average of 25.0.",
+        "data_points": {
+          "category": "Email",
+          "value": 25.09879518072289,
+          "average": 25.02154732555006
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing duration by channel, Chatbot has the lowest value at 24.9, which is 0% below the average of 25.0.",
+        "data_points": {
+          "category": "Chatbot",
+          "value": 24.917756782945737,
+          "average": 25.02154732555006
+        }
+      }
+    ],
+    "69": [
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.8665103369321075,
+        "description": "In the Bar comparing duration across reason, the relationship landscape shows exceptional predictability with 2 highly stable series relationships. The most predictable pair, Service Outage and Payments, demonstrates 99% consistency maintaining a consistent gap of 25.1 units across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 2,
+          "avg_consistency": 99.3020673864215,
+          "most_stable_pair": [
+            "Service Outage",
+            "Payments"
+          ],
+          "relationship_hubs": [
+            "Service Outage"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Billing Question, Service Outage consistently perform above average while Payments consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing duration by reason, the highest value overall is 25.3 for Service Outage in the Email category, which is 52% above the overall average.",
+        "data_points": {
+          "category": "Email",
+          "series": "Service Outage",
+          "value": 25.34480560866794
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing duration by reason, the lowest value overall is 0.0 for Payments in the Web category, which is 100% below the overall average.",
+        "data_points": {
+          "category": "Web",
+          "series": "Payments",
+          "value": 0.0
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across reasons, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.2512957742373888,
+          "cv": 0.0024633173726374526,
+          "normalized_entropy": 0.9999978113099924
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The duration distribution is approximately symmetric across reasons.",
+        "data_points": {
+          "skewness": -0.0798696127003756
+        }
+      }
+    ],
+    "70": [
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.95,
+        "description": "In the Bar comparing duration across sentiment, the Very Positive category shows the most pronounced disparities between series with a range of 1.1 units for the absolute range, which is 3.2x higher than the average disparity in other categories. The gap ranges from Call-Center (24.3) to Web (25.4).",
+        "data_points": {
+          "category": "Very Positive",
+          "disparity_measure": "range",
+          "disparity_value": 1.0839886003999304,
+          "max_series": "Web",
+          "min_series": "Call-Center"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.95,
+        "description": "In the Bar comparing duration across sentiment, the Very Positive category shows the most pronounced disparities between series with a standard deviation of 0.40, which is 3.0x higher than the average disparity in other categories. The gap ranges from Call-Center (24.3) to Web (25.4).",
+        "data_points": {
+          "category": "Very Positive",
+          "disparity_measure": "std_dev",
+          "disparity_value": 0.3963766365180361,
+          "max_series": "Web",
+          "min_series": "Call-Center"
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.9040800795550302,
+        "description": "In the Bar comparing duration across sentiment, the relationship landscape shows exceptional predictability with 6 highly stable series relationships. The most predictable pair, Chatbot and Email, demonstrates 99% consistency maintaining a 0.99 ratio across all categories, with an overall relationship consistency of 99% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 6,
+          "avg_consistency": 98.81601591100603,
+          "most_stable_pair": [
+            "Chatbot",
+            "Email"
+          ],
+          "relationship_hubs": [
+            "Call-Center",
+            "Chatbot",
+            "Email",
+            "Web"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Email, Web consistently perform above average while Chatbot consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing duration by sentiment, the highest value overall is 25.4 for Web in the Very Positive category, which is 2% above the overall average.",
+        "data_points": {
+          "category": "Very Positive",
+          "series": "Web",
+          "value": 25.40531561461794
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing duration by sentiment, the lowest value overall is 24.3 for Call-Center in the Very Positive category, which is 3% below the overall average.",
+        "data_points": {
+          "category": "Very Positive",
+          "series": "Call-Center",
+          "value": 24.32132701421801
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The duration distribution is left-skewed, with a few sentiments having unusually low values.",
+        "data_points": {
+          "skewness": -0.5854394262272868
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across sentiments, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.20728682802338372,
+          "cv": 0.013651913576320765,
+          "normalized_entropy": 0.9999419407005403
+        }
+      }
+    ],
+    "71": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing duration across channel, Negative leads in 3 out of 4 categories (75%), except Web, which is led by Very Positive.",
+        "data_points": {
+          "dominant_series": "Negative",
+          "won_categories": [
+            "Call-Center",
+            "Chatbot",
+            "Email"
+          ],
+          "exceptions": {
+            "Web": "Very Positive"
+          }
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.949424254225967,
+        "description": "In the Bar comparing duration across channel, the relationship landscape shows exceptional predictability with 11 highly stable series relationships. The most predictable pair, Neutral and Positive, demonstrates 100% consistency maintaining a 1.00 ratio across all categories, with an overall relationship consistency of 98% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 11,
+          "avg_consistency": 97.8848508451934,
+          "most_stable_pair": [
+            "Neutral",
+            "Positive"
+          ],
+          "relationship_hubs": [
+            "Neutral",
+            "Very Negative",
+            "Very Positive",
+            "Negative",
+            "Positive"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Negative, Very Negative consistently perform above average while Neutral, Very Positive, Positive consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing duration by channel, the highest value overall is 25.4 for Very Positive in the Web category, which is 2% above the overall average.",
+        "data_points": {
+          "category": "Web",
+          "series": "Very Positive",
+          "value": 25.40531561461794
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.785073717786481,
+        "description": "In the Bar comparing duration across channel, the Call-Center category shows the most pronounced disparities between series with a range of 1.0 units for the absolute range, which is 1.9x higher than the average disparity in other categories. The gap ranges from Very Positive (24.3) to Negative (25.4).",
+        "data_points": {
+          "category": "Call-Center",
+          "disparity_measure": "range",
+          "disparity_value": 1.0422584199556582,
+          "max_series": "Negative",
+          "min_series": "Very Positive"
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing duration by channel, the lowest value overall is 24.3 for Very Positive in the Call-Center category, which is 3% below the overall average.",
+        "data_points": {
+          "category": "Call-Center",
+          "series": "Very Positive",
+          "value": 24.32132701421801
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "negative_skew",
+        "importance": 0.75,
+        "description": "The duration distribution is left-skewed, with a few channels having unusually low values.",
+        "data_points": {
+          "skewness": -0.8357249263307618
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.7466959495928165,
+        "description": "In the Bar comparing duration across channel, the Call-Center category shows the most pronounced disparities between series with a standard deviation of 0.34, which is 1.7x higher than the average disparity in other categories. The gap ranges from Very Positive (24.3) to Negative (25.4).",
+        "data_points": {
+          "category": "Call-Center",
+          "disparity_measure": "std_dev",
+          "disparity_value": 0.34013502597060413,
+          "max_series": "Negative",
+          "min_series": "Very Positive"
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across channels, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.2527333443289599,
+          "cv": 0.0052721636034451114,
+          "normalized_entropy": 0.9999899599937843
+        }
+      }
+    ],
+    "7": [
+      {
+        "type": "temporal_leadership",
+        "subtype": "stability_pattern",
+        "importance": 0.85,
+        "description": "In the Line tracking calls over timestamp, Negative maintains leadership in 100% of time periods (30 out of 30).",
+        "data_points": {
+          "dominant_series": "Negative",
+          "leadership_percentage": 100.0,
+          "challenger": null,
+          "total_periods": 30
+        }
+      },
+      {
+        "type": "series_divergence",
+        "subtype": "variance_trend",
+        "importance": 0.85,
+        "description": "In the Line of calls over timestamp, the series values are diverging and spreading apart, with the variability between series increasing by 1% from 10/01/2020 to 10/30/2020.",
+        "data_points": {
+          "start_var": 9749.36,
+          "end_var": 9812.8,
+          "trend": 0.6419399332588184
+        }
+      }
+    ],
+    "173": [
+      {
+        "type": "divergent_trends",
+        "subtype": "opposite_directions",
+        "importance": 1.0,
+        "description": "In the Line of calls over timestamp, there are divergent trends: 10/28/2020, 10/21/2020, 10/07/2020 and 10/14/2020 show upward movement while 10/16/2020, 10/09/2020, 10/02/2020, 10/30/2020 and 10/23/2020 show downward movement.",
+        "data_points": {
+          "upward": [
+            "10/28/2020",
+            "10/21/2020",
+            "10/07/2020",
+            "10/14/2020"
+          ],
+          "downward": [
+            "10/16/2020",
+            "10/09/2020",
+            "10/02/2020",
+            "10/30/2020",
+            "10/23/2020"
+          ]
+        }
+      },
+      {
+        "type": "trend_comparison",
+        "subtype": "strongest_upward",
+        "importance": 0.9,
+        "description": "In the Line of calls over timestamp, 10/21/2020 exhibits the strongest upward trend among all series with a correlation coefficient of R\u00b2 = 0.38.",
+        "data_points": {
+          "series": "10/21/2020",
+          "slope": 125.35714285714285,
+          "r_squared": 0.3750000000000001
+        }
+      },
+      {
+        "type": "trend_comparison",
+        "subtype": "strongest_downward",
+        "importance": 0.9,
+        "description": "In the Line of calls over timestamp, 10/16/2020 exhibits the strongest downward trend among all series with a correlation coefficient of R\u00b2 = 0.38.",
+        "data_points": {
+          "series": "10/16/2020",
+          "slope": -121.28571428571425,
+          "r_squared": 0.375
+        }
+      },
+      {
+        "type": "series_convergence",
+        "subtype": "variance_trend",
+        "importance": 0.85,
+        "description": "In the Line of calls over timestamp, all series values are converging toward similar levels, with the variability between series decreasing by 17% from Friday to Wednesday.",
+        "data_points": {
+          "start_var": 172405.55555555556,
+          "end_var": 143265.80999999997,
+          "trend": -1808.742698412697
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Friday in the Line tracking calls over timestamp, 10/16/2020 leads all other series with the highest value at 1132.0.",
+        "data_points": {
+          "time": "Friday",
+          "series": "10/16/2020",
+          "value": 1132
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Monday in the Line tracking calls over timestamp, 10/19/2020 leads all other series with the highest value at 1102.0.",
+        "data_points": {
+          "time": "Monday",
+          "series": "10/19/2020",
+          "value": 1102
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Saturday in the Line tracking calls over timestamp, 10/17/2020 leads all other series with the highest value at 1123.0.",
+        "data_points": {
+          "time": "Saturday",
+          "series": "10/17/2020",
+          "value": 1123
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Sunday in the Line tracking calls over timestamp, 10/18/2020 leads all other series with the highest value at 1097.0.",
+        "data_points": {
+          "time": "Sunday",
+          "series": "10/18/2020",
+          "value": 1097
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Thursday in the Line tracking calls over timestamp, 10/22/2020 leads all other series with the highest value at 1167.0.",
+        "data_points": {
+          "time": "Thursday",
+          "series": "10/22/2020",
+          "value": 1167
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Tuesday in the Line tracking calls over timestamp, 10/06/2020 leads all other series with the highest value at 1152.0.",
+        "data_points": {
+          "time": "Tuesday",
+          "series": "10/06/2020",
+          "value": 1152
+        }
+      },
+      {
+        "type": "comparison",
+        "subtype": "temporal_leader",
+        "importance": 0.7,
+        "description": "At Wednesday in the Line tracking calls over timestamp, 10/21/2020 leads all other series with the highest value at 1170.0.",
+        "data_points": {
+          "time": "Wednesday",
+          "series": "10/21/2020",
+          "value": 1170
+        }
+      }
+    ],
+    "174": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing calls across sentiment, Friday leads in 3 out of 5 categories (60%), except Very Positive (led by Thursday) and Very Negative (led by Thursday).",
+        "data_points": {
+          "dominant_series": "Friday",
+          "won_categories": [
+            "Negative",
+            "Neutral",
+            "Positive"
+          ],
+          "exceptions": {
+            "Very Positive": "Thursday",
+            "Very Negative": "Thursday"
+          }
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "highly_predictable",
+        "importance": 0.95,
+        "description": "In the Bar comparing calls across sentiment, the relationship landscape shows exceptional predictability with 23 highly stable series relationships. The most predictable pair, Thursday and Monday, demonstrates 98% consistency maintaining a 1.27 ratio across all categories, with an overall relationship consistency of 94% indicating that series interactions follow highly predictable patterns.",
+        "data_points": {
+          "pattern_type": "highly_predictable",
+          "total_relationships": 23,
+          "avg_consistency": 93.97456285854666,
+          "most_stable_pair": [
+            "Thursday",
+            "Monday"
+          ],
+          "relationship_hubs": [
+            "Sunday",
+            "Tuesday",
+            "Saturday",
+            "Thursday",
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Thursday, Friday consistently perform above average while Monday, Sunday, Saturday, Wednesday, Tuesday consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing calls by sentiment, the highest value overall is 1869.0 for Friday in the Negative category, which is 99% above the overall average.",
+        "data_points": {
+          "category": "Negative",
+          "series": "Friday",
+          "value": 1869
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.7813024660295032,
+        "description": "In the Bar comparing calls across sentiment, the Negative category shows the most pronounced disparities between series with a standard deviation of 172.70, which is 1.9x higher than the average disparity in other categories. The gap ranges from Sunday (1430.0) to Friday (1869.0).",
+        "data_points": {
+          "category": "Negative",
+          "disparity_measure": "std_dev",
+          "disparity_value": 172.69531976688816,
+          "max_series": "Friday",
+          "min_series": "Sunday"
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing calls by sentiment, the lowest value overall is 406.0 for Sunday in the Very Positive category, which is 57% below the overall average.",
+        "data_points": {
+          "category": "Very Positive",
+          "series": "Sunday",
+          "value": 406
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across sentiments, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.44462689290275503,
+          "cv": 0.4387224992696141,
+          "normalized_entropy": 0.9399191816054235
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.7491053677932406,
+        "description": "In the Bar comparing calls across sentiment, the Negative category shows the most pronounced disparities between series with a range of 439.0 units for the absolute range, which is 1.7x higher than the average disparity in other categories. The gap ranges from Sunday (1430.0) to Friday (1869.0).",
+        "data_points": {
+          "category": "Negative",
+          "disparity_measure": "range",
+          "disparity_value": 439,
+          "max_series": "Friday",
+          "min_series": "Sunday"
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The calls distribution is approximately symmetric across sentiments.",
+        "data_points": {
+          "skewness": 0.30677219208170836
+        }
+      }
+    ],
+    "175": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing calls across day, Negative leads in 7 out of 7 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "Negative",
+          "won_categories": [
+            "Friday",
+            "Monday",
+            "Saturday",
+            "Sunday",
+            "Thursday",
+            "Tuesday",
+            "Wednesday"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "relationship_consistency",
+        "subtype": "mostly_stable",
+        "importance": 0.95,
+        "description": "In the Bar comparing calls across day, the relationship landscape demonstrates strong overall stability with 10 very stable relationships and 8 moderately stable relationships. The most reliable relationship between Negative and Very Negative shows 98% consistency, contributing to an overall relationship consistency of 90% across all series pairs, indicating predominantly stable interaction patterns.",
+        "data_points": {
+          "pattern_type": "mostly_stable",
+          "total_relationships": 20,
+          "avg_consistency": 90.15190647520086,
+          "most_stable_pair": [
+            "Negative",
+            "Very Negative"
+          ],
+          "relationship_hubs": [
+            "Neutral",
+            "Very Positive",
+            "Negative",
+            "Very Negative",
+            "Positive"
+          ]
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Neutral, Negative consistently perform above average while Very Positive, Very Negative, Positive consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing calls by day, the highest value overall is 1869.0 for Negative in the Friday category, which is 99% above the overall average.",
+        "data_points": {
+          "category": "Friday",
+          "series": "Negative",
+          "value": 1869
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing calls by day, the lowest value overall is 406.0 for Very Positive in the Sunday category, which is 57% below the overall average.",
+        "data_points": {
+          "category": "Sunday",
+          "series": "Very Positive",
+          "value": 406
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The calls distribution is right-skewed, with a few days having unusually high values.",
+        "data_points": {
+          "skewness": 0.9992558488441613
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_even",
+        "importance": 0.7,
+        "description": "The distribution is moderately even across days, with some variation but no dominant categories.",
+        "data_points": {
+          "gini": 0.20542445902281403,
+          "cv": 0.12294612886882549,
+          "normalized_entropy": 0.9962543283061012
+        }
+      }
+    ],
+    "8": [
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across sentiments, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.450321797207043,
+          "cv": 0.4492514309919447,
+          "normalized_entropy": 0.9370883438527196
+        }
+      },
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 5 categories in the Bar of sentiment, the average calls is 6588.0 with a standard deviation of 2959.7 (45% coefficient of variation).",
+        "data_points": {
+          "average": 6588.0,
+          "std_dev": 2959.6684273749315,
+          "cv": 44.92514309919447
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The calls distribution is approximately symmetric across sentiments.",
+        "data_points": {
+          "skewness": 0.31483428498154614
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing calls by sentiment, Negative has the highest value at 11063.0, which is 68% above the average of 6588.0.",
+        "data_points": {
+          "category": "Negative",
+          "value": 11063,
+          "average": 6588.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing calls by sentiment, Very Positive has the lowest value at 3169.0, which is 52% below the average of 6588.0.",
+        "data_points": {
+          "category": "Very Positive",
+          "value": 3169,
+          "average": 6588.0
+        }
+      }
+    ]
+  }
+}

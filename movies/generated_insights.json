@@ -1,0 +1,1506 @@
+{
+  "timestamp": "2025-08-20 01:19:50",
+  "levels": {
+    "1": [
+      {
+        "title": "Bar Chart: In the Bar showing movies across all categories in Person, SAMUEL L",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "category": "SAMUEL L. JACKSON",
+            "value": 64,
+            "avg_value": 51.2,
+            "z_score": 2.4207023183111476,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:SAMUEL L. JACKSON"
+            ],
+            "measure": [
+              "movies:64"
+            ]
+          },
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2. Furthermore, in the Bar showing movies by Person, MICHAEL PE\ufffdA has the lowest value at 46.0, which is 10% below the average of 51.2. In addition, across all 20 categories in the Bar of Person, the average movies is 51.2 with a standard deviation of 5.3 (10% coefficient of variation).",
+        "charts": [
+          5
+        ],
+        "entities": [
+          "MICHAEL PE\ufffdA",
+          "SAMUEL L. JACKSON"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 4,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing movies across all categories in Person, J",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing movies across all categories in Person, J.K. SIMMONS stands out with a value of 63.0, which is 2.2 standard deviations above the mean of 51.2.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "category": "J.K. SIMMONS",
+            "value": 63,
+            "avg_value": 51.2,
+            "z_score": 2.231584949693089,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:J.K. SIMMONS"
+            ],
+            "measure": [
+              "movies:63"
+            ]
+          },
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "In the Bar showing movies across all categories in Person, J.K. SIMMONS stands out with a value of 63.0, which is 2.2 standard deviations above the mean of 51.2. Furthermore, in the Bar showing movies by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2. In addition, across all 20 categories in the Bar of Person, the average movies is 51.2 with a standard deviation of 5.3 (10% coefficient of variation).",
+        "charts": [
+          5
+        ],
+        "entities": [
+          "J.K. SIMMONS",
+          "MICHAEL PE\ufffdA",
+          "SAMUEL L. JACKSON"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 6,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "Person",
+            "category": "RON DEAN",
+            "value": 2771597.0,
+            "avg_value": 2041106.8366666667,
+            "z_score": 2.8194637987090805,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:RON DEAN"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            6
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8. Furthermore, in the Bar showing votes by Person, MIRANDA NOLAN has the lowest value at 1771212.0, which is 13% below the average of 2041106.8. In addition, across all 20 categories in the Bar of Person, the average votes is 2041106.8 with a standard deviation of 259088.3 (13% coefficient of variation).",
+        "charts": [
+          6
+        ],
+        "entities": [
+          "MIRANDA NOLAN",
+          "RON DEAN"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 4,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "TITLE",
+            "category": "THE DARK KNIGHT",
+            "value": 2771597.0,
+            "avg_value": 1658210.3,
+            "z_score": 2.891261411131984,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE DARK KNIGHT"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            3
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3. Furthermore, in the Bar showing votes by TITLE, GUARDIANS OF THE GALAXY has the lowest value at 1240886.0, which is 25% below the average of 1658210.3. In addition, across all 20 categories in the Bar of TITLE, the average votes is 1658210.3 with a standard deviation of 385086.8 (23% coefficient of variation).",
+        "charts": [
+          3
+        ],
+        "entities": [
+          "GUARDIANS OF THE GALAXY",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 4,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing votes across all categories in TITLE, INCEPTION stands out with a value of 2460667",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in TITLE, INCEPTION stands out with a value of 2460667.0, which is 2.1 standard deviations above the mean of 1658210.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "TITLE",
+            "category": "INCEPTION",
+            "value": 2460667.0,
+            "avg_value": 1658210.3,
+            "z_score": 2.0838331289697596,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:INCEPTION"
+            ],
+            "measure": [
+              "votes:2460667.0"
+            ]
+          },
+          "view_attribution": [
+            3
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in TITLE, INCEPTION stands out with a value of 2460667.0, which is 2.1 standard deviations above the mean of 1658210.3. Furthermore, in the Bar showing votes by TITLE, THE DARK KNIGHT has the highest value at 2771597.0, which is 67% above the average of 1658210.3. In addition, across all 20 categories in the Bar of TITLE, the average votes is 1658210.3 with a standard deviation of 385086.8 (23% coefficient of variation).",
+        "charts": [
+          3
+        ],
+        "entities": [
+          "GUARDIANS OF THE GALAXY",
+          "INCEPTION",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 6,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "Rating",
+            "dimension_name": "TITLE",
+            "category": "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+            "value": 8.9,
+            "avg_value": 8.309999999999999,
+            "z_score": 2.18518518518519,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE LORD OF THE RINGS: THE RETURN OF THE KING"
+            ],
+            "measure": [
+              "Rating:8.9"
+            ]
+          },
+          "view_attribution": [
+            2
+          ]
+        },
+        "narrative": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. Furthermore, in the Bar showing Rating by TITLE, MAD MAX: FURY ROAD has the lowest value at 8.0, which is 4% below the average of 8.3. In addition, across all 20 categories in the Bar of TITLE, the average Rating is 8.3 with a standard deviation of 0.3 (3% coefficient of variation).",
+        "charts": [
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+          "MAD MAX: FURY ROAD"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 4,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "Rating",
+            "dimension_name": "TITLE",
+            "category": "THE DARK KNIGHT",
+            "value": 8.9,
+            "avg_value": 8.309999999999999,
+            "z_score": 2.18518518518519,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE DARK KNIGHT"
+            ],
+            "measure": [
+              "Rating:8.9"
+            ]
+          },
+          "view_attribution": [
+            2
+          ]
+        },
+        "narrative": "In the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. Furthermore, in the Bar showing Rating by TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING has the highest value at 8.9, which is 7% above the average of 8.3. In addition, across all 20 categories in the Bar of TITLE, the average Rating is 8.3 with a standard deviation of 0.3 (3% coefficient of variation).",
+        "charts": [
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+          "MAD MAX: FURY ROAD",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 6,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "outlier",
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of movies over Year, the largest single decrease of 1430",
+        "primary_fact": {
+          "type": "change",
+          "subtype": "decrease",
+          "description": "In the Line of movies over Year, the largest single decrease of 1430.0 (27%) occurs between 2019 and 2020.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "movies",
+            "time_dimension": "Year",
+            "from_period": 2019,
+            "to_period": 2020,
+            "change": 1430,
+            "change_percentage": 26.92524948220674,
+            "change_type": "decrease"
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            1
+          ]
+        },
+        "narrative": "In the Line of movies over Year, the largest single decrease of 1430.0 (27%) occurs between 2019 and 2020.",
+        "charts": [
+          1
+        ],
+        "entities": [],
+        "importance": 0.9,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "change"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of votes over Year, the largest single decrease of 70011",
+        "primary_fact": {
+          "type": "change",
+          "subtype": "decrease",
+          "description": "In the Line of votes over Year, the largest single decrease of 70011.4 (55%) occurs between 2019 and 2020.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "votes",
+            "time_dimension": "Year",
+            "from_period": 2019,
+            "to_period": 2020,
+            "change": 70011.4246319533,
+            "change_percentage": 54.972564118864575,
+            "change_type": "decrease"
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            10
+          ]
+        },
+        "narrative": "In the Line of votes over Year, the largest single decrease of 70011.4 (55%) occurs between 2019 and 2020. Furthermore, the Line tracking votes over Year shows a weak downward trend with a correlation coefficient of R\u00b2 = 0.37.",
+        "charts": [
+          10
+        ],
+        "entities": [],
+        "importance": 0.9,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "trend",
+          "change"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of average rating over Year, the largest single decrease of 0",
+        "primary_fact": {
+          "type": "change",
+          "subtype": "decrease",
+          "description": "In the Line of average rating over Year, the largest single decrease of 0.3 (5%) occurs between 2019 and 2020.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "average rating",
+            "time_dimension": "Year",
+            "from_period": 2019,
+            "to_period": 2020,
+            "change": 0.3092422221608775,
+            "change_percentage": 4.959956518143746,
+            "change_type": "decrease"
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            11
+          ]
+        },
+        "narrative": "In the Line of average rating over Year, the largest single decrease of 0.3 (5%) occurs between 2019 and 2020.",
+        "charts": [
+          11
+        ],
+        "entities": [],
+        "importance": 0.9,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "change"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: The Line tracking votes over Year shows a weak downward trend with a correlation coefficient of R\u00b2 = 0",
+        "primary_fact": {
+          "type": "trend",
+          "subtype": "downward",
+          "description": "The Line tracking votes over Year shows a weak downward trend with a correlation coefficient of R\u00b2 = 0.37.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "votes",
+            "time_dimension": "Year",
+            "direction": "downward",
+            "strength": "weak",
+            "slope": -2658.8479264624184,
+            "r_squared": 0.3716799722015065
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            10
+          ]
+        },
+        "narrative": "The Line tracking votes over Year shows a weak downward trend with a correlation coefficient of R\u00b2 = 0.37. Furthermore, in the Line of votes over Year, the largest single decrease of 70011.4 (55%) occurs between 2019 and 2020.",
+        "charts": [
+          10
+        ],
+        "entities": [],
+        "importance": 0.8743359944403013,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "trend",
+          "change"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: Across all 20 categories in the Bar of Person, the average votes is 2041106",
+        "primary_fact": {
+          "type": "distribution",
+          "subtype": "average",
+          "description": "Across all 20 categories in the Bar of Person, the average votes is 2041106.8 with a standard deviation of 259088.3 (13% coefficient of variation).",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "Person",
+            "avg_value": 2041106.8366666667,
+            "std_dev": 259088.32866298745,
+            "cv": 12.69352118216922,
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            6
+          ]
+        },
+        "narrative": "Across all 20 categories in the Bar of Person, the average votes is 2041106.8 with a standard deviation of 259088.3 (13% coefficient of variation). Furthermore, in the Bar showing votes by Person, RON DEAN has the highest value at 2771597.0, which is 36% above the average of 2041106.8. In addition, in the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8.",
+        "charts": [
+          6
+        ],
+        "entities": [
+          "MIRANDA NOLAN",
+          "RON DEAN"
+        ],
+        "importance": 0.855,
+        "supporting_facts_count": 6,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme",
+          "outlier",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: The Bar shows a consistent decreasing pattern in movies across all 20 categories in Person, indicating a negative relationship between category order and values",
+        "primary_fact": {
+          "type": "pattern",
+          "subtype": "decreasing",
+          "description": "The Bar shows a consistent decreasing pattern in movies across all 20 categories in Person, indicating a negative relationship between category order and values.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "pattern_type": "decreasing",
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "The Bar shows a consistent decreasing pattern in movies across all 20 categories in Person, indicating a negative relationship between category order and values.",
+        "charts": [
+          5
+        ],
+        "entities": [],
+        "importance": 0.85,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "pattern"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: The Bar shows a consistent decreasing pattern in votes across all 20 categories in Person, indicating a negative relationship between category order and values",
+        "primary_fact": {
+          "type": "pattern",
+          "subtype": "decreasing",
+          "description": "The Bar shows a consistent decreasing pattern in votes across all 20 categories in Person, indicating a negative relationship between category order and values.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "Person",
+            "pattern_type": "decreasing",
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            6
+          ]
+        },
+        "narrative": "The Bar shows a consistent decreasing pattern in votes across all 20 categories in Person, indicating a negative relationship between category order and values.",
+        "charts": [
+          6
+        ],
+        "entities": [],
+        "importance": 0.85,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "pattern"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: The Bar shows a consistent decreasing pattern in average rating across all 20 categories in Person, indicating a negative relationship between category order and values",
+        "primary_fact": {
+          "type": "pattern",
+          "subtype": "decreasing",
+          "description": "The Bar shows a consistent decreasing pattern in average rating across all 20 categories in Person, indicating a negative relationship between category order and values.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "average rating",
+            "dimension_name": "Person",
+            "pattern_type": "decreasing",
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            4
+          ]
+        },
+        "narrative": "The Bar shows a consistent decreasing pattern in average rating across all 20 categories in Person, indicating a negative relationship between category order and values.",
+        "charts": [
+          4
+        ],
+        "entities": [],
+        "importance": 0.85,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "pattern"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: The Bar shows a consistent decreasing pattern in votes across all 20 categories in TITLE, indicating a negative relationship between category order and values",
+        "primary_fact": {
+          "type": "pattern",
+          "subtype": "decreasing",
+          "description": "The Bar shows a consistent decreasing pattern in votes across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "TITLE",
+            "pattern_type": "decreasing",
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            3
+          ]
+        },
+        "narrative": "The Bar shows a consistent decreasing pattern in votes across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+        "charts": [
+          3
+        ],
+        "entities": [],
+        "importance": 0.85,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "pattern"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: The Bar shows a consistent decreasing pattern in Rating across all 20 categories in TITLE, indicating a negative relationship between category order and values",
+        "primary_fact": {
+          "type": "pattern",
+          "subtype": "decreasing",
+          "description": "The Bar shows a consistent decreasing pattern in Rating across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "Rating",
+            "dimension_name": "TITLE",
+            "pattern_type": "decreasing",
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            2
+          ]
+        },
+        "narrative": "The Bar shows a consistent decreasing pattern in Rating across all 20 categories in TITLE, indicating a negative relationship between category order and values.",
+        "charts": [
+          2
+        ],
+        "entities": [],
+        "importance": 0.85,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "pattern"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of movies over Year, the movies peak at 2014 with value 5936",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "maximum",
+          "description": "In the Line of movies over Year, the movies peak at 2014 with value 5936.0.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "movies",
+            "time_dimension": "Year",
+            "time_point": 2014,
+            "value": 5936
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2014"
+            ]
+          },
+          "view_attribution": [
+            1
+          ]
+        },
+        "narrative": "In the Line of movies over Year, the movies peak at 2014 with value 5936.0.",
+        "charts": [
+          1
+        ],
+        "entities": [
+          2014
+        ],
+        "importance": 0.7,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: Across all 20 categories in the Bar of Person, the average average rating is 8",
+        "primary_fact": {
+          "type": "distribution",
+          "subtype": "average",
+          "description": "Across all 20 categories in the Bar of Person, the average average rating is 8.6 with a standard deviation of 0.2 (3% coefficient of variation).",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "average rating",
+            "dimension_name": "Person",
+            "avg_value": 8.576666666666668,
+            "std_dev": 0.22659312532476453,
+            "cv": 2.641971923724421,
+            "category_count": 20
+          },
+          "contextual_entities": {},
+          "view_attribution": [
+            4
+          ]
+        },
+        "narrative": "Across all 20 categories in the Bar of Person, the average average rating is 8.6 with a standard deviation of 0.2 (3% coefficient of variation). Furthermore, in the Bar showing average rating by Person, JASON FITCH has the highest value at 8.9, which is 4% above the average of 8.6.",
+        "charts": [
+          4
+        ],
+        "entities": [
+          "SAM COMERY",
+          "JASON FITCH"
+        ],
+        "importance": 0.7,
+        "supporting_facts_count": 4,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of votes over Year, the votes peak at 2013 with value 178273",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "maximum",
+          "description": "In the Line of votes over Year, the votes peak at 2013 with value 178273.3.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "votes",
+            "time_dimension": "Year",
+            "time_point": 2013,
+            "value": 178273.34026499817
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2013"
+            ]
+          },
+          "view_attribution": [
+            10
+          ]
+        },
+        "narrative": "In the Line of votes over Year, the votes peak at 2013 with value 178273.3.",
+        "charts": [
+          10
+        ],
+        "entities": [
+          2013
+        ],
+        "importance": 0.7,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of average rating over Year, the average rating peak at 2019 with value 6",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "maximum",
+          "description": "In the Line of average rating over Year, the average rating peak at 2019 with value 6.2.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "average rating",
+            "time_dimension": "Year",
+            "time_point": 2019,
+            "value": 6.234776878177368
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2019"
+            ]
+          },
+          "view_attribution": [
+            11
+          ]
+        },
+        "narrative": "In the Line of average rating over Year, the average rating peak at 2019 with value 6.2.",
+        "charts": [
+          11
+        ],
+        "entities": [
+          2019
+        ],
+        "importance": 0.7,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of movies over Year, the trough is at 2000 with value 3252",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "minimum",
+          "description": "In the Line of movies over Year, the trough is at 2000 with value 3252.0.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "movies",
+            "time_dimension": "Year",
+            "time_point": 2000,
+            "value": 3252
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2000"
+            ]
+          },
+          "view_attribution": [
+            1
+          ]
+        },
+        "narrative": "In the Line of movies over Year, the trough is at 2000 with value 3252.0.",
+        "charts": [
+          1
+        ],
+        "entities": [
+          2000
+        ],
+        "importance": 0.65,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Line Chart: In the Line of average rating over Year, the trough is at 2020 with value 5",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "minimum",
+          "description": "In the Line of average rating over Year, the trough is at 2020 with value 5.9.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "average rating",
+            "time_dimension": "Year",
+            "time_point": 2020,
+            "value": 5.925534656016491
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2020"
+            ]
+          },
+          "view_attribution": [
+            11
+          ]
+        },
+        "narrative": "In the Line of average rating over Year, the trough is at 2020 with value 5.9.",
+        "charts": [
+          11
+        ],
+        "entities": [
+          2020
+        ],
+        "importance": 0.65,
+        "supporting_facts_count": 0,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Bar Chart: In the Bar showing average rating by Person, JASON FITCH has the highest value at 8",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "maximum",
+          "description": "In the Bar showing average rating by Person, JASON FITCH has the highest value at 8.9, which is 4% above the average of 8.6.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "average rating",
+            "dimension_name": "Person",
+            "category": "JASON FITCH",
+            "value": 8.9,
+            "avg_value": 8.576666666666668,
+            "percentage_above_avg": 3.769918383210249
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:JASON FITCH"
+            ],
+            "measure": [
+              "average rating:8.9"
+            ]
+          },
+          "view_attribution": [
+            4
+          ]
+        },
+        "narrative": "In the Bar showing average rating by Person, JASON FITCH has the highest value at 8.9, which is 4% above the average of 8.6. Furthermore, across all 20 categories in the Bar of Person, the average average rating is 8.6 with a standard deviation of 0.2 (3% coefficient of variation).",
+        "charts": [
+          4
+        ],
+        "entities": [
+          "JASON FITCH"
+        ],
+        "importance": 0.63,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 1,
+        "fact_types_involved": [
+          "extreme",
+          "distribution"
+        ],
+        "has_template_variables": true
+      }
+    ],
+    "2": [
+      {
+        "title": "person:samuel l. jackson: In the Bar showing movies across all categories in Person, SAMUEL L",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "category": "SAMUEL L. JACKSON",
+            "value": 64,
+            "avg_value": 51.2,
+            "z_score": 2.4207023183111476,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:SAMUEL L. JACKSON"
+            ],
+            "measure": [
+              "movies:64"
+            ]
+          },
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2. Additionally, in the Bar showing movies by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2.",
+        "charts": [
+          5
+        ],
+        "entities": [
+          "SAMUEL L. JACKSON"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 1,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "movies:64: In the Bar showing movies across all categories in Person, SAMUEL L",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "category": "SAMUEL L. JACKSON",
+            "value": 64,
+            "avg_value": 51.2,
+            "z_score": 2.4207023183111476,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:SAMUEL L. JACKSON"
+            ],
+            "measure": [
+              "movies:64"
+            ]
+          },
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "In the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2. Additionally, in the Bar showing movies by Person, SAMUEL L. JACKSON has the highest value at 64.0, which is 25% above the average of 51.2.",
+        "charts": [
+          5
+        ],
+        "entities": [
+          "SAMUEL L. JACKSON"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 1,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "person:ron dean: In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "Person",
+            "category": "RON DEAN",
+            "value": 2771597.0,
+            "avg_value": 2041106.8366666667,
+            "z_score": 2.8194637987090805,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:RON DEAN"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            6
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8. Additionally, in the Bar showing votes by Person, RON DEAN has the highest value at 2771597.0, which is 36% above the average of 2041106.8.",
+        "charts": [
+          6
+        ],
+        "entities": [
+          "RON DEAN"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 1,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "votes:2771597.0: In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "Person",
+            "category": "RON DEAN",
+            "value": 2771597.0,
+            "avg_value": 2041106.8366666667,
+            "z_score": 2.8194637987090805,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:RON DEAN"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            6
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in Person, RON DEAN stands out with a value of 2771597.0, which is 2.8 standard deviations above the mean of 2041106.8. Furthermore, in the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3. In addition, in the Bar showing votes by Person, RON DEAN has the highest value at 2771597.0, which is 36% above the average of 2041106.8.",
+        "charts": [
+          6,
+          3
+        ],
+        "entities": [
+          "RON DEAN",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 3,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "title:the dark knight: In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "TITLE",
+            "category": "THE DARK KNIGHT",
+            "value": 2771597.0,
+            "avg_value": 1658210.3,
+            "z_score": 2.891261411131984,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE DARK KNIGHT"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            3
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3. Furthermore, in the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. In addition, in the Bar showing votes by TITLE, THE DARK KNIGHT has the highest value at 2771597.0, which is 67% above the average of 1658210.3.",
+        "charts": [
+          3,
+          2
+        ],
+        "entities": [
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "title:the lord of the rings: the return of the king: In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "Rating",
+            "dimension_name": "TITLE",
+            "category": "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+            "value": 8.9,
+            "avg_value": 8.309999999999999,
+            "z_score": 2.18518518518519,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE LORD OF THE RINGS: THE RETURN OF THE KING"
+            ],
+            "measure": [
+              "Rating:8.9"
+            ]
+          },
+          "view_attribution": [
+            2
+          ]
+        },
+        "narrative": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. Additionally, in the Bar showing Rating by TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING has the highest value at 8.9, which is 7% above the average of 8.3.",
+        "charts": [
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 1,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "rating:8.9: In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "Rating",
+            "dimension_name": "TITLE",
+            "category": "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+            "value": 8.9,
+            "avg_value": 8.309999999999999,
+            "z_score": 2.18518518518519,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE LORD OF THE RINGS: THE RETURN OF THE KING"
+            ],
+            "measure": [
+              "Rating:8.9"
+            ]
+          },
+          "view_attribution": [
+            2
+          ]
+        },
+        "narrative": "In the Bar showing Rating across all categories in TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. Furthermore, in the Bar showing Rating across all categories in TITLE, THE DARK KNIGHT stands out with a value of 8.9, which is 2.2 standard deviations above the mean of 8.3. In addition, in the Bar showing Rating by TITLE, THE LORD OF THE RINGS: THE RETURN OF THE KING has the highest value at 8.9, which is 7% above the average of 8.3.",
+        "charts": [
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "outlier",
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "year:2020: In the Line of votes over Year, the trough is at 2020 with value 57345",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "minimum",
+          "description": "In the Line of votes over Year, the trough is at 2020 with value 57345.6.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "votes",
+            "time_dimension": "Year",
+            "time_point": 2020,
+            "value": 57345.604741046125
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2020"
+            ]
+          },
+          "view_attribution": [
+            10
+          ]
+        },
+        "narrative": "In the Line of votes over Year, the trough is at 2020 with value 57345.6. Additionally, in the Line of average rating over Year, the trough is at 2020 with value 5.9.",
+        "charts": [
+          10,
+          11
+        ],
+        "entities": [
+          2020
+        ],
+        "importance": 0.65,
+        "supporting_facts_count": 1,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 2,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      }
+    ],
+    "3": [
+      {
+        "title": "Relationship between THE LORD OF THE RINGS: THE RETURN OF THE KING and SAMUEL L. JACKSON",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "votes",
+            "dimension_name": "TITLE",
+            "category": "THE DARK KNIGHT",
+            "value": 2771597.0,
+            "avg_value": 1658210.3,
+            "z_score": 2.891261411131984,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "TITLE:THE DARK KNIGHT"
+            ],
+            "measure": [
+              "votes:2771597.0"
+            ]
+          },
+          "view_attribution": [
+            3
+          ]
+        },
+        "narrative": "In the Bar showing votes across all categories in TITLE, THE DARK KNIGHT stands out with a value of 2771597.0, which is 2.9 standard deviations above the mean of 1658210.3. Furthermore, in the Bar showing movies across all categories in Person, SAMUEL L. JACKSON stands out with a value of 64.0, which is 2.4 standard deviations above the mean of 51.2.",
+        "charts": [
+          3,
+          5,
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+          "SAMUEL L. JACKSON",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 2,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 3,
+        "fact_types_involved": [
+          "outlier"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Relationship between J.K. SIMMONS and INCEPTION",
+        "primary_fact": {
+          "type": "outlier",
+          "subtype": "high",
+          "description": "In the Bar showing movies across all categories in Person, J.K. SIMMONS stands out with a value of 63.0, which is 2.2 standard deviations above the mean of 51.2.",
+          "template_variables": {
+            "chart_type": "Bar",
+            "metric_name": "movies",
+            "dimension_name": "Person",
+            "category": "J.K. SIMMONS",
+            "value": 63,
+            "avg_value": 51.2,
+            "z_score": 2.231584949693089,
+            "deviation_type": "above"
+          },
+          "contextual_entities": {
+            "category": [
+              "Person:J.K. SIMMONS"
+            ],
+            "measure": [
+              "movies:63"
+            ]
+          },
+          "view_attribution": [
+            5
+          ]
+        },
+        "narrative": "In the Bar showing movies across all categories in Person, J.K. SIMMONS stands out with a value of 63.0, which is 2.2 standard deviations above the mean of 51.2. Furthermore, in the Bar showing votes across all categories in TITLE, INCEPTION stands out with a value of 2460667.0, which is 2.1 standard deviations above the mean of 1658210.3.",
+        "charts": [
+          5,
+          3,
+          2,
+          6
+        ],
+        "entities": [
+          "J.K. SIMMONS",
+          "INCEPTION",
+          "RON DEAN",
+          "THE DARK KNIGHT"
+        ],
+        "importance": 0.95,
+        "supporting_facts_count": 3,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 3,
+        "fact_types_involved": [
+          "outlier"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Relationship between THE LORD OF THE RINGS: THE RETURN OF THE KING and 2019",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "maximum",
+          "description": "In the Line of votes over Year, the votes peak at 2013 with value 178273.3.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "votes",
+            "time_dimension": "Year",
+            "time_point": 2013,
+            "value": 178273.34026499817
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2013"
+            ]
+          },
+          "view_attribution": [
+            10
+          ]
+        },
+        "narrative": "In the Line of votes over Year, the votes peak at 2013 with value 178273.3. Furthermore, in the Line of average rating over Year, the average rating peak at 2019 with value 6.2.",
+        "charts": [
+          10,
+          11,
+          1,
+          5,
+          6,
+          2
+        ],
+        "entities": [
+          "THE LORD OF THE RINGS: THE RETURN OF THE KING",
+          2019,
+          "RON DEAN",
+          "SAMUEL L. JACKSON",
+          2013,
+          2014
+        ],
+        "importance": 0.7,
+        "supporting_facts_count": 5,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 3,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      },
+      {
+        "title": "Relationship between MICHAEL PE\ufffdA and 2000",
+        "primary_fact": {
+          "type": "extreme",
+          "subtype": "minimum",
+          "description": "In the Line of average rating over Year, the trough is at 2020 with value 5.9.",
+          "template_variables": {
+            "chart_type": "Line",
+            "metric_name": "average rating",
+            "time_dimension": "Year",
+            "time_point": 2020,
+            "value": 5.925534656016491
+          },
+          "contextual_entities": {
+            "x": [
+              "Year:2020"
+            ]
+          },
+          "view_attribution": [
+            11
+          ]
+        },
+        "narrative": "In the Line of average rating over Year, the trough is at 2020 with value 5.9. Furthermore, in the Line of votes over Year, the trough is at 2020 with value 57345.6.",
+        "charts": [
+          11,
+          10,
+          1,
+          3,
+          4,
+          5
+        ],
+        "entities": [
+          2000,
+          2020,
+          "SAM COMERY",
+          "GUARDIANS OF THE GALAXY",
+          "MICHAEL PE\ufffdA"
+        ],
+        "importance": 0.65,
+        "supporting_facts_count": 5,
+        "contrasting_facts_count": 0,
+        "aggregation_level": 3,
+        "fact_types_involved": [
+          "extreme"
+        ],
+        "has_template_variables": true
+      }
+    ]
+  }
+}

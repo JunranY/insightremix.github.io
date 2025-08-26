@@ -1,0 +1,648 @@
+{
+  "timestamp": "2025-08-26 11:54:03",
+  "total_facts": 98,
+  "charts": {
+    "0": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Department, Retention leads in 3 out of 3 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "Retention",
+          "won_categories": [
+            "HR",
+            "R & D",
+            "Sales"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Department, the R & D category shows the most pronounced disparities between series with a range of 695.0 units for the absolute range, which is 4.6x higher than the average disparity in other categories. The gap ranges from Attrition (133.0) to Retention (828.0).",
+        "data_points": {
+          "category": "R & D",
+          "disparity_measure": "range",
+          "disparity_value": 695,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Department, the R & D category shows the most pronounced disparities between series with a standard deviation of 347.50, which is 4.6x higher than the average disparity in other categories. The gap ranges from Attrition (133.0) to Retention (828.0).",
+        "data_points": {
+          "category": "R & D",
+          "disparity_measure": "std_dev",
+          "disparity_value": 347.5,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "very_uneven",
+        "importance": 0.85,
+        "description": "The distribution is highly uneven across Departments, with a few categories dominating the total.",
+        "data_points": {
+          "gini": 0.6736990154711673,
+          "cv": 0.6360260912088374,
+          "normalized_entropy": 0.7669452600094419
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Department, the highest value overall is 828.0 for Retention in the R & D category, which is 238% above the overall average.",
+        "data_points": {
+          "category": "R & D",
+          "series": "Retention",
+          "value": 828
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Department, the lowest value overall is 12.0 for Attrition in the HR category, which is 95% below the overall average.",
+        "data_points": {
+          "category": "HR",
+          "series": "Attrition",
+          "value": 12
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The headcount distribution is approximately symmetric across Departments.",
+        "data_points": {
+          "skewness": -0.37077107465567977
+        }
+      }
+    ],
+    "1": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Job Role, Retention leads in 9 out of 9 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "Retention",
+          "won_categories": [
+            "Healthcare Representative",
+            "Human Resources",
+            "Laboratory Technician",
+            "Manager",
+            "Manufacturing Director",
+            "Research Director",
+            "Research Scientist",
+            "Sales Executive",
+            "Sales Representative"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "category_clustering",
+        "subtype": "similar_behavior",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Job Role, Human Resources and Sales Representative exhibit very similar patterns across all series (similarity score: 1.00), suggesting these 2 categories behave as a cohesive group and may share common underlying characteristics.",
+        "data_points": {
+          "categories": [
+            "Human Resources",
+            "Sales Representative"
+          ],
+          "similarity": 0.9999999999999999,
+          "cluster_size": 2
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.8326530612244898,
+        "description": "In the Bar comparing headcount across Job Role, the Sales Executive category shows the most pronounced disparities between series with a range of 212.0 units for the absolute range, which is 2.2x higher than the average disparity in other categories. The gap ranges from Attrition (57.0) to Retention (269.0).",
+        "data_points": {
+          "category": "Sales Executive",
+          "disparity_measure": "range",
+          "disparity_value": 212,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.8326530612244898,
+        "description": "In the Bar comparing headcount across Job Role, the Sales Executive category shows the most pronounced disparities between series with a standard deviation of 106.00, which is 2.2x higher than the average disparity in other categories. The gap ranges from Attrition (57.0) to Retention (269.0).",
+        "data_points": {
+          "category": "Sales Executive",
+          "disparity_measure": "std_dev",
+          "disparity_value": 106.0,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Job Role, the highest value overall is 269.0 for Retention in the Sales Executive category, which is 229% above the overall average.",
+        "data_points": {
+          "category": "Sales Executive",
+          "series": "Retention",
+          "value": 269
+        }
+      },
+      {
+        "type": "distribution_concentration",
+        "subtype": "pareto",
+        "importance": 0.8,
+        "description": "Just 44% of Job Roles (Laboratory Technician, Sales Executive, Research Scientist, and 1 others) account for 80% of the total headcount.",
+        "data_points": {
+          "concentration_percentage": 44,
+          "categories": [
+            "Laboratory Technician",
+            "Sales Executive",
+            "Research Scientist",
+            "Sales Representative"
+          ]
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Job Role, the lowest value overall is 2.0 for Attrition in the Research Director category, which is 98% below the overall average.",
+        "data_points": {
+          "category": "Research Director",
+          "series": "Attrition",
+          "value": 2
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Job Roles, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.5752461322081575,
+          "cv": 0.8495170499018997,
+          "normalized_entropy": 0.8280470760673178
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The headcount distribution is approximately symmetric across Job Roles.",
+        "data_points": {
+          "skewness": 0.4635762223903273
+        }
+      }
+    ],
+    "3": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Gender, the highest value overall is 732.0 for Retention in the Male category, which is 99% above the overall average.",
+        "data_points": {
+          "category": "Male",
+          "series": "Retention",
+          "value": 732
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Gender, the lowest value overall is 87.0 for Attrition in the Female category, which is 76% below the overall average.",
+        "data_points": {
+          "category": "Female",
+          "series": "Attrition",
+          "value": 87
+        }
+      }
+    ],
+    "2": [
+      {
+        "type": "temporal_leadership",
+        "subtype": "stability_pattern",
+        "importance": 0.85,
+        "description": "In the Line tracking headcount over Attrition Date, Attrition maintains leadership in 100% of time periods (116 out of 116).",
+        "data_points": {
+          "dominant_series": "Attrition",
+          "leadership_percentage": 100.0,
+          "challenger": null,
+          "total_periods": 116
+        }
+      }
+    ],
+    "4": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Age group, Retention leads in 5 out of 5 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "Retention",
+          "won_categories": [
+            "25-34",
+            "35-44",
+            "45-55",
+            "< 25",
+            "> 55"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.9436762225969645,
+        "description": "In the Bar comparing headcount across Age group, the 35-44 category shows the most pronounced disparities between series with a range of 403.0 units for the absolute range, which is 2.7x higher than the average disparity in other categories. The gap ranges from Attrition (51.0) to Retention (454.0).",
+        "data_points": {
+          "category": "35-44",
+          "disparity_measure": "range",
+          "disparity_value": 403,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.9436762225969645,
+        "description": "In the Bar comparing headcount across Age group, the 35-44 category shows the most pronounced disparities between series with a standard deviation of 201.50, which is 2.7x higher than the average disparity in other categories. The gap ranges from Attrition (51.0) to Retention (454.0).",
+        "data_points": {
+          "category": "35-44",
+          "disparity_measure": "std_dev",
+          "disparity_value": 201.5,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Age group, the highest value overall is 454.0 for Retention in the 35-44 category, which is 209% above the overall average.",
+        "data_points": {
+          "category": "35-44",
+          "series": "Retention",
+          "value": 454
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Age group, the lowest value overall is 8.0 for Attrition in the > 55 category, which is 95% below the overall average.",
+        "data_points": {
+          "category": "> 55",
+          "series": "Attrition",
+          "value": 8
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Age groups, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.5898734177215189,
+          "cv": 0.7430953573924494,
+          "normalized_entropy": 0.8357079134377844
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "positive_skew",
+        "importance": 0.75,
+        "description": "The headcount distribution is right-skewed, with a few Age groups having unusually high values.",
+        "data_points": {
+          "skewness": 0.916904942292109
+        }
+      }
+    ],
+    "5": [
+      {
+        "type": "chart_dominance",
+        "subtype": "series_majority",
+        "importance": 0.95,
+        "description": "In the Bar comparing headcount across Education, Retention leads in 5 out of 5 categories (100%), showing complete dominance across all categories.",
+        "data_points": {
+          "dominant_series": "Retention",
+          "won_categories": [
+            "Associates Degree",
+            "Bachelor's Degree",
+            "Doctoral Degree",
+            "High School",
+            "Master's Degree"
+          ],
+          "exceptions": {}
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "absolute range (range)",
+        "importance": 0.8810289389067524,
+        "description": "In the Bar comparing headcount across Education, the Bachelor's Degree category shows the most pronounced disparities between series with a range of 374.0 units for the absolute range, which is 2.4x higher than the average disparity in other categories. The gap ranges from Attrition (99.0) to Retention (473.0).",
+        "data_points": {
+          "category": "Bachelor's Degree",
+          "disparity_measure": "range",
+          "disparity_value": 374,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "variation",
+        "subtype": "standard deviation (std_dev)",
+        "importance": 0.8810289389067524,
+        "description": "In the Bar comparing headcount across Education, the Bachelor's Degree category shows the most pronounced disparities between series with a standard deviation of 187.00, which is 2.4x higher than the average disparity in other categories. The gap ranges from Attrition (99.0) to Retention (473.0).",
+        "data_points": {
+          "category": "Bachelor's Degree",
+          "disparity_measure": "std_dev",
+          "disparity_value": 187.0,
+          "max_series": "Retention",
+          "min_series": "Attrition"
+        }
+      },
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, Retention consistently perform above average while Attrition consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Education, the highest value overall is 473.0 for Retention in the Bachelor's Degree category, which is 222% above the overall average.",
+        "data_points": {
+          "category": "Bachelor's Degree",
+          "series": "Retention",
+          "value": 473
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Education, the lowest value overall is 5.0 for Attrition in the Doctoral Degree category, which is 97% below the overall average.",
+        "data_points": {
+          "category": "Doctoral Degree",
+          "series": "Attrition",
+          "value": 5
+        }
+      },
+      {
+        "type": "distribution_evenness",
+        "subtype": "moderately_uneven",
+        "importance": 0.75,
+        "description": "The distribution is moderately uneven across Educations, with noticeable variation in values.",
+        "data_points": {
+          "gini": 0.5628691983122363,
+          "cv": 0.6572805040371861,
+          "normalized_entropy": 0.8507374470198628
+        }
+      },
+      {
+        "type": "distribution_skew",
+        "subtype": "symmetric",
+        "importance": 0.7,
+        "description": "The headcount distribution is approximately symmetric across Educations.",
+        "data_points": {
+          "skewness": 0.3829570636477687
+        }
+      }
+    ],
+    "6": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 3, 4 consistently perform above average while 2 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 391.0 for 3 in the Retention category, which is 113% above the overall average.",
+        "data_points": {
+          "category": "Retention",
+          "series": 3,
+          "value": 391
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 43.0 for 2 in the Attrition category, which is 77% below the overall average.",
+        "data_points": {
+          "category": "Attrition",
+          "series": 2,
+          "value": 43
+        }
+      }
+    ],
+    "7": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 3 consistently perform above average while 4, 1 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 743.0 for 3 in the Retention category, which is 304% above the overall average.",
+        "data_points": {
+          "category": "Retention",
+          "series": 3,
+          "value": 743
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 13.0 for 4 in the Attrition category, which is 93% below the overall average.",
+        "data_points": {
+          "category": "Attrition",
+          "series": 4,
+          "value": 13
+        }
+      }
+    ],
+    "8": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 3 consistently perform above average while 2 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 407.0 for 4 in the Retention category, which is 121% above the overall average.",
+        "data_points": {
+          "category": "Retention",
+          "series": 4,
+          "value": 407
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 46.0 for 2 in the Attrition category, which is 75% below the overall average.",
+        "data_points": {
+          "category": "Attrition",
+          "series": 2,
+          "value": 46
+        }
+      }
+    ],
+    "9": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 4, 3 consistently perform above average while 1, 2 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 388.0 for 3 in the Retention category, which is 111% above the overall average.",
+        "data_points": {
+          "category": "Retention",
+          "series": 3,
+          "value": 388
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 45.0 for 2 in the Attrition category, which is 76% below the overall average.",
+        "data_points": {
+          "category": "Attrition",
+          "series": 2,
+          "value": 45
+        }
+      }
+    ],
+    "10": [
+      {
+        "type": "category_value_consistency",
+        "subtype": "chart_level",
+        "importance": 0.85,
+        "description": "In the Bar, 3 consistently perform above average while 1, 2, 4 consistently perform below average.",
+        "data_points": {}
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_maximum",
+        "importance": 0.8,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the highest value overall is 766.0 for 3 in the Retention category, which is 317% above the overall average.",
+        "data_points": {
+          "category": "Retention",
+          "series": 3,
+          "value": 766
+        }
+      },
+      {
+        "type": "cross_series_extreme",
+        "subtype": "global_minimum",
+        "importance": 0.75,
+        "description": "Across all series in the Bar comparing headcount by Attrition/Retention, the lowest value overall is 25.0 for 1 in the Attrition category, which is 86% below the overall average.",
+        "data_points": {
+          "category": "Attrition",
+          "series": 1,
+          "value": 25
+        }
+      }
+    ],
+    "34": [
+      {
+        "type": "distribution",
+        "subtype": "average",
+        "importance": 0.7,
+        "description": "Across all 2 categories in the Bar of Attrition/Retention, the average headcount is 735.0 with a standard deviation of 498.0 (68% coefficient of variation).",
+        "data_points": {
+          "average": 735.0,
+          "std_dev": 498.0,
+          "cv": 67.75510204081633
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "maximum",
+        "importance": 0.6,
+        "description": "In the Bar showing headcount by Attrition/Retention, Retention has the highest value at 1233.0, which is 68% above the average of 735.0.",
+        "data_points": {
+          "category": "Retention",
+          "value": 1233,
+          "average": 735.0
+        }
+      },
+      {
+        "type": "extreme",
+        "subtype": "minimum",
+        "importance": 0.55,
+        "description": "In the Bar showing headcount by Attrition/Retention, Attrition has the lowest value at 237.0, which is 68% below the average of 735.0.",
+        "data_points": {
+          "category": "Attrition",
+          "value": 237,
+          "average": 735.0
+        }
+      }
+    ]
+  }
+}

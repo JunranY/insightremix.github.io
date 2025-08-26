@@ -1,0 +1,3040 @@
+{
+  "space": {
+    "0": {
+      "id": 0,
+      "type": "summarize_measure",
+      "name": "Summary the measure wait time",
+      "existed": [
+        2
+      ],
+      "added": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "1": {
+      "id": 1,
+      "type": "summarize_measure",
+      "name": "Summary the measure patients",
+      "existed": [
+        4,
+        5,
+        6,
+        0
+      ],
+      "added": [
+        15,
+        16
+      ]
+    },
+    "2": {
+      "id": 2,
+      "type": "summarize_measure",
+      "name": "Summary the measure score",
+      "existed": [
+        3
+      ],
+      "added": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "3": {
+      "id": 3,
+      "type": "compare_measures",
+      "name": "Undestanding the relationship between patients and Patient Waittime",
+      "existed": [
+        4,
+        5,
+        6,
+        0,
+        2
+      ],
+      "added": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    "4": {
+      "id": 4,
+      "type": "compare_measures",
+      "name": "Undestanding the relationship between Patient Waittime and Patient Satisfaction Score",
+      "existed": [
+        2,
+        3
+      ],
+      "added": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    "5": {
+      "id": 5,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Patient Admission Flag for patients",
+      "existed": [
+        4,
+        1
+      ],
+      "added": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "6": {
+      "id": 6,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Patient Gender for patients",
+      "existed": [
+        8
+      ],
+      "added": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "7": {
+      "id": 7,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Patient Race for patients",
+      "existed": [
+        8
+      ],
+      "added": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ]
+    },
+    "8": {
+      "id": 8,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ]
+    },
+    "9": {
+      "id": 9,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    "10": {
+      "id": 10,
+      "type": "compare_dimension",
+      "name": "Compare the categories of Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128
+      ]
+    },
+    "11": {
+      "id": 11,
+      "type": "compare_dimension",
+      "name": "Compare the categories of admission_time for patients",
+      "existed": [
+        7
+      ],
+      "added": [
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145
+      ]
+    },
+    "12": {
+      "id": 12,
+      "type": "compare_dimension",
+      "name": "Compare the categories of admission_day for patients",
+      "existed": [
+        10,
+        7
+      ],
+      "added": [
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ]
+    },
+    "13": {
+      "id": 13,
+      "type": "time_analysis",
+      "name": "Changes in patients over time",
+      "existed": [
+        6
+      ],
+      "added": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178
+      ]
+    },
+    "14": {
+      "id": 14,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4,
+        8
+      ],
+      "added": [
+        179,
+        180,
+        181,
+        182
+      ]
+    },
+    "15": {
+      "id": 15,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        189,
+        190,
+        191,
+        192,
+        193
+      ]
+    },
+    "16": {
+      "id": 16,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        200,
+        201,
+        202,
+        203,
+        204
+      ]
+    },
+    "17": {
+      "id": 17,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        211,
+        212,
+        213,
+        214,
+        215
+      ]
+    },
+    "18": {
+      "id": 18,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4,
+        1
+      ],
+      "added": [
+        222,
+        223,
+        224,
+        225
+      ]
+    },
+    "19": {
+      "id": 19,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        232,
+        233,
+        234,
+        235,
+        236
+      ]
+    },
+    "20": {
+      "id": 20,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Gender for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        243,
+        244,
+        245,
+        246,
+        247
+      ]
+    },
+    "21": {
+      "id": 21,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4,
+        8
+      ],
+      "added": [
+        254,
+        255,
+        256,
+        257
+      ]
+    },
+    "22": {
+      "id": 22,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        264,
+        265,
+        266,
+        267,
+        268
+      ]
+    },
+    "23": {
+      "id": 23,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        275,
+        276,
+        277,
+        278,
+        279
+      ]
+    },
+    "24": {
+      "id": 24,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        286,
+        287,
+        288,
+        289,
+        290
+      ]
+    },
+    "25": {
+      "id": 25,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4,
+        1
+      ],
+      "added": [
+        297,
+        298,
+        299,
+        300
+      ]
+    },
+    "26": {
+      "id": 26,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        307,
+        308,
+        309,
+        310,
+        311
+      ]
+    },
+    "27": {
+      "id": 27,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Race for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        318,
+        319,
+        320,
+        321,
+        322
+      ]
+    },
+    "28": {
+      "id": 28,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        329,
+        330,
+        331,
+        332
+      ]
+    },
+    "29": {
+      "id": 29,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        339,
+        340,
+        341,
+        342
+      ]
+    },
+    "30": {
+      "id": 30,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        349,
+        350,
+        351,
+        352
+      ]
+    },
+    "31": {
+      "id": 31,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        359,
+        360,
+        361,
+        362
+      ]
+    },
+    "32": {
+      "id": 32,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        1,
+        5
+      ],
+      "added": [
+        369,
+        370,
+        371
+      ]
+    },
+    "33": {
+      "id": 33,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        378,
+        379,
+        380,
+        381
+      ]
+    },
+    "34": {
+      "id": 34,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Wait Time for patients",
+      "existed": [
+        4,
+        5
+      ],
+      "added": [
+        388,
+        389,
+        390,
+        391
+      ]
+    },
+    "35": {
+      "id": 35,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        398,
+        399,
+        400,
+        401
+      ]
+    },
+    "36": {
+      "id": 36,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        408,
+        409,
+        410,
+        411
+      ]
+    },
+    "37": {
+      "id": 37,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        418,
+        419,
+        420,
+        421
+      ]
+    },
+    "38": {
+      "id": 38,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        428,
+        429,
+        430,
+        431
+      ]
+    },
+    "39": {
+      "id": 39,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        1,
+        6
+      ],
+      "added": [
+        438,
+        439,
+        440
+      ]
+    },
+    "40": {
+      "id": 40,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        447,
+        448,
+        449,
+        450
+      ]
+    },
+    "41": {
+      "id": 41,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Department Referral for patients",
+      "existed": [
+        4,
+        6
+      ],
+      "added": [
+        457,
+        458,
+        459,
+        460
+      ]
+    },
+    "42": {
+      "id": 42,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        467,
+        468,
+        469,
+        470
+      ]
+    },
+    "43": {
+      "id": 43,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        477,
+        478,
+        479,
+        480
+      ]
+    },
+    "44": {
+      "id": 44,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        487,
+        488,
+        489,
+        490
+      ]
+    },
+    "45": {
+      "id": 45,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        497,
+        498,
+        499,
+        500
+      ]
+    },
+    "46": {
+      "id": 46,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        1,
+        9
+      ],
+      "added": [
+        507,
+        508,
+        509
+      ]
+    },
+    "47": {
+      "id": 47,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        516,
+        517,
+        518,
+        519
+      ]
+    },
+    "48": {
+      "id": 48,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and Patient Age for patients",
+      "existed": [
+        4,
+        9
+      ],
+      "added": [
+        526,
+        527,
+        528,
+        529
+      ]
+    },
+    "49": {
+      "id": 49,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        536,
+        537,
+        538,
+        539,
+        540
+      ]
+    },
+    "50": {
+      "id": 50,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        547,
+        548,
+        549,
+        550,
+        551
+      ]
+    },
+    "51": {
+      "id": 51,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        558,
+        559,
+        560,
+        561,
+        562
+      ]
+    },
+    "52": {
+      "id": 52,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        569,
+        570,
+        571,
+        572,
+        573
+      ]
+    },
+    "53": {
+      "id": 53,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4
+      ],
+      "added": [
+        580,
+        581,
+        582,
+        583,
+        584
+      ]
+    },
+    "54": {
+      "id": 54,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4,
+        1
+      ],
+      "added": [
+        591,
+        592,
+        593,
+        594
+      ]
+    },
+    "55": {
+      "id": 55,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_time for patients",
+      "existed": [
+        4,
+        7
+      ],
+      "added": [
+        601,
+        602,
+        603,
+        604
+      ]
+    },
+    "56": {
+      "id": 56,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        611,
+        612,
+        613,
+        614
+      ]
+    },
+    "57": {
+      "id": 57,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        621,
+        622,
+        623,
+        624
+      ]
+    },
+    "58": {
+      "id": 58,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        631,
+        632,
+        633,
+        634
+      ]
+    },
+    "59": {
+      "id": 59,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        641,
+        642,
+        643,
+        644
+      ]
+    },
+    "60": {
+      "id": 60,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10
+      ],
+      "added": [
+        651,
+        652,
+        653,
+        654
+      ]
+    },
+    "61": {
+      "id": 61,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        1,
+        10
+      ],
+      "added": [
+        661,
+        662,
+        663
+      ]
+    },
+    "62": {
+      "id": 62,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Admission Flag and admission_day for patients",
+      "existed": [
+        4,
+        10,
+        7
+      ],
+      "added": [
+        670,
+        671,
+        672
+      ]
+    },
+    "63": {
+      "id": 63,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        679,
+        680,
+        681,
+        682
+      ]
+    },
+    "64": {
+      "id": 64,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        689,
+        690,
+        691,
+        692
+      ]
+    },
+    "65": {
+      "id": 65,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        699,
+        700,
+        701,
+        702
+      ]
+    },
+    "66": {
+      "id": 66,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        709,
+        710,
+        711,
+        712
+      ]
+    },
+    "67": {
+      "id": 67,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        719,
+        720,
+        721,
+        722
+      ]
+    },
+    "68": {
+      "id": 68,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        729,
+        730,
+        731,
+        732
+      ]
+    },
+    "69": {
+      "id": 69,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Race for patients",
+      "existed": [
+        8,
+        8
+      ],
+      "added": [
+        739,
+        740,
+        741,
+        742
+      ]
+    },
+    "70": {
+      "id": 70,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        749,
+        750,
+        751,
+        752,
+        753
+      ]
+    },
+    "71": {
+      "id": 71,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        8,
+        5
+      ],
+      "added": [
+        760,
+        761,
+        762,
+        763
+      ]
+    },
+    "72": {
+      "id": 72,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        770,
+        771,
+        772,
+        773,
+        774
+      ]
+    },
+    "73": {
+      "id": 73,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        781,
+        782,
+        783,
+        784,
+        785
+      ]
+    },
+    "74": {
+      "id": 74,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        792,
+        793,
+        794,
+        795,
+        796
+      ]
+    },
+    "75": {
+      "id": 75,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        803,
+        804,
+        805,
+        806,
+        807
+      ]
+    },
+    "76": {
+      "id": 76,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        814,
+        815,
+        816,
+        817,
+        818
+      ]
+    },
+    "77": {
+      "id": 77,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        825,
+        826,
+        827,
+        828,
+        829
+      ]
+    },
+    "78": {
+      "id": 78,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        8,
+        6
+      ],
+      "added": [
+        836,
+        837,
+        838,
+        839
+      ]
+    },
+    "79": {
+      "id": 79,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        846,
+        847,
+        848,
+        849,
+        850
+      ]
+    },
+    "80": {
+      "id": 80,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        857,
+        858,
+        859,
+        860,
+        861
+      ]
+    },
+    "81": {
+      "id": 81,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        868,
+        869,
+        870,
+        871,
+        872
+      ]
+    },
+    "82": {
+      "id": 82,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        879,
+        880,
+        881,
+        882,
+        883
+      ]
+    },
+    "83": {
+      "id": 83,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        890,
+        891,
+        892,
+        893,
+        894
+      ]
+    },
+    "84": {
+      "id": 84,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        901,
+        902,
+        903,
+        904,
+        905
+      ]
+    },
+    "85": {
+      "id": 85,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        8,
+        9
+      ],
+      "added": [
+        912,
+        913,
+        914,
+        915
+      ]
+    },
+    "86": {
+      "id": 86,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        922,
+        923,
+        924,
+        925,
+        926
+      ]
+    },
+    "87": {
+      "id": 87,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        933,
+        934,
+        935,
+        936,
+        937
+      ]
+    },
+    "88": {
+      "id": 88,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        944,
+        945,
+        946,
+        947,
+        948
+      ]
+    },
+    "89": {
+      "id": 89,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        955,
+        956,
+        957,
+        958,
+        959
+      ]
+    },
+    "90": {
+      "id": 90,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        966,
+        967,
+        968,
+        969,
+        970
+      ]
+    },
+    "91": {
+      "id": 91,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_time for patients",
+      "existed": [
+        8
+      ],
+      "added": [
+        989,
+        990,
+        991,
+        992,
+        993
+      ]
+    },
+    "92": {
+      "id": 92,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_time for patients",
+      "existed": [
+        7
+      ],
+      "added": [
+        1048,
+        1049,
+        1050,
+        1051,
+        1052
+      ]
+    },
+    "93": {
+      "id": 93,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1059,
+        1060,
+        1061,
+        1062,
+        1063
+      ]
+    },
+    "94": {
+      "id": 94,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        8,
+        10
+      ],
+      "added": [
+        1070,
+        1071,
+        1072,
+        1073
+      ]
+    },
+    "95": {
+      "id": 95,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1080,
+        1081,
+        1082,
+        1083,
+        1084
+      ]
+    },
+    "96": {
+      "id": 96,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1091,
+        1092,
+        1093,
+        1094,
+        1095
+      ]
+    },
+    "97": {
+      "id": 97,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1102,
+        1103,
+        1104,
+        1105,
+        1106
+      ]
+    },
+    "98": {
+      "id": 98,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1113,
+        1114,
+        1115,
+        1116,
+        1117
+      ]
+    },
+    "99": {
+      "id": 99,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Gender and admission_day for patients",
+      "existed": [
+        10,
+        7
+      ],
+      "added": [
+        1124,
+        1125,
+        1126,
+        1127
+      ]
+    },
+    "100": {
+      "id": 100,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1134,
+        1135,
+        1136,
+        1137,
+        1138
+      ]
+    },
+    "101": {
+      "id": 101,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        8,
+        5
+      ],
+      "added": [
+        1145,
+        1146,
+        1147,
+        1148
+      ]
+    },
+    "102": {
+      "id": 102,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1155,
+        1156,
+        1157,
+        1158,
+        1159
+      ]
+    },
+    "103": {
+      "id": 103,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1166,
+        1167,
+        1168,
+        1169,
+        1170
+      ]
+    },
+    "104": {
+      "id": 104,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1177,
+        1178,
+        1179,
+        1180,
+        1181
+      ]
+    },
+    "105": {
+      "id": 105,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1188,
+        1189,
+        1190,
+        1191,
+        1192
+      ]
+    },
+    "106": {
+      "id": 106,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Wait Time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1199,
+        1200,
+        1201,
+        1202,
+        1203
+      ]
+    },
+    "107": {
+      "id": 107,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1210,
+        1211,
+        1212,
+        1213,
+        1214
+      ]
+    },
+    "108": {
+      "id": 108,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        8,
+        6
+      ],
+      "added": [
+        1221,
+        1222,
+        1223,
+        1224
+      ]
+    },
+    "109": {
+      "id": 109,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1231,
+        1232,
+        1233,
+        1234,
+        1235
+      ]
+    },
+    "110": {
+      "id": 110,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1242,
+        1243,
+        1244,
+        1245,
+        1246
+      ]
+    },
+    "111": {
+      "id": 111,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1253,
+        1254,
+        1255,
+        1256,
+        1257
+      ]
+    },
+    "112": {
+      "id": 112,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1264,
+        1265,
+        1266,
+        1267,
+        1268
+      ]
+    },
+    "113": {
+      "id": 113,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Department Referral for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1275,
+        1276,
+        1277,
+        1278,
+        1279
+      ]
+    },
+    "114": {
+      "id": 114,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1286,
+        1287,
+        1288,
+        1289,
+        1290
+      ]
+    },
+    "115": {
+      "id": 115,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        8,
+        9
+      ],
+      "added": [
+        1297,
+        1298,
+        1299,
+        1300
+      ]
+    },
+    "116": {
+      "id": 116,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1307,
+        1308,
+        1309,
+        1310,
+        1311
+      ]
+    },
+    "117": {
+      "id": 117,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1318,
+        1319,
+        1320,
+        1321,
+        1322
+      ]
+    },
+    "118": {
+      "id": 118,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1329,
+        1330,
+        1331,
+        1332,
+        1333
+      ]
+    },
+    "119": {
+      "id": 119,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1340,
+        1341,
+        1342,
+        1343,
+        1344
+      ]
+    },
+    "120": {
+      "id": 120,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and Patient Age for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        1351,
+        1352,
+        1353,
+        1354,
+        1355
+      ]
+    },
+    "121": {
+      "id": 121,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_time for patients",
+      "existed": [
+        8
+      ],
+      "added": [
+        1374,
+        1375,
+        1376,
+        1377,
+        1378
+      ]
+    },
+    "122": {
+      "id": 122,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_time for patients",
+      "existed": [
+        7
+      ],
+      "added": [
+        1433,
+        1434,
+        1435,
+        1436,
+        1437
+      ]
+    },
+    "123": {
+      "id": 123,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1444,
+        1445,
+        1446,
+        1447,
+        1448
+      ]
+    },
+    "124": {
+      "id": 124,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        8,
+        10
+      ],
+      "added": [
+        1455,
+        1456,
+        1457,
+        1458
+      ]
+    },
+    "125": {
+      "id": 125,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1465,
+        1466,
+        1467,
+        1468,
+        1469
+      ]
+    },
+    "126": {
+      "id": 126,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1476,
+        1477,
+        1478,
+        1479,
+        1480
+      ]
+    },
+    "127": {
+      "id": 127,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1487,
+        1488,
+        1489,
+        1490,
+        1491
+      ]
+    },
+    "128": {
+      "id": 128,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10
+      ],
+      "added": [
+        1498,
+        1499,
+        1500,
+        1501,
+        1502
+      ]
+    },
+    "129": {
+      "id": 129,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Race and admission_day for patients",
+      "existed": [
+        10,
+        7
+      ],
+      "added": [
+        1509,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "130": {
+      "id": 130,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1519,
+        1520,
+        1521,
+        1522
+      ]
+    },
+    "131": {
+      "id": 131,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1529,
+        1530,
+        1531,
+        1532
+      ]
+    },
+    "132": {
+      "id": 132,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1539,
+        1540,
+        1541,
+        1542
+      ]
+    },
+    "133": {
+      "id": 133,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1549,
+        1550,
+        1551,
+        1552
+      ]
+    },
+    "134": {
+      "id": 134,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1559,
+        1560,
+        1561,
+        1562
+      ]
+    },
+    "135": {
+      "id": 135,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1569,
+        1570,
+        1571,
+        1572
+      ]
+    },
+    "136": {
+      "id": 136,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Department Referral for patients",
+      "existed": [
+        5,
+        6
+      ],
+      "added": [
+        1579,
+        1580,
+        1581,
+        1582
+      ]
+    },
+    "137": {
+      "id": 137,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1589,
+        1590,
+        1591,
+        1592
+      ]
+    },
+    "138": {
+      "id": 138,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1599,
+        1600,
+        1601,
+        1602
+      ]
+    },
+    "139": {
+      "id": 139,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1609,
+        1610,
+        1611,
+        1612
+      ]
+    },
+    "140": {
+      "id": 140,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1619,
+        1620,
+        1621,
+        1622
+      ]
+    },
+    "141": {
+      "id": 141,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1629,
+        1630,
+        1631,
+        1632
+      ]
+    },
+    "142": {
+      "id": 142,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1639,
+        1640,
+        1641,
+        1642
+      ]
+    },
+    "143": {
+      "id": 143,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and Patient Age for patients",
+      "existed": [
+        5,
+        9
+      ],
+      "added": [
+        1649,
+        1650,
+        1651,
+        1652
+      ]
+    },
+    "144": {
+      "id": 144,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1659,
+        1660,
+        1661,
+        1662,
+        1663
+      ]
+    },
+    "145": {
+      "id": 145,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1670,
+        1671,
+        1672,
+        1673,
+        1674
+      ]
+    },
+    "146": {
+      "id": 146,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1681,
+        1682,
+        1683,
+        1684,
+        1685
+      ]
+    },
+    "147": {
+      "id": 147,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1692,
+        1693,
+        1694,
+        1695,
+        1696
+      ]
+    },
+    "148": {
+      "id": 148,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1703,
+        1704,
+        1705,
+        1706,
+        1707
+      ]
+    },
+    "149": {
+      "id": 149,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5
+      ],
+      "added": [
+        1714,
+        1715,
+        1716,
+        1717,
+        1718
+      ]
+    },
+    "150": {
+      "id": 150,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_time for patients",
+      "existed": [
+        5,
+        7
+      ],
+      "added": [
+        1725,
+        1726,
+        1727,
+        1728
+      ]
+    },
+    "151": {
+      "id": 151,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1735,
+        1736,
+        1737,
+        1738
+      ]
+    },
+    "152": {
+      "id": 152,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1745,
+        1746,
+        1747,
+        1748
+      ]
+    },
+    "153": {
+      "id": 153,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1755,
+        1756,
+        1757,
+        1758
+      ]
+    },
+    "154": {
+      "id": 154,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1765,
+        1766,
+        1767,
+        1768
+      ]
+    },
+    "155": {
+      "id": 155,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1775,
+        1776,
+        1777,
+        1778
+      ]
+    },
+    "156": {
+      "id": 156,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10
+      ],
+      "added": [
+        1785,
+        1786,
+        1787,
+        1788
+      ]
+    },
+    "157": {
+      "id": 157,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Wait Time and admission_day for patients",
+      "existed": [
+        5,
+        10,
+        7
+      ],
+      "added": [
+        1795,
+        1796,
+        1797
+      ]
+    },
+    "158": {
+      "id": 158,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1804,
+        1805,
+        1806,
+        1807
+      ]
+    },
+    "159": {
+      "id": 159,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1814,
+        1815,
+        1816,
+        1817
+      ]
+    },
+    "160": {
+      "id": 160,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1824,
+        1825,
+        1826,
+        1827
+      ]
+    },
+    "161": {
+      "id": 161,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1834,
+        1835,
+        1836,
+        1837
+      ]
+    },
+    "162": {
+      "id": 162,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1844,
+        1845,
+        1846,
+        1847
+      ]
+    },
+    "163": {
+      "id": 163,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1854,
+        1855,
+        1856,
+        1857
+      ]
+    },
+    "164": {
+      "id": 164,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and Patient Age for patients",
+      "existed": [
+        6,
+        9
+      ],
+      "added": [
+        1864,
+        1865,
+        1866,
+        1867
+      ]
+    },
+    "165": {
+      "id": 165,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1874,
+        1875,
+        1876,
+        1877,
+        1878
+      ]
+    },
+    "166": {
+      "id": 166,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1885,
+        1886,
+        1887,
+        1888,
+        1889
+      ]
+    },
+    "167": {
+      "id": 167,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1896,
+        1897,
+        1898,
+        1899,
+        1900
+      ]
+    },
+    "168": {
+      "id": 168,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1907,
+        1908,
+        1909,
+        1910,
+        1911
+      ]
+    },
+    "169": {
+      "id": 169,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1918,
+        1919,
+        1920,
+        1921,
+        1922
+      ]
+    },
+    "170": {
+      "id": 170,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6
+      ],
+      "added": [
+        1929,
+        1930,
+        1931,
+        1932,
+        1933
+      ]
+    },
+    "171": {
+      "id": 171,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_time for patients",
+      "existed": [
+        6,
+        7
+      ],
+      "added": [
+        1940,
+        1941,
+        1942,
+        1943
+      ]
+    },
+    "172": {
+      "id": 172,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        1950,
+        1951,
+        1952,
+        1953
+      ]
+    },
+    "173": {
+      "id": 173,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        1960,
+        1961,
+        1962,
+        1963
+      ]
+    },
+    "174": {
+      "id": 174,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        1970,
+        1971,
+        1972,
+        1973
+      ]
+    },
+    "175": {
+      "id": 175,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        1980,
+        1981,
+        1982,
+        1983
+      ]
+    },
+    "176": {
+      "id": 176,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        1990,
+        1991,
+        1992,
+        1993
+      ]
+    },
+    "177": {
+      "id": 177,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10
+      ],
+      "added": [
+        2000,
+        2001,
+        2002,
+        2003
+      ]
+    },
+    "178": {
+      "id": 178,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Department Referral and admission_day for patients",
+      "existed": [
+        6,
+        10,
+        7
+      ],
+      "added": [
+        2010,
+        2011,
+        2012
+      ]
+    },
+    "179": {
+      "id": 179,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    "180": {
+      "id": 180,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2030,
+        2031,
+        2032,
+        2033,
+        2034
+      ]
+    },
+    "181": {
+      "id": 181,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2041,
+        2042,
+        2043,
+        2044,
+        2045
+      ]
+    },
+    "182": {
+      "id": 182,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2052,
+        2053,
+        2054,
+        2055,
+        2056
+      ]
+    },
+    "183": {
+      "id": 183,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2063,
+        2064,
+        2065,
+        2066,
+        2067
+      ]
+    },
+    "184": {
+      "id": 184,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9
+      ],
+      "added": [
+        2074,
+        2075,
+        2076,
+        2077,
+        2078
+      ]
+    },
+    "185": {
+      "id": 185,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_time for patients",
+      "existed": [
+        9,
+        7
+      ],
+      "added": [
+        2085,
+        2086,
+        2087,
+        2088
+      ]
+    },
+    "186": {
+      "id": 186,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2095,
+        2096,
+        2097,
+        2098
+      ]
+    },
+    "187": {
+      "id": 187,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2105,
+        2106,
+        2107,
+        2108
+      ]
+    },
+    "188": {
+      "id": 188,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2115,
+        2116,
+        2117,
+        2118
+      ]
+    },
+    "189": {
+      "id": 189,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2125,
+        2126,
+        2127,
+        2128
+      ]
+    },
+    "190": {
+      "id": 190,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2135,
+        2136,
+        2137,
+        2138
+      ]
+    },
+    "191": {
+      "id": 191,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10
+      ],
+      "added": [
+        2145,
+        2146,
+        2147,
+        2148
+      ]
+    },
+    "192": {
+      "id": 192,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of Patient Age and admission_day for patients",
+      "existed": [
+        9,
+        10,
+        7
+      ],
+      "added": [
+        2155,
+        2156,
+        2157
+      ]
+    },
+    "193": {
+      "id": 193,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2164,
+        2165,
+        2166
+      ]
+    },
+    "194": {
+      "id": 194,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2173,
+        2174,
+        2175
+      ]
+    },
+    "195": {
+      "id": 195,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2182,
+        2183,
+        2184
+      ]
+    },
+    "196": {
+      "id": 196,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2191,
+        2192,
+        2193
+      ]
+    },
+    "197": {
+      "id": 197,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2200,
+        2201,
+        2202
+      ]
+    },
+    "198": {
+      "id": 198,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2209,
+        2210,
+        2211
+      ]
+    },
+    "199": {
+      "id": 199,
+      "type": "compare_two_dimensions",
+      "name": "Compare the categories of admission_time and admission_day for patients",
+      "existed": [
+        10,
+        7,
+        7
+      ],
+      "added": [
+        2218,
+        2219,
+        2220
+      ]
+    }
+  }
+}
