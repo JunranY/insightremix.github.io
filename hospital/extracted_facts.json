@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-26 13:04:14",
+  "timestamp": "2025-08-27 13:48:49",
   "total_facts": 178,
   "charts": {
     "4": [
@@ -942,7 +942,7 @@
         "type": "chart_dominance",
         "subtype": "series_majority",
         "importance": 0.95,
-        "description": "In the Bar comparing patients across admission_day, Not Adimitted leads in 5 out of 7 categories (71%), except Tuesday (led by Adimitted) and Friday (led by Adimitted).",
+        "description": "In the Bar comparing patients across admission_day, Not Adimitted leads in 5 out of 7 categories (71%), except Friday (led by Adimitted) and Tuesday (led by Adimitted).",
         "data_points": {
           "dominant_series": "Not Adimitted",
           "won_categories": [
@@ -953,8 +953,8 @@
             "Wednesday"
           ],
           "exceptions": {
-            "Tuesday": "Adimitted",
-            "Friday": "Adimitted"
+            "Friday": "Adimitted",
+            "Tuesday": "Adimitted"
           }
         }
       },
@@ -1039,7 +1039,7 @@
         "type": "chart_dominance",
         "subtype": "series_majority",
         "importance": 0.95,
-        "description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Native American/Alaska Native (led by Female) and Pacific Islander (led by Female).",
+        "description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Pacific Islander (led by Female) and Native American/Alaska Native (led by Female).",
         "data_points": {
           "dominant_series": "Male",
           "won_categories": [
@@ -1050,8 +1050,8 @@
             "White"
           ],
           "exceptions": {
-            "Native American/Alaska Native": "Female",
-            "Pacific Islander": "Female"
+            "Pacific Islander": "Female",
+            "Native American/Alaska Native": "Female"
           }
         }
       },

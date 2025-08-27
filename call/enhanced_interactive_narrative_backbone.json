@@ -1,7 +1,7 @@
 {
   "title": "Dashboard Analysis",
   "description": "Enhanced insights with universal pattern detection and interactive interface",
-  "timestamp": "2025-08-26 11:40:03",
+  "timestamp": "2025-08-27 13:49:09",
   "approach": "pattern",
   "goals": [
     {
@@ -20,7 +20,7 @@
       "insights": [
         {
           "title": "Exceptional High Values: Friday",
-          "narrative": "Friday demonstrates exceptionally high calls values in day, day, representing a significant positive outlier that stands apart from typical patterns.",
+          "narrative": "Friday demonstrates exceptionally high calls values, representing a significant positive outlier that stands apart from typical patterns.",
           "charts": [],
           "entities": [
             "Friday"
@@ -1621,7 +1621,7 @@
         ],
         "174": [
           {
-            "description": "In the Bar comparing calls across sentiment, Friday leads in 3 out of 5 categories (60%), except Very Positive (led by Thursday) and Very Negative (led by Thursday).",
+            "description": "In the Bar comparing calls across sentiment, Friday leads in 3 out of 5 categories (60%), except Very Negative (led by Thursday) and Very Positive (led by Thursday).",
             "fact_type": "chart_dominance",
             "subtype": "series_majority",
             "importance": 0.95,
@@ -1633,8 +1633,8 @@
                 "Positive"
               ],
               "exceptions": {
-                "Very Positive": "Thursday",
-                "Very Negative": "Thursday"
+                "Very Negative": "Thursday",
+                "Very Positive": "Thursday"
               }
             },
             "entities": []

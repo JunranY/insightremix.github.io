@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Goal insights with supporting facts for interactive interface",
-    "timestamp": "2025-08-26 11:40:03",
+    "timestamp": "2025-08-27 13:49:09",
     "total_goals": 3,
     "total_insights": 5
   },
@@ -13,7 +13,7 @@
         {
           "insight_id": "1_insight_0",
           "title": "Exceptional High Values: Friday",
-          "narrative": "Friday demonstrates exceptionally high calls values in day, day, representing a significant positive outlier that stands apart from typical patterns.",
+          "narrative": "Friday demonstrates exceptionally high calls values, representing a significant positive outlier that stands apart from typical patterns.",
           "pattern_type": "outlier",
           "confidence": 0.6,
           "supporting_entities": [

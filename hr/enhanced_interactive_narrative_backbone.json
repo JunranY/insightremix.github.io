@@ -1,7 +1,7 @@
 {
   "title": "Dashboard Analysis",
   "description": "Enhanced insights with universal pattern detection and interactive interface",
-  "timestamp": "2025-08-26 11:54:03",
+  "timestamp": "2025-08-27 13:48:31",
   "approach": "pattern",
   "goals": [
     {
@@ -310,7 +310,7 @@
         },
         {
           "title": "Exceptional Performer: Retention",
-          "narrative": "Retention demonstrates exceptional behavior in Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, Attrition/Retention, standing out significantly from other Attrition/Retention in terms of headcount performance.",
+          "narrative": "Retention demonstrates exceptional behavior across multiple dimensions, standing out significantly from other Attrition/Retention in terms of headcount performance.",
           "charts": [],
           "entities": [
             "Retention"
