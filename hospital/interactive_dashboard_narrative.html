@@ -253,25 +253,21 @@
             color: #4a5568;
         }
         
-        .zoom-hint {
-            font-size: 0.7rem;
-            color: #718096;
-            font-style: italic;
-        }
-        
-        /* Chart Zoom Overlay */
+        /* FIXED: Chart Zoom Overlay - Full viewport positioning */
         .chart-zoom-overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100vw;
+            height: 100vh;
             background: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
+            z-index: 9999;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
-            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .chart-zoom-overlay.visible {
@@ -281,31 +277,35 @@
         
         .zoom-overlay-content {
             position: relative;
-            width: 100%;
-            height: 100%;
+            width: 90vw;
+            height: 90vh;
             display: flex;
             flex-direction: column;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
         
         .zoom-controls {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            right: 20px;
             display: flex;
-            gap: 5px;
-            z-index: 1001;
+            gap: 10px;
+            z-index: 10000;
         }
         
         .zoom-btn {
             background: rgba(255, 255, 255, 0.9);
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         
         .zoom-btn:hover {
@@ -314,7 +314,7 @@
         }
         
         .close-overlay {
-            background: rgba(255, 0, 0, 0.8) !important;
+            background: rgba(220, 38, 38, 0.9) !important;
             color: white;
         }
         
@@ -325,7 +325,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 50px 10px 30px 10px;
+            margin: 60px 20px 60px 20px;
         }
         
         .zoom-image {
@@ -334,55 +334,21 @@
             object-fit: contain;
             transition: transform 0.2s ease;
             transform-origin: center center;
+            cursor: grab;
         }
         
         .zoom-info {
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.9);
             color: #333;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
             backdrop-filter: blur(10px);
-        }
-        
-        .zoom-chart-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-left: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        
-        .zoom-chart-btn:hover {
-            background: #5a67d8;
-        }
-        
-        .chart-details-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .chart-details-header h5 {
-            margin: 0;
-            color: #2d3748;
-        }
-        
-        .chart-insight-count {
-            color: #4a5568;
-            font-size: 0.9rem;
-            margin: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         
         /* Insights Styles */
@@ -456,13 +422,28 @@
             font-weight: 500;
         }
         
-        .source-indicator {
-            background: #f7fafc;
+        .expand-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.8rem;
+            color: #718096;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .insight-item:hover .expand-indicator {
             color: #4a5568;
-            padding: 0.25rem 0.5rem;
-            border-radius: 8px;
+        }
+        
+        .expand-icon {
+            transition: transform 0.3s ease;
             font-size: 0.7rem;
-            text-transform: uppercase;
+        }
+        
+        .insight-item.expanded .expand-icon {
+            transform: rotate(180deg);
         }
         
         .insight-narrative {
@@ -471,49 +452,235 @@
             margin-bottom: 1rem;
         }
         
-        .contributing-evidence {
-            background: #f8fafc;
-            border-radius: 6px;
-            padding: 1rem;
+        /* UPDATED: Unified Facts Layout */
+        .supporting-facts-section {
             margin-top: 1rem;
+            padding: 0;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
             transition: all 0.3s ease;
             overflow: hidden;
             max-height: 0;
+            position: relative;
         }
         
-        .contributing-evidence.expanded {
-            max-height: 200px;
+        .supporting-facts-section.expanded {
+            max-height: 600px;
+            border-left-color: #48bb78;
+            padding: 1rem;
+        }
+        
+        .supporting-facts-title {
+            color: #2d3748;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: sticky;
+            top: 0;
+            background: #f8fafc;
+            z-index: 2;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .evidence-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* UPDATED: Unified grid layout like chart details */
+        .unified-facts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            max-height: 450px;
+            overflow-y: auto;
+            padding-right: 8px;
+            margin-right: -8px;
+        }
+        
+        .unified-facts-grid::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .unified-facts-grid::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .unified-facts-grid::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 4px;
             border: 1px solid #e2e8f0;
         }
         
-        .contributing-evidence h5 {
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+        .unified-facts-grid::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0;
         }
         
-        .evidence-list {
-            color: #4a5568;
-            font-size: 0.9rem;
+        /* UPDATED: Unified fact item styling */
+        .unified-fact-item {
+            background: white;
+            border-radius: 6px;
+            padding: 1rem;
+            border-left: 3px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
-        .entities-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+        .unified-fact-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border-left-color: #667eea;
         }
         
-        .entity-tag {
+        .unified-fact-item.highlighted {
             background: #e6fffa;
-            color: #234e52;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            border: 1px solid #81e6d9;
+            border-left-color: #38b2ac;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 178, 172, 0.2);
         }
         
-        /* Chart Details Section */
+        .fact-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .fact-type-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .fact-extreme { 
+            border-left-color: #f56565;
+        }
+        
+        .fact-extreme .fact-type-badge { 
+            background: #fed7d7; 
+            color: #c53030; 
+        }
+        
+        .fact-trend { 
+            border-left-color: #4299e1;
+        }
+        
+        .fact-trend .fact-type-badge { 
+            background: #bee3f8; 
+            color: #2b6cb0; 
+        }
+        
+        .fact-outlier { 
+            border-left-color: #ed8936;
+        }
+        
+        .fact-outlier .fact-type-badge { 
+            background: #fbd38d; 
+            color: #c05621; 
+        }
+        
+        .fact-comparison { 
+            border-left-color: #48bb78;
+        }
+        
+        .fact-comparison .fact-type-badge { 
+            background: #c6f6d5; 
+            color: #2f855a; 
+        }
+        
+        .fact-distribution { 
+            border-left-color: #9f7aea;
+        }
+        
+        .fact-distribution .fact-type-badge { 
+            background: #e9d8fd; 
+            color: #6b46c1; 
+        }
+        
+        .fact-subtype {
+            font-size: 0.8rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .fact-importance {
+            background: #f0fff4;
+            color: #22543d;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: auto;
+        }
+        
+        .chart-reference {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.125rem 0.375rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .fact-description {
+            color: #4a5568;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .fact-entities {
+            font-size: 0.8rem;
+            color: #718096;
+            background: #f7fafc;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        /* Enhanced Chart Highlighting for Facts */
+        .chart-item.fact-highlighted {
+            border: 3px solid #38b2ac;
+            box-shadow: 0 8px 30px rgba(56, 178, 172, 0.4);
+            transform: translateY(-4px) scale(1.02);
+            z-index: 100;
+            position: relative;
+        }
+        
+        .chart-item.fact-highlighted::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(45deg, #38b2ac, #4fd1c7);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 0.5; 
+                transform: scale(1.02); 
+            }
+        }
+        
+        /* Chart Details Section - using same unified layout */
         .chart-details-section {
             background: white;
             border-radius: 8px;
@@ -538,31 +705,52 @@
             padding: 1.5rem;
         }
         
+        .chart-details-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .chart-details-header h5 {
+            margin: 0;
+            color: #2d3748;
+        }
+        
+        .chart-insight-count {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* UPDATED: Chart fact items using unified layout */
         .chart-fact-item {
-            background: #f8fafc;
+            background: white;
             border-radius: 6px;
             padding: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             border-left: 3px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
-        .fact-type-badge {
-            display: inline-block;
-            background: #edf2f7;
-            color: #4a5568;
-            padding: 0.25rem 0.5rem;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-right: 0.5rem;
+        .chart-fact-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border-left-color: #667eea;
         }
         
-        .fact-extreme { border-left-color: #f56565; }
-        .fact-trend { border-left-color: #4299e1; }
-        .fact-outlier { border-left-color: #ed8936; }
-        .fact-comparison { border-left-color: #48bb78; }
-        .fact-distribution { border-left-color: #9f7aea; }
+        .chart-fact-item.highlighted {
+            background: #e6fffa;
+            border-left-color: #38b2ac;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 178, 172, 0.2);
+        }
         
         .close-details-btn {
             background: #667eea;
@@ -578,6 +766,22 @@
         
         .close-details-btn:hover {
             background: #5a67d8;
+        }
+        
+        .entities-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .entity-tag {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #81e6d9;
         }
         
         /* Responsive Design */
@@ -598,6 +802,22 @@
             
             .charts-grid {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .zoom-overlay-content {
+                width: 95vw;
+                height: 95vh;
+            }
+            
+            .zoom-controls {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .zoom-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
             }
         }
         
@@ -632,6 +852,10 @@
             .main-header h1 {
                 font-size: 2rem;
             }
+            
+            .zoom-container {
+                margin: 40px 10px 40px 10px;
+            }
         }
         
         /* Animation Classes */
@@ -662,365 +886,6 @@
             text-align: center;
         }
         
-        .mb-1 { margin-bottom: 0.5rem; }
-        .mb-2 { margin-bottom: 1rem; }
-        .mt-1 { margin-top: 0.5rem; }
-        .mt-2 { margin-top: 1rem; }
-        
-        
-        /* Enhanced Supporting Facts Styles */
-        .expand-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.8rem;
-            color: #718096;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
-        
-        .insight-item:hover .expand-indicator {
-            color: #4a5568;
-        }
-        
-        .expand-icon {
-            transition: transform 0.3s ease;
-            font-size: 0.7rem;
-        }
-        
-        .insight-item.expanded .expand-icon {
-            transform: rotate(180deg);
-        }
-        
-        .insight-item.expanded .expand-text {
-            opacity: 0.7;
-        }
-        
-        .supporting-facts-section {
-            margin-top: 1rem;
-            padding: 0;
-            background: #f8fafc;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            max-height: 0;
-            position: relative;
-        }
-        
-        .supporting-facts-section.expanded {
-            max-height: 600px;
-            border-left-color: #48bb78;
-            padding: 1rem;
-            overflow: visible; /* Allow content to be scrollable */
-        }
-        
-        .supporting-facts-title {
-            color: #2d3748;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.5rem;
-            position: sticky;
-            top: 0;
-            background: #f8fafc;
-            z-index: 2;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .scroll-hint {
-            font-size: 0.8rem;
-            color: #718096;
-            font-weight: normal;
-            animation: bounce-hint 2s infinite;
-        }
-        
-        @keyframes bounce-hint {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-3px); }
-            60% { transform: translateY(-2px); }
-        }
-        
-        .evidence-icon {
-            font-size: 1.2rem;
-        }
-        
-        .supporting-facts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-height: 450px; /* Allow scrolling within the facts list */
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding-right: 8px; /* Space for scrollbar */
-            margin-right: -8px; /* Compensate for padding */
-        }
-        
-        /* Custom scrollbar styling for better UX */
-        .supporting-facts-list::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .supporting-facts-list::-webkit-scrollbar-track {
-            background: #f1f5f9;
-            border-radius: 4px;
-        }
-        
-        .supporting-facts-list::-webkit-scrollbar-thumb {
-            background: #cbd5e0;
-            border-radius: 4px;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .supporting-facts-list::-webkit-scrollbar-thumb:hover {
-            background: #a0aec0;
-        }
-        
-        /* Firefox scrollbar */
-        .supporting-facts-list {
-            scrollbar-width: thin;
-            scrollbar-color: #cbd5e0 #f1f5f9;
-        }
-        
-        .chart-facts-group {
-            background: white;
-            border-radius: 6px;
-            padding: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-        
-        .chart-facts-group:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
-        
-        .chart-facts-header {
-            color: #4a5568;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .chart-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-weight: 600;
-        }
-        
-        .facts-count {
-            font-size: 0.8rem;
-            color: #718096;
-            font-weight: normal;
-        }
-        
-        .facts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-        
-        .supporting-fact-item {
-            padding: 0.75rem;
-            background: #fafbfc;
-            border-radius: 4px;
-            border-left: 3px solid #e2e8f0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .supporting-fact-item:hover {
-            background: #f1f5f9;
-            border-left-color: #667eea;
-            transform: translateX(2px);
-        }
-        
-        .supporting-fact-item.highlighted {
-            background: #e6fffa;
-            border-left-color: #38b2ac;
-            transform: translateX(4px);
-            box-shadow: 0 2px 8px rgba(56, 178, 172, 0.2);
-        }
-        
-        .fact-content {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 0.5rem;
-        }
-        
-        .fact-type-badge {
-            background: #edf2f7;
-            color: #4a5568;
-            padding: 0.25rem 0.5rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        
-        .fact-extreme { 
-            background: #fed7d7; 
-            color: #c53030; 
-        }
-        
-        .fact-trend { 
-            background: #bee3f8; 
-            color: #2b6cb0; 
-        }
-        
-        .fact-outlier { 
-            background: #fbd38d; 
-            color: #c05621; 
-        }
-        
-        .fact-comparison { 
-            background: #c6f6d5; 
-            color: #2f855a; 
-        }
-        
-        .fact-distribution { 
-            background: #e9d8fd; 
-            color: #6b46c1; 
-        }
-        
-        .fact-subtype {
-            font-size: 0.8rem;
-            color: #718096;
-            font-style: italic;
-        }
-        
-        .fact-description {
-            flex: 1;
-            color: #4a5568;
-            line-height: 1.4;
-        }
-        
-        .fact-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            font-size: 0.8rem;
-            color: #718096;
-        }
-        
-        .fact-importance {
-            background: #f0fff4;
-            color: #22543d;
-            padding: 0.125rem 0.375rem;
-            border-radius: 8px;
-        }
-        
-        .fact-entities {
-            background: #e6fffa;
-            color: #234e52;
-            padding: 0.125rem 0.375rem;
-            border-radius: 8px;
-        }
-        
-        /* Enhanced Chart Highlighting for Facts */
-        .chart-item.fact-highlighted {
-            border: 3px solid #38b2ac;
-            box-shadow: 0 8px 30px rgba(56, 178, 172, 0.4);
-            transform: translateY(-4px) scale(1.02);
-            z-index: 10;
-            position: relative;
-        }
-        
-        .chart-item.fact-highlighted::after {
-            content: '';
-            position: absolute;
-            top: -6px;
-            left: -6px;
-            right: -6px;
-            bottom: -6px;
-            background: linear-gradient(45deg, #38b2ac, #4fd1c7);
-            border-radius: 12px;
-            z-index: -1;
-            opacity: 0.3;
-            animation: pulse-glow 2s infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { 
-                opacity: 0.3; 
-                transform: scale(1); 
-            }
-            50% { 
-                opacity: 0.5; 
-                transform: scale(1.02); 
-            }
-        }
-        
-        /* Responsive adjustments for supporting facts */
-        @media (max-width: 768px) {
-            .supporting-facts-section {
-                padding: 0.75rem;
-            }
-            
-            .chart-facts-group {
-                padding: 0.75rem;
-            }
-            
-            .supporting-fact-item {
-                padding: 0.5rem;
-            }
-            
-            .fact-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.25rem;
-            }
-            
-            .fact-meta {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        
-        /* Animation classes */
-        .slide-down {
-            animation: slideDown 0.3s ease;
-        }
-        
-        .slide-up {
-            animation: slideUp 0.3s ease;
-        }
-        
-        @keyframes slideDown {
-            from { 
-                max-height: 0; 
-                opacity: 0; 
-            }
-            to { 
-                max-height: 800px; 
-                opacity: 1; 
-            }
-        }
-        
-        @keyframes slideUp {
-            from { 
-                max-height: 800px; 
-                opacity: 1; 
-            }
-            to { 
-                max-height: 0; 
-                opacity: 0; 
-            }
-        }
-        
             </style>
         </head>
         <body>
@@ -1032,7 +897,7 @@
                         <span class="approach-badge pattern-approach">
                             Pattern Approach
                         </span>
-                        <span class="timestamp">Generated: 2025-08-27 14:04:05</span>
+                        <span class="timestamp">Generated: 2025-08-31 12:00:32</span>
                     </div>
                 </div>
             </header>
@@ -1041,11 +906,10 @@
         
         <section class="goal-section" id="goal-1" data-goal-id="1">
             <div class="goal-header">
-                <h2 class="goal-title">Summary the measure patients</h2>
+                <h2 class="goal-title">Summarize the volume of patients</h2>
                 <div class="goal-meta">
                     <span class="goal-type">Summarize Measure</span>
                     <span class="goal-views">Views: 4, 5, 6, 0, 15, 16</span>
-                    <span class="approach-indicator">Pattern</span>
                 </div>
             </div>
             
@@ -1182,7 +1046,6 @@
                         Confidence: 0.77
                     </span>
                     <span class="pattern-type">outlier</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -1194,61 +1057,49 @@
                 General Practice demonstrates exceptionally high patients values, representing a significant positive outlier that stands apart from typical patterns.
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-1-0">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (2 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-1-0">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="6">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 6</span>
-                            <span class="facts-count">(2 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="1-0-6-0"
-                                data-chart-id="6"
-                                data-fact-type="outlier"
-                                onmouseover="highlightFactChart(this, '1', '6')"
-                                onmouseout="clearFactHighlight('1', '6')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-outlier">outlier</span>
-                                    <span class="fact-subtype">(high)</span>
-                                    <span class="fact-description">In the Bar showing patients across all categories in Department Referral, General Practice stands out with a value of 1840.0, which is 2.2 standard deviations above the mean of 545.1.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.95</span>
-                                    <span class="fact-entities">Entities: General Practice</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="1-0-6-1"
-                                data-chart-id="6"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '1', '6')"
-                                onmouseout="clearFactHighlight('1', '6')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing patients by Department Referral, General Practice has the highest value at 1840.0, which is 238% above the average of 545.1.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: General Practice</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-outlier" 
+                         data-fact-id="1-0-6-0"
+                         data-chart-id="6"
+                         data-fact-type="outlier"
+                         onmouseover="highlightFactChart(this, '1', '6')"
+                         onmouseout="clearFactHighlight('1', '6')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">outlier</span>
+                            <span class="fact-subtype">(high)</span>
+                            <span class="fact-importance">Importance: 0.95</span>
+                            <span class="chart-reference">Chart 6</span>
                         </div>
+                        <div class="fact-description">In the Bar showing patients across all categories in Department Referral, General Practice stands out with a value of 1840.0, which is 2.2 standard deviations above the mean of 545.1.</div>
+                        <div class="fact-entities">Entities: General Practice</div>
                     </div>
-            
+                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="1-0-6-1"
+                         data-chart-id="6"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '1', '6')"
+                         onmouseout="clearFactHighlight('1', '6')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 6</span>
+                        </div>
+                        <div class="fact-description">In the Bar showing patients by Department Referral, General Practice has the highest value at 1840.0, which is 238% above the average of 545.1.</div>
+                        <div class="fact-entities">Entities: General Practice</div>
+                    </div>
+                
                 </div>
             </div>
+            
         </div>
         
                     </div>
@@ -1269,11 +1120,10 @@
         
         <section class="goal-section" id="goal-4" data-goal-id="4">
             <div class="goal-header">
-                <h2 class="goal-title">Undestanding the relationship between Patient Waittime and Patient Satisfaction Score</h2>
+                <h2 class="goal-title">Understanding the relationship between Patient Waittime and Patient Satisfaction Score</h2>
                 <div class="goal-meta">
                     <span class="goal-type">Compare Measures</span>
                     <span class="goal-views">Views: 2, 3, 28, 29, 30, 31, 32, 33, 34, 35</span>
-                    <span class="approach-indicator">Pattern</span>
                 </div>
             </div>
             
@@ -1478,7 +1328,6 @@
                         Confidence: 0.69
                     </span>
                     <span class="pattern-type">measure_contradiction</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -1490,71 +1339,49 @@
                 Not Adimitted shows an inverse relationship between wait time and score: high in wait time but low in score, indicating these measures capture different aspects of performance.
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-4-0">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (2 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-4-0">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="28">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 28</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="4-0-28-0"
-                                data-chart-id="28"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '4', '28')"
-                                onmouseout="clearFactHighlight('4', '28')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: Not Adimitted</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="4-0-28-0"
+                         data-chart-id="28"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '4', '28')"
+                         onmouseout="clearFactHighlight('4', '28')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 28</span>
                         </div>
+                        <div class="fact-description">In the Bar showing wait time by Patient Admission Flag, Not Adimitted has the highest value at 35.6, which is 1% above the average of 35.3.</div>
+                        <div class="fact-entities">Entities: Not Adimitted</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="29">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 29</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="4-0-29-0"
-                                data-chart-id="29"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '4', '29')"
-                                onmouseout="clearFactHighlight('4', '29')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(minimum)</span>
-                                    <span class="fact-description">In the Bar showing score by Patient Admission Flag, Not Adimitted has the lowest value at 4.9, which is 2% below the average of 5.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.55</span>
-                                    <span class="fact-entities">Entities: Not Adimitted</span>
-                                </div>
-                            </div>
                 
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="4-0-29-0"
+                         data-chart-id="29"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '4', '29')"
+                         onmouseout="clearFactHighlight('4', '29')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(minimum)</span>
+                            <span class="fact-importance">Importance: 0.55</span>
+                            <span class="chart-reference">Chart 29</span>
                         </div>
+                        <div class="fact-description">In the Bar showing score by Patient Admission Flag, Not Adimitted has the lowest value at 4.9, which is 2% below the average of 5.0.</div>
+                        <div class="fact-entities">Entities: Not Adimitted</div>
                     </div>
-            
+                
                 </div>
             </div>
+            
         </div>
         
         <div class="insight-item insight-pattern" 
@@ -1574,7 +1401,6 @@
                         Confidence: 0.69
                     </span>
                     <span class="pattern-type">measure_contradiction</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -1586,77 +1412,55 @@
                 Adimitted shows an inverse relationship between wait time and score: low in wait time but high in score, indicating these measures capture different aspects of performance.
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-4-1">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (2 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-4-1">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="28">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 28</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="4-1-28-0"
-                                data-chart-id="28"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '4', '28')"
-                                onmouseout="clearFactHighlight('4', '28')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(minimum)</span>
-                                    <span class="fact-description">In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.55</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="4-1-28-0"
+                         data-chart-id="28"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '4', '28')"
+                         onmouseout="clearFactHighlight('4', '28')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(minimum)</span>
+                            <span class="fact-importance">Importance: 0.55</span>
+                            <span class="chart-reference">Chart 28</span>
                         </div>
+                        <div class="fact-description">In the Bar showing wait time by Patient Admission Flag, Adimitted has the lowest value at 35.0, which is 1% below the average of 35.3.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="29">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 29</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="4-1-29-0"
-                                data-chart-id="29"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '4', '29')"
-                                onmouseout="clearFactHighlight('4', '29')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing score by Patient Admission Flag, Adimitted has the highest value at 5.1, which is 2% above the average of 5.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
                 
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="4-1-29-0"
+                         data-chart-id="29"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '4', '29')"
+                         onmouseout="clearFactHighlight('4', '29')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 29</span>
                         </div>
+                        <div class="fact-description">In the Bar showing score by Patient Admission Flag, Adimitted has the highest value at 5.1, which is 2% above the average of 5.0.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
                     </div>
-            
+                
                 </div>
             </div>
+            
         </div>
         
         <div class="insight-item insight-pattern" 
             data-insight-id="2"
             data-contributing-charts='[32, 33, 2, 3, 34, 35, 28, 29, 30, 31]'
-            data-entities='["438-98-4639", "Creavan", "689-43-8910", "Lorking", "Segrave", "Breche", "828-46-7426", "819-36-3342", "2024-06-26 03:09:00", "498-27-3065", "2024-06-30 05:31:00", "2024-09-06 11:19:00", "584-70-7549", "516-29-6967", "2023-09-20 06:19:00", "445-98-3362", "Madine", "255-33-4780", "2023-12-14 01:27:00", "290-84-6074", "438-98-4639", "Creavan", "689-43-8910", "Lorking", "Segrave", "Breche", "828-46-7426", "819-36-3342", "2024-06-26 03:09:00", "498-27-3065", "2024-06-30 05:31:00", "2024-09-06 11:19:00", "584-70-7549", "516-29-6967", "2023-09-20 06:19:00", "445-98-3362", "Madine", "255-33-4780", "2023-12-14 01:27:00", "290-84-6074"]'
+            data-entities='["O'Longain", "573-53-7688", "2023-04-12 00:52:00", "537-13-0339", "Roistone", "207-51-4043", "2023-10-23 17:44:00", "Thynne", "698-18-8238", "2023-11-22 08:04:00", "650-97-0593", "2023-04-12 08:39:00", "2024-03-21 19:49:00", "2023-07-17 00:11:00", "2024-03-12 11:35:00", "2024-09-21 07:46:00", "2024-04-05 13:41:00", "Royall", "Waiting", "2024-10-11 12:33:00", "O'Longain", "573-53-7688", "2023-04-12 00:52:00", "537-13-0339", "Roistone", "207-51-4043", "2023-10-23 17:44:00", "Thynne", "698-18-8238", "2023-11-22 08:04:00", "650-97-0593", "2023-04-12 08:39:00", "2024-03-21 19:49:00", "2023-07-17 00:11:00", "2024-03-12 11:35:00", "2024-09-21 07:46:00", "2024-04-05 13:41:00", "Royall", "Waiting", "2024-10-11 12:33:00"]'
             data-pattern-type="measure_correlation"
             data-supporting-facts='[]'
             onmouseover="highlightContributingCharts(this, '4')"
@@ -1670,7 +1474,6 @@
                         Confidence: 0.02
                     </span>
                     <span class="pattern-type">measure_correlation</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -1682,17 +1485,17 @@
                 wait time and score show no linear correlation (r=-0.02).
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-4-2">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (0 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-4-2">
+                <div class="unified-facts-grid">
         
                 </div>
             </div>
+            
         </div>
         
                     </div>
@@ -1717,7 +1520,6 @@
                 <div class="goal-meta">
                     <span class="goal-type">Compare Two Dimensions</span>
                     <span class="goal-views">Views: 4, 10, 7, 669, 670, 671</span>
-                    <span class="approach-indicator">Pattern</span>
                 </div>
             </div>
             
@@ -1854,7 +1656,6 @@
                         Confidence: 1.00
                     </span>
                     <span class="pattern-type">outlier</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -1866,132 +1667,97 @@
                 Adimitted demonstrates exceptional behavior in the dimensional interaction between Patient Admission Flag and admission_day, standing out from typical interaction patterns.
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-62-0">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (5 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-62-0">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="4">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 4</span>
-                            <span class="facts-count">(2 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="62-0-4-0"
-                                data-chart-id="4"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '62', '4')"
-                                onmouseout="clearFactHighlight('62', '4')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="62-0-4-1"
-                                data-chart-id="4"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '62', '4')"
-                                onmouseout="clearFactHighlight('62', '4')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="62-0-4-0"
+                         data-chart-id="4"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '62', '4')"
+                         onmouseout="clearFactHighlight('62', '4')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 4</span>
                         </div>
+                        <div class="fact-description">In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="669">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 669</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="62-0-669-0"
-                                data-chart-id="669"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '62', '669')"
-                                onmouseout="clearFactHighlight('62', '669')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(minimum)</span>
-                                    <span class="fact-description">In the Bar showing 08-12 by admission_time, Adimitted has the lowest value at 762.0, which is 0% below the average of 763.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.55</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
                 
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="62-0-4-1"
+                         data-chart-id="4"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '62', '4')"
+                         onmouseout="clearFactHighlight('62', '4')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 4</span>
                         </div>
+                        <div class="fact-description">In the Bar showing patients by Patient Admission Flag, Adimitted has the highest value at 4612.0, which is 0% above the average of 4608.0.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="670">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 670</span>
-                            <span class="facts-count">(2 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="62-0-670-0"
-                                data-chart-id="670"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '62', '670')"
-                                onmouseout="clearFactHighlight('62', '670')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(minimum)</span>
-                                    <span class="fact-description">In the Bar showing Wednesday by Patient Admission Flag, Adimitted has the lowest value at 629.0, which is 0% below the average of 630.0.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.55</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
                 
-                            <div class="supporting-fact-item" 
-                                data-fact-id="62-0-670-1"
-                                data-chart-id="670"
-                                data-fact-type="cross_series_extreme"
-                                onmouseover="highlightFactChart(this, '62', '670')"
-                                onmouseout="clearFactHighlight('62', '670')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
-                                    <span class="fact-subtype">(global_minimum)</span>
-                                    <span class="fact-description">Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the Adimitted category, which is 4% below the overall average.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.75</span>
-                                    <span class="fact-entities">Entities: Adimitted</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="62-0-669-0"
+                         data-chart-id="669"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '62', '669')"
+                         onmouseout="clearFactHighlight('62', '669')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(minimum)</span>
+                            <span class="fact-importance">Importance: 0.55</span>
+                            <span class="chart-reference">Chart 669</span>
                         </div>
+                        <div class="fact-description">In the Bar showing 08-12 by admission_time, Adimitted has the lowest value at 762.0, which is 0% below the average of 763.0.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
                     </div>
-            
+                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="62-0-670-0"
+                         data-chart-id="670"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '62', '670')"
+                         onmouseout="clearFactHighlight('62', '670')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(minimum)</span>
+                            <span class="fact-importance">Importance: 0.55</span>
+                            <span class="chart-reference">Chart 670</span>
+                        </div>
+                        <div class="fact-description">In the Bar showing Wednesday by Patient Admission Flag, Adimitted has the lowest value at 629.0, which is 0% below the average of 630.0.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-cross_series_extreme" 
+                         data-fact-id="62-0-670-1"
+                         data-chart-id="670"
+                         data-fact-type="cross_series_extreme"
+                         onmouseover="highlightFactChart(this, '62', '670')"
+                         onmouseout="clearFactHighlight('62', '670')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">cross_series_extreme</span>
+                            <span class="fact-subtype">(global_minimum)</span>
+                            <span class="fact-importance">Importance: 0.75</span>
+                            <span class="chart-reference">Chart 670</span>
+                        </div>
+                        <div class="fact-description">Across all series in the Bar comparing patients by Patient Admission Flag, the lowest value overall is 629.0 for Wednesday in the Adimitted category, which is 4% below the overall average.</div>
+                        <div class="fact-entities">Entities: Adimitted</div>
+                    </div>
+                
                 </div>
             </div>
+            
         </div>
         
                     </div>
@@ -2016,7 +1782,6 @@
                 <div class="goal-meta">
                     <span class="goal-type">Compare Two Dimensions</span>
                     <span class="goal-views">Views: 8, 9, 1296, 1297, 1298, 1299</span>
-                    <span class="approach-indicator">Pattern</span>
                 </div>
             </div>
             
@@ -2028,7 +1793,7 @@
         
         <div class="chart-item" 
              data-chart-id="8" 
-             data-chart-insights='[{"description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Native American/Alaska Native (led by Female) and Pacific Islander (led by Female).", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Male", "won_categories": ["African American", "Asian", "Declined to Identify", "Two or More Races", "White"], "exceptions": {"Native American/Alaska Native": "Female", "Pacific Islander": "Female"}}, "entities": []}, {"description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 602.55, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.8646797444319231, "data_points": {"category": "White", "disparity_measure": "std_dev", "disparity_value": 602.5484766113567, "max_series": "Male", "min_series": "NC"}, "entities": ["White", "White"]}, {"description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 1291.0 units for the absolute range, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.8556470588235294, "data_points": {"category": "White", "disparity_measure": "range", "disparity_value": 1291, "max_series": "Male", "min_series": "NC"}, "entities": ["White", "White"]}, {"description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "White", "series": "Male", "value": 1296}, "entities": ["White", "Male", "1296", "White", "Male"]}, {"description": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Native American/Alaska Native", "series": "NC", "value": 0}, "entities": ["Native American/Alaska Native", "NC", "0", "Native American/Alaska Native", "NC"]}, {"description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.44156672233186567, "cv": 0.5356325581171167, "normalized_entropy": 0.9257870123266538}, "entities": []}, {"description": "The patients distribution is approximately symmetric across Patient Races.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.4379341702568829}, "entities": []}]'
+             data-chart-insights='[{"description": "In the Bar comparing patients across Patient Race, Male leads in 5 out of 7 categories (71%), except Pacific Islander (led by Female) and Native American/Alaska Native (led by Female).", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Male", "won_categories": ["African American", "Asian", "Declined to Identify", "Two or More Races", "White"], "exceptions": {"Pacific Islander": "Female", "Native American/Alaska Native": "Female"}}, "entities": []}, {"description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 602.55, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).", "fact_type": "variation", "subtype": "standard deviation (std_dev)", "importance": 0.8646797444319231, "data_points": {"category": "White", "disparity_measure": "std_dev", "disparity_value": 602.5484766113567, "max_series": "Male", "min_series": "NC"}, "entities": ["White", "White"]}, {"description": "In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 1291.0 units for the absolute range, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).", "fact_type": "variation", "subtype": "absolute range (range)", "importance": 0.8556470588235294, "data_points": {"category": "White", "disparity_measure": "range", "disparity_value": 1291, "max_series": "Male", "min_series": "NC"}, "entities": ["White", "White"]}, {"description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "White", "series": "Male", "value": 1296}, "entities": ["White", "Male", "1296", "White", "Male"]}, {"description": "Across all series in the Bar comparing patients by Patient Race, the lowest value overall is 0.0 for NC in the Native American/Alaska Native category, which is 100% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "Native American/Alaska Native", "series": "NC", "value": 0}, "entities": ["Native American/Alaska Native", "NC", "0", "Native American/Alaska Native", "NC"]}, {"description": "The distribution is moderately uneven across Patient Races, with noticeable variation in values.", "fact_type": "distribution_evenness", "subtype": "moderately_uneven", "importance": 0.75, "data_points": {"gini": 0.44156672233186567, "cv": 0.5356325581171167, "normalized_entropy": 0.9257870123266538}, "entities": []}, {"description": "The patients distribution is approximately symmetric across Patient Races.", "fact_type": "distribution_skew", "subtype": "symmetric", "importance": 0.7, "data_points": {"skewness": 0.4379341702568829}, "entities": []}]'
              onclick="showChartDetails(8, this, event)"
              title="Click for details, double-click to zoom">
         
@@ -2079,7 +1844,7 @@
         
         <div class="chart-item new-view" 
              data-chart-id="1297" 
-             data-chart-insights='[{"description": "In the Bar comparing patients across Patient Gender, Male leads in 6 out of 8 categories (75%), except 40-49 (led by Female) and 0-9 (led by Female).", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Male", "won_categories": ["10-19", "20-29", "30-39", "50-59", "60-69", "70-79"], "exceptions": {"40-49": "Female", "0-9": "Female"}}, "entities": []}, {"description": "In the Bar comparing patients across Patient Gender, 20-29 and 30-39 exhibit very similar patterns across all series (similarity score: 1.00), suggesting these 2 categories behave as a cohesive group and may share common underlying characteristics.", "fact_type": "category_clustering", "subtype": "similar_behavior", "importance": 0.95, "data_points": {"categories": ["20-29", "30-39"], "similarity": 0.9999999999999998, "cluster_size": 2}, "entities": []}, {"description": "In the Bar comparing patients across Patient Gender, the relationship landscape shows exceptional predictability with 3 highly stable series relationships. The most predictable pair, Female and NC, demonstrates 96% consistency maintaining a consistent gap of 557.9 units across all categories, with an overall relationship consistency of 95% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.8528733850295501, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 3, "avg_consistency": 94.57467700591002, "most_stable_pair": ["Female", "NC"], "relationship_hubs": ["Male", "NC", "Female"]}, "entities": []}, {"description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for Male in the 20-29 category, which is 63% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "20-29", "series": "Male", "value": 625}, "entities": ["20-29", "Male", "625", "20-29", "Male"]}, {"description": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1.0 for NC in the 30-39 category, which is 100% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "30-39", "series": "NC", "value": 1}, "entities": ["30-39", "NC", "1", "30-39", "NC"]}, {"description": "The distribution is very even across categories, with nearly equal values for each Patient Gender.", "fact_type": "distribution_evenness", "subtype": "very_even", "importance": 0.75, "data_points": {"gini": 0.15786397449521783, "cv": 0.06487132690332195, "normalized_entropy": 0.9989557393891698}, "entities": []}, {"description": "The patients distribution is left-skewed, with a few Patient Genders having unusually low values.", "fact_type": "distribution_skew", "subtype": "negative_skew", "importance": 0.75, "data_points": {"skewness": -1.3396082930674105}, "entities": []}]'
+             data-chart-insights='[{"description": "In the Bar comparing patients across Patient Gender, Male leads in 6 out of 8 categories (75%), except 0-9 (led by Female) and 40-49 (led by Female).", "fact_type": "chart_dominance", "subtype": "series_majority", "importance": 0.95, "data_points": {"dominant_series": "Male", "won_categories": ["10-19", "20-29", "30-39", "50-59", "60-69", "70-79"], "exceptions": {"0-9": "Female", "40-49": "Female"}}, "entities": []}, {"description": "In the Bar comparing patients across Patient Gender, 20-29 and 30-39 exhibit very similar patterns across all series (similarity score: 1.00), suggesting these 2 categories behave as a cohesive group and may share common underlying characteristics.", "fact_type": "category_clustering", "subtype": "similar_behavior", "importance": 0.95, "data_points": {"categories": ["20-29", "30-39"], "similarity": 0.9999999999999998, "cluster_size": 2}, "entities": []}, {"description": "In the Bar comparing patients across Patient Gender, the relationship landscape shows exceptional predictability with 3 highly stable series relationships. The most predictable pair, Female and NC, demonstrates 96% consistency maintaining a consistent gap of 557.9 units across all categories, with an overall relationship consistency of 95% indicating that series interactions follow highly predictable patterns.", "fact_type": "relationship_consistency", "subtype": "highly_predictable", "importance": 0.8528733850295501, "data_points": {"pattern_type": "highly_predictable", "total_relationships": 3, "avg_consistency": 94.57467700591002, "most_stable_pair": ["Female", "NC"], "relationship_hubs": ["Male", "NC", "Female"]}, "entities": []}, {"description": "In the Bar, Male, Female consistently perform above average while NC consistently perform below average.", "fact_type": "category_value_consistency", "subtype": "chart_level", "importance": 0.85, "data_points": {}, "entities": []}, {"description": "Across all series in the Bar comparing patients by Patient Gender, the highest value overall is 625.0 for Male in the 20-29 category, which is 63% above the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_maximum", "importance": 0.8, "data_points": {"category": "20-29", "series": "Male", "value": 625}, "entities": ["20-29", "Male", "625", "20-29", "Male"]}, {"description": "Across all series in the Bar comparing patients by Patient Gender, the lowest value overall is 1.0 for NC in the 30-39 category, which is 100% below the overall average.", "fact_type": "cross_series_extreme", "subtype": "global_minimum", "importance": 0.75, "data_points": {"category": "30-39", "series": "NC", "value": 1}, "entities": ["30-39", "NC", "1", "30-39", "NC"]}, {"description": "The distribution is very even across categories, with nearly equal values for each Patient Gender.", "fact_type": "distribution_evenness", "subtype": "very_even", "importance": 0.75, "data_points": {"gini": 0.15786397449521783, "cv": 0.06487132690332195, "normalized_entropy": 0.9989557393891698}, "entities": []}, {"description": "The patients distribution is left-skewed, with a few Patient Genders having unusually low values.", "fact_type": "distribution_skew", "subtype": "negative_skew", "importance": 0.75, "data_points": {"skewness": -1.3396082930674105}, "entities": []}]'
              onclick="showChartDetails(1297, this, event)"
              title="Click for details, double-click to zoom">
         
@@ -2153,7 +1918,6 @@
                         Confidence: 1.00
                     </span>
                     <span class="pattern-type">outlier</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -2165,200 +1929,161 @@
                 White demonstrates exceptional behavior in the dimensional interaction between Patient Race and Patient Age, standing out from typical interaction patterns.
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-115-0">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (9 facts)
-                    <span class="scroll-hint">Scroll to see more ↓</span>
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-115-0">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="8">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 8</span>
-                            <span class="facts-count">(4 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-8-0"
-                                data-chart-id="8"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing Male by Patient Race, White has the highest value at 1296.0, which is 93% above the average of 672.1.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-8-1"
-                                data-chart-id="8"
-                                data-fact-type="variation"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-variation">variation</span>
-                                    <span class="fact-subtype">(standard deviation (std_dev))</span>
-                                    <span class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 602.55, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.86</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-8-2"
-                                data-chart-id="8"
-                                data-fact-type="variation"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-variation">variation</span>
-                                    <span class="fact-subtype">(absolute range (range))</span>
-                                    <span class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 1291.0 units for the absolute range, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.86</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-8-3"
-                                data-chart-id="8"
-                                data-fact-type="cross_series_extreme"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
-                                    <span class="fact-subtype">(global_maximum)</span>
-                                    <span class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.80</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-0-8-0"
+                         data-chart-id="8"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 8</span>
                         </div>
+                        <div class="fact-description">In the Bar showing Male by Patient Race, White has the highest value at 1296.0, which is 93% above the average of 672.1.</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="1296">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 1296</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-1296-0"
-                                data-chart-id="1296"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '1296')"
-                                onmouseout="clearFactHighlight('115', '1296')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
                 
+                    <div class="unified-fact-item fact-variation" 
+                         data-fact-id="115-0-8-1"
+                         data-chart-id="8"
+                         data-fact-type="variation"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">variation</span>
+                            <span class="fact-subtype">(standard deviation (std_dev))</span>
+                            <span class="fact-importance">Importance: 0.86</span>
+                            <span class="chart-reference">Chart 8</span>
                         </div>
+                        <div class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 602.55, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="1298">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 1298</span>
-                            <span class="facts-count">(4 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-1298-0"
-                                data-chart-id="1298"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
                 
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-1298-1"
-                                data-chart-id="1298"
-                                data-fact-type="cross_series_extreme"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
-                                    <span class="fact-subtype">(global_maximum)</span>
-                                    <span class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.80</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-1298-2"
-                                data-chart-id="1298"
-                                data-fact-type="variation"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-variation">variation</span>
-                                    <span class="fact-subtype">(absolute range (range))</span>
-                                    <span class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 66.0 units for the absolute range, which is 1.8x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.75</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-0-1298-3"
-                                data-chart-id="1298"
-                                data-fact-type="variation"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-variation">variation</span>
-                                    <span class="fact-subtype">(standard deviation (std_dev))</span>
-                                    <span class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 17.44, which is 1.5x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.71</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-variation" 
+                         data-fact-id="115-0-8-2"
+                         data-chart-id="8"
+                         data-fact-type="variation"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">variation</span>
+                            <span class="fact-subtype">(absolute range (range))</span>
+                            <span class="fact-importance">Importance: 0.86</span>
+                            <span class="chart-reference">Chart 8</span>
                         </div>
+                        <div class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 1291.0 units for the absolute range, which is 2.3x higher than the average disparity in other categories. The gap ranges from NC (5.0) to Male (1296.0).</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
+                
+                    <div class="unified-fact-item fact-cross_series_extreme" 
+                         data-fact-id="115-0-8-3"
+                         data-chart-id="8"
+                         data-fact-type="cross_series_extreme"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">cross_series_extreme</span>
+                            <span class="fact-subtype">(global_maximum)</span>
+                            <span class="fact-importance">Importance: 0.80</span>
+                            <span class="chart-reference">Chart 8</span>
+                        </div>
+                        <div class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-0-1296-0"
+                         data-chart-id="1296"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '1296')"
+                         onmouseout="clearFactHighlight('115', '1296')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 1296</span>
+                        </div>
+                        <div class="fact-description">In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-0-1298-0"
+                         data-chart-id="1298"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-cross_series_extreme" 
+                         data-fact-id="115-0-1298-1"
+                         data-chart-id="1298"
+                         data-fact-type="cross_series_extreme"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">cross_series_extreme</span>
+                            <span class="fact-subtype">(global_maximum)</span>
+                            <span class="fact-importance">Importance: 0.80</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-variation" 
+                         data-fact-id="115-0-1298-2"
+                         data-chart-id="1298"
+                         data-fact-type="variation"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">variation</span>
+                            <span class="fact-subtype">(absolute range (range))</span>
+                            <span class="fact-importance">Importance: 0.75</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a range of 66.0 units for the absolute range, which is 1.8x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-variation" 
+                         data-fact-id="115-0-1298-3"
+                         data-chart-id="1298"
+                         data-fact-type="variation"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">variation</span>
+                            <span class="fact-subtype">(standard deviation (std_dev))</span>
+                            <span class="fact-importance">Importance: 0.71</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">In the Bar comparing patients across Patient Race, the White category shows the most pronounced disparities between series with a standard deviation of 17.44, which is 1.5x higher than the average disparity in other categories. The gap ranges from 40-49 (282.0) to 20-29 (348.0).</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
                 </div>
             </div>
+            
         </div>
         
         <div class="insight-item insight-pattern" 
@@ -2378,7 +2103,6 @@
                         Confidence: 0.68
                     </span>
                     <span class="pattern-type">consistency</span>
-                    <span class="source-indicator">pattern</span>
                     <span class="expand-indicator">
                         <span class="expand-text">Click to see evidence</span>
                         <span class="expand-icon">▼</span>
@@ -2390,132 +2114,97 @@
                 White demonstrates consistent high patients value across multiple combinations of Patient Race and Patient Age. 
             </div>
             
-            <!-- NEW: Supporting Facts Section -->
+            <!-- Supporting Facts Section with unified layout -->
             <div class="supporting-facts-section hidden" id="supporting-facts-115-1">
                 <h5 class="supporting-facts-title">
                     <span class="evidence-icon">🔍</span>
                     Supporting Evidence (5 facts)
-                    
                 </h5>
-                <div class="supporting-facts-list" id="facts-list-115-1">
+                <div class="unified-facts-grid">
         
-                    <div class="chart-facts-group" data-chart-id="8">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 8</span>
-                            <span class="facts-count">(2 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-1-8-0"
-                                data-chart-id="8"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing Male by Patient Race, White has the highest value at 1296.0, which is 93% above the average of 672.1.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-1-8-1"
-                                data-chart-id="8"
-                                data-fact-type="cross_series_extreme"
-                                onmouseover="highlightFactChart(this, '115', '8')"
-                                onmouseout="clearFactHighlight('115', '8')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
-                                    <span class="fact-subtype">(global_maximum)</span>
-                                    <span class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.80</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-1-8-0"
+                         data-chart-id="8"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 8</span>
                         </div>
+                        <div class="fact-description">In the Bar showing Male by Patient Race, White has the highest value at 1296.0, which is 93% above the average of 672.1.</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="1296">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 1296</span>
-                            <span class="facts-count">(1 fact)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-1-1296-0"
-                                data-chart-id="1296"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '1296')"
-                                onmouseout="clearFactHighlight('115', '1296')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
                 
+                    <div class="unified-fact-item fact-cross_series_extreme" 
+                         data-fact-id="115-1-8-1"
+                         data-chart-id="8"
+                         data-fact-type="cross_series_extreme"
+                         onmouseover="highlightFactChart(this, '115', '8')"
+                         onmouseout="clearFactHighlight('115', '8')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">cross_series_extreme</span>
+                            <span class="fact-subtype">(global_maximum)</span>
+                            <span class="fact-importance">Importance: 0.80</span>
+                            <span class="chart-reference">Chart 8</span>
                         </div>
+                        <div class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 1296.0 for Male in the White category, which is 195% above the overall average.</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
-                    <div class="chart-facts-group" data-chart-id="1298">
-                        <h6 class="chart-facts-header">
-                            <span class="chart-indicator">📊 Chart 1298</span>
-                            <span class="facts-count">(2 facts)</span>
-                        </h6>
-                        <div class="facts-list">
-            
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-1-1298-0"
-                                data-chart-id="1298"
-                                data-fact-type="extreme"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-extreme">extreme</span>
-                                    <span class="fact-subtype">(maximum)</span>
-                                    <span class="fact-description">In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.60</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
                 
-                            <div class="supporting-fact-item" 
-                                data-fact-id="115-1-1298-1"
-                                data-chart-id="1298"
-                                data-fact-type="cross_series_extreme"
-                                onmouseover="highlightFactChart(this, '115', '1298')"
-                                onmouseout="clearFactHighlight('115', '1298')">
-                                <div class="fact-content">
-                                    <span class="fact-type-badge fact-cross_series_extreme">cross_series_extreme</span>
-                                    <span class="fact-subtype">(global_maximum)</span>
-                                    <span class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.</span>
-                                </div>
-                                <div class="fact-meta">
-                                    <span class="fact-importance">Importance: 0.80</span>
-                                    <span class="fact-entities">Entities: White</span>
-                                </div>
-                            </div>
-                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-1-1296-0"
+                         data-chart-id="1296"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '1296')"
+                         onmouseout="clearFactHighlight('115', '1296')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 1296</span>
                         </div>
+                        <div class="fact-description">In the Bar showing patients by Patient Race, White has the highest value at 2571.0, which is 95% above the average of 1316.6.</div>
+                        <div class="fact-entities">Entities: White</div>
                     </div>
-            
+                
+                    <div class="unified-fact-item fact-extreme" 
+                         data-fact-id="115-1-1298-0"
+                         data-chart-id="1298"
+                         data-fact-type="extreme"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">extreme</span>
+                            <span class="fact-subtype">(maximum)</span>
+                            <span class="fact-importance">Importance: 0.60</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">In the Bar showing 60-69 by Patient Race, White has the highest value at 327.0, which is 98% above the average of 164.9.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
+                    <div class="unified-fact-item fact-cross_series_extreme" 
+                         data-fact-id="115-1-1298-1"
+                         data-chart-id="1298"
+                         data-fact-type="cross_series_extreme"
+                         onmouseover="highlightFactChart(this, '115', '1298')"
+                         onmouseout="clearFactHighlight('115', '1298')">
+                        <div class="fact-header">
+                            <span class="fact-type-badge">cross_series_extreme</span>
+                            <span class="fact-subtype">(global_maximum)</span>
+                            <span class="fact-importance">Importance: 0.80</span>
+                            <span class="chart-reference">Chart 1298</span>
+                        </div>
+                        <div class="fact-description">Across all series in the Bar comparing patients by Patient Race, the highest value overall is 348.0 for 20-29 in the White category, which is 111% above the overall average.</div>
+                        <div class="fact-entities">Entities: White</div>
+                    </div>
+                
                 </div>
             </div>
+            
         </div>
         
                     </div>
@@ -2543,71 +2232,129 @@
         // Global state
         let currentOpenChart = null;
         let highlightedCharts = [];
+        let factHighlightedCharts = new Map();
+        let openSupportingFacts = new Set();
         
-        // Main Functions
+        // ENHANCED: Auto-scroll to highlighted charts
+        function scrollToChart(chartElement, smooth = true) {
+            if (!chartElement) return;
+            
+            const chartRect = chartElement.getBoundingClientRect();
+            const isVisible = chartRect.top >= 0 && chartRect.bottom <= window.innerHeight;
+            
+            if (!isVisible) {
+                chartElement.scrollIntoView({
+                    behavior: smooth ? 'smooth' : 'auto',
+                    block: 'center',
+                    inline: 'nearest'
+                });
+            }
+        }
+        
+        // ENHANCED: Unified highlighting for both chart insights and supporting facts
+        function highlightFactChart(factElement, goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Find the chart element
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (!chartElement) return;
+            
+            // Add enhanced highlighting for fact interaction
+            chartElement.classList.add('fact-highlighted');
+            factHighlightedCharts.set(chartId, 'fact');
+            
+            // Also highlight the fact item itself
+            factElement.classList.add('highlighted');
+            
+            // Dim other charts slightly
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                const currentChartId = chart.dataset.chartId;
+                if (currentChartId !== chartId) {
+                    chart.classList.add('dimmed');
+                }
+            });
+            
+            // NEW: Auto-scroll to the highlighted chart
+            setTimeout(() => {
+                scrollToChart(chartElement, true);
+            }, 100);
+        }
+        
+        function clearFactHighlight(goalId, chartId) {
+            const goalSection = document.getElementById('goal-' + goalId);
+            if (!goalSection) return;
+            
+            // Remove enhanced highlighting
+            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
+            if (chartElement) {
+                chartElement.classList.remove('fact-highlighted');
+            }
+            
+            // Remove fact highlighting
+            const factElements = goalSection.querySelectorAll('.unified-fact-item.highlighted, .chart-fact-item.highlighted');
+            factElements.forEach(fact => fact.classList.remove('highlighted'));
+            
+            // Remove dimming from all charts
+            const allCharts = goalSection.querySelectorAll('.chart-item');
+            allCharts.forEach(chart => {
+                chart.classList.remove('dimmed');
+            });
+            
+            // Clear from tracking
+            factHighlightedCharts.delete(chartId);
+        }
+        
         function highlightContributingCharts(insightElement, goalId) {
             const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
             const goalSection = document.getElementById('goal-' + goalId);
             
             if (!goalSection) return;
             
-            // Clear previous highlights
-            clearHighlights(goalId);
+            // Clear previous highlights (but preserve fact highlights)
+            clearHighlights(goalId, true);
             
             // Highlight contributing charts
             contributingCharts.forEach(chartId => {
                 const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
                 if (chartElement) {
-                    chartElement.classList.add('highlighted');
-                    highlightedCharts.push(chartElement);
+                    // Don't override fact highlighting
+                    if (!chartElement.classList.contains('fact-highlighted')) {
+                        chartElement.classList.add('highlighted');
+                        highlightedCharts.push(chartElement);
+                    }
                 }
             });
             
-            // Dim non-contributing charts
+            // Dim non-contributing charts (unless they're fact-highlighted)
             const allCharts = goalSection.querySelectorAll('.chart-item');
             allCharts.forEach(chart => {
                 const chartId = parseInt(chart.dataset.chartId);
-                if (!contributingCharts.includes(chartId)) {
+                if (!contributingCharts.includes(chartId) && !chart.classList.contains('fact-highlighted')) {
                     chart.classList.add('dimmed');
                 }
             });
-            
-            // Expand contributing evidence
-            const evidencePanel = insightElement.querySelector('.contributing-evidence');
-            if (evidencePanel) {
-                evidencePanel.classList.remove('hidden');
-                evidencePanel.classList.add('expanded');
-                
-                // Update evidence content with specific chart information
-                const evidenceList = evidencePanel.querySelector('.evidence-list');
-                if (evidenceList && contributingCharts.length > 0) {
-                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
-                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
-                }
-            }
         }
         
-        function clearHighlights(goalId) {
+        function clearHighlights(goalId, preserveFactHighlights = false) {
             const goalSection = document.getElementById('goal-' + goalId);
             if (!goalSection) return;
             
-            // Remove all highlight classes
+            // Remove highlight classes (but preserve fact highlights if requested)
             highlightedCharts.forEach(chart => {
-                chart.classList.remove('highlighted', 'dimmed');
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
             });
             highlightedCharts = [];
             
-            // Clear all chart highlights and dims
+            // Clear all chart highlights and dims (except fact highlights)
             const allCharts = goalSection.querySelectorAll('.chart-item');
             allCharts.forEach(chart => {
-                chart.classList.remove('highlighted', 'dimmed');
-            });
-            
-            // Collapse all contributing evidence panels
-            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
-            evidencePanels.forEach(panel => {
-                panel.classList.add('hidden');
-                panel.classList.remove('expanded');
+                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
+                    chart.classList.remove('highlighted', 'dimmed');
+                }
             });
         }
         
@@ -2639,7 +2386,7 @@
                 return;
             }
             
-            // Update details content
+            // Update details content with unified layout
             let detailsHTML = `
                 <div class="chart-details-header">
                     <h5>Chart ${chartId} - Detailed Insights</h5>
@@ -2650,15 +2397,25 @@
             if (chartInsights.length > 0) {
                 chartInsights.forEach((insight, index) => {
                     const factTypeClass = `fact-${insight.fact_type}`;
+                    const factId = `chart-${chartId}-fact-${index}`;
+                    
                     detailsHTML += `
-                        <div class="chart-fact-item ${factTypeClass}">
+                        <div class="chart-fact-item ${factTypeClass}" 
+                             data-fact-id="${factId}"
+                             data-chart-id="${chartId}"
+                             data-fact-type="${insight.fact_type}"
+                             onmouseover="highlightChartFromFact(this, '${goalId}', '${chartId}')"
+                             onmouseout="clearChartFactHighlight('${goalId}', '${chartId}')">
                             <div class="fact-header">
                                 <span class="fact-type-badge">${insight.fact_type}</span>
-                                ${insight.subtype ? `<span class="fact-subtype">${insight.subtype}</span>` : ''}
+                                ${insight.subtype ? `<span class="fact-subtype">(${insight.subtype})</span>` : ''}
                                 <span class="fact-importance">Importance: ${insight.importance.toFixed(2)}</span>
+                                <span class="chart-reference">Chart ${chartId}</span>
                             </div>
                             <div class="fact-description">${insight.description}</div>
-                            
+                            ${insight.entities && insight.entities.length > 0 ? 
+                                `<div class="fact-entities">Entities: ${insight.entities.slice(0, 3).join(', ')}</div>` : ''
+                            }
                         </div>
                     `;
                 });
@@ -2688,17 +2445,15 @@
             }, 100);
         }
         
+        // FIXED: Chart zoom overlay with full viewport positioning
         function showChartZoomOverlay(chartId, chartElement) {
-            const goalSection = chartElement.closest('.goal-section');
-            const chartsPanel = goalSection.querySelector('.charts-panel');
-            
             // Get the chart image source
             const chartImg = chartElement.querySelector('img');
             if (!chartImg) return;
             
             const chartSrc = chartImg.src;
             
-            // Create overlay
+            // Create overlay that covers entire viewport
             const overlay = document.createElement('div');
             overlay.className = 'chart-zoom-overlay';
             overlay.innerHTML = `
@@ -2713,13 +2468,13 @@
                         <img src="${chartSrc}" alt="Chart ${chartId}" class="zoom-image" id="zoom-image">
                     </div>
                     <div class="zoom-info">
-                        <span>Chart ${chartId} - Double-click to zoom, drag to pan</span>
+                        <span>Chart ${chartId} - Mouse wheel to zoom, drag to pan, ESC to close</span>
                     </div>
                 </div>
             `;
             
-            // Add overlay to charts panel
-            chartsPanel.appendChild(overlay);
+            // Add overlay to document body (not within chart panel)
+            document.body.appendChild(overlay);
             
             // Initialize zoom functionality
             initializeZoomControls(overlay);
@@ -2764,7 +2519,7 @@
                 closeZoomOverlay(overlay);
             });
             
-            // Double-click zoom
+            // Double-click zoom to point
             zoomImage.addEventListener('dblclick', (e) => {
                 e.preventDefault();
                 const rect = zoomContainer.getBoundingClientRect();
@@ -2920,120 +2675,7 @@
             currentOpenChart = null;
         }
         
-        // Chart hover effects for bidirectional interaction
-        function setupChartHoverEffects() {
-            document.querySelectorAll('.chart-item').forEach(chartElement => {
-                chartElement.addEventListener('mouseenter', function() {
-                    const chartId = parseInt(this.dataset.chartId);
-                    const goalSection = this.closest('.goal-section');
-                    const goalId = goalSection.dataset.goalId;
-                    
-                    // Find insights that reference this chart
-                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
-                    relatedInsights.forEach(insight => {
-                        const contributingCharts = JSON.parse(insight.dataset.contributingCharts || '[]');
-                        if (contributingCharts.includes(chartId)) {
-                            insight.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
-                            insight.style.transform = 'translateX(5px)';
-                        }
-                    });
-                });
-                
-                chartElement.addEventListener('mouseleave', function() {
-                    const goalSection = this.closest('.goal-section');
-                    const relatedInsights = goalSection.querySelectorAll('.insight-item');
-                    relatedInsights.forEach(insight => {
-                        insight.style.backgroundColor = '';
-                        insight.style.transform = '';
-                    });
-                });
-            });
-        }
-        
-        // Smooth scrolling for goal navigation
-        function setupSmoothScrolling() {
-            document.querySelectorAll('a[href^="#goal-"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-        
-        // Enhanced keyboard navigation
-        function setupKeyboardNavigation() {
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && currentOpenChart) {
-                    const openDetails = document.querySelector('.chart-details-section:not(.hidden)');
-                    if (openDetails) {
-                        const goalSection = openDetails.closest('.goal-section');
-                        const goalId = goalSection.dataset.goalId;
-                        closeChartDetails(goalId);
-                    }
-                }
-            });
-        }
-        
-        // Touch device support
-        function setupTouchSupport() {
-            // Convert hover interactions to touch on mobile devices
-            if ('ontouchstart' in window) {
-                document.querySelectorAll('.insight-item').forEach(insight => {
-                    insight.addEventListener('touchstart', function() {
-                        const goalSection = this.closest('.goal-section');
-                        const goalId = goalSection.dataset.goalId;
-                        highlightContributingCharts(this, goalId);
-                        
-                        // Auto-clear after 3 seconds on touch devices
-                        setTimeout(() => {
-                            clearHighlights(goalId);
-                        }, 3000);
-                    });
-                });
-            }
-        }
-        
-        // Initialize all interactive features
-        document.addEventListener('DOMContentLoaded', function() {
-            setupChartHoverEffects();
-            setupSmoothScrolling();
-            setupKeyboardNavigation();
-            setupTouchSupport();
-            
-            console.log('Interactive dashboard initialized');
-        });
-        
-        // Utility functions
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-        
-        // Performance optimization for hover effects
-        const debouncedHighlight = debounce(highlightContributingCharts, 100);
-        const debouncedClear = debounce(clearHighlights, 100);
-        
-        
-        // Enhanced Supporting Facts Functionality
-        
-        // Global state for supporting facts
-        let openSupportingFacts = new Set();
-        let factHighlightedCharts = new Map(); // chartId -> highlightType
-        
+        // ENHANCED: Supporting facts toggle with unified styling
         function toggleSupportingFacts(insightElement, goalId, insightIndex) {
             const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
             const expandIcon = insightElement.querySelector('.expand-icon');
@@ -3071,9 +2713,6 @@
                 // Add expanded class after a brief delay
                 setTimeout(() => {
                     factsSection.classList.add('expanded');
-                    
-                    // Setup scroll indicator behavior
-                    setupScrollIndicator(goalId, insightIndex);
                 }, 10);
                 
                 insightElement.classList.add('expanded');
@@ -3092,182 +2731,16 @@
             }
         }
         
-        function setupScrollIndicator(goalId, insightIndex) {
-            const factsList = document.getElementById(`facts-list-${goalId}-${insightIndex}`);
-            const scrollHint = factsList.parentElement.querySelector('.scroll-hint');
-            
-            if (!factsList || !scrollHint) return;
-            
-            function updateScrollHint() {
-                const isScrollable = factsList.scrollHeight > factsList.clientHeight;
-                const isAtBottom = factsList.scrollTop + factsList.clientHeight >= factsList.scrollHeight - 5;
-                
-                if (isScrollable && !isAtBottom) {
-                    scrollHint.style.display = 'inline';
-                } else {
-                    scrollHint.style.display = 'none';
-                }
-            }
-            
-            // Initial check
-            setTimeout(updateScrollHint, 100);
-            
-            // Listen for scroll events
-            factsList.addEventListener('scroll', updateScrollHint);
-            
-            // Listen for resize events (in case content changes)
-            window.addEventListener('resize', updateScrollHint);
+        // ENHANCED: Chart highlighting from facts (used for both chart insights and supporting facts)
+        function highlightChartFromFact(factElement, goalId, chartId) {
+            highlightFactChart(factElement, goalId, chartId);
         }
         
-        function highlightFactChart(factElement, goalId, chartId) {
-            const goalSection = document.getElementById('goal-' + goalId);
-            if (!goalSection) return;
-            
-            // Find the chart element
-            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
-            if (!chartElement) return;
-            
-            // Add enhanced highlighting for fact interaction
-            chartElement.classList.add('fact-highlighted');
-            factHighlightedCharts.set(chartId, 'fact');
-            
-            // Also highlight the fact item itself
-            factElement.classList.add('highlighted');
-            
-            // Dim other charts slightly
-            const allCharts = goalSection.querySelectorAll('.chart-item');
-            allCharts.forEach(chart => {
-                const currentChartId = chart.dataset.chartId;
-                if (currentChartId !== chartId) {
-                    chart.classList.add('dimmed');
-                }
-            });
+        function clearChartFactHighlight(goalId, chartId) {
+            clearFactHighlight(goalId, chartId);
         }
         
-        function clearFactHighlight(goalId, chartId) {
-            const goalSection = document.getElementById('goal-' + goalId);
-            if (!goalSection) return;
-            
-            // Remove enhanced highlighting
-            const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
-            if (chartElement) {
-                chartElement.classList.remove('fact-highlighted');
-            }
-            
-            // Remove fact highlighting
-            const factElements = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
-            factElements.forEach(fact => fact.classList.remove('highlighted'));
-            
-            // Remove dimming from all charts
-            const allCharts = goalSection.querySelectorAll('.chart-item');
-            allCharts.forEach(chart => {
-                chart.classList.remove('dimmed');
-            });
-            
-            // Clear from tracking
-            factHighlightedCharts.delete(chartId);
-        }
-        
-        function clearAllFactHighlights(goalId) {
-            const goalSection = document.getElementById('goal-' + goalId);
-            if (!goalSection) return;
-            
-            // Remove all fact highlights
-            const factHighlightedElements = goalSection.querySelectorAll('.fact-highlighted');
-            factHighlightedElements.forEach(element => {
-                element.classList.remove('fact-highlighted');
-            });
-            
-            // Remove all fact item highlights
-            const factItems = goalSection.querySelectorAll('.supporting-fact-item.highlighted');
-            factItems.forEach(fact => fact.classList.remove('highlighted'));
-            
-            // Remove dimming
-            const allCharts = goalSection.querySelectorAll('.chart-item');
-            allCharts.forEach(chart => {
-                chart.classList.remove('dimmed');
-            });
-            
-            // Clear tracking
-            factHighlightedCharts.clear();
-        }
-        
-        // Enhanced version of existing highlightContributingCharts function
-        function highlightContributingCharts(insightElement, goalId) {
-            const contributingCharts = JSON.parse(insightElement.dataset.contributingCharts || '[]');
-            const goalSection = document.getElementById('goal-' + goalId);
-            
-            if (!goalSection) return;
-            
-            // Clear previous highlights (but preserve fact highlights)
-            clearHighlights(goalId, true); // true = preserve fact highlights
-            
-            // Highlight contributing charts
-            contributingCharts.forEach(chartId => {
-                const chartElement = goalSection.querySelector(`[data-chart-id="${chartId}"]`);
-                if (chartElement) {
-                    // Don't override fact highlighting
-                    if (!chartElement.classList.contains('fact-highlighted')) {
-                        chartElement.classList.add('highlighted');
-                        highlightedCharts.push(chartElement);
-                    }
-                }
-            });
-            
-            // Dim non-contributing charts (unless they're fact-highlighted)
-            const allCharts = goalSection.querySelectorAll('.chart-item');
-            allCharts.forEach(chart => {
-                const chartId = parseInt(chart.dataset.chartId);
-                if (!contributingCharts.includes(chartId) && !chart.classList.contains('fact-highlighted')) {
-                    chart.classList.add('dimmed');
-                }
-            });
-            
-            // Expand contributing evidence
-            const evidencePanel = insightElement.querySelector('.contributing-evidence');
-            if (evidencePanel) {
-                evidencePanel.classList.remove('hidden');
-                evidencePanel.classList.add('expanded');
-                
-                // Update evidence content with specific chart information
-                const evidenceList = evidencePanel.querySelector('.evidence-list');
-                if (evidenceList && contributingCharts.length > 0) {
-                    const chartTexts = contributingCharts.map(chartId => `Chart ${chartId}`);
-                    evidenceList.innerHTML = `${chartTexts.join(', ')} provide supporting facts for this insight.`;
-                }
-            }
-        }
-        
-        // Enhanced version of clearHighlights to preserve fact highlights
-        function clearHighlights(goalId, preserveFactHighlights = false) {
-            const goalSection = document.getElementById('goal-' + goalId);
-            if (!goalSection) return;
-            
-            // Remove highlight classes (but preserve fact highlights if requested)
-            highlightedCharts.forEach(chart => {
-                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
-                    chart.classList.remove('highlighted', 'dimmed');
-                }
-            });
-            highlightedCharts = [];
-            
-            // Clear all chart highlights and dims (except fact highlights)
-            const allCharts = goalSection.querySelectorAll('.chart-item');
-            allCharts.forEach(chart => {
-                if (!preserveFactHighlights || !chart.classList.contains('fact-highlighted')) {
-                    chart.classList.remove('highlighted', 'dimmed');
-                }
-            });
-            
-            // Collapse all contributing evidence panels
-            const evidencePanels = goalSection.querySelectorAll('.contributing-evidence');
-            evidencePanels.forEach(panel => {
-                panel.classList.add('hidden');
-                panel.classList.remove('expanded');
-            });
-        }
-        
-        // Enhanced chart hover effects to work with supporting facts
+        // Enhanced chart hover effects to work with unified fact highlighting
         function setupEnhancedChartHoverEffects() {
             document.querySelectorAll('.chart-item').forEach(chartElement => {
                 chartElement.addEventListener('mouseenter', function() {
@@ -3287,11 +2760,13 @@
                             }
                         });
                         
-                        // Also check for facts that reference this chart
-                        const factItems = goalSection.querySelectorAll(`[data-chart-id="${chartId}"] .supporting-fact-item`);
+                        // Also highlight all fact items that reference this chart
+                        const factItems = goalSection.querySelectorAll(`[data-chart-id="${chartId}"]`);
                         factItems.forEach(fact => {
-                            fact.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
-                            fact.style.transform = 'translateX(2px)';
+                            if (fact.classList.contains('unified-fact-item') || fact.classList.contains('chart-fact-item')) {
+                                fact.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
+                                fact.style.transform = 'translateX(2px)';
+                            }
                         });
                     }
                 });
@@ -3307,7 +2782,7 @@
                             insight.style.transform = '';
                         });
                         
-                        const factItems = goalSection.querySelectorAll('.supporting-fact-item');
+                        const factItems = goalSection.querySelectorAll('.unified-fact-item, .chart-fact-item');
                         factItems.forEach(fact => {
                             fact.style.backgroundColor = '';
                             fact.style.transform = '';
@@ -3317,50 +2792,45 @@
             });
         }
         
-        // Close all supporting facts when clicking outside
-        function setupSupportingFactsClickOutside() {
-            document.addEventListener('click', function(event) {
-                // Check if click is outside any insight item
-                const insightItem = event.target.closest('.insight-item');
-                if (!insightItem) {
-                    // Close all open supporting facts
-                    openSupportingFacts.forEach(factId => {
-                        const [goalId, insightIndex] = factId.split('-');
-                        const factsSection = document.getElementById(`supporting-facts-${goalId}-${insightIndex}`);
-                        const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
-                        
-                        if (factsSection && insightElement) {
-                            factsSection.classList.remove('expanded');
-                            factsSection.classList.add('slide-up');
-                            insightElement.classList.remove('expanded');
-                            
-                            const expandText = insightElement.querySelector('.expand-text');
-                            if (expandText) {
-                                expandText.textContent = 'Click to see evidence';
-                            }
-                            
-                            setTimeout(() => {
-                                factsSection.classList.add('hidden');
-                                factsSection.classList.remove('slide-up');
-                            }, 300);
-                        }
-                    });
-                    
-                    openSupportingFacts.clear();
-                    
-                    // Clear all fact highlights
-                    document.querySelectorAll('.goal-section').forEach(goalSection => {
-                        const goalId = goalSection.dataset.goalId;
-                        clearAllFactHighlights(goalId);
-                    });
-                }
+        // Smooth scrolling for goal navigation
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#goal-"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
         }
         
-        // Keyboard shortcuts for supporting facts
-        function setupSupportingFactsKeyboard() {
+        // Enhanced keyboard navigation
+        function setupKeyboardNavigation() {
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
+                    // Close zoom overlay first if open
+                    const zoomOverlay = document.querySelector('.chart-zoom-overlay.visible');
+                    if (zoomOverlay) {
+                        closeZoomOverlay(zoomOverlay);
+                        return;
+                    }
+                    
+                    // Close chart details if open
+                    if (currentOpenChart) {
+                        const openDetails = document.querySelector('.chart-details-section:not(.hidden)');
+                        if (openDetails) {
+                            const goalSection = openDetails.closest('.goal-section');
+                            const goalId = goalSection.dataset.goalId;
+                            closeChartDetails(goalId);
+                            return;
+                        }
+                    }
+                    
                     // Close all supporting facts
                     openSupportingFacts.forEach(factId => {
                         const [goalId, insightIndex] = factId.split('-');
@@ -3380,54 +2850,60 @@
                     });
                     
                     openSupportingFacts.clear();
-                    
-                    // Clear all highlights
-                    document.querySelectorAll('.goal-section').forEach(goalSection => {
-                        const goalId = goalSection.dataset.goalId;
-                        clearAllFactHighlights(goalId);
-                        clearHighlights(goalId);
-                    });
                 }
             });
         }
         
-        // Enhanced initialization
+        // Touch device support
+        function setupTouchSupport() {
+            // Convert hover interactions to touch on mobile devices
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.insight-item').forEach(insight => {
+                    insight.addEventListener('touchstart', function() {
+                        const goalSection = this.closest('.goal-section');
+                        const goalId = goalSection.dataset.goalId;
+                        highlightContributingCharts(this, goalId);
+                        
+                        // Auto-clear after 3 seconds on touch devices
+                        setTimeout(() => {
+                            clearHighlights(goalId);
+                        }, 3000);
+                    });
+                });
+            }
+        }
+        
+        // Initialize all interactive features
         document.addEventListener('DOMContentLoaded', function() {
-            setupChartHoverEffects();
             setupEnhancedChartHoverEffects();
             setupSmoothScrolling();
             setupKeyboardNavigation();
-            setupSupportingFactsKeyboard();
-            setupSupportingFactsClickOutside();
             setupTouchSupport();
             
-            console.log('Enhanced interactive dashboard with supporting facts initialized');
+            console.log('Enhanced interactive dashboard initialized');
             
-            // Log supporting facts statistics
-            const allSupportingFacts = document.querySelectorAll('.supporting-fact-item');
-            const chartGroups = document.querySelectorAll('.chart-facts-group');
-            console.log(`Found ${allSupportingFacts.length} supporting facts across ${chartGroups.length} chart groups`);
+            // Log statistics
+            const allFacts = document.querySelectorAll('.unified-fact-item, .chart-fact-item');
+            const chartItems = document.querySelectorAll('.chart-item');
+            console.log(`Dashboard loaded with ${chartItems.length} charts and ${allFacts.length} total facts`);
         });
         
-        // Utility function to get supporting facts for debugging
-        function getInsightSupportingFacts(goalId, insightIndex) {
-            const insightElement = document.querySelector(`[data-insight-id="${insightIndex}"]`);
-            if (insightElement) {
-                const supportingFacts = JSON.parse(insightElement.dataset.supportingFacts || '[]');
-                console.log(`Insight ${insightIndex} in goal ${goalId}:`, supportingFacts);
-                return supportingFacts;
-            }
-            return [];
+        // Utility functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
         }
         
-        // Utility function to highlight specific fact by ID (for debugging)
-        function debugHighlightFact(goalId, insightIndex, chartId, factIndex) {
-            const factId = `${goalId}-${insightIndex}-${chartId}-${factIndex}`;
-            const factElement = document.querySelector(`[data-fact-id="${factId}"]`);
-            if (factElement) {
-                highlightFactChart(factElement, goalId, chartId);
-            }
-        }
+        // Performance optimization for hover effects
+        const debouncedHighlight = debounce(highlightFactChart, 50);
+        const debouncedClear = debounce(clearFactHighlight, 50);
         
             </script>
         </body>
